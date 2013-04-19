@@ -1,4 +1,4 @@
-\documentclass[10pt,article,colorback,accentcolor=tud9d]{tudreport}
+\documentclass[10pt,article,colorback,accentcolor=tud9d]{scrartcl}
 \usepackage[utf8]{inputenc} %?%
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} %cool beans%
@@ -16,11 +16,13 @@ linkcolor = black,
 plainpages = false,
 hypertexnames = false,
 citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis% 
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}%Ränder
+\usepackage{amssymb}%Für R reele zahlen
 \title{Theoretische Physik IV}
-\subtitle{Professor: Dr. Gernot Alber\\
-Mitschrift von Philipp Dijkstal}
-\subsubtitle{email: \textaccent{philipp.dijkstal@web.de}}
-\institution{Fachbereich Physik}
+%\subtitle{Professor: Dr. Gernot Alber\\
+%Mitschrift von Philipp Dijkstal}
+%\subsubtitle{email: \textaccent{philipp.dijkstal@web.de}}
+%\institution{Fachbereich Physik}
 \begin{document}
 \maketitle
 \tableofcontents
@@ -143,8 +145,8 @@ ${X}_\lambda < {Y}_{\lambda'}$ oder ${X}_\lambda > {Y}_{\lambda'}$ oder beides\\
 Dazu gehören andere Zustandsräume $\Gamma_\lambda$.\\
 \begin{equation}
 \begin{aligned}
-\Gamma_{1-\lambda} x \Gamma_\lambda \quad &X_\lambda :=((1-\lambda)X_1,\lambda X_2) \quad X_1,X_2,Y_1,Y_{-2} \in \Gamma\\
-&Y_\lambda :=((1-\lambda)Y_1,\lambda Y_2)
+\Gamma_{1-\lambda} \times \Gamma_\lambda \ni \ X_\lambda &:=((1-\lambda)X_1,\lambda X_2) \quad X_1,X_2,Y_1,Y_{2} \in \Gamma\\
+Y_\lambda &:=((1-\lambda)Y_1,\lambda Y_2)
 \end{aligned}
 \end{equation}
 
@@ -161,6 +163,7 @@ Mischung möglich!
 Vorlesung 2 - 18.04.2013\\
 $\Rightarrow$ \textbf{lokales Entropieprinzip} (für 1 thermodynamisches System, $\Gamma$)\\
 $\exists \ S_\Gamma(X)$ mit folgenden Eigenschaften: 
+\begin{fleqn}
 \begin{itemize}
 \item monoton unter $<$
 \begin{equation}
@@ -168,7 +171,7 @@ X<Y \quad ; \quad X,Y \in \Gamma \Leftrightarrow S_\Gamma(X) \leq S_\Gamma(Y)
 \end{equation}
 \item additiv
 \begin{equation}
-S_{\Gamma \times \Gamma}((X,Y))=S_\Gamma(X)+S_\Gamma(X)+S_\Gamma(Y)
+S_{\Gamma \times \Gamma}((X,Y))=S_\Gamma(X)+S_\Gamma(Y)
 \end{equation}
 \item skalierbar 
 \begin{equation}
@@ -176,37 +179,46 @@ S_{\Gamma_\lambda}(\lambda X)=\lambda S_\Gamma(X)
 \end{equation}
 \item konkav
 \begin{equation}
-\lambda S_\Gamma(X)+(1-\lambda)S_\Gamma(Y) \leq S_\Gamma(\lambda X +(1-\lambda)Y)
+\begin{aligned}
+&0 \leq \lambda \leq 1 \quad \quad \text{vgl. konvexe Kombinierbarkeit}\\
+&\lambda S_\Gamma(X)+(1-\lambda)S_\Gamma(Y) \leq S_\Gamma(\lambda X +(1-\lambda)Y)
+\end{aligned}
 \end{equation}
 \end{itemize}
-\textbf{Konstruktion EINRÜCKEN}:\\
-wähle $X_0 \in \Gamma \ll X_1 \in \Gamma$;\\
-sei $X \in \Gamma$\\
-$\text{sup}_\lambda \{\lambda: \ ((1-\lambda)X_0,\lambda X_1) < X\}:=S_\Gamma(X)$\\
-$\Leftrightarrow \quad X \sim ((1-\underbrace{S_\Gamma(X)})X_0,\underbrace{S_\Gamma(X)}X_1)\\
-\in R \quad \in R$\\
+\end{fleqn}
+\textbf{Konstruktion der Entropiefunktion}:\\
+wähle $X_0 \in \Gamma, \quad X_1 \in \Gamma, \quad X_0 \ll X_1$;\\
+sei $X \in \Gamma$
+\begin{fleqn}
+\begin{equation}
+\begin{aligned}
+\quad &S_\Gamma(X) :=\text{sup}_\lambda \{\lambda: \ ((1-\lambda)X_0,\lambda X_1) < X\}\\
+\Leftrightarrow \quad &X \sim ((1-\underbrace{S_\Gamma(X)}_{\in \mathbb{R}})X_0,\underbrace{S_\Gamma(X)}_{\in \mathbb{R}}X_1)
+\end{aligned}
+\end{equation}
+\end{fleqn}
 Alternative Definition von $((1-\lambda)X_0,\lambda X_1)<X$:\\
 \begin{itemize}
 \item $0 \leq \lambda \leq 1$
 \item $\lambda < 0: \quad (1-\lambda)X_0<(X,-\lambda X_1)$
 \item $(1-\lambda)<0: \quad \lambda X_1<((\lambda-1)X_0,X)$
 \end{itemize} 
-\textbf{Eindeutigkeit:} $\overline{S}\sim_\Gamma(X)=aS_\Gamma(X)+b$\\
-Für jede Substanz die Freiheit, das b zu wählen. a ist nach einmaligem Festlegen eine Konstante.\\
-Mischung: 6-dim-Raum zu 3-dim Raum\\
-EINRÜCKEN ENDE\\
+\textbf{Eindeutigkeit:} $\text{\~{S}}_\Gamma(X)=aS_\Gamma(X)+b$\\ \\
 \textbf{Es gilt:}
 \begin{itemize}
-\item Betrachtung zusammengesetzter Systeme (ohne Mischung und chemische Reaktionen)
-$\rightarrow \exists S(X) = a_\Gamma S_\Gamma(X) + b_\Gamma$ mit $a_\Gamma$ kann auf $a_{\Gamma^0}$ zurückgeführt werden. $b_\Gamma$ beliebig.\\
-d.h. durch die Wahl der Entropiefunktion für eine Substanz, z.B. $H_2O$, sind alle multiplikativen Konstanten festgelegt; additive Konstanten sind frei wählbar.\\
+\item Betrachtung zusammengesetzter Systeme (ohne Mischung und chemische Reaktionen)\\
+$\rightarrow \exists S(X) = a_\Gamma S_\Gamma(X) + b_\Gamma$ mit\\ 
+$a_\Gamma$ kann auf $a_{\Gamma^0}$ zurückgeführt werden,\\ 
+$b_\Gamma$ beliebig.\\
+d.h. durch die Wahl der Entropiefunktion für eine Substanz, z.B. $H_2O$, sind alle multiplikativen Konstanten festgelegt, additive Konstanten sind frei wählbar.\\
 Referenzsubstanz: z.B. $H_2O$, d.h. $X_0 \ll X_1, \quad X_0,X_1 \in \Gamma \Rightarrow S_\Gamma(X)$ festgelegt\\
-betrachte 2. Substanz $Y_0 \ll Y_1, \quad Y_0,Y_1 \in \Gamma' \Rightarrow S_{\Gamma'}(Y)$\\
+betrachte 2. Substanz $Y_0 \ll Y_1, \quad Y_0,Y_1 \in \Gamma' \Rightarrow S_{\Gamma'}(Y)$
 \begin{fleqn}
 \begin{equation}
 \begin{aligned}
-\text{bestimmt mit} \quad &(Y_0,tX_1) \sim (Y_1,tX_0)
-&\Rightarrow S_{\Gamma'}(Y_0)+tS_\Gamma(X_1)=S_{\Gamma'}(Y_0)+tS_\Gamma(X_0) \Leftrightarrow S_{\Gamma'}(Y_1)-S_{\Gamma'}(Y_0)=t(S_\Gamma
+\text{bestimmt mit} \quad &(Y_0,tX_1) \sim (Y_1,tX_0)\\
+&\Rightarrow S_{\Gamma'}(Y_0)+tS_\Gamma(X_1)=S_{\Gamma'}(Y_0)+tS_\Gamma(X_0)\\
+&\Leftrightarrow S_{\Gamma'}(Y_1)-S_{\Gamma'}(Y_0)=t(S_\Gamma(X_1)-S_\Gamma(X_0))
 \end{aligned}
 \end{equation}
 \item Betrachtung von Mischungen und chemischen Prozessen\\
@@ -214,14 +226,17 @@ $\Rightarrow$ alle additiven Konstanten sind durch die Wahl eines einzigen a bes
 \end{fleqn}
 \end{itemize}
 $\Rightarrow$ \textbf{globales Entropieprinzip}\\
-$\exists$ globale Entropiefunktion $S(X)$; eindeutig bis auf die Wahl einer multiplikativen und einer additiven Konstante.\\
-monton, additiv, skalierbar, konkav in Bezug auf adiabatische Erreichbarkeit und für alle Materialien
+$\exists$ globale Entropiefunktion $S(X)$:
+\begin{itemize}
+\item eindeutig bis auf die Wahl einer multiplikativen und einer additiven Konstante.
+\item monton, additiv, skalierbar, konkav in Bezug auf adiabatische Erreichbarkeit und für alle Materialien.
+\end{itemize}
 \begin{fleqn}
 \begin{equation}
 \begin{aligned}
 &X<Y \Leftrightarrow S(X) \leq S(Y)\\
 &X<Y \wedge Y<X \Leftrightarrow X \sim Y\\
-&X<Y \wedge Y\not{<}X \Leftrightarrow X \ll Y
+&X<Y \wedge Y\not<X \Leftrightarrow X \ll Y
 \end{aligned}
 \end{equation}
 \end{fleqn}
@@ -229,23 +244,39 @@ monton, additiv, skalierbar, konkav in Bezug auf adiabatische Erreichbarkeit und
 Die globale Entropiefunktion ist:
 \begin{itemize}
 \item stetig differenzierbar in Bezug auf alle extensiven thermodynamischen Variablen
-\item streng monoton wachsend in Bezug auf U
+\item streng monoton wachsend in Bezug auf U\footnote{diese Eigenschaften lassen sich auch durch weitere Axiome erzwingen}
 \end{itemize}
 \subsection{Kontrolle thermodynamischer Gleichgewichtszustände}
- Extensive Parameter $(\underbrace{(U,V,N)})$ sind kontrollierbar durch ``Wände''.\\
- $\quad \quad \quad:=X$\\
+ \begin{doublespacing}Extensive Parameter $(\underbrace{(U,V,N)}_{:=X})$ sind kontrollierbar durch ``Wände''.\end{doublespacing}\\
  Es gibt \textbf{adiabatische Wände} mit der Eigenschaft:\\
  Energieänderungen haben ihre Ursache in Arbeit
  \subsection{Grundproblem der Thermodynamik}
- 1. Ausgangspunkt Zusammengesetztes, abgeschlossenes, thermodynamisches System. Wände müssen Eeigenschaften stabilisieren.\\
- Beseitigt man die Wände zwischen  2 Systemen, gilt Energieerhaltung, aber man weiß nicht, wie sich diese Energie verteilt.
- 2. neuer thermodynamischer Gleichgewichtszustand, 5-dim statt 6-dim\\
- $\Rightarrow$ \textbf{Frage:} Was bestimmt $X$? Welcher neuerr thermodynamischer Zusstand ist adiabatisch erreichbar?\\
+ 1. Ausgangspunkt: Zusammengesetztes, abgeschlossenes, thermodynamisches System.\footnote{Skizze} Wände müssen Eigenschaften stabilisieren.\\
+ Beseitigt man die Wände zwischen  2 Systemen, gilt Energieerhaltung, aber man weiß nicht, wie sich diese Energie verteilt.\\
+ 2. Neuer thermodynamischer Gleichgewichtszustand, 5- statt 6-dimensional\\
+ $\Rightarrow$ \textbf{Frage:} Was bestimmt $X$? Welcher neuer thermodynamischer Zusstand ist adiabatisch erreichbar?\\
  \textbf{Postulat III:}\\
- Der neue adiabatisch erreichbarer thermmodynamischer Gleichgewichtszustand ist durch mmaximale Entropie charakterisiert,
- d.h. $S(X_0) \quad \rightarrow$  max.;\\
- falls $X_0$ eindeuutig $\rightarrow$  stabil\\
- \textbf{Tthermodynamischess Fundamentalrelation}\\
- $S(X) \quad \rightarrow$ $dS(U,V,N)= \frac{\partial S}{\partial U}\left.\right|_{(V,N)} dU  + \frac{\partial S}{\partial V}\left.\right|_{(U,N)} + \frac{\partial  S}{\partial N}\left.\right|_{(U,V)} dN =0$
+Der neue adiabatisch erreichbare, thermodynamische Gleichgewichtszustand ist durch maximale Entropie charakterisiert, d.h.\\
+ $S(X_0) \rightarrow$  max.,\\ 
+falls $X_0$ eindeutig, dann $X_0$ stabil\\
+ \textbf{Thermodynamische Fundamentalrelation}
+\begin{fleqn}
+\begin{equation}
+ \quad S(X) \xrightarrow{X=(U,V,N)} dS(U,V,N)= 
+\underbrace{\left.\frac{\partial S}{\partial U}\right|_{(V,N)}}
+  _{=:\frac{1}{T}} dU  + 
+\underbrace{\left.\frac{\partial S}{\partial V}\right|_{(U,N)}}
+  _{=:\frac{p}{T}} + 
+\underbrace{\left.\frac{\partial S}{\partial N}\right|
+  _{(U,V)}}_{=:-\frac{\mu}{T}} dN \stackrel{!}{=}0
+\end{equation}
+\end{fleqn}
+mit\\
+$T$: Temperatur\\
+$p$: Druck\\
+$\mu$: chemisches Potential\\
+$\rightarrow$ Kodierung eines thermodynamischen Systems entweder durch Angabe von\\
+$S(X)$ oder von \\
+$(T(X),p(X),\mu(X))$ 
 
 \end{document}
