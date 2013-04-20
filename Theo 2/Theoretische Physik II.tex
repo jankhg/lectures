@@ -1,0 +1,199 @@
+\documentclass[10pt,article,colorback,accentcolor=tud9d]{scrartcl}
+\usepackage[utf8]{inputenc} %?%
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} %cool beans%
+\usepackage[english,ngerman]{babel} %deutsche Schriftzeichen%
+\usepackage{amsmath} %für Formeln%
+\usepackage{float} %Für Position von Abbildungen%
+\usepackage[singlespacing]{setspace}
+\usepackage{nccmath}
+\usepackage[colorlinks,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis% 
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}%Ränder
+\usepackage{amssymb}%Für R reele zahlen
+\title{Theoretische Physik II}
+%\subtitle{Professor: Dr. Gernot Alber\\
+%Mitschrift von Philipp Dijkstal}
+%\subsubtitle{email: \textaccent{philipp.dijkstal@web.de}}
+%\institution{Fachbereich Physik}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+Vorlesung 2 vom 18.04.2013
+\section{Formalismus der Quantenmechanik}
+$\rightarrow$ mathematisches Handwerkszeug bereitstellen\\
+\begin{itemize}
+\item Lineare Algebra
+\item später: Analysis, Funktionentheorie
+\end{itemize}
+\subsection{Vektoren und Hilbert-Raum}
+\begin{itemize}
+\item Grundelement: Vektoren
+\item Schreibweise: Dirac-Notation\\
+$\rightarrow$ Ket-Symbole bzw. Kets\\
+$\left| \quad > \right.$ $\rightarrow$ Bezeichnungen innerhalb Symbol\\
+Bsp.: $\left| 0>\right.,\left|1>\right.,\left|n>\right.,\left|nlm>\right.,\left| \uparrow>\right.$
+\item Vektorraum: Ket-Vektoren sind Elemente eines linearen kompletten Vektorraums $(\nu)$\\
+$\left|1>\right.,\left|2>\right.,...,\left|\alpha>\right.,...,\left|\beta>\right.,... \in \nu$\\
+auf dem Addition zweier Vektoren 2 Multiplikationen mit $\mathbb{C}$-Zahl definiert
+\item Eigenschaften der Addition und Multiplikation einer Zahl aus $\mathbb{C}$
+\begin{fleqn}
+\begin{itemize}
+\item Abgeschlossenheit: 
+\begin{equation} 
+\left| \alpha >\right.+\left|\beta>\right. \in \nu
+\end{equation}
+\item Distributivität: 
+\begin{equation}
+\begin{aligned}
+C(\left|\alpha>\right. +\left|\beta>\right.) = C\left|\alpha>\right. +C\left|\beta>\right.\\
+(C+D)\left|\alpha>\right. = C\left|\alpha>\right. +D\left|\beta>\right.
+\end{aligned}
+\end{equation}
+\item Assoziativität: 
+\begin{equation}
+C(D\left|\alpha>\right.)=(CD)\left|\alpha>\right.
+\end{equation}
+\item Kommutativität der Addition: 
+\begin{equation}
+\left|\alpha>\right. + \left|\beta>\right. =\left|\beta>\right. + \left|\alpha>\right.
+\end{equation}
+\item Assoziativität der Addition: 
+\begin{equation}
+\left|\alpha>\right. + (\left|\beta>\right. + \left|\gamma>\right.) = (\left|\alpha>\right. + \left|\beta>\right.)+\left|\gamma>\right.
+\end{equation}
+\item Nullvektor: 
+\begin{equation}
+\begin{aligned}
+\left|\alpha>\right. +\left|0>\right. = \left|\alpha>\right.\\
+0 \left|\alpha>\right. = \left|0>\right.\\
+C \left|0>\right. = \left|0>\right.
+\end{aligned}
+\end{equation}
+\item Inverses Element bezüglich Addition:
+\begin{equation}
+\begin{aligned}
+\left|\alpha>\right. + \left|{\alpha}_{inv}>\right. = \left|0>\right.\\
+\left|{\alpha}_{inv}>\right. = -\left|\alpha>\right.
+\end{aligned}
+\end{equation}
+\end{itemize}
+\end{fleqn}
+\item Lineare Unabhängigkeit\\
+Der Satz
+\begin{fleqn}
+\begin{equation} \nonumber
+{\left|1>\right.,\left|2>\right.,...,\left|n>\right.}
+\end{equation}
+ist genau dann linear unabhängig, wenn
+\begin{equation}
+\sum {C}_i \left|i>\right. = \left|0>\right.
+\end{equation}
+\end{fleqn}
+nur für ${C}_1, {C}_2,...,{C}_n=0$\\
+erfüllt ist.
+\item Dimension des Vektorraums $\nu$ maximale Zahl linear unabhängiger Vektroen. 
+\item Basisentwicklung: Jeder Vektor $\left|\alpha>\right.$ eines n-dim. Vektorraums lässt sich eindeutig durch Linearkombination von n Basisvektoren \\
+${\left|1>\right.,\left|2>\right.,...,\left|n>\right.}$ mit Koeffizienten ${C}_1,...{C}_n$\\
+darstellen:\\
+$\left|\alpha>\right. = \sum {C}_i \left|i>\right.$
+\end{itemize}
+\subsection{Skalarprodukt und Hilbertraum}
+\begin{itemize}
+\item Skalarprodukt ordnet zwei Vektoren $\left|\alpha>\right.,\left|\beta>\right.$ eine $\mathbb{C}$-Zahl zu.\\
+Typische Schreibweisen:
+\begin{fleqn}
+\begin{equation}
+\vec{a}\vec{b} \quad (\vec{a}\vec{b})
+\end{equation}
+In Diracnotation:
+\begin{equation}
+<\alpha\left|\right.\beta>=<\alpha \left|\right|\beta>
+\end{equation}
+$\rightarrow$ bra(c)ket
+\item Eigenschaften
+\begin{itemize}
+\item Schiefsymmetrie:
+\begin{equation}
+\begin{aligned}
+<\alpha\left|\right.\beta> =(<\beta\left|\right.\alpha>)^*\\
+=<\beta\left|\right.\alpha>^*
+\end{aligned}
+\end{equation}
+\item Positive Semidefinit: 
+\begin{equation}
+<\alpha\left|\right.\alpha> \ \ \geq \ 0
+\end{equation}
+(wobei: $<\alpha\left|\right.\alpha> \ \ = 0 \Leftrightarrow \left|\alpha\right.> \ \ = \ \left|0\right.>$)
+\item Kombination von Schief-Symmetrie und Linearität im Ket:
+\begin{equation}
+\begin{aligned}
+\left|\right.\Psi> = C\left|\right.\beta>+D\left|\right.\gamma>\\
+<\alpha\left|\right.\Psi>=C<\alpha\left|\right.\beta> +D<\alpha\left|\right.\gamma>\\
+<\Psi\left|\right.\alpha>=<\alpha\left|\right.\Psi>^* \\
+ =(C <\alpha\left|\right.\beta> + D<\alpha\left|\right.\gamma>)^*\\
+=C^*(<\alpha\left|\right.\beta>)^* + ^*(<\alpha\left|\right.\gamma>)^*\\
+=C^*<\beta\left|\right.\alpha> +D^*<\gamma\left|\right.\alpha>
+\end{aligned}
+\end{equation}
+\end{itemize}
+\end{fleqn}
+\item Daher interpretiert man den ersten Faktor im Skalarprodukt als "`anderen Typ"' von Vektor: Bra-Vektoren
+\item Jedem Ket-Vektor $\left|\right.\alpha>$ ist über duale Korrespondenz ein Bra-Vektor zugeordnet\\
+$\left|\right.\alpha> \ \ \rightarrow \ \ <\alpha\left|\right.$\\
+Entscheidende Eigenschaft:
+\begin{fleqn}
+\begin{equation}
+\begin{aligned}
+\left|\right.\Psi> = C \left|\right.\alpha> +D\left|\right.\beta>\\
+\longleftrightarrow\\
+<\Psi\left|\right.=C^*<\alpha\left|\right. +D^* <\beta\left|\right.
+\end{aligned}
+\end{equation}
+\end{fleqn}
+\item Die Reihenfolge von Bra und Ket im Skalarprodukt ist wichtig!
+\item Manchmal auch:
+\begin{fleqn}
+\begin{equation}
+<\alpha\left|\right.=(\left|\right.\alpha>)^+ \leftarrow \text{hermetisch Adjungiert}
+\end{equation}
+\end{fleqn}
+\item Begriffe im Zusammenhang mit Skalarprodukt:
+\begin{itemize}
+\item Orthogonalität: Zwei Vektoren $\left|\right.\alpha>, \left|\right.\beta>$ sind orthogonal, wenn
+\begin{fleqn}
+\begin{equation}
+<\alpha\left|\right.\beta>=0
+\end{equation}
+\end{fleqn}
+\item Norm: Die Norm eines Vektors $\left|\right.\alpha>$ ist 
+\begin{fleqn}
+\begin{equation}
+\left|\right|\left|\right.\alpha>\left|\right|=\sqrt{<\alpha\left|\right.\alpha>}
+\end{equation}
+\end{fleqn}
+Ein Vektor ist normiert, wenn
+\begin{fleqn}
+\begin{equation}
+\left|\right|\left|\right.\alpha>\left|\right| =1 \quad <\alpha\left|\right.\alpha>
+\end{equation}
+\end{fleqn}
+\end{itemize}
+\item Orhonormierte Basis: Basis
+\begin{fleqn}
+\begin{equation}
+{\left|\right.1>,\left|\right.2>,...,\left|\right.i>,...,\left|\right.j>,...}
+\end{equation}
+\end{fleqn}
+heißt orthognonal wenn
+\end{itemize}
+
+\end{document}
