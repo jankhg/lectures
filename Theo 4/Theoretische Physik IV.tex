@@ -1,4 +1,4 @@
-\documentclass[10pt,article,colorback,accentcolor=tud9d]{tudreport}
+\documentclass[10pt,article,colorback,accentcolor=tud9d]{scrartcl}
 \usepackage[utf8]{inputenc} %?%
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} %cool beans%
@@ -16,6 +16,8 @@ linkcolor = black,
 plainpages = false,
 hypertexnames = false,
 citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis% 
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}%Ränder
+\usepackage{amssymb}%Für R reele zahlen
 \title{Theoretische Physik IV}
 %\subtitle{Professor: Dr. Gernot Alber\\
 %Mitschrift von Philipp Dijkstal}
@@ -143,8 +145,8 @@ ${X}_\lambda < {Y}_{\lambda'}$ oder ${X}_\lambda > {Y}_{\lambda'}$ oder beides\\
 Dazu gehören andere Zustandsräume $\Gamma_\lambda$.\\
 \begin{equation}
 \begin{aligned}
-\Gamma_{1-\lambda} x \Gamma_\lambda \quad &X_\lambda :=((1-\lambda)X_1,\lambda X_2) \quad X_1,X_2,Y_1,Y_{-2} \in \Gamma\\
-&Y_\lambda :=((1-\lambda)Y_1,\lambda Y_2)
+\Gamma_{1-\lambda} \times \Gamma_\lambda \ni \ X_\lambda &:=((1-\lambda)X_1,\lambda X_2) \quad X_1,X_2,Y_1,Y_{2} \in \Gamma\\
+Y_\lambda &:=((1-\lambda)Y_1,\lambda Y_2)
 \end{aligned}
 \end{equation}
 
@@ -254,12 +256,19 @@ Die globale Entropiefunktion ist:
  2. Neuer thermodynamischer Gleichgewichtszustand, 5- statt 6-dimensional\\
  $\Rightarrow$ \textbf{Frage:} Was bestimmt $X$? Welcher neuer thermodynamischer Zusstand ist adiabatisch erreichbar?\\
  \textbf{Postulat III:}\\
-Der neue adiabatisch erreichbare, thermodynamische Gleichgewichtszustand ist durch maximale Entropie charakterisiert, d.h.\\ $S(X_0) \quad \rightarrow$  max.,\\ 
+Der neue adiabatisch erreichbare, thermodynamische Gleichgewichtszustand ist durch maximale Entropie charakterisiert, d.h.\\
+ $S(X_0) \rightarrow$  max.,\\ 
 falls $X_0$ eindeutig, dann $X_0$ stabil\\
  \textbf{Thermodynamische Fundamentalrelation}
 \begin{fleqn}
 \begin{equation}
- \quad S(X) \xrightarrow{X=(U,V,N)} dS(U,V,N)= \underbrace{\left.\frac{\partial S}{\partial U}\right|_{(V,N)}}_{=:\frac{1}{T}} dU  + \underbrace{\left.\frac{\partial S}{\partial V}\right|_{(U,N)}}_{=:\frac{p}{T}} + \underbrace{\left.\frac{\partial S}{\partial N}\right|_{(U,V)}}_{=:-\frac{\mu}{T}} dN \stackrel{!}{=}0
+ \quad S(X) \xrightarrow{X=(U,V,N)} dS(U,V,N)= 
+\underbrace{\left.\frac{\partial S}{\partial U}\right|_{(V,N)}}
+  _{=:\frac{1}{T}} dU  + 
+\underbrace{\left.\frac{\partial S}{\partial V}\right|_{(U,N)}}
+  _{=:\frac{p}{T}} dV + 
+\underbrace{\left.\frac{\partial S}{\partial N}\right|
+  _{(U,V)}}_{=:-\frac{\mu}{T}} dN \stackrel{!}{=}0
 \end{equation}
 \end{fleqn}
 mit\\
@@ -269,4 +278,5 @@ $\mu$: chemisches Potential\\
 $\rightarrow$ Kodierung eines thermodynamischen Systems entweder durch Angabe von\\
 $S(X)$ oder von \\
 $(T(X),p(X),\mu(X))$ 
+
 \end{document}
