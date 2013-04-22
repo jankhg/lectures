@@ -116,7 +116,7 @@ Literatur:
   \end{itemize}
   
 \noindent \textbf{mathematisch:} \\
-  $X,Y \in \underbrace{\Gamma}_{\text{thermodynamisches System}}$ \\
+  $X,Y \in \underbrace{\Gamma}_{\text{thermodynamisches System}}$ \\Ordnungsrelation: $X<Y$ $ \Leftrightarrow S(X) \leq S(Y)$\\ \\
 \textbf{Notation:}
 \begin{fleqn}
 \begin{equation}
@@ -126,11 +126,6 @@ Literatur:
 \end{aligned}
 \end{equation}
 \end{fleqn}
-
-wird später führen zu: Ordnungsrelation
-\footnote{lies: ``Y kann von X aus genau dann erreicht werden, wenn die Entropie von X kleiner ist als die Entropie von Y.''}
-: $ X<Y \Leftrightarrow S(X) \leq S(Y) $ \\
-
 Zusammengesetze Systeme:
 \begin{fleqn}
 \begin{equation} \nonumber

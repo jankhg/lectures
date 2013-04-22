@@ -1,0 +1,4 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Grundprinzipien/-konzepte der Thermodynamik}{1}
+\contentsline {subsection}{\numberline {1.1}Thermodynamische Systeme}{1}
+\contentsline {subsection}{\numberline {1.2}Thermodynamische Gleichgewichtszust\IeC {\"a}nde}{1}
