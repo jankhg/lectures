@@ -56,7 +56,7 @@ auf dem Addition zweier Vektoren 2 Multiplikationen mit $\mathbb{C}$-Zahl defini
 \begin{equation}
 \begin{aligned}
 C(\left|\alpha>\right. +\left|\beta>\right.) = C\left|\alpha>\right. +C\left|\beta>\right.\\
-(C+D)\left|\alpha>\right. = C\left|\alpha>\right. +D\left|\beta>\right.
+(C+D)\left|\alpha>\right. = C\left|\alpha>\right. +D\left|\alpha>\right.
 \end{aligned}
 \end{equation}
 \item Assoziativität: 
@@ -189,11 +189,132 @@ Ein Vektor ist normiert, wenn
 \end{itemize}
 \item Orhonormierte Basis: Basis
 \begin{fleqn}
-\begin{equation}
+\begin{equation} \nonumber
 {\left|\right.1>,\left|\right.2>,...,\left|\right.i>,...,\left|\right.j>,...}
 \end{equation}
+heißt orthognonal wenn
+\begin{equation}
+<i\left|\right. j>={\delta}_{ij}
+\end{equation}
 \end{fleqn}
-heißt orthognonal wenn FEHLT
 \end{itemize}
-
+Vorlesung 3 - 23.04.2013\\
+\section{Lineare Operatoren}
+\begin{itemize}
+\item Operatoren sind formales Werkzeug, um Vektoren zu manipulieren. \\
+\begin{fleqn}
+$\rightarrow$ Operatoren beschreiben Abbildung von einem Ket $\left|\right. \alpha > \in \mathbb{H}$ auf einen anderen Ket  $\left|\right. \alpha' > \in \mathbb{H}$
+\begin{equation}
+  \left|\right. \alpha' > = \hat{A} \left|\right. \alpha >
+\end{equation}
+$\rightarrow$ Operatoren wirken immer nach rechts\\
+$\rightarrow$ Hütchen zur Unterscheidung von Zahlen, Matrizen,...
+\item In QM sind (fast) ausschleißlich lineare Operatoren relevant.
+\begin{equation}
+\begin{aligned}
+  \hat{A} (C\left|\right. \alpha > + D\left|\right. \beta >)&\\
+  &= \hat{A} C\left|\right. \alpha > + \hat{A} D \left|\right. \alpha >\\
+  &= C \hat{A} \left|\right. \alpha > + D \hat{A} \left|\right. \beta >
+\end{aligned}
+\end{equation}
+\item Assoziativität und Distributivität 
+\begin{equation}
+\begin{aligned}
+&(\hat{A} + \hat{B}) \left|\right. \alpha > = \hat{A} \left|\right. \alpha > + \hat{B} \left|\right. \alpha >\\
+&(\hat{A} \hat{B})\left|\right. \alpha >= \hat{A} (\hat{B} \left|\right. \alpha >)
+\end{aligned}
+\end{equation}
+\item Rechnen mit isolierten Operatoren z.B.
+\begin{equation}
+\begin{aligned}
+  &\hat{A} + \hat{B} = \hat{B} + \hat{A} \\
+  &(\hat{A} + \hat{B}) + \hat{C}= \hat{A} +(\hat{B}+ \hat{C})
+\end{aligned}
+\end{equation}
+Für Produkte von Operatoren
+\begin{equation}
+\begin{aligned}
+  &\hat{A}(\hat{B} \hat{C}) = (\hat{A} \hat{B})\hat{C}
+  &\hat{A}(\hat{B} + \hat{C}) = \hat{A}\hat{B} + \hat{B}\hat{C}
+\end{aligned}
+\end{equation}
+\item Vorsicht: Multiplikation ist nicht multiplikativ
+\begin{equation}
+\hat{A}\hat{B} \not= \hat{B}\hat{A}
+\end{equation}
+$\rightarrow$ Reihenfolge ist wesentlich
+\item Spezielle Operatoren
+  \begin{itemize}
+  \item Eins-Operator $\hat{1}$: $1h\left|\right. \alpha > = \left|\right. \alpha >$
+  \item Inverser Operator $\hat{A}^{-1}$: ${\hat{A}}^-1 \hat{A}\left|\right. \alpha > = \left|\right. \alpha >$\\
+  oder $\hat{1} = {\hat{A}}^{-1}\hat{A} = \hat{A} {\hat{A}}^{-1}$
+  \end{itemize}
+\item Spezieller Operator: dyadisches Produkt
+  \begin{equation}
+  \left|\right. \beta' ><\beta\left|\right.
+  \end{equation}
+  Anwendung auf Ket
+  \begin{equation}
+  (\left|\right. \beta' ><\beta\left|\right.)\left|\right.\alpha> = \left|\right.\beta'><\beta\left|\right.\alpha> \in \mathbb{C}
+  \end{equation}
+  $\rightarrow$ Wichtig z.B. für Spektraldarstellung von Operatoren
+\item Matrixelemente von Operatoren\\
+  Betrachte Transformation von $\left|\right. \beta >$ mittels $\hat{A}$
+  \begin{equation}
+  \left|\right. \beta'> = \hat{A}\left|\right. \beta>
+  \end{equation}
+  Skalarprodukt mit $<\alpha \left|\right.$
+  \begin{equation}
+  <\alpha\left|\right.\beta'> = \underbrace{<\alpha\left|\right.\hat{A}\left|\right.\beta>}_{\text{Matrixelement}}
+  \end{equation}
+\item Erwartungswert eines Operators: Diagonales Matrixelement
+  \begin{equation}
+  <\hat{A}>_\alpha = <\alpha \left|\right.\hat{A} \alpha>
+  \end{equation}
+\end{fleqn}
+\end{itemize}
+\textbf{Hermetische Adjunktion}
+\begin{fleqn}
+\begin{itemize}
+\item Übertragung der hermiteschen adjungierten für Matrizen auf Operatoren
+  \begin{equation}
+  <\alpha\left|\right.\hat{A}\left|\right.\beta> \ \xrightarrow{herm. adj.} (<\beta \left|\right.\hat{A}\left|\right.\alpha>)^*
+  \end{equation}
+  Def. herm. adj. Operator
+  \begin{equation}
+  <\alpha\left|\right.{\hat{A}}^t \left|\right. \beta>=(<\beta\left|\right.\hat{A}\left|\right.\alpha>)^*
+  \end{equation}
+\item Aus Definition folgen Rechenregeln
+  \begin{equation}
+  \begin{aligned}
+  &(C\hat{A})^t=C^*{\hat{A}}^t\\
+  &({\hat{A}}^t)^t=\hat{A}\\
+  &(\hat{A} + \hat{B})^t )= \hat{A}^t + \hat{B}^t\\
+  &(\hat{A}\hat{B})^t=\hat{B}^t\hat{A}^t
+  \end{aligned}
+  \end{equation}
+\item Universalrezept für herm. Adj.\\
+  1) Zyklische Umkehr der Reihenfolge\\
+  2) Komplex konjugieren der $\mathbb{C}$-Zahl\\
+  3) Ersetzung der Bras durch Kets u.U.\\
+  4) hermitesche Adjungierte der Einzeloperatoren\\
+  Bsp.:
+  \begin{equation}
+  \begin{aligned}
+  &(<\alpha\left|\right.\hat{A}^t+C\hat{A}\hat{B}\left|\right.\beta>)^t\\
+  &= (\left|\right.\beta>)^t (\hat{A}^t+C\hat{A}\hat{B})^t(<\alpha\left|\right.)^t\\
+  &= <\beta\left|\right. \hat{A} +C^*\hat{B}^t \hat{A}^t \left|\right.\alpha>
+  \end{aligned}
+  \end{equation}
+  Achtung: Ausdrücke wie $\alpha>\hat{A}$ oder $ \hat{A}<\alpha\left|\right.$ sind sinnnlos!
+\item Duale Korrespondenz
+  \begin{equation}
+  \begin{aligned}
+  &\left|\right.\alpha'>&=\hat{A}\left|\right.\alpha>\\
+  & &\updownarrow \\
+  &<\alpha'\left|\right.&=<\alpha\left|\right.\hat{A}^t
+  \end{aligned}
+  \end{equation}
+\end{itemize}
+\end{fleqn}
 \end{document}
