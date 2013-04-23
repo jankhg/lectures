@@ -277,6 +277,81 @@ $p$: Druck\\
 $\mu$: chemisches Potential\\
 $\rightarrow$ Kodierung eines thermodynamischen Systems entweder durch Angabe von\\
 $S(X)$ oder von \\
-$(T(X),p(X),\mu(X))$ 
+$(T(X),p(X),\mu(X))$ \\
+Vorlesung 3 23.4.2013\\
+Für stabiles Gleichgewicht: $dS=0$ und $d^2S<0$\\
+\textbf{Konsequenzen}:\\
+\begin{fleqn}
+(1) $\underbrace{S(U,V,N)}_{\text{entropische Fundamentalrelation}}$ ist streng monoton wachsend in U\\
+   $4\Rightarrow$
+ \begin{itemize}
+   \item $U(S,V,N)$ energetische Fundamentalrelation
+   \item $S(U,V,N) \rightarrow$ max. $\Leftrightarrow U(S,V,N) \rightarrow$ min. 
+   \item $\left.\frac{\partial S}{\partial U}\right|_{(V,N)} \gg 0$, $T:= \left.\frac{\partial U}{\partial S}\right|_{(V,N)} \geq 0$
+   \item \textbf{Postulat IV}: $\frac{\partial U}{\partial S} :=T=0$ für Zustände mit $S=0$
+ \end{itemize}
+ (2) Intensive Variablen thermodynamischer Systeme\\
+ z.B.: Sei $X=(U,V,N_j) \ \rightarrow \ S(X)$ extensive Variablen\\
+ $U(S,V,N_j) \Leftrightarrow S(U,V,N_j)$ Fundamentalrelationen
+ \begin{equation}
+   \rightarrow \ dU(X)= \underbrace{\frac{\partial U}{\partial S}}_{:=T(X)} dS(X) + \underbrace{\frac{\partial U}{\partial V}}_{:= -p(X)}dV(X) +\sum_j \underbrace{\frac{\partial U}{\partial N_j}}_{:=\mu_j(X)}dN_j(X)
+ \end{equation}
+ $S(U,V,N_j)$ bzw. $U(S,V,N_j)$ - Fundamentalrelationen
+ $\Leftrightarrow$ $T(X),p(X),\mu_j(X)$ - Zustandsgleichungen
+ Temperatur, Druck, chemisches Potential unabhängig von Systemgröße (intensiv)
+ \begin{itemize}
+  \item betrachte \textbf{quasistatischen Prozess}, d.h. $X<Y$ \textbf{und} alle Zwischenschritte sind termodynamische Gleichgewichtszustände\\
+   \textbf{Wärme}:
+   \begin{equation}
+    dU = \underbrace{TdS}_{:=\delta Q} \underbrace{-pdV}_{:=\delta W_M} + \underbrace{\sum_j \mu_j dN_j}_{:=\delta W_{ch}}
+   \end{equation}
+   Wärme, mechanische Arbeit, chemische Arbeit
+ \end{itemize}
+Langsame Prozesführung ist notwendig, um quasistatische Prozesse zu gewährleisten!\\
+(3) Eulersche Relationen
+  \begin{equation}
+  \begin{aligned}
+  &U_\lambda(\lambda S,\lambda V,\lambda N_j)=\lambda U(S,V,N_j) \quad \text{wegen Extensivität}\\
+  &\Rightarrow \left.\frac{d}{d\lambda}U_\lambda\right|_{\lambda = 1} =U(S,V,N_j) = \underbrace{\left.\frac{\partial U_\lambda}{\partial \lambda S}\right|}_{=T} S +\underbrace{\left.\frac{\partial U_\lambda}{\partial \lambda V}\right|}_{=-p} V +\sum_j \underbrace{\frac{\partial U_\lambda}{\partial \lambda N_j}}_{=\mu_j} N_j\\
+  &\Leftrightarrow U(X) =T(X)S(X)-p(X)V(X)+\sum_j \mu_j(X) N_j(X) \quad \text{Euler-Relation}\\
+  &\rightarrow S= \frac{U}{T}+\frac{p}{T}V -\sum_j\frac{\mu_j}{T}N_j
+  \end{aligned}
+  \end{equation}
+(4) Gibbs-Duhem Relationen:
+  \begin{equation}
+   dU=TdS -pdV+\sum_j\mu_jdN_j +\underbrace{SdT-Vdp+\sum_jN_jd\mu_j}_{=0\Rightarrow\text{nicht alle int. Variablen sind unabhängig!}}
+  \end{equation}
+\end{fleqn}
+\subsubsection{Einfache Thermodynamische Systeme}
+\begin{itemize}
+  \item \textbf{Einkomponentiges ideales Gas}\\
+   $X=(U,V,N)$, Referenzzustand $X_0=(U_0,V_0,N_0)$, $S(X_0)=N_0s_0$
+   \begin{equation}
+   S(U,V,N)=Ns_0 +NR \ ln\left\{\left(\frac{U}{U_0}\right)^c\left(\frac{V}{V_0}\right)\left(\frac{N}{N_0}\right)^{-(c+1)}\right\} \text{klassische Physik}
+   \end{equation}
+   $R=N_Ak_B=8,32JK^{-1}mol^{-1}$\\
+   $c= \frac{3}{2}$\\
+   $N_A=6,022 \times 10^{23}JK^{-1}$\\
+   $k_B=1,381 \times 10^{-23}JK^{-1}$\\
+  \item Einkomponentiges ``reales'' Gas
+   \begin{equation}
+   S(U,V,N)=Ns_0 + NR \ ln \left(\frac{\left(\frac{U}{N}+\frac{a}{V/N}\right)^c\left(\frac{V}{N} -b\right)}{\left(\frac{U_0}{N_0} + \frac{a}{V/N}\right)^c \left(\frac{V_0}{N_0}-b\right)}\right)
+   \end{equation}
+  \item Elektromagnetissches Feld: $X=(U,V)$\\
+   \begin{equation}
+    S(U,V)= \frac{4}{3}b^{1/4} U^{3/4}V^{1/4} \quad b:= \frac{\pi^2kg^4}{15 hquer^3 c^3} schlange 7,56 \times 10^{-16} Jm^{-3}K^{-4}
+    \end{equation}
+   $\rightarrow$ Zustandsgleichung
+   \begin{equation}
+   \begin{aligned}
+    &\frac{\partial S}{\partial U} tripelgleich \frac{1}{T} = b^{1/4} U^{-1/4} V^{1/4} \Leftrightarrow \frac{1}{T}=\left(b\frac{V}{U}\right)^{1/4}
+    &\frac{U}{V}=bT^4 \quad \text{Stefan-Boltzmann-Gesetz}\\
+    \frac{\partial S }{\partial V}=\frac{p}{T} \Leftrightarrow p=\frac{1}{3}\left(b\frac{U^3}{V^3}\right)^{1/4}\underbrace{T}_{\left(\frac{U}{V}\frac{1}{b}\right)^{1/4}}=\frac{1}{3}\frac{U}{V}
+   \end{aligned}
+   \end{equation}
+\end{itemize}
+\subsection{Thermische Gleichgewichtsbedingungen}
+\subsubsection{Thermisches Gleichgewicht und Temperatur}
+Problem: Bild
 
 \end{document}
