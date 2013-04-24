@@ -117,7 +117,7 @@ Typische Schreibweisen:
 \end{equation}
 In Diracnotation:
 \begin{equation}
-<\alpha\left|\right.\beta>=<\alpha \left|\right|\beta>
+<\alpha\left|\right.\beta> \ =<\alpha \left|\right|\beta>
 \end{equation}
 $\rightarrow$ bra(c)ket
 \item Eigenschaften
@@ -125,7 +125,7 @@ $\rightarrow$ bra(c)ket
 \item Schiefsymmetrie:
 \begin{equation}
 \begin{aligned}
-<\alpha\left|\right.\beta> =(<\beta\left|\right.\alpha>)^*
+<\alpha\left|\right.\beta> \ =(<\beta\left|\right.\alpha>)^*
 \end{aligned}
 \end{equation}
 \item Positive Semidefinit: 
@@ -136,9 +136,9 @@ $\rightarrow$ bra(c)ket
 \item Kombination von Schief-Symmetrie und Linearität im Ket:
 \begin{equation}
 \begin{aligned}
-\left|\right.\Psi> = C\left|\right.\beta>+D\left|\right.\gamma>\\
-<\alpha\left|\right.\Psi>=C<\alpha\left|\right.\beta> +D<\alpha\left|\right.\gamma>\\
-<\Psi\left|\right.\alpha>=<\alpha\left|\right.\Psi>^* \\
+\left|\right.\Psi> \ = C\left|\right.\beta>+D\left|\right.\gamma>\\
+<\alpha\left|\right.\Psi> \ =C<\alpha\left|\right.\beta> +D<\alpha\left|\right.\gamma>\\
+<\Psi\left|\right.\alpha> \ =<\alpha\left|\right.\Psi>^* \\
  =(C <\alpha\left|\right.\beta> + D<\alpha\left|\right.\gamma>)^*\\
 =C^*(<\alpha\left|\right.\beta>)^* + ^*(<\alpha\left|\right.\gamma>)^*\\
 =C^*<\beta\left|\right.\alpha> +D^*<\gamma\left|\right.\alpha>
@@ -153,7 +153,7 @@ Entscheidende Eigenschaft:
 \begin{fleqn}
 \begin{equation}
 \begin{aligned}
-\left|\right.\Psi> = C \left|\right.\alpha> +D\left|\right.\beta>\\
+\left|\right.\Psi> \ = C \left|\right.\alpha> +D\left|\right.\beta>\\
 \longleftrightarrow\\
 <\Psi\left|\right.=C^*<\alpha\left|\right. +D^* <\beta\left|\right.
 \end{aligned}
@@ -171,7 +171,7 @@ Entscheidende Eigenschaft:
 \item Orthogonalität: Zwei Vektoren $\left|\right.\alpha>, \left|\right.\beta>$ sind orthogonal, wenn
 \begin{fleqn}
 \begin{equation}
-<\alpha\left|\right.\beta>=0
+<\alpha\left|\right.\beta> \ =0
 \end{equation}
 \end{fleqn}
 \item Norm: Die Norm eines Vektors $\left|\right.\alpha>$ ist 
@@ -194,7 +194,7 @@ Ein Vektor ist normiert, wenn
 \end{equation}
 heißt orthognonal wenn
 \begin{equation}
-<i\left|\right. j>={\delta}_{ij}
+<i\left|\right. j> \ ={\delta}_{ij}
 \end{equation}
 \end{fleqn}
 \end{itemize}
@@ -205,7 +205,7 @@ heißt orthognonal wenn
 \begin{fleqn}
 $\rightarrow$ Operatoren beschreiben Abbildung von einem Ket $\left|\right. \alpha > \in \mathbb{H}$ auf einen anderen Ket  $\left|\right. \alpha' > \in \mathbb{H}$
 \begin{equation}
-  \left|\right. \alpha' > = \hat{A} \left|\right. \alpha >
+  \left|\right. \alpha' > \ = \hat{A} \left|\right. \alpha >
 \end{equation}
 $\rightarrow$ Operatoren wirken immer nach rechts\\
 $\rightarrow$ Hütchen zur Unterscheidung von Zahlen, Matrizen,...
@@ -220,8 +220,8 @@ $\rightarrow$ Hütchen zur Unterscheidung von Zahlen, Matrizen,...
 \item Assoziativität und Distributivität 
 \begin{equation}
 \begin{aligned}
-&(\hat{A} + \hat{B}) \left|\right. \alpha > = \hat{A} \left|\right. \alpha > + \hat{B} \left|\right. \alpha >\\
-&(\hat{A} \hat{B})\left|\right. \alpha >= \hat{A} (\hat{B} \left|\right. \alpha >)
+&(\hat{A} + \hat{B}) \left|\right. \alpha > \ = \hat{A} \left|\right. \alpha > + \hat{B} \left|\right. \alpha >\\
+&(\hat{A} \hat{B})\left|\right. \alpha > \ = \hat{A} (\hat{B} \left|\right. \alpha >)
 \end{aligned}
 \end{equation}
 \item Rechnen mit isolierten Operatoren z.B.
@@ -245,9 +245,17 @@ Für Produkte von Operatoren
 $\rightarrow$ Reihenfolge ist wesentlich
 \item Spezielle Operatoren
   \begin{itemize}
-  \item Eins-Operator $\hat{1}$: $1h\left|\right. \alpha > = \left|\right. \alpha >$
-  \item Inverser Operator $\hat{A}^{-1}$: ${\hat{A}}^-1 \hat{A}\left|\right. \alpha > = \left|\right. \alpha >$\\
-  oder $\hat{1} = {\hat{A}}^{-1}\hat{A} = \hat{A} {\hat{A}}^{-1}$
+  \item Eins-Operator 
+   \begin{equation}
+  \hat{1}: \quad \hat{1}\left|\right. \alpha > \ = \left|\right. \alpha >
+  \end{equation}
+  \item Inverser Operator 
+  \begin{equation}
+  \begin{aligned}
+  &\hat{A}^{-1}: {\hat{A}}^{-1} \hat{A}\left|\right. \alpha > \ = \left|\right. \alpha >\\
+  \text{oder} \quad &\hat{1} = {\hat{A}}^{-1}\hat{A} = \hat{A} {\hat{A}}^{-1}
+  \end{aligned}
+  \end{equation}
   \end{itemize}
 \item Spezieller Operator: dyadisches Produkt
   \begin{equation}
@@ -255,17 +263,17 @@ $\rightarrow$ Reihenfolge ist wesentlich
   \end{equation}
   Anwendung auf Ket
   \begin{equation}
-  (\left|\right. \beta' ><\beta\left|\right.)\left|\right.\alpha> = \left|\right.\beta'><\beta\left|\right.\alpha> \in \mathbb{C}
+  (\left|\right. \beta' ><\beta\left|\right.)\left|\right.\alpha> \ = \left|\right.\beta'><\beta\left|\right.\alpha> \in \mathbb{C}
   \end{equation}
   $\rightarrow$ Wichtig z.B. für Spektraldarstellung von Operatoren
 \item Matrixelemente von Operatoren\\
   Betrachte Transformation von $\left|\right. \beta >$ mittels $\hat{A}$
   \begin{equation}
-  \left|\right. \beta'> = \hat{A}\left|\right. \beta>
+  \left|\right. \beta'> \ = \hat{A}\left|\right. \beta>
   \end{equation}
   Skalarprodukt mit $<\alpha \left|\right.$
   \begin{equation}
-  <\alpha\left|\right.\beta'> = \underbrace{<\alpha\left|\right.\hat{A}\left|\right.\beta>}_{\text{Matrixelement}}
+  <\alpha\left|\right.\beta'> \ = \underbrace{<\alpha\left|\right.\hat{A}\left|\right.\beta>}_{\text{Matrixelement}}
   \end{equation}
 \item Erwartungswert eines Operators: Diagonales Matrixelement
   \begin{equation}
@@ -282,7 +290,7 @@ $\rightarrow$ Reihenfolge ist wesentlich
   \end{equation}
   Def. herm. adj. Operator
   \begin{equation}
-  <\alpha\left|\right.{\hat{A}}^t \left|\right. \beta>=(<\beta\left|\right.\hat{A}\left|\right.\alpha>)^*
+  <\alpha\left|\right.{\hat{A}}^t \left|\right. \beta> \ =(<\beta\left|\right.\hat{A}\left|\right.\alpha>)^*
   \end{equation}
 \item Aus Definition folgen Rechenregeln
   \begin{equation}
