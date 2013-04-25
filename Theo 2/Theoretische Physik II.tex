@@ -359,7 +359,7 @@ Vorlesung 4 - 25.04.2013
 \end{flushright}
 \subsection{Hermitesche und Unitäre Operatoren}
 \begin{itemize}
-  \item Fürh hermitesche operatoren gilt
+  \item Für hermitesche operatoren gilt
     \begin{equation}
     \hat{A}^t=\hat{A}
     \end{equation}
@@ -401,11 +401,11 @@ Vorlesung 4 - 25.04.2013
 \end{itemize}
 \subsection{Eingenwertproblem \& Darstellungen}
 \begin{itemize}
-  \item Gegeben sei Operator $\hat{A}$. Ket-Vektoren $\left.\right|a>$ heiße Eigenvektor zum Eigenwert a. Wenn
+  \item Gegeben sei Operator $\hat{A}$. Ket-Vektoren $\left.\right|a>$ heiße Eigenvektor zum Eigenwert a. \textcolor[rgb]{1,0,0}{Wenn}
     \begin{equation}
     \hat{A}\left.\right|a> \ = a\left.\right|a>
     \end{equation}
-    Die Eigenwerte sind im Allgemeinen komplexe Zahlen.
+    \textcolor[rgb]{1,0,0}{Die Eigenwerte sind im Allgemeinen komplexe Zahlen.}
   \item Spektrum des Operators: Gesamtheit der EW und EV.
   \item Diskrete EW / diskretes Spektrum oder kontinuierliche EW / kont. Spektrum oder Kombination
   \item Diskrete Spektren: endlich oder abzählbar unendlich viele EV\\
@@ -419,17 +419,17 @@ Vorlesung 4 - 25.04.2013
 Besondere Eigenschaften für EW-Problem hermitescher Operatoren
   \begin{itemize}
     \item Eigenwerte hermitescher Operatoren sind reell\\
-      $\rightarrow$ Beweis über reelen Erwartungswert und 
+      $\rightarrow$ Beweis über reellen Erwartungswert und 
       \begin{equation}
       a=\frac{<a\left.\right|\hat{A}\left.\right|a>}{<a\left.\right|a>}
       \end{equation}
-    \item Eigenvektoren zu verschiedenen EW sind orthogonal\\
+    \item Eigenvektoren zu verschiedenen EW sind orthogonal\\ \\
       a) Ohne Entartung:
          \begin{equation}
         \label{eq:ortho}
           <a\left.\right|a'> = 0 \quad \text{wenn} \quad a \neq a'
           \end{equation}
-          $\rightarrow$ Beweis über $(a-a') \ <a\left.\right|a'> = 0$
+          $\rightarrow$ Beweis über $(a-a') \ <a\left.\right|a'> = 0$\\ \\
       b) Mit Entartung:\\
          - Wie (a) für EV aus verschiedenen ent. Unterräumen\\
          - Innerhalb des ent. Unterraums muss explizit orthogonalisiert werden.
@@ -446,7 +446,7 @@ Besondere Eigenschaften für EW-Problem hermitescher Operatoren
     \end{equation}
   \item Vorrausgesetzt EV sind normiert, dann gilt zusammen mit Orthogonalität 
     \begin{equation}
-    <a_i\left.\right|a_j> \ = \Delta_{ij}
+    <a_i\left.\right|a_j> \ = \delta_{ij}
     \end{equation}
   \item Vollständigkeit: Entwicklung eines beliebigen Vektors $\left.\right|\beta>$ in Eigenbasis $\left.\right|a_i>$:
     \begin{equation}
@@ -457,8 +457,8 @@ Besondere Eigenschaften für EW-Problem hermitescher Operatoren
       \begin{aligned}
       <a_j\left.\right|\beta> \ &= \ <a_j\left.\right|\left(\sum_i C_i\left.\right|a_i>\right)\\
       &=\sum_iC_i<a_j\left.\right|a_i>\\
-      &=\sum_i C_i>a_j\left.\right|a_i>\\
-      &=sum_iC_i \Delta_{ij}\\
+      &\textcolor[rgb]{1,0,0}{=\sum_i C_i>a_j\left.\right|a_i>}\\
+      &=\sum_iC_i \Delta_{ij}\\
       &=C_j
       \end{aligned}
       \end{equation}
@@ -486,17 +486,17 @@ Besondere Eigenschaften für EW-Problem hermitescher Operatoren
     \end{equation}
     $\rightarrow$ Nutze Eigenwertberechnung
     \begin{equation}
-    \hat{A}\left.\right|a_j>=a_j\left.\right|a_j>
+    \hat{A}\left.\right|a_j>=a_j\left.\right|a_j> \nonumber
     \end{equation}
     \begin{equation}
     \begin{aligned}
     &\sum_{i,j}\left.\right|a_i><a_i\left.\right|\hat{A}\left.\right|a_j><a_j\left.\right|\\
-    &=\sum_{i,j}a_j\left.\right|a_i>\underbrace{<a_i\left.\right|a_j>}_{\Delta_{ij}}<a_j\left.\right|\\
-    &=\sum_ia_i\left.\right|a_i><a_i\left.\right|\\
-    &=sum_i\left.\right|a_i>a_i<a_i\left.\right|
+    =&\sum_{i,j}a_j\left.\right|a_i>\underbrace{<a_i\left.\right|a_j>}_{\Delta_{ij}}<a_j\left.\right|\\
+    =&\sum_ia_i\left.\right|a_i><a_i\left.\right|\\
+    =&\sum_i\left.\right|a_i>a_i<a_i\left.\right|
     \end{aligned}
     \end{equation}
-    $\rightarrow$ Sepktraldarstellung des Operators $\hat{A}$
+    $\rightarrow$ Spektraldarstellung des Operators $\hat{A}$
   
 \end{itemize}
 
