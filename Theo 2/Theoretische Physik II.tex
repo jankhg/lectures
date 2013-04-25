@@ -41,10 +41,14 @@ $\rightarrow$ mathematisches Handwerkszeug bereitstellen\\
 \item Schreibweise: Dirac-Notation\\
 $\rightarrow$ Ket-Symbole bzw. Kets\\
 $\left| \quad > \right.$ $\rightarrow$ Bezeichnungen innerhalb Symbol\\
-Bsp.: $\left| 0>\right.,\left|1>\right.,\left|n>\right.,\left|nlm>\right.,\left| \uparrow>\right.$
-\item Vektorraum: Ket-Vektoren sind Elemente eines linearen kompletten Vektorraums $(\nu)$\\
-$\left|1>\right.,\left|2>\right.,...,\left|\alpha>\right.,...,\left|\beta>\right.,... \in \nu$\\
-auf dem Addition zweier Vektoren 2 Multiplikationen mit $\mathbb{C}$-Zahl definiert
+Bsp.: $\left| 0>\right.,\left|1>\right.,\left|n>\right.,\left|nlm>\right.,
+\left| \uparrow>\right.$
+\item Vektorraum: Ket-Vektoren sind Elemente eines linearen kompletten 
+Vektorraums $(\nu)$\\
+$\left|1>\right.,\left|2>\right.,...,\left|\alpha>\right.,...,\left|\beta>
+\right.,... \in \nu$\\
+auf dem Addition zweier Vektoren 2 Multiplikationen mit $\mathbb{C}$-Zahl 
+definiert
 \item Eigenschaften der Addition und Multiplikation einer Zahl aus $\mathbb{C}$
 \begin{fleqn}
 \begin{itemize}
@@ -55,7 +59,8 @@ auf dem Addition zweier Vektoren 2 Multiplikationen mit $\mathbb{C}$-Zahl defini
 \item Distributivität: 
 \begin{equation}
 \begin{aligned}
-C(\left|\alpha>\right. +\left|\beta>\right.) = C\left|\alpha>\right. +C\left|\beta>\right.\\
+C(\left|\alpha>\right. +\left|\beta>\right.) = C\left|\alpha>\right. +C\left|
+\beta>\right.\\
 (C+D)\left|\alpha>\right. = C\left|\alpha>\right. +D\left|\alpha>\right.
 \end{aligned}
 \end{equation}
@@ -65,11 +70,13 @@ C(D\left|\alpha>\right.)=(CD)\left|\alpha>\right.
 \end{equation}
 \item Kommutativität der Addition: 
 \begin{equation}
-\left|\alpha>\right. + \left|\beta>\right. =\left|\beta>\right. + \left|\alpha>\right.
+\left|\alpha>\right. + \left|\beta>\right. =\left|\beta>\right. + \left|\alpha
+>\right.
 \end{equation}
 \item Assoziativität der Addition: 
 \begin{equation}
-\left|\alpha>\right. + (\left|\beta>\right. + \left|\gamma>\right.) = (\left|\alpha>\right. + \left|\beta>\right.)+\left|\gamma>\right.
+\left|\alpha>\right. + (\left|\beta>\right. + \left|\gamma>\right.) = (\left|
+\alpha>\right. + \left|\beta>\right.)+\left|\gamma>\right.
 \end{equation}
 \item Nullvektor: 
 \begin{equation}
@@ -101,15 +108,19 @@ ist genau dann linear unabhängig, wenn
 \end{fleqn}
 nur für ${C}_1, {C}_2,...,{C}_n=0$\\
 erfüllt ist.
-\item Dimension des Vektorraums $\nu$ maximale Zahl linear unabhängiger Vektroen. 
-\item Basisentwicklung: Jeder Vektor $\left|\alpha>\right.$ eines n-dim. Vektorraums lässt sich eindeutig durch Linearkombination von n Basisvektoren \\
-${\left|1>\right.,\left|2>\right.,...,\left|n>\right.}$ mit Koeffizienten ${C}_1,...{C}_n$\\
+\item Dimension des Vektorraums $\nu$ maximale Zahl linear unabhängiger 
+Vektroen. 
+\item Basisentwicklung: Jeder Vektor $\left|\alpha>\right.$ eines n-dim. 
+Vektorraums lässt sich eindeutig durch Linearkombination von n Basisvektoren \\
+${\left|1>\right.,\left|2>\right.,...,\left|n>\right.}$ mit Koeffizienten ${C}
+_1,...{C}_n$\\
 darstellen:\\
 $\left|\alpha>\right. = \sum {C}_i \left|i>\right.$
 \end{itemize}
 \subsection{Skalarprodukt und Hilbertraum}
 \begin{itemize}
-\item Skalarprodukt ordnet zwei Vektoren $\left|\alpha>\right.,\left|\beta>\right.$ eine $\mathbb{C}$-Zahl zu.\\
+\item Skalarprodukt ordnet zwei Vektoren $\left|\alpha>\right.,\left|\beta>
+\right.$ eine $\mathbb{C}$-Zahl zu.\\
 Typische Schreibweisen:
 \begin{fleqn}
 \begin{equation}
@@ -132,12 +143,14 @@ $\rightarrow$ bra(c)ket
 \begin{equation}
 <\alpha\left|\right.\alpha> \ \ \geq \ 0
 \end{equation}
-(wobei: $<\alpha\left|\right.\alpha> \ \ = 0 \Leftrightarrow \left|\alpha\right.> \ \ = \ \left|0\right.>$)
+(wobei: $<\alpha\left|\right.\alpha> \ \ = 0 \Leftrightarrow \left|
+\alpha\right.> \ \ = \ \left|0\right.>$)
 \item Kombination von Schief-Symmetrie und Linearität im Ket:
 \begin{equation}
 \begin{aligned}
 \left|\right.\Psi> \ = C\left|\right.\beta>+D\left|\right.\gamma>\\
-<\alpha\left|\right.\Psi> \ =C<\alpha\left|\right.\beta> +D<\alpha\left|\right.\gamma>\\
+<\alpha\left|\right.\Psi> \ =C<\alpha\left|\right.\beta> +D<\alpha\left|\right
+.\gamma>\\
 <\Psi\left|\right.\alpha> \ =<\alpha\left|\right.\Psi>^* \\
  =(C <\alpha\left|\right.\beta> + D<\alpha\left|\right.\gamma>)^*\\
 =C^*(<\alpha\left|\right.\beta>)^* + ^*(<\alpha\left|\right.\gamma>)^*\\
@@ -146,8 +159,10 @@ $\rightarrow$ bra(c)ket
 \end{equation}
 \end{itemize}
 \end{fleqn}
-\item Daher interpretiert man den ersten Faktor im Skalarprodukt als "`anderen Typ"' von Vektor: Bra-Vektoren
-\item Jedem Ket-Vektor $\left|\right.\alpha>$ ist über duale Korrespondenz ein Bra-Vektor zugeordnet\\
+\item Daher interpretiert man den ersten Faktor im Skalarprodukt als "`
+anderen Typ"' von Vektor: Bra-Vektoren
+\item Jedem Ket-Vektor $\left|\right.\alpha>$ ist über duale Korrespondenz 
+ein Bra-Vektor zugeordnet\\
 $\left|\right.\alpha> \ \ \rightarrow \ \ <\alpha\left|\right.$\\
 Entscheidende Eigenschaft:
 \begin{fleqn}
@@ -163,12 +178,14 @@ Entscheidende Eigenschaft:
 \item Manchmal auch:
 \begin{fleqn}
 \begin{equation}
-<\alpha\left|\right.=(\left|\right.\alpha>)^+ \leftarrow \text{hermetisch Adjungiert}
+<\alpha\left|\right.=(\left|\right.\alpha>)^+ \leftarrow \text{hermetisch 
+Adjungiert}
 \end{equation}
 \end{fleqn}
 \item Begriffe im Zusammenhang mit Skalarprodukt:
 \begin{itemize}
-\item Orthogonalität: Zwei Vektoren $\left|\right.\alpha>, \left|\right.\beta>$ sind orthogonal, wenn
+\item Orthogonalität: Zwei Vektoren $\left|\right.\alpha>, \left|\right.\beta>
+$ sind orthogonal, wenn
 \begin{fleqn}
 \begin{equation}
 <\alpha\left|\right.\beta> \ =0
@@ -177,13 +194,15 @@ Entscheidende Eigenschaft:
 \item Norm: Die Norm eines Vektors $\left|\right.\alpha>$ ist 
 \begin{fleqn}
 \begin{equation}
-\left|\right|\left|\right.\alpha>\left|\right|=\sqrt{<\alpha\left|\right.\alpha>}
+\left|\right|\left|\right.\alpha>\left|\right|=\sqrt{<\alpha\left|\right.
+\alpha>}
 \end{equation}
 \end{fleqn}
 Ein Vektor ist normiert, wenn
 \begin{fleqn}
 \begin{equation}
-\left|\right|\left|\right.\alpha>\left|\right| =1 \quad <\alpha\left|\right.\alpha>
+\left|\right|\left|\right.\alpha>\left|\right| =1 \quad <\alpha\left|\right.
+\alpha>
 \end{equation}
 \end{fleqn}
 \end{itemize}
@@ -203,7 +222,9 @@ heißt orthognonal wenn
 \begin{itemize}
 \item Operatoren sind formales Werkzeug, um Vektoren zu manipulieren. \\
 \begin{fleqn}
-$\rightarrow$ Operatoren beschreiben Abbildung von einem Ket $\left|\right. \alpha > \in \mathbb{H}$ auf einen anderen Ket  $\left|\right. \alpha' > \in \mathbb{H}$
+$\rightarrow$ Operatoren beschreiben Abbildung von einem Ket $\left|\right. 
+\alpha > \in \mathbb{H}$ auf einen anderen Ket  $\left|\right. \alpha' > \in 
+\mathbb{H}$
 \begin{equation}
   \left|\right. \alpha' > \ = \hat{A} \left|\right. \alpha >
 \end{equation}
@@ -220,8 +241,10 @@ $\rightarrow$ Hütchen zur Unterscheidung von Zahlen, Matrizen,...
 \item Assoziativität und Distributivität 
 \begin{equation}
 \begin{aligned}
-&(\hat{A} + \hat{B}) \left|\right. \alpha > \ = \hat{A} \left|\right. \alpha > + \hat{B} \left|\right. \alpha >\\
-&(\hat{A} \hat{B})\left|\right. \alpha > \ = \hat{A} (\hat{B} \left|\right. \alpha >)
+&(\hat{A} + \hat{B}) \left|\right. \alpha > \ = \hat{A} \left|\right. \alpha >
+ + \hat{B} \left|\right. \alpha >\\
+&(\hat{A} \hat{B})\left|\right. \alpha > \ = \hat{A} (\hat{B} \left|\right. 
+\alpha >)
 \end{aligned}
 \end{equation}
 \item Rechnen mit isolierten Operatoren z.B.
@@ -252,7 +275,8 @@ $\rightarrow$ Reihenfolge ist wesentlich
   \item Inverser Operator 
   \begin{equation}
   \begin{aligned}
-  &\hat{A}^{-1}: {\hat{A}}^{-1} \hat{A}\left|\right. \alpha > \ = \left|\right. \alpha >\\
+  &\hat{A}^{-1}: {\hat{A}}^{-1} \hat{A}\left|\right. \alpha > \ = \left|\right
+. \alpha >\\
   \text{oder} \quad &\hat{1} = {\hat{A}}^{-1}\hat{A} = \hat{A} {\hat{A}}^{-1}
   \end{aligned}
   \end{equation}
@@ -263,7 +287,8 @@ $\rightarrow$ Reihenfolge ist wesentlich
   \end{equation}
   Anwendung auf Ket
   \begin{equation}
-  (\left|\right. \beta' ><\beta\left|\right.)\left|\right.\alpha> \ = \left|\right.\beta'><\beta\left|\right.\alpha> \in \mathbb{C}
+  (\left|\right. \beta' ><\beta\left|\right.)\left|\right.\alpha> \ = \left|
+\right.\beta'><\beta\left|\right.\alpha> \in \mathbb{C}
   \end{equation}
   $\rightarrow$ Wichtig z.B. für Spektraldarstellung von Operatoren
 \item Matrixelemente von Operatoren\\
@@ -273,7 +298,8 @@ $\rightarrow$ Reihenfolge ist wesentlich
   \end{equation}
   Skalarprodukt mit $<\alpha \left|\right.$
   \begin{equation}
-  <\alpha\left|\right.\beta'> \ = \underbrace{<\alpha\left|\right.\hat{A}\left|\right.\beta>}_{\text{Matrixelement}}
+  <\alpha\left|\right.\beta'> \ = \underbrace{<\alpha\left|\right.\hat{A}\left
+|\right.\beta>}_{\text{Matrixelement}}
   \end{equation}
 \item Erwartungswert eines Operators: Diagonales Matrixelement
   \begin{equation}
@@ -286,11 +312,13 @@ $\rightarrow$ Reihenfolge ist wesentlich
 \begin{itemize}
 \item Übertragung der hermiteschen adjungierten für Matrizen auf Operatoren
   \begin{equation}
-  <\alpha\left|\right.\hat{A}\left|\right.\beta> \ \xrightarrow{herm. adj.} (<\beta \left|\right.\hat{A}\left|\right.\alpha>)^*
+  <\alpha\left|\right.\hat{A}\left|\right.\beta> \ \xrightarrow{herm. adj.} (<
+\beta \left|\right.\hat{A}\left|\right.\alpha>)^*
   \end{equation}
   Def. herm. adj. Operator
   \begin{equation}
-  <\alpha\left|\right.{\hat{A}}^t \left|\right. \beta> \ =(<\beta\left|\right.\hat{A}\left|\right.\alpha>)^*
+  <\alpha\left|\right.{\hat{A}}^t \left|\right. \beta> \ =(<\beta\left|\right.
+\hat{A}\left|\right.\alpha>)^*
   \end{equation}
 \item Aus Definition folgen Rechenregeln
   \begin{equation}
@@ -310,11 +338,13 @@ $\rightarrow$ Reihenfolge ist wesentlich
   \begin{equation}
   \begin{aligned}
   &(<\alpha\left|\right.\hat{A}^t+C\hat{A}\hat{B}\left|\right.\beta>)^t\\
-  &= (\left|\right.\beta>)^t (\hat{A}^t+C\hat{A}\hat{B})^t(<\alpha\left|\right.)^t\\
+  &= (\left|\right.\beta>)^t (\hat{A}^t+C\hat{A}\hat{B})^t(<\alpha\left|\right
+.)^t\\
   &= <\beta\left|\right. \hat{A} +C^*\hat{B}^t \hat{A}^t \left|\right.\alpha>
   \end{aligned}
   \end{equation}
-  Achtung: Ausdrücke wie $\alpha>\hat{A}$ oder $ \hat{A}<\alpha\left|\right.$ sind sinnnlos!
+  Achtung: Ausdrücke wie $\alpha>\hat{A}$ oder $ \hat{A}<\alpha\left|\right.$ 
+sind sinnnlos!
 \item Duale Korrespondenz
   \begin{equation}
   \begin{aligned}
@@ -324,5 +354,155 @@ $\rightarrow$ Reihenfolge ist wesentlich
   \end{aligned}
   \end{equation}
 \end{itemize}
+\begin{flushright}
+Vorlesung 4 - 25.04.2013
+\end{flushright}
+\subsection{Hermitesche und Unitäre Operatoren}
+\begin{itemize}
+  \item Fürh hermitesche operatoren gilt
+    \begin{equation}
+    \hat{A}^t=\hat{A}
+    \end{equation}
+    selbst-adjungiert
+  \item Erwartungswerte von hermiteschen Operatoren sind reell.
+    \begin{equation}
+    <\alpha\left.\right|\hat{A}\left.\right|\alpha> \ =  \left(<\alpha \left.\right| \hat{A}^t \left.\right| \alpha >\right)^* = \left(<\alpha \left.\right|\hat{A}\left.\right|\alpha>\right)^*
+    \end{equation}
+    $\Rightarrow$ $<\alpha\left.\right|\hat{A}\left.\right|\alpha> \in \mathbb{R}$
+  \item Für unitäre Operatoren gilt
+    \begin{equation}
+    \hat{U}^t=\hat{U}^{-1} \quad \text{bzw} \quad \hat{U}^t\hat{U}=\hat{1}
+    \end{equation}
+  \item Anwendung eines unitären Operatoren ändert Normierung nicht
+    \begin{equation} \nonumber
+     \left.\right|\alpha'> \ = \hat{U}\left.\right|\alpha> \quad <\alpha'\left.\right|= \ <\alpha\left.\right|\hat{U}^t
+    \end{equation}
+    \begin{equation}
+    \begin{aligned}
+    <\alpha'\left.\right|\alpha'> \ =& \ <\alpha\left.\right|\underbrace{\hat{U}^t\hat{U}}_{\hat{1}}\left.\right|\alpha>\\
+    &= \ <\alpha\left.\right|\hat{1}\left.\right|\alpha>
+    \end{aligned}
+    \end{equation}
+    \end{itemize}
+\subsection{Funktionen von Operatoren}
+\begin{itemize}
+  \item Funktionen von Operatoren sind nur über Reihendarstellungen definiert z.B.
+    \begin{equation}
+    F(\hat{A})=\sum^\infty_{n=0}a_n\hat{A}^n
+    \end{equation}
+  \item Bsp: Exponentialfunktion
+    \begin{equation}
+    exp(c\hat{A})= \sum^\infty_{n=0}\frac{c^n}{n!}\hat{A}^n
+    \end{equation}
+  \item Durch Nicht-Kommutativität des Produkts von Operatoren gelten viele Rechenregeln für spezielle Funktionen \textbf{nicht} mehr z.B.
+  \begin{equation}
+  exp(\hat{A}+\hat{B})\neq exp(\hat{A}) +exp(\hat{B}), \quad \text{wenn} \quad \hat{A}\hat{B} \neq \hat{B}\hat{A}
+  \end{equation}
+\end{itemize}
+\subsection{Eingenwertproblem \& Darstellungen}
+\begin{itemize}
+  \item Gegeben sei Operator $\hat{A}$. Ket-Vektoren $\left.\right|a>$ heiße Eigenvektor zum Eigenwert a. Wenn
+    \begin{equation}
+    \hat{A}\left.\right|a> \ = a\left.\right|a>
+    \end{equation}
+    Die Eigenwerte sind im Allgemeinen komplexe Zahlen.
+  \item Spektrum des Operators: Gesamtheit der EW und EV.
+  \item Diskrete EW / diskretes Spektrum oder kontinuierliche EW / kont. Spektrum oder Kombination
+  \item Diskrete Spektren: endlich oder abzählbar unendlich viele EV\\
+    $\rightarrow$ kompatibel mit mathematischem Hilbertraum
+  \item kontinuierliche Spektrum: überabzählbar unendlich viele EV\\
+    $\rightarrow$ erweiterter Hilbertraum
+  \item Entartung: Mehrere Eigenzustände zum selben EW\\
+    $\rightarrow$ Entartungsindex\footnote{Komma nicht nötig} $\left.\right|a,n>$
+\end{itemize}
+\subsection{Eingenwertproblem hermitescher Operatoren}
+Besondere Eigenschaften für EW-Problem hermitescher Operatoren
+  \begin{itemize}
+    \item Eigenwerte hermitescher Operatoren sind reell\\
+      $\rightarrow$ Beweis über reelen Erwartungswert und 
+      \begin{equation}
+      a=\frac{<a\left.\right|\hat{A}\left.\right|a>}{<a\left.\right|a>}
+      \end{equation}
+    \item Eigenvektoren zu verschiedenen EW sind orthogonal\\
+      a) Ohne Entartung:
+         \begin{equation}
+        \label{eq:ortho}
+          <a\left.\right|a'> = 0 \quad \text{wenn} \quad a \neq a'
+          \end{equation}
+          $\rightarrow$ Beweis über $(a-a') \ <a\left.\right|a'> = 0$
+      b) Mit Entartung:\\
+         - Wie (a) für EV aus verschiedenen ent. Unterräumen\\
+         - Innerhalb des ent. Unterraums muss explizit orthogonalisiert werden.
+    \item Eigenvektoren bilden eine vollst. orthonormierte Basis\\
+      - Orthogonalität aus \ref{eq:ortho}\\
+      - Normierung ist für diskrete Spektren einfach, für kontinuierliche Spektren ist Vorsicht geboten.\\
+      - Vollständigkeit: bewiesen für diskrete Spektren aber für kontinuierliche Spektren ist Vollständigkeit mathematisch noch nicht gezeigt. $\rightarrow$ Postulat!
+  \end{itemize}
+\textbf{Diskerete Eigenbasen}
+\begin{itemize}
+  \item Eigenwertproblem eines herm. Op. $\hat{A}$ mit diskretem Spektrum
+    \begin{equation}
+    \hat{A}\left.\right|a_i> \ = a_i\left.\right|a_i> \quad i:\text{Zählindex}
+    \end{equation}
+  \item Vorrausgesetzt EV sind normiert, dann gilt zusammen mit Orthogonalität 
+    \begin{equation}
+    <a_i\left.\right|a_j> \ = \Delta_{ij}
+    \end{equation}
+  \item Vollständigkeit: Entwicklung eines beliebigen Vektors $\left.\right|\beta>$ in Eigenbasis $\left.\right|a_i>$:
+    \begin{equation}
+    \left.\right|\beta> \ = \sum_i C_i \left.\right|a_i >
+    \end{equation}
+    - Multiplikation $<a_j\left.\right|$
+      \begin{equation}
+      \begin{aligned}
+      <a_j\left.\right|\beta> \ &= \ <a_j\left.\right|\left(\sum_i C_i\left.\right|a_i>\right)\\
+      &=\sum_iC_i<a_j\left.\right|a_i>\\
+      &=\sum_i C_i>a_j\left.\right|a_i>\\
+      &=sum_iC_i \Delta_{ij}\\
+      &=C_j
+      \end{aligned}
+      \end{equation}
+    - Einsetzen in Entwicklung
+    \begin{equation}
+    \begin{aligned}
+      \left.\right|\beta> \ &= \sum_i\left(<a_i\left.\right|\beta>\right) \left.\right|a_i>\\
+      &=\sum_i\left.\right|a_i><a_i\left.\right|\beta>\\
+      &=\left(\sum_i\left.\right|a_i><a_i\left.\right|\right)\left.\right|\beta>\\
+      &=\hat{1}\left.\right|\beta>
+    \end{aligned}
+    \end{equation}
+  \item Zerlegung des $\hat{1}$-Operators
+    \begin{equation}
+    \hat{1}= \sum_i \left.\right|a_i><a_i\left.\right|
+    \end{equation}
+    $\rightarrow$ Sehr nützliches Rechenwerkzeug
+  \item Beispiel:für "`triviale"' Rechnung:
+    \begin{equation}
+    \begin{aligned}
+    \hat{A} &= \hat{1}\hat{A}\hat{1}\\
+    &=\left(\sum_i\left.\right|a_i><a_i\left.\right|\right)\hat{A}\left(\sum_j\left.\right|a_j><a_j\left.\right|\right)\\
+    &=\sum_{i,j}\left.\right|a_i><a_i\left.\right|\hat{A}\left.\right|a_j><a_j\left.\right|
+    \end{aligned}
+    \end{equation}
+    $\rightarrow$ Nutze Eigenwertberechnung
+    \begin{equation}
+    \hat{A}\left.\right|a_j>=a_j\left.\right|a_j>
+    \end{equation}
+    \begin{equation}
+    \begin{aligned}
+    &\sum_{i,j}\left.\right|a_i><a_i\left.\right|\hat{A}\left.\right|a_j><a_j\left.\right|\\
+    &=\sum_{i,j}a_j\left.\right|a_i>\underbrace{<a_i\left.\right|a_j>}_{\Delta_{ij}}<a_j\left.\right|\\
+    &=\sum_ia_i\left.\right|a_i><a_i\left.\right|\\
+    &=sum_i\left.\right|a_i>a_i<a_i\left.\right|
+    \end{aligned}
+    \end{equation}
+    $\rightarrow$ Sepktraldarstellung des Operators $\hat{A}$
+  
+\end{itemize}
+
+
+
+
+
 \end{fleqn}
 \end{document}
