@@ -371,7 +371,11 @@ $S(X_1,X_2)=S_1(X_1)+S_2(X_2)$  Additivität
 dS=\underbrace{\frac{\partial S_1}{\partial U_1}}_{:=\frac{1}{T_1(X_1}}dU_1 +\underbrace{\frac{\partial S_2}{\partial U_2}}_{:=\frac{1}{T_2(X_2)}}\underbrace{dU_2}_{=-dU_1} = \left(\frac{1}{T_1(X_1)}-\frac{1}{T_2(X_2)}\right)dU_1 \stackrel{!}{=} 0
 \end{equation}
 \begin{itemize}
-  \item neuer thermodynamischer Gleichgewichtszustand  FEHLT
+  \item neuer thermodynamischer Gleichgewichtszustand
+    \begin{equation}
+      T_1(X_1) = T_2(X_2); \quad X_1=(U_1,V_1,N_1); \quad X_2=(U-U_1,V_2,N_2) \quad \text{mit} \quad U=U_1+U_2
+    \end{equation}
+
   \item Betrachtung eines quasistatischen Prozesses:
     \begin{equation}
     dS=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU_1 \geq 0 \quad \text{für} X<Y
@@ -393,13 +397,13 @@ dS=\underbrace{\frac{\partial S_1}{\partial U_1}}_{:=\frac{1}{T_1(X_1}}dU_1 +\un
 \text{sei} T_1=T_2 \wedge P_1 >P_2 \Rightarrow dV_1>0
 \end{equation}
 \subsubsection{Chemisches Gleichgewicht}
-adiabate Want $\rightarrow$ diabate Wand\\
-impenneable Want $\rightarrow$ penneable Wand\\
+adiabate Wand $\rightarrow$ diabate Wand\\
+impermeable Wand $\rightarrow$ permeable Wand\\
 $U_1+U_2=U$\\
 $N_1 + N_2 = N$
 \begin{equation}
-  dS= \left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU_1+\underbrace{\left(\frac{\partial S_1}{\partial N_1}\right.}_{:=\frac{\mu_1}{T_1}}
-  -\underbrace{\left.\frac{\partial S_2}{\partial N_2}\right)}_{:=\frac{\mu_2}{T_2}}dN_1\stackrel{!}{=}0
+  dS= \left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU_1+\underbrace{\left(\frac{\partial S_1}{\partial N_1}\right.}_{=:-\frac{\mu_1}{T_1}}
+  -\underbrace{\left.\frac{\partial S_2}{\partial N_2}\right)}_{=:-\frac{\mu_2}{T_2}}dN_1\stackrel{!}{=}0
 \end{equation}
 \begin{equation}
  \left. 
@@ -409,7 +413,8 @@ $N_1 + N_2 = N$
   \end{aligned}
  \right\} \rightarrow (U_1,N_1)
 \end{equation}
-Sei $T_1=T_2 \wedge \mu_1$ FEHLT
+$ 0 \leq dS = - \left( \frac{\mu_1}{T_1} - \frac{\mu_2}{T_2} \right) dN_1 $ \\
+Sei $T_1=T_2 \wedge \mu_1 > \mu_2 \Rightarrow dN_1 < 0 $
 \subsubsection{Adiabatische Erreichbarkeit thermodynamischer Prozesse}
 \textbf{2. Hauptsatz der Thermodynamik:}\\
 Konsequenz von: $S(X)$ konkav und $T:=\frac{\partial U}{\partial S} \geq 0$\\
