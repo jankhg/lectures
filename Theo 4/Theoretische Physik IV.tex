@@ -500,12 +500,17 @@ zu zeigen:\\
 \begin{equation}
 \begin{aligned}
 dS&=\frac{\partial S}{\partial U}dU+\frac{\partial S}{\partial V}dV+\frac{\partial S}{\partial N}dN+\left.\sum_\alpha\frac{\partial S}{\partial X_\alpha}\right|_UdX_\alpha\\
-dU&=\frac{\partial U}{\partial S}dS+\frac{\partial U}{\partial V}dV+\frac{\partial U}{\partial N}dN+\left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha\\
-\text{für beide obeigen Gleichungen gilt:}\quad dV=dN=0\\
-\text{für} \quad dU=0 \quad \text{gilt:} \quad \frac{\partial U}{\partial S}dS + \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha = 0
-  => dS = -\frac{1}{T} \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha \\
-=> dS = 0 <=> -\frac{1}{T} \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha = 0 <=> U \text{extremal für} \quad S=const. \\ 
-T(S,V,N) := \frac{\partial U}{\partial S}(S,V,N) \rightarrow S(T,V,N)
+dU&=\frac{\partial U}{\partial S}dS+\frac{\partial U}{\partial V}dV+\frac{\partial U}{\partial N}dN+\left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha
+\end{aligned}
+\end{equation}
+für beide obeigen Gleichungen gilt:$dV=dN=0$
+für $dU=0$ gilt: 
+\begin{equation}
+\begin{aligned}
+&\quad \frac{\partial U}{\partial S}dS + \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha = 0\\
+  &=> dS = -\frac{1}{T} \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha \\
+&=> dS = 0 <=> -\frac{1}{T} \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha = 0 <=> U \text{extremal für} \quad S=const. \\ 
+&T(S,V,N) := \frac{\partial U}{\partial S}(S,V,N) \rightarrow S(T,V,N)
 \end{aligned}
 \end{equation}
 \end{fleqn}
