@@ -1,4 +1,4 @@
-\documentclass[10pt,article,colorback,accentcolor=tud9d]{scrartcl}
+\documentclass[10pt]{scrartcl}
 \usepackage[utf8]{inputenc} %?%
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} %cool beans%
@@ -19,6 +19,7 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}%Ränder
 \usepackage{amssymb}%Für R reele zahlen
 \title{Theoretische Physik IV}
+\author{Philipp Dijkstal und Jan Krause}
 %\subtitle{Professor: Dr. Gernot Alber\\
 %Mitschrift von Philipp Dijkstal}
 %\subsubtitle{email: \textaccent{philipp.dijkstal@web.de}}
@@ -426,7 +427,81 @@ Konsequenz von: $S(X)$ konkav und $T:=\frac{\partial U}{\partial S} \geq 0$\\
 \end{itemize}
 
 
+\begin{flushright}
+Vorlesung 5 - 30.04.2013
+\end{flushright}
+\subsubsection{Thermodynamische Maschinen}
+\begin{itemize}
+	\item Wärmekraftmaschine\\
+    $\Delta W_b >0$, maximal bei gegebener $-\Delta U_a>0$
+  \item Kühlschrank\\
+    $-\Delta Q_c >0$, maximal bei gegebener $-\Delta W_b>0$
+  \item Wärmepumpe\\
+    $\Delta U_a \equiv \Delta Q_C >0$, maximal bei gegebener $-\Delta W_b >0$
+\end{itemize}
+\textbf{Energie:}
+\begin{equation}
+-\Delta U_a = \Delta W_b + \Delta Q_C
+\end{equation}
+\textbf{Entropie:}
+\begin{equation}
+\Delta S_a +\underbrace{S_b}_{=0}+ \Delta S_C \geq 0
+\end{equation}
 
+Aber: Keine Aussage, wie die Prozesse genau ablaufen\\
+Doch wegen Eigenschaften der Enropiefunktion gilt
+\begin{equation}
+\Delta S_i \leq \frac{1}{T_i}\Delta U_i
+\end{equation}
+System ohne Arbeitskoordinaten 
+\begin{eqnarray}
+\Rightarrow &\Delta U_i &= \Delta Q_i\\
+&\Delta Q_i &\geq T_i\Delta S_i\\
+&-\Delta Q_a &\equiv -\Delta U_a \leq-T_a\Delta S_a
+\end{eqnarray}
+\textbf{Wärmekraftmaschine}
+\begin{equation}
+\begin{aligned}
+&\Delta W_b=\\
+&-\Delta U_a- \underbrace{\Delta Q_C}_{\geq T_C \Delta S_C}\leq -\Delta U_a-T_c\Delta S_C\leq -T_a\Delta S_a-T_C\Delta S_c\leq -T_a\Delta S_a+T_c\Delta S_a=(T_c-T_a)\Delta S_a
+\end{aligned}
+\end{equation}
+\begin{equation}
+\eta := \frac{\Delta W_b}{-\Delta U_a}\leq\frac{-\Delta U_a +T_c\Delta S_a}{- U_a}=1+\frac{T_c\Delta S_a}{T_a}\leq 1+\frac{T_c\Delta S_a}{-T_a\Delta S_a}= 1-\frac{T_c}{T_a}:=\eta_c
+\label{eq:carnot}
+\end{equation}
+\textbf{Kühlschrank}\\
+\begin{equation}
+\eta_K:=\left(\frac{-\Delta Q_c}{-\Delta W_b}\right)\leq\frac{T_c}{T_a-T_c}
+\end{equation}
+\textbf{Wärmepumpe}\\
+\begin{equation}
+\eta_W:=\left(\frac{\Delta Q_A}{-\Delta W_b}\right)\leq\frac{T_a}{T_a-T_c}
+\end{equation}
 
+\subsection{Extremalprinzipien und thermodynamische Potentiale}
+\subsubsection{Prinzip minimaler Energie}
+Prinzip maximaler Entropie\\
+$S(U,V,N,X_\alpha)$ $S\rightarrow$ max. bei gegebenen Werten von $U,V_i,N$\\
+notwendig: $dS=0$ für $dU=dV=d=0$\\
+lokal hinreichend: $d^2S<0$ stabil\\ \\
+S monoton in U $\rightarrow U(S,V,N,X_\alpha)$ kann bestimmt werden.\\
+Es gilt im thermodynamischen Gleichgewichtszustand:\\
+$U(S,V,N,X_\alpha) \rightarrow$ min für S,V,N konstant.\\
+Analogon aus der Geometrie: Kreis\\
+U $\rightarrow$ Umfang\\
+S $\rightarrow$ Fläche\\
+Kreis hat\\
+- bei gegebenen Umfang die größte Fläche\\
+- bei gegebener Fläche den kleinsten Umfang\\ \\
+zu zeigen:\\
+- $dU=0$ für $dS=0=dV=dN$\\
+- $dU^2 > 0$ für $dS=0=dV=dN$
+\begin{equation}
+\begin{aligned}
+dS&=\frac{\partial S}{\partial U}dU+\frac{\partial S}{\partial V}dV+\frac{\partial S}{\partial N}dN+\left.\sum_\alpha\frac{\partial S}{\partial X_\alpha}\right|_UdX_\alpha\\
+dU&=
+\end{aligned}
+\end{equation}
 \end{fleqn}
 \end{document}
