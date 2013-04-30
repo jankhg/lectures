@@ -222,7 +222,7 @@ heißt orthognonal wenn
 \begin{itemize}
 \item Operatoren sind formales Werkzeug, um Vektoren zu manipulieren. \\
 \begin{fleqn}
-$\rightarrow$ Operatoren beschreiben Abbildung von einem Ket $\left|\right. 
+$\rightarrow$4 Operatoren beschreiben Abbildung von einem Ket $\left|\right. 
 \alpha \rangle  \in \mathbb{H}$ auf einen anderen Ket  $\left|\right. \alpha' \rangle  \in 
 \mathbb{H}$
 \begin{equation}
@@ -317,16 +317,16 @@ $\rightarrow$ Reihenfolge ist wesentlich
   \end{equation}
   Def. herm. adj. Operator
   \begin{equation}
-  \langle \alpha\left|\right.{\hat{A}}^t \left|\right. \beta\rangle  \ =(\langle \beta\left|\right.
+  \langle \alpha\left|\right.{\hat{A}}^{\dagger} \left|\right. \beta\rangle  \ =(\langle \beta\left|\right.
 \hat{A}\left|\right.\alpha\rangle )^*
   \end{equation}
 \item Aus Definition folgen Rechenregeln
   \begin{equation}
   \begin{aligned}
-  &(C\hat{A})^t=C^*{\hat{A}}^t\\
-  &({\hat{A}}^t)^t=\hat{A}\\
-  &(\hat{A} + \hat{B})^t )= \hat{A}^t + \hat{B}^t\\
-  &(\hat{A}\hat{B})^t=\hat{B}^t\hat{A}^t
+  &(C\hat{A})^{\dagger}=C^*{\hat{A}}^{\dagger}\\
+  &({\hat{A}}^{\dagger})^{\dagger}=\hat{A}\\
+  &(\hat{A} + \hat{B})^{\dagger} )= \hat{A}^{\dagger} + \hat{B}^{\dagger}\\
+  &(\hat{A}\hat{B})^{\dagger}=\hat{B}^{\dagger}\hat{A}^{\dagger}
   \end{aligned}
   \end{equation}
 \item \onehalfspacing Universalrezept für herm. Adj.\singlespacing 
@@ -337,10 +337,10 @@ $\rightarrow$ Reihenfolge ist wesentlich
   Bsp.:
   \begin{equation}
   \begin{aligned}
-  &(\langle \alpha\left|\right.\hat{A}^t+C\hat{A}\hat{B}\left|\right.\beta\rangle )^t\\
-  &= (\left|\right.\beta\rangle )^t (\hat{A}^t+C\hat{A}\hat{B})^t(\langle \alpha\left|\right
-.)^t\\
-  &= \langle \beta\left|\right. \hat{A} +C^*\hat{B}^t \hat{A}^t \left|\right.\alpha\rangle 
+  &(\langle \alpha\left|\right.\hat{A}^{\dagger}+C\hat{A}\hat{B}\left|\right.\beta\rangle )^{\dagger}\\
+  &= (\left|\right.\beta\rangle )^{\dagger} (\hat{A}^{\dagger}+C\hat{A}\hat{B})^{\dagger}(\langle \alpha\left|\right
+.)^{\dagger}\\
+  &= \langle \beta\left|\right. \hat{A} +C^*\hat{B}^{\dagger} \hat{A}^{\dagger} \left|\right.\alpha\rangle 
   \end{aligned}
   \end{equation}
   Achtung: Ausdrücke wie $\alpha\rangle \hat{A}$ oder $ \hat{A}\langle \alpha\left|\right.$ 
@@ -350,36 +350,38 @@ sind sinnnlos!
   \begin{aligned}
   &\left|\right.\alpha'\rangle &=\hat{A}\left|\right.\alpha\rangle \\
   & \quad \quad \quad \updownarrow&\\
-  &\langle \alpha'\left|\right.&= \ \langle \alpha\left|\right.\hat{A}^t
+  &\langle \alpha'\left|\right.&= \ \langle \alpha\left|\right.\hat{A}^{\dagger}
   \end{aligned}
   \end{equation}
 \end{itemize}
+
 \begin{flushright}
 Vorlesung 4 - 25.04.2013
 \end{flushright}
+
 \subsection{Hermitesche und Unitäre Operatoren}
 \begin{itemize}
   \item Für hermitesche operatoren gilt
     \begin{equation}
-    \hat{A}^t=\hat{A}
+    \hat{A}^{\dagger}=\hat{A}
     \end{equation}
     selbst-adjungiert
   \item Erwartungswerte von hermiteschen Operatoren sind reell.
     \begin{equation}
-    \langle \alpha\left.\right|\hat{A}\left.\right|\alpha\rangle  \ =  \left(\langle \alpha \left.\right| \hat{A}^t \left.\right| \alpha \rangle \right)^* = \left(\langle \alpha \left.\right|\hat{A}\left.\right|\alpha\rangle \right)^*
+    \langle \alpha\left.\right|\hat{A}\left.\right|\alpha\rangle  \ =  \left(\langle \alpha \left.\right| \hat{A}^{\dagger} \left.\right| \alpha \rangle \right)^* = \left(\langle \alpha \left.\right|\hat{A}\left.\right|\alpha\rangle \right)^*
     \end{equation}
     $\Rightarrow$ $\langle \alpha\left.\right|\hat{A}\left.\right|\alpha\rangle  \in \mathbb{R}$
   \item Für unitäre Operatoren gilt
     \begin{equation}
-    \hat{U}^t=\hat{U}^{-1} \quad \text{bzw} \quad \hat{U}^t\hat{U}=\hat{1}
+    \hat{U}^{\dagger}=\hat{U}^{-1} \quad \text{bzw} \quad \hat{U}^{\dagger}\hat{U}=\hat{1}
     \end{equation}
   \item Anwendung eines unitären Operatoren ändert Normierung nicht
     \begin{equation} \nonumber
-     \left.\right|\alpha'\rangle  \ = \hat{U}\left.\right|\alpha\rangle  \quad \langle \alpha'\left.\right|= \ \langle \alpha\left.\right|\hat{U}^t
+     \left.\right|\alpha'\rangle  \ = \hat{U}\left.\right|\alpha\rangle  \quad \langle \alpha'\left.\right|= \ \langle \alpha\left.\right|\hat{U}^{\dagger}
     \end{equation}
     \begin{equation}
     \begin{aligned}
-    \langle \alpha'\left.\right|\alpha'\rangle  \ =& \ \langle \alpha\left.\right|\underbrace{\hat{U}^t\hat{U}}_{\hat{1}}\left.\right|\alpha\rangle \\
+    \langle \alpha'\left.\right|\alpha'\rangle  \ =& \ \langle \alpha\left.\right|\underbrace{\hat{U}^{\dagger}\hat{U}}_{\hat{1}}\left.\right|\alpha\rangle \\
     &= \ \langle \alpha\left.\right|\hat{1}\left.\right|\alpha\rangle 
     \end{aligned}
     \end{equation}
@@ -490,7 +492,7 @@ Besondere Eigenschaften für EW-Problem hermitescher Operatoren
     \begin{equation}
     \begin{aligned}
     &\sum_{i,j}\left.\right|a_i\rangle \langle a_i\left.\right|\hat{A}\left.\right|a_j\rangle \langle a_j\left.\right|\\
-    =&\sum_{i,j}a_j\left.\right|a_i\rangle \underbrace{\langle a_i\left.\right|a_j\rangle }_{\Delta_{ij}}\langle a_j\left.\right|\\
+    =&\sum_{i,j}a_j\left.\right|a_i\rangle \underbrace{\langle a_i\left.\right|a_j\rangle }_{\delta_{ij}}\langle a_j\left.\right|\\
     =&\sum_ia_i\left.\right|a_i\rangle \langle a_i\left.\right|\\
     =&\sum_i\left.\right|a_i\rangle a_i\langle a_i\left.\right|
     \end{aligned}
@@ -499,8 +501,132 @@ Besondere Eigenschaften für EW-Problem hermitescher Operatoren
   
 \end{itemize}
 
+\begin{flushright}
+Vorlesung 5 - 30.03.2013
+\end{flushright}
+\textbf{Darstellung}\\
+$\rightarrow$ normale Anschauung versagt.
+\begin{itemize}
+	\item Wir unterscheiden zwiscen abstrakten Hilbertraumobjekten (Ket, Bra, Operatoren), die über Rechenregeln definiert sind, und den Darstellungen dieser Objekte.(analogon zu Spalten- und Zeilenvektoren und Matrizen)
+  \item Erinnerung: Koordinaten für Darstellung eines Vektors im 3D Raum(kartesisch, Kugelkoordinaten)
+  \item Beispiel: Eigenwertproblem eines abstrakten Operators $\hat{B}$.
+    \begin{equation}
+    \hat{B}\left.\right|b\rangle =b\left.\right|b\rangle
+    \end{equation}
+    Übertragung in Darstellung durch Eigenbasis von $\hat{A}$, d.h. $\left\{\left.\right|a_i\rangle\right\}$ mit
+    \begin{equation}
+    \begin{aligned}
+    &\langle a_i\left.\right|a_j\rangle=\delta_{ij}\\
+    &\hat{1}=\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|
+    \end{aligned}
+    \end{equation}
+    Konstruktion der Darstellung
+    \begin{equation}
+    \begin{aligned}
+      \hat{B}\hat{1}\left.\right|b\rangle=&b\left.\right|b\rangle\\
+      \hat{B}\left(\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|\right)\left.\right|b\rangle=&b\left.\right|b\rangle\\
+      \langle a_j\left.\right|\hat{B}\left(\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|\right)\left.\right|b\rangle’&\langle a_j\left.\right|b\left.\right|b\rangle\\
+      \sum_i\langle a_j\left.\right|\hat{B}\left.\right|a_i\rangle\langle a_i\left.\right|b\rangle =&b\langle a_j\left.\right|b\rangle      
+    \end{aligned}
+    \end{equation}
+  In "`Matrixnotation"'$\Rightarrow$ Matrix-Eigenwertproblem %fehlt
+\item Praktische Rechnung wird letztendlich in eine geschickt gewählten Darstellung ausgeführt.
+\end{itemize}
+\textbf{Darstellungswechsel}
+\begin{itemize}
+	\item Betrachte zwei Eigenbasen $\{\left.\right|a_i\rangle\}$ und $\{\left.\right|b_i\rangle\}$
+  \item Allgemeiner Vektor $\left.\right|\gamma\rangle$ sein in $\{\left.\right|a_i\rangle\}$ Basis dargestellt, d.h. $\langle a_i\left.\right|\gamma\rangle$ sind bekannt.
+  \item Wie bekommt man daraus die Entwicklungskoeffizienten in $\{\left.\right|b_i\rangle\}$?
+  \begin{equation}
+  \begin{aligned}
+    \langle b_i \left.\right|\gamma\rangle&=\langle b_i\left.\right|\hat{1}\left.\right|\gamma\rangle\\
+    &=\langle b_i \left.\right|\left(\sum_j\left.\right|a_j\rangle\langle a_j\left.\right|\right)\left.\right|\gamma\rangle\\
+    &=\sum_j\langle b_i\left.\right|a_j\rangle\langle a_j\left.\right|\gamma\rangle
+  \end{aligned}
+  \end{equation}
+  \item Transformationsmatrix $U_{ij} =\langle b_ia_j\rangle$ ist unitär
+    \begin{equation}
+      U^{\dagger}U=\hat{1}
+     \end{equation}
+     \begin{equation}
+      \begin{aligned}
+      \sum_jU^{\dagger}_{ij}U_{jk}&=\sum_j\langle b_j\left.\right|a_i\rangle^{\dagger}\langle b_j\left.\right|a_k\rangle\\
+      U_{jk}^{\dagger}&=\sum_j\langle a_j\left.\right|b_j\rangle\langle b_j\left.\right|a_k\rangle\\
+      &=\langle a_j\left.\right|\hat{1}\left.\right|a_k\rangle\\
+      &=\langle a_j\left.\right|a_k\rangle\\
+      &=S_{ij}
+      \end{aligned}
+    \end{equation}
+\end{itemize}
+\textbf{Kontinuierliche Eigenbasen}
+\begin{itemize}
+	\item Betrachte hermiteschen Operator $\hat{B}$ mit kontinuierlichem Spektrum, d.h.
+    \begin{equation}
+    \hat{B}\left.\right|b\rangle =b\left.\right|\rangle
+    \end{equation}
+    mit kontinuierlichen reellen EW.
+  \item Orthogonalität gilt wie bei diskreten Basen
+    \begin{equation}
+      \langle b\left.\right|b'\rangle=0 \quad \text{für} \quad b\neq b'
+    \end{equation}
+  \item Komplizierter werden Normierung und Vollständigkeit
+  \item Vollständigkeit: Analogie zur diskreten Basis $\{\left.\right|a_i\rangle\}$
+    \begin{equation}
+      \left.\right|\gamma\rangle =\sum_i\left.\right|a_i\rangle \langle a_i\left.\right|\gamma\rangle
+    \end{equation}
+    Übergang zu kontinuierlicher Basis $\{\left.\right|b\rangle\} \rightarrow$\\
+    Übergang von Summe $\sum_i$ nach Integral $\int db$
+    \begin{equation}
+    \left.\right|\gamma\rangle = \int db \left.\right|b\rangle \underbrace{\langle b\left.\right|\gamma\rangle}_{\text{kont. Funktion von b}}
+    \label{eq:integral}
+    \end{equation}
+  \item Zerlegung der $\hat{1}$ in kontinuierlicher Basis
+    \begin{equation}
+      \hat{1} = \int db \left.\right|b\rangle\langle b\left.\right|
+    \end{equation}
+  \item Normierung: Multipliziere (\ref{eq:integral}) von links mit $\langle b'\left.\right|$
+    \begin{equation}
+      \langle b'\left.\right|\gamma\rangle =\int db \langle b'\left.\right|b\rangle\langle b \left.\right|\gamma\rangle
+    \end{equation}
+    vergleiche mit
+    \begin{equation}
+    \begin{aligned}
+    &f(x') =\int dx \delta(x-x')f(x)\\
+    &\Rightarrow \langle b'\left.\right|b\rangle = \delta(b'-b)
+    \end{aligned}
+    \end{equation}
+    Orthonormierungsbedingung für kontinuierliche Basen
+  \item physikalische Interpretationen wird durch $\delta$-Distributionen schwieriger
+  \item Spektraldarstellung für $\hat{B}$ mit konstanter Eigenbasis
+    \begin{equation}
+    \hat{b}=\langle b\left.\right|b\left.\right|b\rangle %seltsam
+    \end{equation}
+\end{itemize}
 
 
+\subsection{Kommutatoren und simultane Eigenbasen}
+\begin{itemize}
+	\item physikalische Auswirkungen nicht-Vertauschbarkeit des Operatorprodukts formalisieren 
+  \item Kommutation zweier Operatoren $\hat{A}$ und $\hat{B}$
+    \begin{equation}
+    \left[\hat{A},\hat{B}\right]=\hat{A}\hat{B}-\hat{B}\hat{A}
+    \end{equation}
+  \item Kommutierende Operatoren
+    \begin{equation}
+    \Leftrightarrow \left[\hat{A},\hat{B}\right]=0
+    \end{equation}
+  \item Rechenregeln
+    \begin{equation}
+    \begin{aligned}
+      &\left[\hat{A},\hat{B}\right]=-\left[\hat{B},\hat{A}\right]\\
+      &\left[\hat{A},\hat{B}\right]^\dagger=\left[\hat{A}^\dagger,\hat{B}^\dagger\right]\\
+      &\left[\hat{A},\hat{B}+\hat{C}\right] =\left[\hat{A},\hat{B}\right]+\left[\hat{A},\hat{C}\right]\\
+      &\left[\hat{A},\hat{B}\hat{C}\right]=\left[\hat{A},\hat{B}\right]\hat{C}+\hat{B}\left[\hat{A},\hat{C}\right]
+    \end{aligned}
+    \end{equation}
+  \item Jacobi-Identität
+
+\end{itemize}
 
 
 \end{fleqn}
