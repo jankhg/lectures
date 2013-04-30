@@ -606,7 +606,7 @@ $\rightarrow$ normale Anschauung versagt.
 
 \subsection{Kommutatoren und simultane Eigenbasen}
 \begin{itemize}
-	\item physikalische Auswirkungen nicht-Vertauschbarkeit des Operatorprodukts formalisieren 
+	\item physikalische Auswirkungen der Nicht-Vertauschbarkeit des Operatorprodukts formalisieren 
   \item Kommutation zweier Operatoren $\hat{A}$ und $\hat{B}$
     \begin{equation}
     \left[\hat{A},\hat{B}\right]=\hat{A}\hat{B}-\hat{B}\hat{A}
@@ -619,12 +619,22 @@ $\rightarrow$ normale Anschauung versagt.
     \begin{equation}
     \begin{aligned}
       &\left[\hat{A},\hat{B}\right]=-\left[\hat{B},\hat{A}\right]\\
-      &\left[\hat{A},\hat{B}\right]^\dagger=\left[\hat{A}^\dagger,\hat{B}^\dagger\right]\\
+      &\left[\hat{A},\hat{B}\right]^\dagger=\left[\hat{B}^\dagger,\hat{A}^\dagger\right]\\
       &\left[\hat{A},\hat{B}+\hat{C}\right] =\left[\hat{A},\hat{B}\right]+\left[\hat{A},\hat{C}\right]\\
-      &\left[\hat{A},\hat{B}\hat{C}\right]=\left[\hat{A},\hat{B}\right]\hat{C}+\hat{B}\left[\hat{A},\hat{C}\right]
+      &\left[\hat{A},\hat{B}\hat{C}\right]=\left[\hat{A},\hat{B}\right]\hat{C}+\hat{B}\left[\hat{A},\hat{C}\right]\\
+      &\left[\hat{A},\left[\hat{B},\hat{C}\right]\right]+\left[\hat{C},\left[\hat{A},\hat{B}\right]\right]+\left[\hat{B},\left[\hat{C},\hat{A}\right]\right]=0
     \end{aligned}
     \end{equation}
+  % TODO: Jan: Von der Jacobi-Identitaet habe ich bei mir nichts stehen.
   \item Jacobi-Identität
+  \item triviale Kommutation
+    \begin{equation}
+    \begin{aligned}
+      &\left[\hat{A},\hat{1}\right]=0\\
+      &\left[\hat{A},\hat{A}\right]=0
+    \end{aligned}
+    \end{equation}
+
 
 \end{itemize}
 
