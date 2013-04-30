@@ -495,12 +495,17 @@ Kreis hat\\
 - bei gegebenen Umfang die größte Fläche\\
 - bei gegebener Fläche den kleinsten Umfang\\ \\
 zu zeigen:\\
-- $dU=0$ für $dS=0=dV=dN$\\
-- $dU^2 > 0$ für $dS=0=dV=dN$
+- $dU=0$ für $dS=dV=dN=0$\\
+- $dU^2 > 0$ für $dS=dV=dN=0$
 \begin{equation}
 \begin{aligned}
 dS&=\frac{\partial S}{\partial U}dU+\frac{\partial S}{\partial V}dV+\frac{\partial S}{\partial N}dN+\left.\sum_\alpha\frac{\partial S}{\partial X_\alpha}\right|_UdX_\alpha\\
-dU&=
+dU&=\frac{\partial U}{\partial S}dS+\frac{\partial U}{\partial V}dV+\frac{\partial U}{\partial N}dN+\left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha\\
+\text{für beide obeigen Gleichungen gilt:}\quad dV=dN=0\\
+\text{für} \quad dU=0 \quad \text{gilt:} \quad \frac{\partial U}{\partial S}dS + \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha = 0
+  => dS = -\frac{1}{T} \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha \\
+=> dS = 0 <=> -\frac{1}{T} \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha = 0 <=> U \text{extremal für} \quad S=const. \\ 
+T(S,V,N) := \frac{\partial U}{\partial S}(S,V,N) \rightarrow S(T,V,N)
 \end{aligned}
 \end{equation}
 \end{fleqn}
