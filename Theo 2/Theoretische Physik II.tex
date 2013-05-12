@@ -635,10 +635,71 @@ $\rightarrow$ normale Anschauung versagt.
       &\left[\hat{A},\hat{A}\right]=0
     \end{aligned}
     \end{equation}
-
-
 \end{itemize}
 
 
+\begin{flushright}
+Vorlesung 6 - 2.05.13
+\end{flushright}
+\textbf{Simultane Eigenbasen}
+  \begin{itemize}
+    \item Betrachte zwei kommutierende hermetische Operatoren $\hat{A},\hat{B}$
+      \begin{equation}
+        \left[\hat{A},\hat{B}\right]=0
+      \end{equation}
+      Es existiert eine simultane Eigenbasis $\left\{\left.\right|ab\rangle\right\}$
+      \begin{equation}
+      \begin{aligned}
+      \hat{A}\left.\right|ab\rangle&=a\left.\right|ab\rangle\\
+      \hat{B}\left.\right|ab\rangle&=b\left.\right|ab\rangle
+      \end{aligned}
+      \end{equation}
+    \item Beweis: Angenommen $\left[\hat{A},\hat{B}\right]=0$ und betrachte 
+      \begin{equation}
+      \hat{A}\left.\right|a\rangle=a\left.\right|a\rangle
+      \end{equation}
+      Multipliziere mit $\hat{B}$
+      \begin{equation}
+      \begin{aligned}
+      \hat{B}\hat{A}\left.\right|a\rangle=&\hat{B}a\left.\right|a\rangle\\
+      \hat{A}\left(\hat{B}\left.\right|a\rangle\right)&=a\left(\hat{B}\left.\right|a\rangle\right)
+      \end{aligned}
+      \end{equation}
+        $\Rightarrow$ $\left(\hat{B}\left.\right|a\rangle\right)$ erfüllt noch immer EW-Relation für $\hat{A}$
+    \item Für nicht entartetes a-Spektrum:\\
+      $\left(\hat{B}\left.\right|a\rangle\right)$ muss proportional zu $\left.\right|a\rangle$ sein:
+      \begin{equation}
+      \Rightarrow \hat{B}\left.\right|a\rangle=b\left.\right|a\rangle
+      \end{equation}
+      Daher sind $\left.\right|a\rangle$ simultane EV zu $\hat{A}$ und $\hat{B}$ $\rightarrow$ $\left.\right|ab\rangle$
+    \item Bei entarteten a-Spektrum:\\
+      Entartungsindex i in $\hat{A}$ EW-Relation
+      \begin{equation}
+      \hat{A}\left.\right|ai\rangle =a\left.\right|ai\rangle
+      \end{equation}
+      $\rightarrow \left(\hat{B}\left.\right|ai\rangle\right)$ ist weiterhin EV zu $\hat{A}$ aber nicht notwendig proportional zu $\left.\right|ai\rangle$\\
+      $\rightarrow$ Wähle orhonormierte Basis im entarteten Unterraum so, dass $\hat{B}\left.\right|ai\rangle$ prop. zu $\left.\right|ai\rangle$, d.h. wir lösen EW von $\hat{B}$ im ent. Unterraum
+    \item Wenn keine weiteren Entartungen auftreten, dann ist simultane EB eindeutig charakterisiert durch 
+      \begin{equation}
+      \begin{aligned}
+        \hat{A}\left.\right|ab\rangle&=a\left.\right|ab\rangle\\
+        \hat{B}\left.\right|ab\rangle&=b\left.\right|ab\rangle
+      \end{aligned}
+      \end{equation}
+      $\rightarrow$ Entartung vom $\hat{A}$-Spektrum durch Hinzunahme von $\hat{B}$ eliminiert oder gehoben.
+    \item Vollständiger Satz von kommutierenden Operatoren:\\
+      Für einen Satz von Operatoren $\left\{\hat{A},\hat{B},\hat{C},...\right\}$, die paarweise miteinander kommutieren
+      \begin{equation}
+      \left[\hat{A},\hat{B}\right]=\left[\hat{A},\hat{C}\right],...=0
+      \end{equation}
+      zu dem sich kein weiterer komm. Operator finden lässt, gibt es eine simultane Eigenbasis, 
+      \begin{equation}
+      \begin{aligned}
+        \hat{A}\left.\right|a,b,c...\rangle&=a\left.\right|a,b,c...\rangle\\
+        \hat{B}\left.\right|a,b,c...\rangle&=b\left.\right|a,b,c...\rangle
+      \end{aligned}
+      \end{equation}
+      die keine Entartung aufweist.
+  \end{itemize}
 \end{fleqn}
 \end{document}
