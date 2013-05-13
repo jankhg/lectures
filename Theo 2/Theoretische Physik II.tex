@@ -776,7 +776,69 @@ Vorlesung 6 - 2.05.13
         \item Wie wird die Dynamik eines Quantensystems beschrieben?
       \end{itemize}
   \end{itemize}
-  \subsubsection{1. Postulat: Zustand eines Systems}
-    Der Zustand eines Systems zum \textbf{Zeitpunkt t} ist durch einen \textbf{normierten} Vektor $\left.\right|\Psi,t\rangle$ im \textbf{Hilbertraum} beschrieben. Der Zustandsvektor $\left.\right|\Psi,t\rangle$ enthält die \textbf{komplette Information} über das System.
+  
+  \textbf{1. Postulat: Zustand eines Systems}
+    Der Zustand eines Systems zum \textbf{Zeitpunkt t} ist durch einen \textbf{normierten} Vektor $\left.\right|\Psi,t\rangle$ im \textbf{Hilbertraum} beschrieben. Der Zustandsvektor $\left.\right|\Psi,t\rangle$ enthält die \textbf{komplette Information} über das System.\\
+  \textbf{2. Postulat: Observablen}\\
+    Jede physikalische Observable wird durch einen hermiteschen linearen Operator auf dem Hilbertraum beschrieben. 
+    \begin{itemize}
+      \item klare Trennung zwischen $\underbrace{\text{Zustand}}_{\text{ket-Vektoren}}$ des Systems und $\underbrace{\text{Observablen}}_{\text{Operatoren}}$
+      \item Observablen, die ein klassisches Analogon besitzen (z.B. Ort, Impuls, Drehimpuls, kin. Energie, Gesamtenergie...) werden über Korrespondenzregeln definiert. \\
+        Einer Observable, die durch eine Funktion $F(\vec{x},\vec{p})$ in der klassischen Physik beschrieben wird, wird ein hermitescher Operator zugeordnet, der sich aus Einsetzung ergibt. 
+        $$
+        \vec{x} \rightarrow \hat{\vec{x}} \quad, \quad \vec{p} \rightarrow \hat{\vec{p}}
+        $$
+        Zwischen $\hat{\vec{x}}$ und $\hat{\vec{p}}$ gilt die fundamentale Kommutatorrelation
+        \begin{equation}
+        \left[\hat{\vec{x}}_i, \hat{\vec{p}}_j\right]=i\hbar\delta_{ij}
+        \end{equation}
+      \item Manchmal führt Einsetzung auf einen nicht hermiteschen Operator, z. B. die Radialkomponente des Impulses
+        \begin{equation}
+        \begin{aligned}
+          \text{klassisch:} \quad &\vec{x}\vec{p}\\
+          \text{QM:} \quad &\frac{1}{2}\left(\hat{\vec{x}}\hat{\vec{p}}+\hat{\vec{p}}\hat{\vec{x}}\right)
+        \end{aligned}
+        \end{equation}
+        $\rightarrow$ explizite "`Hermitesierung"' notwendig
+      \item Bsp.: Energie der Observable:
+        \begin{equation}
+        \begin{aligned}
+          \text{klassisch: Hamiltonfunktion} \quad H(\vec{x},\vec{p})&=\frac{\vec{p}}{2m} + V(\vec{x})\\
+          \text{QM: Hamiltonoperator} \quad \hat{H}(\hat{\vec{x}},\hat{\vec{o}})&=\frac{\hat{\vec{p}}^2}{2m}+V(\hat{\vec{x}})
+        \end{aligned}
+        \end{equation}
+      \item Analogie des fundamentalen Kommutators mit Poisson-Klammern der klassischen Mechanik
+        \begin{equation}
+         \left\{x_i,p_j\right\}=\delta_{ij}
+        \end{equation}
+        mit 
+        \begin{equation}
+        \left\{A,B\right\}:=\sum_j\left(\frac{\partial A}{\partial x_i}\frac{\partial B}{\partial p_i}-\frac{\partial A}{\partial p_i}\frac{\partial B}{\partial x_i}\right)
+        \end{equation}
+      \item Observablen ohne klassische Analogien (z.B. Spin) müssen im Rahmen der QM konstruiert werden
+    \end{itemize}
+  \textbf{3. Postulat: ideale Messung}\\
+    Bei einer idealen Messung einer Observablen $\hat{A}$ an einem System im Zustand $\left.\right|\Psi,t\rangle$ kann nur einer der (diskreten) Eigenwerte des Operators $\hat{A}$ resultieren.\\
+    Der Zustand des Systems unmittelbar nach der Messung ist durch den Eigenvektor zum gemessenen Eigenwert gegeben.
+    \begin{itemize}
+      \item Direkter Zusammenhang zwiwchen EW-Spektrum des Operators der Observable und dem wirklichen Messergebnis
+        \begin{itemize}
+          \item diskretes Spektrum: nur spezielle, diskrete Messergebnisse sind möglich. $\rightarrow$ Quantisierung
+          \item kontinuierliche Spektren oder bei Entartung ein kleiner Unterraum, welcher sich aus Messunsicherheit bei kont. Observablen oder Entartung ergibt, ist nach der Messung als Information über den Zustand verfügbar
+          \item Messung ist ein ideales Werkzeug zur Präparation von Zuständen
+        \end{itemize}
+    \end{itemize}
+    Nachtrag: 
+    \begin{equation}
+      \hat{\vec{x}}=\left(\begin{array}{c} \hat{x}_1 \\ \hat{x}_2 \\ \hat{x}_3 \end{array}\right) \quad, \quad \hat{\vec{x}}\hat{\vec{p}}=\hat{x}_1\hat{p}_1 + \hat{x}_2\hat{p}_2 + \hat{x}_3\hat{p}_3 \quad, \quad \hat{\vec{x}}\left.\right|\hat{x}\rangle=\vec{x}\left.\right|\vec{x}\rangle
+    \end{equation}
+    \begin{equation}
+    \left(\begin{array}{c} \hat{x}_1 \\ \hat{x}_2 \\ \hat{x}_3 \end{array}\right)\left.\right|\vec{x}\rangle=\left(\begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\left.\right|\vec{x}\rangle
+    \end{equation}
+    \begin{equation}
+    \underbrace{\hat{x}_1}_{\text{Operator}}\left.\right|x_1x_2x_3\rangle=\underbrace{x_1}_{\text{Eigenwert}}\left.\right|x_1x_2x_3\rangle
+    \end{equation}
+  \textbf{4. Postulat: Wahrscheinlichkeitsaussage}\\
+    Für ein Spektrum im Zustand $\left.\right|\Psi,t\rangle$ liefert das Skalarprodukt mit den Eigenzuständen der Observable eien Wahrscheinlichkeitsamplitude für die Messung der zugeordneten, zugehörigen Eigenwerte.
 \end{fleqn}
 \end{document}
