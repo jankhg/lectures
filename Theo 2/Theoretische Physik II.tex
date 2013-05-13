@@ -19,6 +19,8 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}%Ränder
 \usepackage{amssymb}%Für R reele zahlen
 \title{Theoretische Physik II}
+\subtitle{Prof. Robert Roth - SS 2013}
+\author{Jan Krause und Philipp Dijkstal}
 %\subtitle{Professor: Dr. Gernot Alber\\
 %Mitschrift von Philipp Dijkstal}
 %\subsubtitle{email: \textaccent{philipp.dijkstal@web.de}}
@@ -701,5 +703,80 @@ Vorlesung 6 - 2.05.13
       \end{equation}
       die keine Entartung aufweist.
   \end{itemize}
+\textbf{Unschärferelationen}
+  \begin{itemize}
+    \item Für nicht kommutierende Operatoren $\hat{A},\hat{B}$ mit 
+      $$
+      \left[\hat{A},\hat{B}\right]\neq 0
+      $$
+      existiert keine simultane Eigenbasis
+    \item Trotzdem wichtige Aussage zur Unschärfe möglich
+    \item Unschärfe oder Varianz des EW von A mit $\left.\right|\gamma\rangle$
+      \begin{equation}
+      \begin{aligned}
+        \Delta A_\gamma&=\sqrt{\langle\gamma\left.\right|\left(\hat{A}-\langle\gamma\left|\hat{A}\right|\gamma\rangle\right)^2\left.\right|\gamma\rangle}\\
+        &=\sqrt{\langle\gamma\left|\hat{A}^2\right|\gamma\rangle-\langle\left|\hat{A}\right|\gamma\rangle^2}\\
+        &=\sqrt{\langle\hat{H}^2\rangle_\gamma-\langle\hat{A}\rangle_\gamma^2}
+      \end{aligned}        
+      \end{equation}
+      mit $\hat{A}=\langle\gamma\left|\hat{A}\right|\gamma\rangle$
+    \item Für das Produkt der Unschärfe $\Delta A_j$ und $\Delta B_j$ gilt verallgemeinerte Unschärferelation
+      \begin{equation}
+      \Delta A_\gamma \Delta B_\gamma \geq \frac{1}{2}\left|\langle\gamma\left|\left[ \hat{A},\hat{B}\right]\right|\gamma\rangle\right|
+      \end{equation}
+    \item Beweis er Schwarzsche Ungleichung
+      \begin{equation}
+      \langle\alpha\left.\right|\alpha\rangle\langle\beta\left.\right|\beta\rangle \geq \left|\langle\alpha\left|\right.\beta\rangle\right|^2
+      \end{equation}
+      Definition von 
+      \begin{equation}
+      \begin{aligned}
+        \left.\right|\alpha\rangle=&\left(\hat{A}-\langle\hat{A}_\gamma\right)\left.\right|\gamma\rangle\\
+        \left.\right|\beta\rangle=&\left(\hat{B}-\langle\hat{B}_\gamma\right)\left.\right|\gamma\rangle
+      \end{aligned}
+      \end{equation}
+      Damit 
+      \begin{equation}
+      \Delta A_\gamma^2\Delta B_\gamma^2 \geq \left|\langle \left(\hat{A}-\langle\hat{A}\rangle_\gamma\right)\left(\hat{B}-\langle\hat{B}\rangle_\gamma\right)\rangle\right|^2
+      \end{equation}
+      Nutze Darstellung des Produkts zweier Operatoren über Kommutator $+$ Antikommutator
+      \begin{equation}
+      \begin{aligned}
+        \hat{C}\hat{D}&=\frac{1}{2}\left[\hat{C},\hat{D}\right]+\frac{1}{2}\underbrace{\left\{\hat{C},\hat{D}\right\}}_{\text{Antikommutator}}\\
+        &=\frac{1}{2i}\left(i\left[\hat{C},\hat{D}\right]\right)+\frac{1}{2}\left\{\hat{C},\hat{D}\right\} \quad \quad \text{; macht $\left[\hat{C},\hat{D}\right]$ hermitesch}
+      \end{aligned}
+      \end{equation}
+      Mit $\hat{C}=\hat{A}-\langle\hat{A}\rangle_\gamma$, $\hat{D}=\hat{B}-\langle\hat{B}\rangle_\gamma$
+      \begin{equation}
+      \begin{aligned}
+        &\left|\langle\left(\hat{A}\langle\hat{A}\rangle_\gamma\right)\left(\hat{B}\langle\hat{B}\rangle_\gamma\right)\rangle_\gamma\right|^2\\
+        &=\left|\langle\hat{C},\hat{D}\rangle_\gamma\right|^2\\
+        &=\left|\langle\frac{1}{2i}\left(i\left[\hat{C},\hat{D}\right]\right)+\frac{1}{2}\left\{\hat{C},\hat{D}\right\}\rangle_\gamma\right|^2\\
+        &=\left|\frac{1}{2i}\langle i\left[\hat{C},\hat{D}\right]\rangle_\gamma+\frac{1}{2}\langle\left\{\hat{C},\hat{D}\right\}\rangle_\gamma\right|^2\\
+        &=\frac{1}{4}\left|\langle\left[\hat{C},\hat{D}\right]\rangle_\gamma\right|^2+\frac{1}{4}\left|\langle\left\{\hat{C},\hat{D}\right\}\rangle_\gamma\right|^2
+      \end{aligned}
+      \end{equation}
+    \item Antikommutatorbeitrag $(\geq 0)$ wird auf rechter Seite der Schwarzschen Ungleichung weggelassen
+      \begin{equation}
+      \begin{aligned}
+        \Delta A_\gamma^2 \Delta B_\gamma^2 &\geq \frac{1}{4}\left|\langle\left[\hat{C},\hat{D}\right]\rangle_\gamma\right|^2\\
+        &=\frac{1}{4}\left|\langle\left[\hat{A},\hat{B}\right]\rangle_\gamma\right|^2\\
+        \Rightarrow \Delta A_\gamma \Delta B_\gamma &\geq \frac{1}{2}\left|\langle\left[\hat{A},\hat{B}\right]\rangle\right|
+      \end{aligned}
+      \end{equation}
+  \end{itemize}
+
+\section{Postulate der Quantenmechanik}
+\subsection{Die Postulate}
+  \begin{itemize}
+    \item Mathematischer Formalismus mit physikalischer Größe koppeln
+      \begin{itemize}
+        \item Wie lässt sich der Zustand eines Quantensystems zu einem festen Zeitpunkt t beschreiben?
+        \item Wie sind Observablen formal repräsentiert?
+        \item Wie wird die Dynamik eines Quantensystems beschrieben?
+      \end{itemize}
+  \end{itemize}
+  \subsubsection{1. Postulat: Zustand eines Systems}
+    Der Zustand eines Systems zum \textbf{Zeitpunkt t} ist durch einen \textbf{normierten} Vektor $\left.\right|\Psi,t\rangle$ im \textbf{Hilbertraum} beschrieben. Der Zustandsvektor $\left.\right|\Psi,t\rangle$ enthält die \textbf{komplette Information} über das System.
 \end{fleqn}
 \end{document}
