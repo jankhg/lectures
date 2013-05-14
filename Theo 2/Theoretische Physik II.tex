@@ -345,7 +345,7 @@ $\rightarrow$ Reihenfolge ist wesentlich
   &= \langle \beta\left|\right. \hat{A} +C^*\hat{B}^{\dagger} \hat{A}^{\dagger} \left|\right.\alpha\rangle 
   \end{aligned}
   \end{equation}
-  Achtung: Ausdrücke wie $\alpha\rangle \hat{A}$ oder $ \hat{A}\langle \alpha\left|\right.$ 
+  Achtung: Ausdrücke wie $\left.\right|\alpha\rangle \hat{A}$ oder $ \hat{A}\langle \alpha\left|\right.$ 
 sind sinnnlos!
 \item Duale Korrespondenz
   \begin{equation}
@@ -409,7 +409,7 @@ Vorlesung 4 - 25.04.2013
     \begin{equation}
     \hat{A}\left.\right|a\rangle  \ = a\left.\right|a\rangle 
     \end{equation}
-    \textcolor[rgb]{1,0,0}{Die Eigenwerte sind im Allgemeinen komplexe Zahlen.}
+    Die Eigenwerte sind im Allgemeinen komplexe Zahlen.
   \item Spektrum des Operators: Gesamtheit der EW und EV.
   \item Diskrete EW / diskretes Spektrum oder kontinuierliche EW / kont. Spektrum oder Kombination
   \item Diskrete Spektren: endlich oder abzählbar unendlich viele EV\\
@@ -527,7 +527,7 @@ $\rightarrow$ normale Anschauung versagt.
     \begin{aligned}
       \hat{B}\hat{1}\left.\right|b\rangle=&b\left.\right|b\rangle\\
       \hat{B}\left(\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|\right)\left.\right|b\rangle=&b\left.\right|b\rangle\\
-      \langle a_j\left.\right|\hat{B}\left(\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|\right)\left.\right|b\rangle’&\langle a_j\left.\right|b\left.\right|b\rangle\\
+      \langle a_j\left.\right|\hat{B}\left(\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|\right)\left.\right|b\rangle’=&\langle a_j\left.\right|b\left.\right|b\rangle\\
       \sum_i\langle a_j\left.\right|\hat{B}\left.\right|a_i\rangle\langle a_i\left.\right|b\rangle =&b\langle a_j\left.\right|b\rangle      
     \end{aligned}
     \end{equation}
@@ -839,6 +839,92 @@ Vorlesung 6 - 2.05.13
     \underbrace{\hat{x}_1}_{\text{Operator}}\left.\right|x_1x_2x_3\rangle=\underbrace{x_1}_{\text{Eigenwert}}\left.\right|x_1x_2x_3\rangle
     \end{equation}
   \textbf{4. Postulat: Wahrscheinlichkeitsaussage}\\
-    Für ein Spektrum im Zustand $\left.\right|\Psi,t\rangle$ liefert das Skalarprodukt mit den Eigenzuständen der Observable eien Wahrscheinlichkeitsamplitude für die Messung der zugeordneten, zugehörigen Eigenwerte.
+    Für ein Spektrum im Zustand $\left.\right|\Psi,t\rangle$ liefert das Skalarprodukt mit den Eigenzuständen der Observable eine Wahrscheinlichkeitsamplitude für die Messung der zugeordneten, zugehörigen Eigenwerte.
+    
+
+\begin{flushright}
+Vorlesung 8 - 14.05.13
+\end{flushright}
 \end{fleqn}
+\subsection{Darstellung und Wellenfunktion}
+Ortsdarstellung (OD)\\
+kontinuierliche Eigenbasis des Ortsoperators $\hat{\vec{x}}$.
+$$
+\hat{\vec{x}}=\left(\begin{array}{c} \hat{x}_1 \\ \hat{x}_2 \\ \hat{x}_3 \end{array}\right)
+$$
+$$
+\hat{\vec{x}}\left.\right|\vec{x}\rangle=\hat{x}\left.\right|\vec{x}\rangle
+$$
+\textcolor[rgb]{1,0,0}{???}
+\begin{equation}
+\langle\vec{x}\left.\right|\vec{x}\rangle=\hat{\delta}(\hat{x}-\vec{x})
+\end{equation}
+Zerlegung des Eins-Operators
+$$
+\hat{1}=\int\ dx \left|\vec{x}\rangle\langle\vec{x}\right|
+$$
+\begin{equation}
+\left.\right|\Psi,t\rangle=\int\ dx\left|\vec{x}\rangle\langle\vec{x}\right|\Psi,t\rangle
+\label{eq:WellenfunktionOrtsdarstellung}
+\end{equation}
+Annahme: Teilchen mit Masse m in klassischem Potential $V(\vec{x})$
+\begin{equation}
+\xrightarrow{\text{2. Post.}} \quad \hat{H}=\frac{\hat{\vec{p}}^2}{2m}+V(\vec{x})
+\label{eq:Hamiltonoperator}
+\end{equation}
+OD eines allg. Operators\footnote{Wichtiger Unterschied zwischen Operator im Hilbertraum und im 3D-Raum (Ortsdarstellung)} $\hat{A}$
+$$
+\langle\vec{x}\left|\right.\hat{A}\left.\right|\alpha\rangle \quad \quad \left.\right|\alpha\rangle \quad \text{beliebig}
+$$
+OD des Ortsoperators $\hat{\vec{x}}$
+$$
+\langle\vec{x}\left.\right|\hat{\vec{x}}\left.\right|\alpha\rangle=\vec{x}\langle\vec{x}\left.\right|\alpha\rangle
+$$
+OD einer Funktion von $\vec{x}$
+$$
+\langle\vec{x}\left.\right|V(\vec{x})\left.\right|\alpha\rangle=V(\vec{x})\langle\vec{x}\left.\right|\alpha\rangle
+$$
+OD Impulsoperator\\
+keine einfache EW Relation, aber wir wissen
+\begin{align}
+[\hat{x}_i,\hat{p}_j]&=i\hbar\delta_{ij} \nonumber\\ \nonumber
+\langle\vec{x}\left.\right|\hat{\vec{p}}\left.\right|\alpha\rangle&=-i\hbar\vec{\nabla}\langle\vec{x}\left.\right|\alpha\rangle\\ \nonumber
+\langle\vec{x}\left.\right|\hat{p}_i\left.\right|\alpha\rangle&=i\hbar\frac{\partial}{\partial_i}\langle\vec{x}\left.\right|\alpha\rangle\\ \nonumber
+\langle\vec{x}\left.\right|[\hat{x}_i,\hat{p}_j]\left.\right|\alpha\rangle&=\langle\vec{x}\left.\right|\hat{x}_i,\hat{p}_j\left.\right|\alpha\rangle-\langle\vec{x}\left.\right|\hat{x}_j,\hat{p}_i\left.\right|\alpha\rangle\\ 
+&=x_i\langle\vec{x}_i,\hat{p}_j\left.\right|\alpha\rangle+i\hbar\frac{\partial}{\partial x_i}x_i\langle\hat{x}\left.\right|\alpha\rangle\nonumber\\
+&=i\hbar\delta_{ij}\langle\vec{x}\left.\right|\alpha\rangle
+\end{align}
+OD des $\hat{H}$-Operators 
+\begin{equation}
+\langle\vec{x}\left.\right|\hat{H}\left.\right|\alpha\rangle=\left[\frac{-\hbar^2}{2m}\vec{\nabla}^2+V(\vec{x})\right]\langle\vec{x}\left.\right|\alpha\rangle
+\label{eq:Hamiltonoperater Ortsdarstellung}
+\end{equation}
+Eigenwertproblem von $\hat{H}$
+\begin{align}
+&\hat{H}\left.\right|E_i\rangle=E_i\left.\right|E_i\rangle\nonumber\\
+&\xrightarrow{OD}\left(\frac{-\hbar^2}{2m}\cdot \Delta+V(\vec{x})\right)\langle\vec{x}\left.\right|\alpha\rangle=E_i\langle\vec{x}_i\left.\right|E_i\rangle
+\end{align}
+$\rightarrow$ Wellenfunktion des Energieeigenzustandes in OD\\
+$\rightarrow$ stationäre Schrödingergleichung in OD\\\\
+\textbf{5. Postulat}: Allgemeine Schrödingergleichung
+\begin{equation}
+i\hbar\frac{\partial}{\partial t}\left.\right|\Psi,t\rangle=\hat{H}\left.\right|\Psi,t\rangle
+\label{eq:Allgemeine Schrödingergleichung}
+\end{equation}
+Allgemeine Schrödingergleichung in OD
+\begin{equation}
+i\hbar\frac{\partial}{\partial t}\langle\vec{x}\left.\right|\Psi,t\rangle=\left(-\frac{\hbar^2}{2m} \Delta+V(\vec{x})\right)\langle\vec{x}\left.\right|\Psi,t\rangle
+\label{eq:Allgemeine Schrödingergleichung in OD}
+\end{equation}
+$\rightarrow$ einfache DGL, stark vereinfacht\\
+abstrakte Schrödingergleichung ist viel allgemeiner als diese DGL (1 Teilchen ohne innere Freiheitsgrade im klassischen Potential $V(\vec{x})$.\\\\
+\textbf{Impulsdarstellung}\\
+kont. Eigenbasis des Impulsoperators\\
+
+\textcolor[rgb]{1,0,0}{fehlt}\\
+Orts- und Impulsraumwellenfunktionen enthalten gleiche Information, lediglich in Unterschiedlichen Darstellungen von $\left.\right|\Psi,t\rangle$\\
+Durch Einsetzen eines Eins-Operators können wir zwischen Darstellungen wechseln
+\begin{equation}
+\Psi(\vec{x},t)=\langle\vec{x}\left.\right|\Psi,t)=\int d^3p\langle\vec{x}\left.\right|\vec{p}\rangle\underbrace{\langle\vec{p}\left.\right|\Psi,t\rangle}_{\Psi(\vec{p},t)}
+\end{equation}
 \end{document}
