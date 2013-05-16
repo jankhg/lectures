@@ -5,7 +5,7 @@
 \usepackage[english,ngerman]{babel} %deutsche Schriftzeichen%
 \usepackage{amsmath} %für Formeln%
 \usepackage{float} %Für Position von Abbildungen%
-\usepackage[singlespacing]{setspace}
+\usepackage[onehalfspacing]{setspace}
 \usepackage{nccmath}
 \usepackage[colorlinks,
 pdfpagelabels,
@@ -927,4 +927,102 @@ Durch Einsetzen eines Eins-Operators können wir zwischen Darstellungen wechseln
 \begin{equation}
 \Psi(\vec{x},t)=\langle\vec{x}\left.\right|\Psi,t)=\int d^3p\langle\vec{x}\left.\right|\vec{p}\rangle\underbrace{\langle\vec{p}\left.\right|\Psi,t\rangle}_{\Psi(\vec{p},t)}
 \end{equation}
+
+\textcolor[rgb]{1,0,0}{FEHLT}
+
+\begin{flushright}
+Vorlesung 9 - 16.05.2013
+\end{flushright}
+
+\subsection{Zeitentwicklung und stationäre Zustände}
+Zeitentwicklung von $\left.\right|\Psi,t\rangle$ durch SGL\footnote{Schrödingergleichung} 
+\begin{equation}
+i\hbar \frac{\partial}{\partial t}\left.\right|\Psi,t\rangle=\hat{H}\left.\right|\Psi,t\rangle
+\label{eq:Schrödingergleichung}
+\end{equation}
+Diese lineare DGL erster Ordnung lässt sich formal für gegebenen Anfangszustand $\left.\right|\Psi,t_0\rangle$ durch Anwendung eines linearen Zeitentwicklungsoperators $\hat{U}_{(t,t_0)}$ lösen.
+\begin{equation}
+\left.\right|\Psi,t\rangle=\hat{U}_{(t,t_0)}\left.\right|\Psi,t_0\rangle
+\end{equation}
+Zeitentwicklungsoperator
+\begin{align}
+i\hbar\frac{\partial}{\partial t}\hat{U}_{(t,t_0)}\left.\right|\Psi,t_0\rangle&=\hat{H}\hat{U}_{(t,t_0)}\left.\right|\Psi,t_0\rangle \quad \text{mit} \quad \left.\right|\Psi,t_0\rangle \quad \text{beliebig}\\
+\rightarrow i\hbar \frac{\partial}{\partial t}\hat{U}_{(t,t_0)}&=\hat{H}\hat{U}_{(t,t_0)}
+\end{align}
+\subsubsection{Zeitunabhängiger Hamiltonoperator}
+\begin{equation}
+\hat{U}_{(t,t_0)}=\hat{U}_{(t,-t_0)}=\exp\left(-\frac{i}{\hbar}\hat{H}(t-t_0)\right)
+\end{equation}
+mit $\hat{U}_{(t_0,t_0)}=\hat{1}$ wenn $\hat{H}^\dagger=\hat{H}$\\
+$\rightarrow$ Norm eines Zustandes bleibt während der Zeitentwicklung erhalten\\
+Exponentialfunktion mit einem hermiteschen Operator im Exponenten ist typisch für kontinuierliche Transformationen (Translation, Rotation). In diesem Zusammenhang bezeichnet man $\hat{H}$ auch als Generator der zeitlichen Translation.\\
+\subsubsection{Zeitabhängiger Hamiltonoperator}
+Nur wenn gilt 
+\begin{equation}
+\left[\hat{H}_{(t)},\hat{H}_{(t')}\right]=0
+\label{eq:Kommutatorrelation2}
+\end{equation}
+lässt sich die DGL geschlossen lösen.
+\begin{equation}
+\hat{U}_{(t,t_0)}=\exp\left(-\frac{i}{\hbar}\int_{t_0}^t \ \text{d}t'\hat{H}_{(t')}\right)
+\end{equation}
+Für (\ref{eq:Kommutatorrelation2}) $\neq$ 0 kann DGL nicht durch Exponentialfunktion gelöst werden.\\
+Hier bleibt nur noch iterative Lösung in Form der Dyson-Reihe.
+\begin{align}
+&i\hbar\frac{\partial}{\partial t} \hat{U}_{(t,t_0)}=\hat{H}_{(t)}\hat{U}_{(t,t_0)}\\
+&\hat{U}_{(t,t_0)}=\hat{1}-\frac{i}{\hbar} \ \int^t_{t_0}\ \text{d}t_1\hat{H}_{t_1}\hat{U}_{(t_1,t_0)}
+\end{align}
+Iteratives Einsetzen von $\hat{U}_{(t,t_0)}$ auf der rechten Seite führt zu Dyson-Reihe.\\
+\subsubsection{Stationäre Zustände}
+Der Zeitentwicklungsoperator für zeitunabhängigen $\hat{H}$ und $t_0=0$
+\begin{equation}
+\hat{U}_{(t)}=\exp\left(-\frac{i}{\hbar}\hat{H}t\right)
+\end{equation}
+stellt formal Lösung der SGL der Anwendung von $\hat{U}_{(t)}$ dar, ist aber meist ebenso kompliziert wie das direkte Lösen der SGL. Ausnahme bilden Eigenzustände von $\hat{H}$.
+\begin{align}
+\hat{H}\left.\right|E_n\rangle&=E_n\left.\right|E_n\rangle\\
+\rightarrow \left.\right|E_n,t\rangle&=\hat{U}_{(t)}\left.\right|E_n\rangle=\exp\left(-\frac{i}{\hbar}\hat{H}t\right)E_n\\
+&=\exp\left(-\frac{i}{\hbar}E_nt\right)\left.\right|E_n\rangle
+\end{align}
+Zeitabhängigkeit des Zustandes beschränkt sich auf einen komplexen Phasenfaktor. \\
+Frequenz mit der diese Phase des Zustandes rotiert ist
+\begin{equation}
+w_n=\frac{E_n}{\hbar}
+\end{equation}
+Bei der Berechnung von beobachtbaren Größen (z.B. Betragsquadrate von Skalarprodukten  oder Erwartungswerten) fällt dieser Phasenfaktor heraus.
+\begin{align}
+\langle E,t\left.\right|\hat{A}\left.\right|E,t\rangle&=\langle E_n \left.\right|\exp\left(+\frac{i}{\hbar}E_nt\right)\hat{A}\exp\left(-\frac{i}{\hbar}E_nt\right)\left.\right|E_n\rangle\\
+&=\rangle E_n\left.\right|\hat{A}\left.\right|E_n\rangle
+\end{align}
+Daher werden EZ von $\hat{H}$ auch als stationäre Zustände bezeichnet, und die entsprechende EW-Gleichung als stationäre Schrödingergleichung.\\
+Zeitentwicklung eines beliebigen Zustandes $\left.\right|\Psi,0\rangle$\\
+$\left.\right|E_n\rangle$ bilden eine vollständige orthonormierte Basis
+\begin{align}
+\left.\right|\Psi,0\rangle&=\sum_n\left.\right|E_n\rangle\langle E_n\left.\right|\Psi,0\rangle\\
+\rightarrow \left.\right|\Psi,t\rangle&=\sum_n\hat{U}_{(t)}\left.\right|E_n\rangle\langle E_n\left.\right|\Psi,0\rangle\\
+&=\sum_n\exp\left(-\frac{i}{\hbar}E_nt\right)\langle E_n \left.\right|\Psi,0\rangle\\
+\left.\right|\Psi,t\rangle&=\sum_nc_n(t)\left.\right|E_n\rangle \quad \text{mit} \\
+&c_n(t)=\exp\left(-\frac{i}{\hbar}E_nt\right)\cdot c_n(0)\\
+&c_n(0)=\langle E_n\left.\right|\Psi,0\rangle
+\end{align}
+\subsubsection{Schrödingerbild}
+In bisheriger Sichtweise tragen Zustände die Zeitabhängigkeit, formal durch Zeitentwicklungsoperator beschrieben.\\
+Zeitabhängigkeit von Observablen, z.B. Erwartungswerte
+\begin{equation}
+\langle\hat{A}\rangle_{(t)}=\langle\Psi,t\left.\right|\hat{A}\left.\right|\Psi,t\rangle
+\end{equation}
+resultiert aus Zeitabh- der Zustände, Operatoren sind zeitabhängig
+\subsubsection{Heisenbergbild}
+Alternative Interpretation der Zeitentwicklung des Erwartungswertes 
+\begin{align}
+\langle\hat{A}\rangle_{(t)}&=\langle\Psi,t\left.\right|\hat{A}\left.\right|\Psi,t\rangle\\
+&=\langle\Psi,0\left.\right|\hat{U}^\dagger_{(t)}\hat{A}\ \hat{U}_{(t)}\left.\right|\Psi,0\rangle\\
+&=\langle\Psi,0\left.\right|\hat{A}_{\hat{H}(t)}\left.\right|\Psi,0\rangle
+\end{align}
+unitäre Transformation des Operators\\
+OP der Observablen entwickeln sich in der Zeit, während die Zustände selbst zeitunabhängig sind. Schrödinger- und Heisenbergbilder sind Darstellungen derselben Physik.
+\begin{align}
+&\hat{A}_{H(t)}=\hat{U}^\dagger_{(t)}\hat{A}\hat{U}_{(t)}\\
+&\frac{\text{d}}{\text{d}t}\hat{A}_{H(t)}=\frac{i}{\hbar}\left[\hat{H},\hat{A}_{H(t)}\right]+\frac{\partial \hat{A}}{\partial t}H(t)
+\end{align}
 \end{document}
