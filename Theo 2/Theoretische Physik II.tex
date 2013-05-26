@@ -29,7 +29,7 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \maketitle
 \tableofcontents
 \newpage
-\begin{flushright}Vorlesung 2 vom 18.04.2013\end{flushright}
+\begin{flushright}Vorlesung 2 - 18.04.2013\end{flushright}
 \section{Formalismus der Quantenmechanik}
 $\rightarrow$ mathematisches Handwerkszeug bereitstellen\\
 \begin{itemize}
@@ -1013,7 +1013,7 @@ Alternative Interpretation der Zeitentwicklung des Erwartungswertes
 \begin{align}
 \langle\hat{A}\rangle_{(t)}&=\langle\Psi,t\left.\right|\hat{A}\left.\right|\Psi,t\rangle\\
 &=\langle\Psi,0\left.\right|\hat{U}^\dagger_{(t)}\hat{A}\ \hat{U}_{(t)}\left.\right|\Psi,0\rangle\\
-&=\langle\Psi,0\left.\right|\hat{A}_{\hat{H}(t)}\left.\right|\Psi,0\rangle
+&=\langle\Psi,0\left.\right|\hat{A yfvfdsdhkbrfkvhdskedhv}_{\hat{H}(t)}\left.\right|\Psi,0\rangle
 \end{align}
 $\rightarrow$ unitäre Transformation des Operators\\
 OP der Observablen entwickeln sich in der Zeit, während die Zustände selbst zeitunabhängig sind. Schrödinger- und Heisenbergbilder sind Darstellungen derselben Physik.
@@ -1021,4 +1021,112 @@ OP der Observablen entwickeln sich in der Zeit, während die Zustände selbst ze
 &\hat{A}_{H(t)}=\hat{U}^\dagger_{(t)}\hat{A}\hat{U}_{(t)}\\
 &\frac{\text{d}}{\text{d}t}\hat{A}_{H(t)}=\frac{i}{\hbar}\left[\hat{H},\hat{A}_{H(t)}\right]+\frac{\partial \hat{A}}{\partial t}H(t)
 \end{align}
+
+\begin{flushright}
+Vorlesung 10 - 21.05.2013
+\end{flushright}
+
+\subsection{Observablen und Vorhersagen}
+\begin{itemize}
+	\item 4. Postulat: Für ideale Messung können Wahrscheinlichkeiten für einen der Eigenwerte der Observablen $\hat{A}$ vorhergesagt werden (diskretes Spektrum).
+    \begin{equation}
+      P_\Psi(a_i)=\left|\langle a_i\left.\right|\Psi\rangle\right|^2 \quad \text{für System im Zustand} \quad \left.\right|\Psi\rangle
+    \end{equation}
+  \item Experimenteller Zugang: Große Zahl von Messungen der Observablen an Systemen in \textbf{identischen} Zuständen $\left.\right|\Psi\rangle$\\
+    $\rightarrow$ Experimentelle Häufigkeitsverteilung\\
+    $\rightarrow$ Vergleichbar mit Wahrscheinlichkeitsverteilung $P_\Psi(a_i)$ aus der QM-Beschreibung
+  \item Bsp.: Doppelspaltexperiment mit Elektronen\\
+    Häufigkeitsverteilung der Position der Elektronen auf dem Schirm ist Abb. des Betragsquadrats der Wellenfunktion in Ortsdarstellung
+  \item Oft ist nicht komplette Verteilung von Interesse, sondern nur einfache Kenngrößen: Mittelwerte \& Varianz
+  \item Mittelwert der Verteilung $P_\Psi(a_i)$
+    \begin{equation}
+    \langle\hat{A}\rangle_\Psi=\sum_iP_\Psi(a_i) a_i
+    \end{equation}
+    Im QM-Kontext
+    \begin{align}
+    \langle\hat{A}\rangle_\Psi&=\sum_i\left|\langle a_i\left.\right|\Psi\rangle\right|^2a_i\\
+    &=\sum_i\langle\Psi\left.\right|a_i\rangle a_i\langle a_i\left.\right|\Psi\rangle\\
+    &=\langle\Psi\left.\right|\hat{A}\left.\right|\Psi\rangle
+    \end{align}
+    Erwartungswert der Observablen $\hat{A}$ $\Leftrightarrow$ Mittelwert der Wahrscheinlichkeitstheorie 
+  \item Analog: Varianz der Verteilung $P_\Psi(a_i)$ $\Leftrightarrow$ Unschärfe $\Delta A_\Psi$
+  \item Spezialfall: $\left.\right|\Psi\rangle=\left.\right|a_i\rangle$\\
+    Erwartungswert: $\langle\Psi\left.\right|\hat{A}\left.\right|\Psi\rangle=\langle a_i\left.\right|\hat{A}\left.\right|a_i\rangle=\langle a_i\left.\right|a_i\left.\right|a_i\rangle=a_i$\\
+    Unschärfe: $\Delta A_{a_i}=0$
+\end{itemize}
+\textbf{Messung kompatibler Observablen}\\
+\begin{itemize}
+	\item Betrachte sequentielle Messung zweier Observablen. Beide Messungen unmittelbar nacheinander, sodass Zeitentwicklung zwischen beiden Messungen irrelevant ist.
+  \item Angenommen $\left[\hat{A},\hat{B}\right]=0$\\
+    Es existiert simultane Eigenbasis
+    \begin{align}
+      \hat{A}\left.\right|a_ib_j\rangle&=a_i\left.\right|a_ib_j\rangle\\
+      \hat{B}\left.\right|a_ib_j\rangle&=b_j\left.\right|a_ib_j\rangle
+    \end{align}
+    Im Falle von diskrete Spektren und keiner Entartung.
+  \item Ausgangszustand $\left.\right|\Psi\rangle$ entwickelt in simultaner Eigenbasis
+    \begin{equation}
+    \left.\right|\Psi\rangle=\sum_{ij}C_{ij}\left.\right|a_ib_j\rangle
+    \end{equation}
+  \item 1. Messung von $\hat{A}$. Wahrscheinlichkeitsverteilung $P_\Psi(a_i)$
+    \begin{align}
+      P_\Psi(a_i)&=\sum_j\left|\langle a_ib_j\left.\right|\Psi\rangle\right|^2\\
+      &=\sum_j\left|\langle a_ib_j\left.\right|\left(\sum_{i'j'}C_{i'j'}\left.\right|a_{i'}b_{j'}\rangle\right)\right|^2\\
+      &=\sum_j\left|\sum_{i'j'}C_{i'j'}\langle\underbrace{a_ib_j\left.\right|a_{i'}b_{j'}}_{\delta_{ii'}\delta_{jj'}}\rangle\right|^2\\
+      &=\sum_j\left|C_{ij}\right|^2
+    \end{align}
+  \item 1. Messung: Zustand nach $a_i$ Messung konstruieren\\
+    $\rightarrow$ Projektion auf Unterraum zum Eigenwert $a_i$.
+  \item Projektionsoperator $\hat{\Pi}(a_i)$
+    \begin{equation}
+      \hat{\Pi}(a_i)=\sum_j|a_ib_j\rangle\langle a_ib_j|
+    \end{equation}
+    Verbindung zum $\hat{1}$-Operator 
+    \begin{equation}
+    \hat{1}=\sum_i\hat{\Pi}(a_i)
+    \end{equation}
+  \item Eigenschaften von Projektionsoperator 
+    \begin{align}
+      \hat{\Pi}^\dagger&=\hat{\Pi} \quad \text{hermitesch}\\
+      \hat{\Pi}^2&=\hat{\Pi} \quad \text{itempotenz}
+    \end{align}
+  \item Zustand nach $a_i$-Messung
+    \begin{align}
+      |\Psi'(a_i)\rangle&=\hat{\Pi}(a_i)|\Psi\rangle\\
+      &=\sum_jC_{ij}|a_ib_j\rangle
+    \end{align}
+    keine Summation über i
+  \item Nachnormierung 
+    \begin{equation}
+    |\Psi(a_i)\rangle=\frac{1}{\left(\sum_j|C_{ij}|^2\right)^{1/2}}\sum_jC_{ij}|a_ib_j\rangle
+    \end{equation}
+  \item 2. Messung: Wsk. für Messergebnis $b_j$
+    \begin{align}
+      P_{\Psi'(a_i)}(b_j)&=\sum_i\left|\langle a_{i'}b_j|\Psi'(a_i)\rangle\right|^2\\
+      &=\sum_{i'}\left|\frac{1}{\left(\sum_j |C_{ij}|^2\right)^{1/2}}\sum_{j'}C_{ij'}\underbrace{a_{i'}b_j|a_ib_{j'}\rangle}_{\delta_{ii'}\delta_{jj'}}\right|^2\\
+      &=\frac{|C_{ij}|^2}{\sum_{j'}|C_{ij'}|^2}
+    \end{align}
+  \item Kombinierte Wahrscheinlichkeit für Messung von $a_i$ und $b_j$
+    \begin{equation}
+    P_\Psi(a_i,b_j)=P_\Psi(a_i)P_{\Psi(a_i)}(b_j)=|C_{ij}|^2
+    \end{equation}
+  \item 2. Messung: Zustand
+    \begin{equation}
+    |\Psi''(a_ib_j)\rangle=|a_ib_j\rangle
+    \end{equation}
+  \item Sequentielle Messung weiterer Observablen $\hat{A},\hat{B}$ mit $[\hat{A},\hat{B}]=0$ gilt:
+    \begin{itemize}
+      \item Wahrscheinlichkeit für bestimmte Kombination von Messergebnissen ($a_i,b_j$)
+        \begin{equation}
+        P_\Psi(a_ib_j)=|C_{ij}|^2=\left|\langle a_ib_j|\Psi\rangle\right|^2
+        \end{equation}
+      \item Zustand nach beiden Messungen
+        \begin{equation}
+        |\Psi''(a_ib_j)\rangle=|a_ib_j\rangle
+        \end{equation}
+        ist der simultane EZ zu beiden Messergebnissen
+      \item Wahrscheinlichkeiten von 2. Zustand sind unabhängig von Reihenfolge der Messungen
+      \item Wiederholten Messungen von $\hat{A}$ oder $\hat{B}$ in beliebiger Reihenfolge reproduzieren die ersten Messergebnisse $a_ib_j$.
+    \end{itemize}
+\end{itemize}
 \end{document}
