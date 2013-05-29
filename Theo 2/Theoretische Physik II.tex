@@ -1129,4 +1129,127 @@ Vorlesung 10 - 21.05.2013
       \item Wiederholte Messungen von $\hat{A}$ oder $\hat{B}$ in beliebiger Reihenfolge reproduzieren die ersten Messergebnisse $a_ib_j$.
     \end{itemize}
 \end{itemize}
+
+\begin{flushright}
+Vorlesung 11 - 23.05.2013
+\end{flushright}
+
+\begin{flushright}
+Vorlesung 12 - 28.05.2013
+\end{flushright}
+\subsection{Stückweise konstante Potentiale}
+\begin{itemize}
+	\item stückweise konstante Potentiale $\rightarrow$ V(x)
+    \begin{equation}
+    V(x)=\left\{
+    \begin{aligned}
+    &\stackrel{:}{.}\\
+    &V_{12} \quad \text{für} \quad \xi_1<x<\xi_2\\
+    &V_{23} \quad \text{für} \quad \xi_2<x<\xi_3\\
+    &\stackrel{:}{.}
+    \end{aligned}
+    \right.
+    \end{equation}
+  \item stationäre Schrödingergleichung
+    \begin{align}
+      &\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right)\Psi_E(x)=E\Psi_E(x)\\
+      &-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\Psi_E(x)=\left[E-V(x)\right]\Psi_E(x)\\
+      &\frac{\partial^2}{\partial x^2}\Psi_E(x)=\frac{2m}{\hbar}\left[V(x)-E\right]\Psi_E(x)
+    \end{align}
+  \item Anschaulich ist die zweite Ableitung der Wellenfunktion (Krümmung) mit Differenz $(V(x)-E)$ verknüpft.
+  \item $E>V(x)$: Zweite Ableitung $\Psi_E''(x)$ hat umgekehrtes Vorzeichen wie $\Psi_E(x)$ $\rightarrow$ Krümmung zur Achse.
+  \item $E<V(x)$: $\Psi_E''(x)$ hat das selbe Vorzeichen wie $\Psi_E(x)$ $\rightarrow$ Krümmung von Achse weg.
+  \item stückweise konst. Potential in einem der Intervalle mit $V(x)=V_0$
+    \begin{equation}
+    \frac{\partial^2}{\partial x^2}\Psi_E(x)=\frac{2m}{\hbar^2}[V_0-E]\Psi_E(x)
+    \end{equation}
+    Allgemeine Lösung: ebene Welle 
+    \begin{equation}
+    \Psi_E(x)=C\exp\left(\pm\sqrt{\frac{2m}{\hbar^2}[V_0-E]}x\right)
+    \end{equation}
+  \item Unterscheide $E>V_0, \ E<V_0$\\
+    1. $E>V_0$\\
+    \begin{align}
+    \Psi_E(x)&=Ae^{ikx}+Be^{-ikx}\\
+    &=A'\sin(kx)+B'\cos(kx)
+    \end{align}
+    \begin{equation}
+    k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)} \in \mathbb{R}
+    \end{equation}
+    $\rightarrow$ Oszillatorische Lösung\\
+    2. $E>V_0$
+    \begin{align}
+    \Psi_E(x)\\&=Ae^{K x}+Be^{-K x}\\
+    &K=\sqrt{\frac{2m}{\hbar^2}(V_0-E)}\in \mathbb{R}
+    \end{align}
+    $\rightarrow$ Exponentieller Anstieg/Abfall
+  \item Vorsicht in der Umgebung der Sprungstelle/Unstetigkeiten im Potential $\rightarrow$ Stetigkeitsbedingung
+  \item Betrachte $\epsilon$-Umgebung um eine Sprungstelle und integriere (formal) die SGL.
+    \begin{align}
+    &\int_{\xi-\epsilon}^{\xi+\epsilon}\ dx \ \frac{\partial^2\Psi_E(x)}{\partial x^2}=\int_{\xi-\epsilon}^{\xi+\epsilon}\ dx \ \frac{2m}{\hbar^2}(V(x)-E)\Psi_E(x)\\
+    &\Psi_E'(\xi+\epsilon)-\Psi_E'(\xi-\epsilon)=\frac{2m}{\hbar^2} \int_{\xi-\epsilon}^{\xi+\epsilon}\ dx \ (V(x)-E) \Psi_E(x)
+    \end{align}
+  \item Aus $\epsilon\rightarrow 0$ Betrachtung:\\
+    $\frac{\partial}{\partial x}\Psi_E(x)$ und $\Psi_E(x)$ sind an der Sprungstelle stetig, wenn V(x) endlich.
+\end{itemize}
+\subsection{Potentialtopf}
+\begin{itemize}
+	\item Potentialtopf
+    \begin{equation}
+    V(x)=\left\{
+    \begin{aligned}
+    &V_0 \ : \ x\leq -a/2 \quad (I)\\
+    &0 \ : \ -a/2\leq x\leq a/2 \quad (II) \\
+    &V_0 \ : \ x\geq a/2 \quad (III)
+    \end{aligned}
+    \right.
+    \end{equation}
+    Zwei Klassen von Lösungen
+    \begin{itemize}
+      \item $E\leq V_0$ : gebundene Zustände
+      \item $E>V_0$ : ungebundene Zustände
+    \end{itemize}
+    \end{itemize}
+    \textbf{Bindungszustand:} $0\leq E \leq V_0$
+    \begin{itemize}
+      \item Drei Bereiche:
+        \begin{align}
+          (I) \quad E<V_0: \quad &K=\sqrt{\frac{2m}{\hbar^2}(V_0-E)}\\
+          &\Psi_I(x)=Ae^{Kx}+A'e^{-Kx}\\
+          (II) \quad E>0: \quad &k=\sqrt{\frac{2m}{\hbar^2}E}\\
+          &\Psi_{II}(x)=B\sin(kx)+B'\cos(kx)\\
+          (III) \quad E<V_0: \quad &K=\sqrt{\frac{2m}{\hbar^2}(V_0-E)}\\
+          &\Psi_{III}(x)=Ce^{Kx}+C'e^{-Kx}
+        \end{align}
+        $\rightarrow$ 6 Integrationskonstanten
+      \item 1. Normierbarkeit: Exponentiell Anwachsenden Terme für $x\rightarrow \pm$ dürfen nicht beitragen, da sonst nicht normierbar.
+        \begin{align}
+          &\rightarrow A'=0 \, \quad C=0\\
+          &\Psi_I(x)=Ae^{Kx}\\
+          &\Psi_{II}(x)=B\sin(kx)+B'\cos(kx)\\
+          &\Psi_{III}(x)=C'e^{-Kx}
+        \end{align}
+      \item 2. Potential symmetrisch unter $x\rightarrow-x$
+      \item Formal wird $x\rightarrow-x$ durch Paritätsoperator beschrieben.
+        \begin{equation}
+        \hat{\Pi}|x\rangle=|-x\rangle
+        \end{equation}
+      \item Hamiltonian ist invariant unter Paritätstransformation
+        \begin{align}
+          &\hat{\Pi}^{-1}\hat{H}\hat{\Pi} \quad \text{oder} \hat{H}\hat{\Pi}=\hat{\Pi}\hat{H}\\
+          &[\hat{H},\hat{\Pi}]=0
+        \end{align}
+        $\rightarrow$ Hamiltonop. und $\hat{\Pi}$ haben simultane Eigenbasis
+        \begin{align}
+        &\langle x|\hat{\Pi}|E_n\rangle=\langle-x|E_n\rangle\\
+        &\pm\langle x|E_n\rangle
+        \end{align}
+        $\rightarrow$ stat. Wellenfunktionen haben entweder gerade oder ungerade Parität
+        \begin{align}
+        \text{gerade:}\quad \Psi_{E_n}(-x)&=\Psi_{E_n}(x)\\
+        \text{ungerade:}\quad \Psi_{E_n}(-x)&=-\Psi_{E_n}(x)
+        \end{align}
+    \end{itemize}
+ 
+
 \end{document}
