@@ -1251,5 +1251,126 @@ Vorlesung 12 - 28.05.2013
         \end{align}
     \end{itemize}
  
+\begin{flushright}
+Vorlesung 13 - 04.06.2013
+\end{flushright}
 
+\subsection{Bindungszustände im Potentialtopf}
+(Skizze Potentialtopf symmetrisch um x=0)
+\begin{align}
+I E&<V_0 \quad &k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)}\quad &\Psi_I(x)=Ae^{kx}+A'e^{-kx}\\
+II E&>0 \quad &K=\sqrt{\frac{2m}{\hbar^2}E}\quad &\Psi_{II}(x)=B\sin(kx)+B'\cos(kx)\\
+III E&<V_0 \quad &k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)}\quad &\Psi_{III}(x)=Ce^{kx}+C'e^{-kx}
+\end{align}
+Wegen Stetigkeitsbedingung von $\Psi$, $\Psi'$ und Skalierung
+\begin{equation}
+A'=0, \quad C=0
+\end{equation}
+\textbf{Paritätssymmetrie}
+\begin{equation}
+\hat{\Pi}|x\rangle=|-x\langle;\quad [\hat{\Pi},\hat{H}]=0
+\end{equation}
+Betrachten wir zunächst die \textbf{gerade (positive) Parität}\\
+$\Rightarrow$ B=0 \& A=C' (Achsensymmetrie)
+\begin{equation}
+\left.
+\begin{aligned}
+&\Psi_I(x)=Ae^{kx}\\
+&\Psi_{II}(x)=B'\cos(Kx)\\
+&\Psi_{III}(x)=Ae^{-kx}
+\end{aligned}
+\right\} \xrightarrow{\text{Stetigkeit bei x=0}}
+\begin{aligned}
+B'\cos(Ka)&=Ae^{-ka}\\
+-B'K\sin{Ka}&=-kAe^{-ka}\\
+\rightarrow K\tan(Ka)&=k (1)
+\end{aligned}
+\end{equation}
+\textbf{Ungerade Parität}
+$\Rightarrow$ B'=0 \& A=-C' (Achsensymmetrie)
+\begin{equation}
+\left.
+\begin{aligned}
+&\Psi_I(x)=-Ae^{kx}\\
+&\Psi_{II}(x)=B\sin(Kx)\\
+&\Psi_{III}(x)=Ae^{-kx}
+\end{aligned}
+\right\} \xrightarrow{\text{Stetigkeit bei x=0}}
+\begin{aligned}
+B\sin(ka)&=Ae^{-ka}\\
+-B'K\cos{Ka}&=-kAe^{-ka}\\
+\rightarrow K\cot(Ka)&=-k (2)
+\end{aligned}
+\end{equation}
+Die beiden transzendenten Gleichungen (1), (2) führen auf ganz bestimmte Energien für die die Stetigkeitsbedingungen erfüllt sind. Die Energiequantisierung ergibt sich aus den Ausschlussbedingungen.\\
+Die Bestimmung der Energieeigenwerte $E_n$ kann graphisch oder numerisch bestimmt werden.
+\begin{align}
+&K\tan(Ka)=k\quad &\text{gerade Parität}\\
+&K\cot(Ka)=-k\quad &\text{ungerade Parität}\\
+&K_n=\sqrt{\frac{2m}{\hbar^2}E_n}\quad&k_n=\sqrt{\frac{2m}{\hbar^2}(V_0-E)}
+\end{align}
+Spezialfall $V_0\rightarrow\infty$ unendlich hoher Potentialtopf\\
+$k\rightarrow\infty$\\
+Es folgt 
+\begin{equation}
+k_na=\frac{n\pi}{2} \quad E_n=\frac{\hbar^2}{2m}k_n^2\quad n=1,2,...
+\end{equation}
+\textbf{Betrachte nun Streulösungen}: $E>V_0$\\
+(Skizze mit Energie größer als Potentialtopf)\\
+Lösung in allen Teilbereichen durch ebene Wellen möglich
+\begin{align}
+&\Psi_I(x)=Ae^{ikx}+A'e^{-ikx}\quad &k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)}\\
+&\Psi_{II}(x)=Be^{ik'x}+B'e^{-ik'x}\quad &k'=\sqrt{\frac{2m}{\hbar^2}E}\\
+&\Psi_{III}(x)=Ce^{ikx}+C'e^{-ikx}\quad &k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)}
+\end{align}
+Betrachte Streuproblem, d.h. man setzt eine von links einlaufende Welle vorraus.\\
+$A=A_{\text{in}}$, C'=0, da keine Welle von rechts\\
+$\rightarrow$ Wahl von $A_{\text{in}}$ ist Konventionssache, da Streulösungen nicht normierbar sind.
+\begin{itemize}
+\item Die verbleibenden Konstanten lassen sich aus 4 Stetigkeitsbedingungen bei $x=\pm a$ bestimmen.
+\item Keine Energiequantisierung, jede beliebige Energie $>V_0$ ergibt Lösung.\\
+Fazit:Potentialtopf
+\item diskrete gebundene Zustände mit $E_n<V_0$ und kontinuierliche Streuzustände bei $E>V_0$
+\item Quantisierung der Energien ist eine Konsequenz der Normierbarkeit. (wegen Randbedingungen)
+\item Wellenfunktion der Bindungszustände haben exponentielle Ausläufer, die in den klassisch verbotenen Bereich tunneln.
+\item Eindringtiefe: $\frac{1}{k}=\frac{1}{V_0-E}$
+\end{itemize}
+
+\subsection{Potentialbarriere}
+(Skizze mit umgekehrtem Potentialtopf)
+\begin{equation}
+V(x)=\left\{
+\begin{aligned}
+0,\quad x<0\\
+V_0,\quad 0\leq x\leq a\\
+0,\quad x>a
+\end{aligned}
+\right.
+\end{equation}
+\begin{itemize}
+	\item keine gebundenen Zustände
+  \item 2 Typen von Streuzuständen: $E>V_0$ und $E<V_0$
+\end{itemize}
+In Region I und III
+\begin{align}
+\Psi_{I}(x)&=Ae^{ikx}+A'e^{-ikx} \quad k=\sqrt{\frac{2m}{\hbar^2}E}\\
+\Psi_{II}(x)&=Ce^{ikx}+C'e^{-ikx}
+\end{align}
+Interpretation als Streuproblem\\
+A: Amplitude der einlaufenden Welle\\
+A': ...reflektierten\\
+C: ...transmittierten\\
+C': 0, da keine Welle von rechter Seite\\
+Entsprechend ergeben sich die Beiträge zur Wahrscheinlichkeitsstromdichte
+\begin{equation}
+j(x)=\frac{\hbar}{2mi}\left[\Psi^*(x)\frac{\partial\Psi(x)}{\partial x}-\Psi(x)\frac{\partial\Psi^*(x)}{\partial x}\right]
+\end{equation}
+zu
+\begin{align}
+&\Psi_{I}(x)=\frac{\hbar k}{m}\left(|A|^2-|A'|^2\right)\\
+&\Psi_{III}(x)=|C|^2\\
+&\frac{\hbar k}{m}|A|^2\quad \text{einlaufende Wahrscheinlichkeitsdichte}\\
+&\frac{\hbar k}{m}|A'|^2\quad \text{reflektierte Wahrscheinlichkeitsdichte}\\
+&\frac{\hbar k}{m}|C|^2\quad \text{transmittierte Wahrscheinlichkeitsdichte}
+\end{align}
 \end{document}
