@@ -1,4 +1,4 @@
-\documentclass[10pt,article,colorback,accentcolor=tud9d]{scrartcl}
+\documentclass[10pt]{scrartcl}
 \usepackage[utf8]{inputenc} %?%
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} %cool beans%
@@ -19,6 +19,7 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}%Ränder
 \usepackage{amssymb}%Für R reele zahlen
 \title{Theoretische Physik IV}
+\author{Philipp Dijkstal und Jan Krause}
 %\subtitle{Professor: Dr. Gernot Alber\\
 %Mitschrift von Philipp Dijkstal}
 %\subsubtitle{email: \textaccent{philipp.dijkstal@web.de}}
@@ -27,7 +28,7 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \maketitle
 \tableofcontents
 \newpage
-Vorlesung 1 - 16.04.2013
+\begin{flushright}Vorlesung 1 - 16.04.2013\end{flushright}
 \section{Prinzipien der Thermodynamik}
 Grundbegriffe:
 \begin{itemize}
@@ -160,7 +161,7 @@ Y_\lambda &:=((1-\lambda)Y_1,\lambda Y_2)
 Mischung möglich!
 \end{fleqn}
 \end{itemize}
-Vorlesung 2 - 18.04.2013\\
+\begin{flushright}Vorlesung 2 - 18.04.2013\end{flushright}
 $\Rightarrow$ \textbf{lokales Entropieprinzip} (für 1 thermodynamisches System, $\Gamma$)\\
 $\exists \ S_\Gamma(X)$ mit folgenden Eigenschaften: 
 \begin{fleqn}
@@ -246,11 +247,11 @@ Die globale Entropiefunktion ist:
 \item stetig differenzierbar in Bezug auf alle extensiven thermodynamischen Variablen
 \item streng monoton wachsend in Bezug auf U\footnote{diese Eigenschaften lassen sich auch durch weitere Axiome erzwingen}
 \end{itemize}
-\subsection{Kontrolle thermodynamischer Gleichgewichtszustände}
+\subsubsection{Kontrolle thermodynamischer Gleichgewichtszustände}
  \begin{doublespacing}Extensive Parameter $(\underbrace{(U,V,N)}_{:=X})$ sind kontrollierbar durch ``Wände''.\end{doublespacing}\\
  Es gibt \textbf{adiabatische Wände} mit der Eigenschaft:\\
  Energieänderungen haben ihre Ursache in Arbeit
- \subsection{Grundproblem der Thermodynamik}
+ \subsubsection{Grundproblem der Thermodynamik}
  1. Ausgangspunkt: Zusammengesetztes, abgeschlossenes, thermodynamisches System.\footnote{Skizze} Wände müssen Eigenschaften stabilisieren.\\
  Beseitigt man die Wände zwischen  2 Systemen, gilt Energieerhaltung, aber man weiß nicht, wie sich diese Energie verteilt.\\
  2. Neuer thermodynamischer Gleichgewichtszustand, 5- statt 6-dimensional\\
@@ -277,6 +278,240 @@ $p$: Druck\\
 $\mu$: chemisches Potential\\
 $\rightarrow$ Kodierung eines thermodynamischen Systems entweder durch Angabe von\\
 $S(X)$ oder von \\
-$(T(X),p(X),\mu(X))$ 
+$(T(X),p(X),\mu(X))$ \\
 
+\begin{flushright}
+Vorlesung 3 23.4.2013
+\end{flushright}
+Für stabiles Gleichgewicht: $dS=0$ und $d^2S<0$\\
+\textbf{Konsequenzen}:\\
+\begin{fleqn}
+(1) $\underbrace{S(U,V,N)}_{\text{entropische Fundamentalrelation}}$ ist streng monoton wachsend in U\\
+   $\Rightarrow$
+ \begin{itemize}
+   \item $U(S,V,N)$ energetische Fundamentalrelation
+   \item $S(U,V,N) \rightarrow$ max. $\Leftrightarrow U(S,V,N) \rightarrow$ min. 
+   \item $\left.\frac{\partial S}{\partial U}\right|_{(V,N)} \gg 0$, $T:= \left.\frac{\partial U}{\partial S}\right|_{(V,N)} \geq 0$
+   \item \textbf{Postulat IV}: $\frac{\partial U}{\partial S} :=T=0$ für Zustände mit $S=0$
+ \end{itemize}
+ (2) Intensive Variablen thermodynamischer Systeme\\
+ z.B.: Sei $X=(U,V,N_j) \ \rightarrow \ S(X)$ extensive Variablen\\
+ $U(S,V,N_j) \Leftrightarrow S(U,V,N_j)$ Fundamentalrelationen
+ \begin{equation}
+   \rightarrow \ dU(X)= \underbrace{\frac{\partial U}{\partial S}}_{:=T(X)} dS(X) + \underbrace{\frac{\partial U}{\partial V}}_{:= -p(X)}dV(X) +\sum_j \underbrace{\frac{\partial U}{\partial N_j}}_{:=\mu_j(X)}dN_j(X)
+ \end{equation}
+ $S(U,V,N_j)$ bzw. $U(S,V,N_j)$ - Fundamentalrelationen\\
+ $\Leftrightarrow$ $T(X),p(X),\mu_j(X)$ - Zustandsgleichungen
+ Temperatur, Druck, chemisches Potential unabhängig von Systemgröße (intensiv)
+ \begin{itemize}
+  \item betrachte \textbf{quasistatischen Prozess}, d.h. $X<Y$ \textbf{und} alle Zwischenschritte sind termodynamische Gleichgewichtszustände\\
+   \textbf{Wärme}:
+   \begin{equation}
+    dU = \underbrace{TdS}_{:=\delta Q} \underbrace{-pdV}_{:=\delta W_M} + \underbrace{\sum_j \mu_j dN_j}_{:=\delta W_{ch}}
+   \end{equation}
+   Wärme, mechanische Arbeit, chemische Arbeit
+ \end{itemize}
+Langsame Prozesführung ist notwendig, um quasistatische Prozesse zu gewährleisten!\\
+(3) Eulersche Relationen
+  \begin{equation}
+  \begin{aligned}
+  &U_\lambda(\lambda S,\lambda V,\lambda N_j)=\lambda U(S,V,N_j) \quad \text{wegen Extensivität}\\
+  &\Rightarrow \left.\frac{d}{d\lambda}U_\lambda\right|_{\lambda = 1} =U(S,V,N_j) = \underbrace{\left.\frac{\partial U_\lambda}{\partial \lambda S}\right|}_{=T} S +\underbrace{\left.\frac{\partial U_\lambda}{\partial \lambda V}\right|}_{=-p} V +\sum_j \underbrace{\frac{\partial U_\lambda}{\partial \lambda N_j}}_{=\mu_j} N_j\\
+  &\Leftrightarrow U(X) =T(X)S(X)-p(X)V(X)+\sum_j \mu_j(X) N_j(X) \quad \text{Euler-Relation}\\
+  &\rightarrow S= \frac{U}{T}+\frac{p}{T}V -\sum_j\frac{\mu_j}{T}N_j
+  \end{aligned}
+  \end{equation}
+(4) Gibbs-Duhem Relationen:
+  \begin{equation}
+   dU=TdS -pdV+\sum_j\mu_jdN_j +\underbrace{SdT-Vdp+\sum_jN_jd\mu_j}_{=0\Rightarrow\text{nicht alle int. Variablen sind unabhängig!}}
+  \end{equation}
+\subsubsection{Einfache Thermodynamische Systeme}
+\begin{itemize}
+  \item \textbf{Einkomponentiges ideales Gas}\\
+   $X=(U,V,N)$, Referenzzustand $X_0=(U_0,V_0,N_0)$, $S(X_0)=N_0s_0$
+   \begin{equation}
+   S(U,V,N)=Ns_0 +NR \ ln\left(\left.\left(\frac{U}{U_0}\right)^c\left(\frac{V}{V_0}\right)\left(\frac{N}{N_0}\right)^{-(c+1)}\right)\right\} \text{klassische Physik}
+   \end{equation}
+   $R=N_Ak_B=8,32JK^{-1}mol^{-1}$\\
+   $c= \frac{3}{2}$\\
+   $N_A=6,022 \times 10^{23}JK^{-1}$\\
+   $k_B=1,381 \times 10^{-23}JK^{-1}$\\
+  \item Einkomponentiges ``reales'' Gas
+   \begin{equation}
+   S(U,V,N)=Ns_0 + NR \ ln \left(\frac{\left(\frac{U}{N}+\frac{a}{V/N}\right)^c\left(\frac{V}{N} -b\right)}{\left(\frac{U_0}{N_0} + \frac{a}{V/N}\right)^c \left(\frac{V_0}{N_0}-b\right)}\right)
+   \end{equation}
+  \item Elektromagnetisches Feld: $X=(U,V)$\\
+   \begin{equation}
+    S(U,V)= \frac{4}{3}b^{1/4} U^{3/4}V^{1/4} \quad b:= \frac{\pi^2kg^4}{15 \hbar^3 c^3} \approx 7,56 \times 10^{-16} Jm^{-3}K^{-4}
+    \end{equation}
+   $\rightarrow$ Zustandsgleichung
+   \begin{equation}
+   \begin{aligned}
+    &\frac{\partial S}{\partial U} \equiv \frac{1}{T} = b^{1/4} U^{-1/4} V^{1/4} \Leftrightarrow \frac{1}{T}=\left(b\frac{V}{U}\right)^{1/4}\\
+    &\frac{U}{V}=bT^4 \quad \text{Stefan-Boltzmann-Gesetz}\\
+    &\frac{\partial S }{\partial V}=\frac{p}{T} \Leftrightarrow p=\frac{1}{3}\left(b\frac{U^3}{V^3}\right)^{1/4}\underbrace{T}_{\left(\frac{U}{V}\frac{1}{b}\right)^{1/4}}=\frac{1}{3}\frac{U}{V}
+   \end{aligned}
+   \end{equation}
+\end{itemize}
+\subsection{Thermische Gleichgewichtsbedingungen}
+\subsubsection{Thermisches Gleichgewicht und Temperatur}
+Problem: Bild
+\begin{flushright}
+Vorlesung 4 - 25.04.2013
+\end{flushright}
+\textbf{Frage:} Was passiert, wenn adiabatische Wand entfernt wird?
+$d(U_1+U_2)=0\\
+d(V_1+V_2)=0\\
+d(N_1+N_2)=0$
+\begin{equation}
+X=\left((U_1,V_1,N_1),(U_2,V_2,N_2)\right) \ < \ Y
+\end{equation}
+S $\rightarrow$ max.  $dS=0$, $d^2S<0$ lokales thermodynamisches Gleichgewicht\\
+$S(X_1,X_2)=S_1(X_1)+S_2(X_2)$  Additivität
+\begin{equation}
+dS=\underbrace{\frac{\partial S_1}{\partial U_1}}_{:=\frac{1}{T_1(X_1}}dU_1 +\underbrace{\frac{\partial S_2}{\partial U_2}}_{:=\frac{1}{T_2(X_2)}}\underbrace{dU_2}_{=-dU_1} = \left(\frac{1}{T_1(X_1)}-\frac{1}{T_2(X_2)}\right)dU_1 \stackrel{!}{=} 0
+\end{equation}
+\begin{itemize}
+  \item neuer thermodynamischer Gleichgewichtszustand
+    \begin{equation}
+      T_1(X_1) = T_2(X_2); \quad X_1=(U_1,V_1,N_1); \quad X_2=(U-U_1,V_2,N_2) \quad \text{mit} \quad U=U_1+U_2
+    \end{equation}
+
+  \item Betrachtung eines quasistatischen Prozesses:
+    \begin{equation}
+    dS=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU_1 \geq 0 \quad \text{für} X<Y
+    \end{equation}
+    $T_1>T_2 \Rightarrow dU_1<0$
+\end{itemize}
+\subsubsection{Mechanisches Gleichgewicht}
+\textbf{Frage:}\\
+ adiabate Wand $\rightarrow$ diabate Wand\\
+ feste Wand $\rightarrow$ feste Wand
+\begin{equation}
+  dS=\underbrace{\frac{\partial S_1}{\partial U_1}}_{:=\frac{1}{T_1}}dU_1 + \underbrace{\frac{\partial S_2}{\partial U_2}}_{:=\frac{1  }{T_2}}\underbrace{dU_2}_{=-dU_1} +\underbrace{\frac{\partial S_1}{\partial V_1}}_{:=\frac{p_1}{T_1}}dV_1 +
+  \underbrace{\frac{\partial S_1}{\partial V_2}}_{:=\frac{p_2}{T_2}}\underbrace{dV_2}_{=-dV_1}\stackrel{!}{=}0
+\end{equation}
+\begin{equation}
+0\leq dS=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU_1 +\left(\frac{p_1}{T_1}-\frac{P_2}{T_2}\right)dV_1
+\end{equation}
+\begin{equation}
+\text{sei} T_1=T_2 \wedge P_1 >P_2 \Rightarrow dV_1>0
+\end{equation}
+\subsubsection{Chemisches Gleichgewicht}
+adiabate Wand $\rightarrow$ diabate Wand\\
+impermeable Wand $\rightarrow$ permeable Wand\\
+$U_1+U_2=U$\\
+$N_1 + N_2 = N$
+\begin{equation}
+  dS= \left(\frac{1}{T_1}-\frac{1}{T_2}\right)dU_1+\underbrace{\left(\frac{\partial S_1}{\partial N_1}\right.}_{=:-\frac{\mu_1}{T_1}}
+  -\underbrace{\left.\frac{\partial S_2}{\partial N_2}\right)}_{=:-\frac{\mu_2}{T_2}}dN_1\stackrel{!}{=}0
+\end{equation}
+\begin{equation}
+ \left. 
+  \begin{aligned}
+    &T_1(X_1)=T_2(X_2)\\
+    &\mu_1(X_1)=\mu_2(X_2)
+  \end{aligned}
+ \right\} \rightarrow (U_1,N_1)
+\end{equation}
+$ 0 \leq dS = - \left( \frac{\mu_1}{T_1} - \frac{\mu_2}{T_2} \right) dN_1 $ \\
+Sei $T_1=T_2 \wedge \mu_1 > \mu_2 \Rightarrow dN_1 < 0 $
+\subsubsection{Adiabatische Erreichbarkeit thermodynamischer Prozesse}
+\textbf{2. Hauptsatz der Thermodynamik:}\\
+Konsequenz von: $S(X)$ konkav und $T:=\frac{\partial U}{\partial S} \geq 0$\\
+\begin{itemize}
+  \item Clausius:\\
+  Es gibt keine Zustandsänderung mit dem einzigen Resultat, dass Wärme\footnote{Nur U ändert sich, V und N konstant} von einer Substanz niederer Temperatur auf eine Substanz höherer Temperatur übergeht. (BILD konkaves S über U)
+  \item Kelvin-Planck:\\
+  Es gibt keine Zustandsänderung mit dem einzigen Resultat, dass sich eine Substanz abkühlt und ein Körper angehoben wird.
+\end{itemize}
+
+
+\begin{flushright}
+Vorlesung 5 - 30.04.2013
+\end{flushright}
+\subsubsection{Thermodynamische Maschinen}
+\begin{itemize}
+	\item Wärmekraftmaschine\\
+    $\Delta W_b >0$, maximal bei gegebener $-\Delta U_a>0$
+  \item Kühlschrank\\
+    $-\Delta Q_c >0$, maximal bei gegebener $-\Delta W_b>0$
+  \item Wärmepumpe\\
+    $\Delta U_a \equiv \Delta Q_C >0$, maximal bei gegebener $-\Delta W_b >0$
+\end{itemize}
+\textbf{Energie:}
+\begin{equation}
+-\Delta U_a = \Delta W_b + \Delta Q_C
+\end{equation}
+\textbf{Entropie:}
+\begin{equation}
+\Delta S_a +\underbrace{S_b}_{=0}+ \Delta S_C \geq 0
+\end{equation}
+
+Aber: Keine Aussage, wie die Prozesse genau ablaufen\\
+Doch wegen Eigenschaften der Enropiefunktion gilt
+\begin{equation}
+\Delta S_i \leq \frac{1}{T_i}\Delta U_i
+\end{equation}
+System ohne Arbeitskoordinaten 
+\begin{eqnarray}
+\Rightarrow &\Delta U_i &= \Delta Q_i\\
+&\Delta Q_i &\geq T_i\Delta S_i\\
+&-\Delta Q_a &\equiv -\Delta U_a \leq-T_a\Delta S_a
+\end{eqnarray}
+\textbf{Wärmekraftmaschine}
+\begin{equation}
+\begin{aligned}
+&\Delta W_b=\\
+&-\Delta U_a- \underbrace{\Delta Q_C}_{\geq T_C \Delta S_C}\leq -\Delta U_a-T_c\Delta S_C\leq -T_a\Delta S_a-T_C\Delta S_c\leq -T_a\Delta S_a+T_c\Delta S_a=(T_c-T_a)\Delta S_a
+\end{aligned}
+\end{equation}
+\begin{equation}
+\eta := \frac{\Delta W_b}{-\Delta U_a}\leq\frac{-\Delta U_a +T_c\Delta S_a}{- U_a}=1+\frac{T_c\Delta S_a}{T_a}\leq 1+\frac{T_c\Delta S_a}{-T_a\Delta S_a}= 1-\frac{T_c}{T_a}:=\eta_c
+\label{eq:carnot}
+\end{equation}
+\textbf{Kühlschrank}\\
+\begin{equation}
+\eta_K:=\left(\frac{-\Delta Q_c}{-\Delta W_b}\right)\leq\frac{T_c}{T_a-T_c}
+\end{equation}
+\textbf{Wärmepumpe}\\
+\begin{equation}
+\eta_W:=\left(\frac{\Delta Q_A}{-\Delta W_b}\right)\leq\frac{T_a}{T_a-T_c}
+\end{equation}
+
+\subsection{Extremalprinzipien und thermodynamische Potentiale}
+\subsubsection{Prinzip minimaler Energie}
+Prinzip maximaler Entropie\\
+$S(U,V,N,X_\alpha)$ $S\rightarrow$ max. bei gegebenen Werten von $U,V_i,N$\\
+notwendig: $dS=0$ für $dU=dV=d=0$\\
+lokal hinreichend: $d^2S<0$ stabil\\ \\
+S monoton in U $\rightarrow U(S,V,N,X_\alpha)$ kann bestimmt werden.\\
+Es gilt im thermodynamischen Gleichgewichtszustand:\\
+$U(S,V,N,X_\alpha) \rightarrow$ min für S,V,N konstant.\\
+Analogon aus der Geometrie: Kreis\\
+U $\rightarrow$ Umfang\\
+S $\rightarrow$ Fläche\\
+Kreis hat\\
+- bei gegebenen Umfang die größte Fläche\\
+- bei gegebener Fläche den kleinsten Umfang\\ \\
+zu zeigen:\\
+- $dU=0$ für $dS=dV=dN=0$\\
+- $dU^2 > 0$ für $dS=dV=dN=0$
+\begin{equation}
+\begin{aligned}
+dS&=\frac{\partial S}{\partial U}dU+\frac{\partial S}{\partial V}dV+\frac{\partial S}{\partial N}dN+\left.\sum_\alpha\frac{\partial S}{\partial X_\alpha}\right|_UdX_\alpha\\
+dU&=\frac{\partial U}{\partial S}dS+\frac{\partial U}{\partial V}dV+\frac{\partial U}{\partial N}dN+\left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha
+\end{aligned}
+\end{equation}
+für beide obeigen Gleichungen gilt:$dV=dN=0$
+für $dU=0$ gilt: 
+\begin{equation}
+\begin{aligned}
+&\quad \frac{\partial U}{\partial S}dS + \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha = 0\\
+  &=> dS = -\frac{1}{T} \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha \\
+&=> dS = 0 <=> -\frac{1}{T} \left.\sum_\alpha\frac{\partial U}{\partial X_\alpha}\right|_SdX_\alpha = 0 <=> U \text{extremal für} \quad S=const. \\ 
+&T(S,V,N) := \frac{\partial U}{\partial S}(S,V,N) \rightarrow S(T,V,N)
+\end{aligned}
+\end{equation}
+\end{fleqn}
 \end{document}

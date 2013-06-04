@@ -5,7 +5,7 @@
 \usepackage[english,ngerman]{babel} %deutsche Schriftzeichen%
 \usepackage{amsmath} %für Formeln%
 \usepackage{float} %Für Position von Abbildungen%
-\usepackage[singlespacing]{setspace}
+\usepackage[onehalfspacing]{setspace}
 \usepackage{nccmath}
 \usepackage[colorlinks,
 pdfpagelabels,
@@ -19,6 +19,8 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}%Ränder
 \usepackage{amssymb}%Für R reele zahlen
 \title{Theoretische Physik II}
+\subtitle{Prof. Robert Roth - SS 2013}
+\author{Jan Krause und Philipp Dijkstal}
 %\subtitle{Professor: Dr. Gernot Alber\\
 %Mitschrift von Philipp Dijkstal}
 %\subsubtitle{email: \textaccent{philipp.dijkstal@web.de}}
@@ -27,8 +29,7 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \maketitle
 \tableofcontents
 \newpage
-\noindent Vorlesung 1 vom 16.04.2013 -Gedöns fehlt noch\\
-Vorlesung 2 vom 18.04.2013
+\begin{flushright}Vorlesung 2 - 18.04.2013\end{flushright}
 \section{Formalismus der Quantenmechanik}
 $\rightarrow$ mathematisches Handwerkszeug bereitstellen\\
 \begin{itemize}
@@ -40,84 +41,95 @@ $\rightarrow$ mathematisches Handwerkszeug bereitstellen\\
 \item Grundelement: Vektoren
 \item Schreibweise: Dirac-Notation\\
 $\rightarrow$ Ket-Symbole bzw. Kets\\
-$\left| \quad > \right.$ $\rightarrow$ Bezeichnungen innerhalb Symbol\\
-Bsp.: $\left| 0>\right.,\left|1>\right.,\left|n>\right.,\left|nlm>\right.,\left| \uparrow>\right.$
-\item Vektorraum: Ket-Vektoren sind Elemente eines linearen kompletten Vektorraums $(\nu)$\\
-$\left|1>\right.,\left|2>\right.,...,\left|\alpha>\right.,...,\left|\beta>\right.,... \in \nu$\\
-auf dem Addition zweier Vektoren 2 Multiplikationen mit $\mathbb{C}$-Zahl definiert
+$\left| \quad \rangle  \right.$ $\rightarrow$ Bezeichnungen innerhalb Symbol\\
+Bsp.: $\left| 0\rangle \right.,\left|1\rangle \right.,\left|n\rangle \right.,\left|nlm\rangle \right.,
+\left| \uparrow\rangle \right.$
+\item Vektorraum: Ket-Vektoren sind Elemente eines linearen kompletten 
+Vektorraums $(\nu)$\\
+$\left|1\rangle \right.,\left|2\rangle \right.,...,\left|\alpha\rangle \right.,...,\left|\beta\rangle 
+\right.,... \in \nu$\\
+auf dem Addition zweier Vektoren 2 Multiplikationen mit $\mathbb{C}$-Zahl 
+definiert
 \item Eigenschaften der Addition und Multiplikation einer Zahl aus $\mathbb{C}$
-\begin{fleqn}
+ 
 \begin{itemize}
 \item Abgeschlossenheit: 
 \begin{equation} 
-\left| \alpha >\right.+\left|\beta>\right. \in \nu
+\left| \alpha \rangle \right.+\left|\beta\rangle \right. \in \nu
 \end{equation}
 \item Distributivität: 
 \begin{equation}
 \begin{aligned}
-C(\left|\alpha>\right. +\left|\beta>\right.) = C\left|\alpha>\right. +C\left|\beta>\right.\\
-(C+D)\left|\alpha>\right. = C\left|\alpha>\right. +D\left|\beta>\right.
+C(\left|\alpha\rangle \right. +\left|\beta\rangle \right.) = C\left|\alpha\rangle \right. +C\left|
+\beta\rangle \right.\\
+(C+D)\left|\alpha\rangle \right. = C\left|\alpha\rangle \right. +D\left|\alpha\rangle \right.
 \end{aligned}
 \end{equation}
 \item Assoziativität: 
 \begin{equation}
-C(D\left|\alpha>\right.)=(CD)\left|\alpha>\right.
+C(D\left|\alpha\rangle \right.)=(CD)\left|\alpha\rangle \right.
 \end{equation}
 \item Kommutativität der Addition: 
 \begin{equation}
-\left|\alpha>\right. + \left|\beta>\right. =\left|\beta>\right. + \left|\alpha>\right.
+\left|\alpha\rangle \right. + \left|\beta\rangle \right. =\left|\beta\rangle \right. + \left|\alpha
+\rangle \right.
 \end{equation}
 \item Assoziativität der Addition: 
 \begin{equation}
-\left|\alpha>\right. + (\left|\beta>\right. + \left|\gamma>\right.) = (\left|\alpha>\right. + \left|\beta>\right.)+\left|\gamma>\right.
+\left|\alpha\rangle \right. + (\left|\beta\rangle \right. + \left|\gamma\rangle \right.) = (\left|
+\alpha\rangle \right. + \left|\beta\rangle \right.)+\left|\gamma\rangle \right.
 \end{equation}
 \item Nullvektor: 
 \begin{equation}
 \begin{aligned}
-\left|\alpha>\right. +\left|0>\right. = \left|\alpha>\right.\\
-0 \left|\alpha>\right. = \left|0>\right.\\
-C \left|0>\right. = \left|0>\right.
+\left|\alpha\rangle \right. +\left|0\rangle \right. = \left|\alpha\rangle \right.\\
+0 \left|\alpha\rangle \right. = \left|0\rangle \right.\\
+C \left|0\rangle \right. = \left|0\rangle \right.
 \end{aligned}
 \end{equation}
 \item Inverses Element bezüglich Addition:
 \begin{equation}
 \begin{aligned}
-\left|\alpha>\right. + \left|{\alpha}_{inv}>\right. = \left|0>\right.\\
-\left|{\alpha}_{inv}>\right. = -\left|\alpha>\right.
+\left|\alpha\rangle \right. + \left|{\alpha}_{inv}\rangle \right. = \left|0\rangle \right.\\
+\left|{\alpha}_{inv}\rangle \right. = -\left|\alpha\rangle \right.
 \end{aligned}
 \end{equation}
 \end{itemize}
-\end{fleqn}
+ 
 \item Lineare Unabhängigkeit\\
 Der Satz
-\begin{fleqn}
+ 
 \begin{equation} \nonumber
-{\left|1>\right.,\left|2>\right.,...,\left|n>\right.}
+{\left|1\rangle \right.,\left|2\rangle \right.,...,\left|n\rangle \right.}
 \end{equation}
 ist genau dann linear unabhängig, wenn
 \begin{equation}
-\sum {C}_i \left|i>\right. = \left|0>\right.
+\sum {C}_i \left|i\rangle \right. = \left|0\rangle \right.
 \end{equation}
-\end{fleqn}
+ 
 nur für ${C}_1, {C}_2,...,{C}_n=0$\\
 erfüllt ist.
-\item Dimension des Vektorraums $\nu$ maximale Zahl linear unabhängiger Vektroen. 
-\item Basisentwicklung: Jeder Vektor $\left|\alpha>\right.$ eines n-dim. Vektorraums lässt sich eindeutig durch Linearkombination von n Basisvektoren \\
-${\left|1>\right.,\left|2>\right.,...,\left|n>\right.}$ mit Koeffizienten ${C}_1,...{C}_n$\\
+\item Dimension des Vektorraums $\nu$ maximale Zahl linear unabhängiger 
+Vektroen. 
+\item Basisentwicklung: Jeder Vektor $\left|\alpha\rangle \right.$ eines n-dim. 
+Vektorraums lässt sich eindeutig durch Linearkombination von n Basisvektoren \\
+${\left|1\rangle \right.,\left|2\rangle \right.,...,\left|n\rangle \right.}$ mit Koeffizienten ${C}
+_1,...{C}_n$\\
 darstellen:\\
-$\left|\alpha>\right. = \sum {C}_i \left|i>\right.$
+$\left|\alpha\rangle \right. = \sum {C}_i \left|i\rangle \right.$
 \end{itemize}
 \subsection{Skalarprodukt und Hilbertraum}
 \begin{itemize}
-\item Skalarprodukt ordnet zwei Vektoren $\left|\alpha>\right.,\left|\beta>\right.$ eine $\mathbb{C}$-Zahl zu.\\
+\item Skalarprodukt ordnet zwei Vektoren $\left|\alpha\rangle \right.,\left|\beta\rangle 
+\right.$ eine $\mathbb{C}$-Zahl zu.\\
 Typische Schreibweisen:
-\begin{fleqn}
+ 
 \begin{equation}
 \vec{a}\vec{b} \quad (\vec{a}\vec{b})
 \end{equation}
 In Diracnotation:
 \begin{equation}
-<\alpha\left|\right.\beta>=<\alpha \left|\right|\beta>
+\langle \alpha\left|\right.\beta\rangle  \ =\langle \alpha \left|\right|\beta\rangle 
 \end{equation}
 $\rightarrow$ bra(c)ket
 \item Eigenschaften
@@ -125,75 +137,1119 @@ $\rightarrow$ bra(c)ket
 \item Schiefsymmetrie:
 \begin{equation}
 \begin{aligned}
-<\alpha\left|\right.\beta> =(<\beta\left|\right.\alpha>)^*
+\langle \alpha\left|\right.\beta\rangle  \ =(\langle \beta\left|\right.\alpha\rangle )^*
 \end{aligned}
 \end{equation}
 \item Positive Semidefinit: 
 \begin{equation}
-<\alpha\left|\right.\alpha> \ \ \geq \ 0
+\langle \alpha\left|\right.\alpha\rangle  \ \ \geq \ 0
 \end{equation}
-(wobei: $<\alpha\left|\right.\alpha> \ \ = 0 \Leftrightarrow \left|\alpha\right.> \ \ = \ \left|0\right.>$)
+(wobei: $\langle \alpha\left|\right.\alpha\rangle  \ \ = 0 \Leftrightarrow \left|
+\alpha\right.\rangle  \ \ = \ \left|0\right.\rangle $)
 \item Kombination von Schief-Symmetrie und Linearität im Ket:
 \begin{equation}
 \begin{aligned}
-\left|\right.\Psi> = C\left|\right.\beta>+D\left|\right.\gamma>\\
-<\alpha\left|\right.\Psi>=C<\alpha\left|\right.\beta> +D<\alpha\left|\right.\gamma>\\
-<\Psi\left|\right.\alpha>=<\alpha\left|\right.\Psi>^* \\
- =(C <\alpha\left|\right.\beta> + D<\alpha\left|\right.\gamma>)^*\\
-=C^*(<\alpha\left|\right.\beta>)^* + ^*(<\alpha\left|\right.\gamma>)^*\\
-=C^*<\beta\left|\right.\alpha> +D^*<\gamma\left|\right.\alpha>
+\left|\right.\Psi\rangle  \ = C\left|\right.\beta\rangle +D\left|\right.\gamma\rangle \\
+\langle \alpha\left|\right.\Psi\rangle  \ =C\langle \alpha\left|\right.\beta\rangle  +D\langle \alpha\left|\right
+.\gamma\rangle \\
+\langle \Psi\left|\right.\alpha\rangle  \ =\langle \alpha\left|\right.\Psi\rangle ^* \\
+ =(C \langle \alpha\left|\right.\beta\rangle  + D\langle \alpha\left|\right.\gamma\rangle )^*\\
+=C^*(\langle \alpha\left|\right.\beta\rangle )^* + ^*(\langle \alpha\left|\right.\gamma\rangle )^*\\
+=C^*\langle \beta\left|\right.\alpha\rangle  +D^*\langle \gamma\left|\right.\alpha\rangle 
 \end{aligned}
 \end{equation}
 \end{itemize}
-\end{fleqn}
-\item Daher interpretiert man den ersten Faktor im Skalarprodukt als "`anderen Typ"' von Vektor: Bra-Vektoren
-\item Jedem Ket-Vektor $\left|\right.\alpha>$ ist über duale Korrespondenz ein Bra-Vektor zugeordnet\\
-$\left|\right.\alpha> \ \ \rightarrow \ \ <\alpha\left|\right.$\\
+ 
+\item Daher interpretiert man den ersten Faktor im Skalarprodukt als "`
+anderen Typ"' von Vektor: Bra-Vektoren
+\item Jedem Ket-Vektor $\left|\right.\alpha\rangle $ ist über duale Korrespondenz 
+ein Bra-Vektor zugeordnet\\
+$\left|\right.\alpha\rangle  \ \ \rightarrow \ \ \langle \alpha\left|\right.$\\
 Entscheidende Eigenschaft:
-\begin{fleqn}
+ 
 \begin{equation}
 \begin{aligned}
-\left|\right.\Psi> = C \left|\right.\alpha> +D\left|\right.\beta>\\
+\left|\right.\Psi\rangle  \ = C \left|\right.\alpha\rangle  +D\left|\right.\beta\rangle \\
 \longleftrightarrow\\
-<\Psi\left|\right.=C^*<\alpha\left|\right. +D^* <\beta\left|\right.
+\langle \Psi\left|\right.=C^*\langle \alpha\left|\right. +D^* \langle \beta\left|\right.
 \end{aligned}
 \end{equation}
-\end{fleqn}
+ 
 \item Die Reihenfolge von Bra und Ket im Skalarprodukt ist wichtig!
 \item Manchmal auch:
-\begin{fleqn}
+ 
 \begin{equation}
-<\alpha\left|\right.=(\left|\right.\alpha>)^+ \leftarrow \text{hermetisch Adjungiert}
+\langle \alpha\left|\right.=(\left|\right.\alpha\rangle )^+ \leftarrow \text{hermetisch 
+Adjungiert}
 \end{equation}
-\end{fleqn}
+ 
 \item Begriffe im Zusammenhang mit Skalarprodukt:
 \begin{itemize}
-\item Orthogonalität: Zwei Vektoren $\left|\right.\alpha>, \left|\right.\beta>$ sind orthogonal, wenn
-\begin{fleqn}
+\item Orthogonalität: Zwei Vektoren $\left|\right.\alpha\rangle , \left|\right.\beta\rangle 
+$ sind orthogonal, wenn
+ 
 \begin{equation}
-<\alpha\left|\right.\beta>=0
+\langle \alpha\left|\right.\beta\rangle  \ =0
 \end{equation}
-\end{fleqn}
-\item Norm: Die Norm eines Vektors $\left|\right.\alpha>$ ist 
-\begin{fleqn}
+ 
+\item Norm: Die Norm eines Vektors $\left|\right.\alpha\rangle $ ist 
+ 
 \begin{equation}
-\left|\right|\left|\right.\alpha>\left|\right|=\sqrt{<\alpha\left|\right.\alpha>}
+\left|\right|\left|\right.\alpha\rangle \left|\right|=\sqrt{\langle \alpha\left|\right.
+\alpha\rangle }
 \end{equation}
-\end{fleqn}
+ 
 Ein Vektor ist normiert, wenn
-\begin{fleqn}
+ 
 \begin{equation}
-\left|\right|\left|\right.\alpha>\left|\right| =1 \quad <\alpha\left|\right.\alpha>
+\left|\right|\left|\right.\alpha\rangle \left|\right| =1 \quad \langle \alpha\left|\right.
+\alpha\rangle 
 \end{equation}
-\end{fleqn}
+ 
 \end{itemize}
 \item Orhonormierte Basis: Basis
-\begin{fleqn}
-\begin{equation}
-{\left|\right.1>,\left|\right.2>,...,\left|\right.i>,...,\left|\right.j>,...}
+ 
+\begin{equation} \nonumber
+{\left|\right.1\rangle ,\left|\right.2\rangle ,...,\left|\right.i\rangle ,...,\left|\right.j\rangle ,...}
 \end{equation}
-\end{fleqn}
-heißt orthognonal wenn FEHLT
+heißt orthognonal wenn
+\begin{equation}
+\langle i\left|\right. j\rangle  \ ={\delta}_{ij}
+\end{equation}
+ 
 \end{itemize}
+\begin{flushright}Vorlesung 3 - 23.04.2013\end{flushright}
+\section{Lineare Operatoren}
+\begin{itemize}
+\item Operatoren sind formales Werkzeug, um Vektoren zu manipulieren. \\
+ 
+$\rightarrow$4 Operatoren beschreiben Abbildung von einem Ket $\left|\right. 
+\alpha \rangle  \in \mathbb{H}$ auf einen anderen Ket  $\left|\right. \alpha' \rangle  \in 
+\mathbb{H}$
+\begin{equation}
+  \left|\right. \alpha' \rangle  \ = \hat{A} \left|\right. \alpha \rangle 
+\end{equation}
+$\rightarrow$ Operatoren wirken immer nach rechts\\
+$\rightarrow$ Hütchen zur Unterscheidung von Zahlen, Matrizen,...
+\item In QM sind (fast) ausschließlich lineare Operatoren relevant.
+\begin{equation}
+\begin{aligned}
+  \hat{A} (C\left|\right. \alpha \rangle  + D\left|\right. \beta \rangle )&\\
+  &= \hat{A} C\left|\right. \alpha \rangle  + \hat{A} D \left|\right. \alpha \rangle \\
+  &= C \hat{A} \left|\right. \alpha \rangle  + D \hat{A} \left|\right. \beta \rangle 
+\end{aligned}
+\end{equation}
+\item Assoziativität und Distributivität 
+\begin{equation}
+\begin{aligned}
+&(\hat{A} + \hat{B}) \left|\right. \alpha \rangle  \ = \hat{A} \left|\right. \alpha \rangle 
+ + \hat{B} \left|\right. \alpha \rangle \\
+&(\hat{A} \hat{B})\left|\right. \alpha \rangle  \ = \hat{A} (\hat{B} \left|\right. 
+\alpha \rangle )
+\end{aligned}
+\end{equation}
+\item Rechnen mit isolierten Operatoren z.B.
+\begin{equation}
+\begin{aligned}
+  &\hat{A} + \hat{B} = \hat{B} + \hat{A} \\
+  &(\hat{A} + \hat{B}) + \hat{C}= \hat{A} +(\hat{B}+ \hat{C})
+\end{aligned}
+\end{equation}
+Für Produkte von Operatoren
+\begin{equation}
+\begin{aligned}
+  &\hat{A}(\hat{B} \hat{C}) = (\hat{A} \hat{B})\hat{C}
+  &\hat{A}(\hat{B} + \hat{C}) = \hat{A}\hat{B} + \hat{B}\hat{C}
+\end{aligned}
+\end{equation}
+\item Vorsicht: Multiplikation ist nicht multiplikativ
+\begin{equation}
+\hat{A}\hat{B} \not= \hat{B}\hat{A}
+\end{equation}
+$\rightarrow$ Reihenfolge ist wesentlich
+\item Spezielle Operatoren
+  \begin{itemize}
+  \item Eins-Operator 
+   \begin{equation}
+  \hat{1}: \quad \hat{1}\left|\right. \alpha \rangle  \ = \left|\right. \alpha \rangle 
+  \end{equation}
+  \item Inverser Operator 
+  \begin{equation}
+  \begin{aligned}
+  &\hat{A}^{-1}: {\hat{A}}^{-1} \hat{A}\left|\right. \alpha \rangle  \ = \left|\right
+. \alpha \rangle \\
+  \text{oder} \quad &\hat{1} = {\hat{A}}^{-1}\hat{A} = \hat{A} {\hat{A}}^{-1}
+  \end{aligned}
+  \end{equation}
+  \end{itemize}
+\item Spezieller Operator: dyadisches Produkt
+  \begin{equation}
+  \left|\right. \beta' \rangle \langle \beta\left|\right.
+  \end{equation}
+  Anwendung auf Ket
+  \begin{equation}
+  (\left|\right. \beta' \rangle \langle \beta\left|\right.)\left|\right.\alpha\rangle  \ = \left|
+\right.\beta'\rangle \langle \beta\left|\right.\alpha\rangle  \in \mathbb{C}
+  \end{equation}
+  $\rightarrow$ Wichtig z.B. für Spektraldarstellung von Operatoren
+\item Matrixelemente von Operatoren\\
+  Betrachte Transformation von $\left|\right. \beta \rangle $ mittels $\hat{A}$
+  \begin{equation}
+  \left|\right. \beta'\rangle  \ = \hat{A}\left|\right. \beta\rangle 
+  \end{equation}
+  Skalarprodukt mit $\langle \alpha \left|\right.$
+  \begin{equation}
+  \langle \alpha\left|\right.\beta'\rangle  \ = \underbrace{\langle \alpha\left|\right.\hat{A}\left
+|\right.\beta\rangle }_{\text{Matrixelement}}
+  \end{equation}
+\item Erwartungswert eines Operators: Diagonales Matrixelement
+  \begin{equation}
+  \langle \hat{A}\rangle _\alpha = \langle \alpha \left|\right.\hat{A}\left.\right| \alpha\rangle 
+  \end{equation}
+ 
+\end{itemize}
+\textbf{Hermitesche Adjunktion}
+ 
+\begin{itemize}
+\item Übertragung der hermiteschen adjungierten für Matrizen auf Operatoren
+  \begin{equation}
+  \langle \alpha\left|\right.\hat{A}\left|\right.\beta\rangle  \ \xrightarrow{herm. adj.} (\langle 
+\beta \left|\right.\hat{A}\left|\right.\alpha\rangle )^*
+  \end{equation}
+  Def. herm. adj. Operator
+  \begin{equation}
+  \langle \alpha\left|\right.{\hat{A}}^{\dagger} \left|\right. \beta\rangle  \ =(\langle \beta\left|\right.
+\hat{A}\left|\right.\alpha\rangle )^*
+  \end{equation}
+\item Aus Definition folgen Rechenregeln
+  \begin{equation}
+  \begin{aligned}
+  &(C\hat{A})^{\dagger}=C^*{\hat{A}}^{\dagger}\\
+  &({\hat{A}}^{\dagger})^{\dagger}=\hat{A}\\
+  &(\hat{A} + \hat{B})^{\dagger} )= \hat{A}^{\dagger} + \hat{B}^{\dagger}\\
+  &(\hat{A}\hat{B})^{\dagger}=\hat{B}^{\dagger}\hat{A}^{\dagger}
+  \end{aligned}
+  \end{equation}
+\item  Universalrezept für herm. Adj.\
+  1) Zyklische Umkehr der Reihenfolge\\
+  2) Komplex konjugieren der $\mathbb{C}$-Zahl\\
+  3) Ersetzung der Bras durch Kets u.U.\\
+  4) hermitesche Adjungierte der Einzeloperatoren\\
+  Bsp.:
+  \begin{equation}
+  \begin{aligned}
+  &(\langle \alpha\left|\right.\hat{A}^{\dagger}+C\hat{A}\hat{B}\left|\right.\beta\rangle )^{\dagger}\\
+  &= (\left|\right.\beta\rangle )^{\dagger} (\hat{A}^{\dagger}+C\hat{A}\hat{B})^{\dagger}(\langle \alpha\left|\right
+.)^{\dagger}\\
+  &= \langle \beta\left|\right. \hat{A} +C^*\hat{B}^{\dagger} \hat{A}^{\dagger} \left|\right.\alpha\rangle 
+  \end{aligned}
+  \end{equation}
+  Achtung: Ausdrücke wie $\left.\right|\alpha\rangle \hat{A}$ oder $ \hat{A}\langle \alpha\left|\right.$ 
+sind sinnnlos!
+\item Duale Korrespondenz
+  \begin{equation}
+  \begin{aligned}
+  &\left|\right.\alpha'\rangle &=\hat{A}\left|\right.\alpha\rangle \\
+  & \quad \quad \quad \updownarrow&\\
+  &\langle \alpha'\left|\right.&= \ \langle \alpha\left|\right.\hat{A}^{\dagger}
+  \end{aligned}
+  \end{equation}
+\end{itemize}
+
+\begin{flushright}
+Vorlesung 4 - 25.04.2013
+\end{flushright}
+
+\subsection{Hermitesche und Unitäre Operatoren}
+\begin{itemize}
+  \item Für hermitesche Operatoren gilt
+    \begin{equation}
+    \hat{A}^{\dagger}=\hat{A}
+    \end{equation}
+    selbst-adjungiert
+  \item Erwartungswerte von hermiteschen Operatoren sind reell.
+    \begin{equation}
+    \langle \alpha\left.\right|\hat{A}\left.\right|\alpha\rangle  \ =  \left(\langle \alpha \left.\right| \hat{A}^{\dagger} \left.\right| \alpha \rangle \right)^* = \left(\langle \alpha \left.\right|\hat{A}\left.\right|\alpha\rangle \right)^*
+    \end{equation}
+    $\Rightarrow$ $\langle \alpha\left.\right|\hat{A}\left.\right|\alpha\rangle  \in \mathbb{R}$
+  \item Für unitäre Operatoren gilt
+    \begin{equation}
+    \hat{U}^{\dagger}=\hat{U}^{-1} \quad \text{bzw.} \quad \hat{U}^{\dagger}\hat{U}=\hat{1}
+    \end{equation}
+  \item Anwendung eines unitären Operatoren ändert Normierung nicht
+    \begin{equation} \nonumber
+     \left.\right|\alpha'\rangle  \ = \hat{U}\left.\right|\alpha\rangle  \quad \langle \alpha'\left.\right|= \ \langle \alpha\left.\right|\hat{U}^{\dagger}
+    \end{equation}
+    \begin{equation}
+    \begin{aligned}
+    \langle \alpha'\left.\right|\alpha'\rangle  \ =& \ \langle \alpha\left.\right|\underbrace{\hat{U}^{\dagger}\hat{U}}_{\hat{1}}\left.\right|\alpha\rangle \\
+    &= \ \langle \alpha\left.\right|\hat{1}\left.\right|\alpha\rangle 
+    \end{aligned}
+    \end{equation}
+    \end{itemize}
+\subsection{Funktionen von Operatoren}
+\begin{itemize}
+  \item Funktionen von Operatoren sind nur über Reihendarstellungen definiert z.B.
+    \begin{equation}
+    F(\hat{A})=\sum^\infty_{n=0}a_n\hat{A}^n
+    \end{equation}
+  \item Bsp: Exponentialfunktion
+    \begin{equation}
+    \exp(c\hat{A})= \sum^\infty_{n=0}\frac{c^n}{n!}\hat{A}^n
+    \end{equation}
+  \item Durch Nicht-Kommutativität des Produkts von Operatoren gelten viele Rechenregeln für spezielle Funktionen \textbf{nicht} mehr z.B.
+  \begin{equation}
+  \exp(\hat{A}+\hat{B})\neq \exp(\hat{A}) +\exp(\hat{B}), \quad \text{wenn} \quad \hat{A}\hat{B} \neq \hat{B}\hat{A}
+  \end{equation}
+\end{itemize}
+\subsection{Eingenwertproblem \& Darstellungen}
+\begin{itemize}
+  \item Gegeben sei Operator $\hat{A}$. Ket-Vektoren $\left.\right|a\rangle $ heiße Eigenvektor zum Eigenwert a, wenn
+    \begin{equation}
+    \hat{A}\left.\right|a\rangle  \ = a\left.\right|a\rangle 
+    \end{equation}
+    Die Eigenwerte sind im Allgemeinen komplexe Zahlen.
+  \item Spektrum des Operators: Gesamtheit der EW und EV.
+  \item Diskrete EW / diskretes Spektrum oder kontinuierliche EW / kontinuierliches Spektrum oder Kombination
+  \item Diskrete Spektren: endlich oder abzählbar unendlich viele EV\\
+    $\rightarrow$ kompatibel mit mathematischem Hilbertraum
+  \item kontinuierliche Spektrum: überabzählbar unendlich viele EV\\
+    $\rightarrow$ erweiterter Hilbertraum
+  \item Entartung: Mehrere Eigenzustände zum selben EW\\
+    $\rightarrow$ Entartungsindex\footnote{Komma nicht nötig} $\left.\right|a,n\rangle $
+\end{itemize}
+\subsection{Eingenwertproblem hermitescher Operatoren}
+Besondere Eigenschaften für EW-Problem hermitescher Operatoren
+  \begin{itemize}
+    \item Eigenwerte hermitescher Operatoren sind reell\\
+      $\rightarrow$ Beweis über reellen Erwartungswert und 
+      \begin{equation}
+      a=\frac{\langle a\left.\right|\hat{A}\left.\right|a\rangle }{\langle a\left.\right|a\rangle }
+      \end{equation}
+    \item Eigenvektoren zu verschiedenen EW sind orthogonal\\ \\
+      a) Ohne Entartung:
+         \begin{equation}
+        \label{eq:ortho}
+          \langle a\left.\right|a'\rangle  = 0 \quad \text{wenn} \quad a \neq a'
+          \end{equation}
+          $\rightarrow$ Beweis über $(a-a') \ \langle a\left.\right|a'\rangle  = 0$\\ \\
+      b) Mit Entartung:\\
+         - Wie (a) für EV aus verschiedenen ent. Unterräumen\\
+         - Innerhalb des ent. Unterraums muss explizit orthogonalisiert werden.
+    \item Eigenvektoren bilden eine vollst. orthonormierte Basis\\
+      - Orthogonalität aus \ref{eq:ortho}\\
+      - Normierung ist für diskrete Spektren einfach, für kontinuierliche Spektren ist Vorsicht geboten.\\
+      - Vollständigkeit: bewiesen für diskrete Spektren aber für kontinuierliche Spektren ist Vollständigkeit mathematisch noch nicht gezeigt. $\rightarrow$ Postulat!
+  \end{itemize}
+\textbf{Diskrete Eigenbasen}
+\begin{itemize}
+  \item Eigenwertproblem eines herm. Op. $\hat{A}$ mit diskretem Spektrum
+    \begin{equation}
+    \hat{A}\left.\right|a_i\rangle  \ = a_i\left.\right|a_i\rangle  \quad i:\text{Zählindex}
+    \end{equation}
+  \item Vorausgesetzt EV sind normiert, dann gilt zusammen mit Orthogonalität 
+    \begin{equation}
+    \langle a_i\left.\right|a_j\rangle  \ = \delta_{ij}
+    \end{equation}
+  \item Vollständigkeit: Entwicklung eines beliebigen Vektors $\left.\right|\beta\rangle $ in Eigenbasis $\left.\right|a_i\rangle $:
+    \begin{equation}
+    \left.\right|\beta\rangle  \ = \sum_i C_i \left.\right|a_i \rangle 
+    \end{equation}
+    - Multiplikation $\langle a_j\left.\right|$
+      \begin{equation}
+      \begin{aligned}
+      \langle a_j\left.\right|\beta\rangle  \ &= \ \langle a_j\left.\right|\left(\sum_i C_i\left.\right|a_i\rangle \right)\\
+      &=\sum_iC_i\langle a_j\left.\right|a_i\rangle \\
+      &=\sum_iC_i \delta_{ij}\\
+      &=C_j
+      \end{aligned}
+      \end{equation}
+    - Einsetzen in Entwicklung
+    \begin{equation}
+    \begin{aligned}
+      \left.\right|\beta\rangle  \ &= \sum_i\left(\langle a_i\left.\right|\beta\rangle \right) \left.\right|a_i\rangle \\
+      &=\sum_i\left.\right|a_i\rangle \langle a_i\left.\right|\beta\rangle \\
+      &=\left(\sum_i\left.\right|a_i\rangle \langle a_i\left.\right|\right)\left.\right|\beta\rangle \\
+      &=\hat{1}\left.\right|\beta\rangle 
+    \end{aligned}
+    \end{equation}
+  \item Zerlegung des $\hat{1}$-Operators
+    \begin{equation}
+    \hat{1}= \sum_i \left.\right|a_i\rangle \langle a_i\left.\right|
+    \end{equation}
+    $\rightarrow$ Sehr nützliches Rechenwerkzeug
+  \item Beispiel:für "`triviale"' Rechnung:
+    \begin{equation}
+    \begin{aligned}
+    \hat{A} &= \hat{1}\hat{A}\hat{1}\\
+    &=\left(\sum_i\left.\right|a_i\rangle \langle a_i\left.\right|\right)\hat{A}\left(\sum_j\left.\right|a_j\rangle \langle a_j\left.\right|\right)\\
+    &=\sum_{i,j}\left.\right|a_i\rangle \langle a_i\left.\right|\hat{A}\left.\right|a_j\rangle \langle a_j\left.\right|
+    \end{aligned}
+    \end{equation}
+    $\rightarrow$ Nutze Eigenwertberechnung
+    \begin{equation}
+    \hat{A}\left.\right|a_j\rangle =a_j\left.\right|a_j\rangle  \nonumber
+    \end{equation}
+    \begin{equation}
+    \begin{aligned}
+    &\sum_{i,j}\left.\right|a_i\rangle \langle a_i\left.\right|\hat{A}\left.\right|a_j\rangle \langle a_j\left.\right|\\
+    =&\sum_{i,j}a_j\left.\right|a_i\rangle \underbrace{\langle a_i\left.\right|a_j\rangle }_{\delta_{ij}}\langle a_j\left.\right|\\
+    =&\sum_ia_i\left.\right|a_i\rangle \langle a_i\left.\right|\\
+    =&\sum_i\left.\right|a_i\rangle a_i\langle a_i\left.\right|
+    \end{aligned}
+    \end{equation}
+    $\rightarrow$ Spektraldarstellung des Operators $\hat{A}$
+  
+\end{itemize}
+
+\begin{flushright}
+Vorlesung 5 - 30.03.2013
+\end{flushright}
+\textbf{Darstellung}\\
+$\rightarrow$ normale Anschauung versagt.
+\begin{itemize}
+	\item Wir unterscheiden zwischen abstrakten Hilbertraumobjekten (Ket, Bra, Operatoren), die über Rechenregeln definiert sind, und den Darstellungen dieser Objekte.(Analogon zu Spalten- und Zeilenvektoren und Matrizen)
+  \item Erinnerung: Koordinaten für Darstellung eines Vektors im 3D Raum(kartesisch, Kugelkoordinaten)
+  \item Beispiel: Eigenwertproblem eines abstrakten Operators $\hat{B}$.
+    \begin{equation}
+    \hat{B}\left.\right|b\rangle =b\left.\right|b\rangle
+    \end{equation}
+    Übertragung in Darstellung durch Eigenbasis von $\hat{A}$, d.h. $\left\{\left.\right|a_i\rangle\right\}$ mit
+    \begin{equation}
+    \begin{aligned}
+    &\langle a_i\left.\right|a_j\rangle=\delta_{ij}\\
+    &\hat{1}=\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|
+    \end{aligned}
+    \end{equation}
+    Konstruktion der Darstellung
+    \begin{equation}
+    \begin{aligned}
+      \hat{B}\hat{1}\left.\right|b\rangle=&b\left.\right|b\rangle\\
+      \hat{B}\left(\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|\right)\left.\right|b\rangle=&b\left.\right|b\rangle\\
+      \langle a_j\left.\right|\hat{B}\left(\sum_i\left.\right|a_i\rangle\langle a_i\left.\right|\right)\left.\right|b\rangle’=&\langle a_j\left.\right|b\left.\right|b\rangle\\
+      \sum_i\langle a_j\left.\right|\hat{B}\left.\right|a_i\rangle\langle a_i\left.\right|b\rangle =&b\langle a_j\left.\right|b\rangle      
+    \end{aligned}
+    \end{equation}
+  In "`Matrixnotation"'$\Rightarrow$ Matrix-Eigenwertproblem %fehlt
+\item Praktische Rechnung wird letztendlich in eine geschickt gewählten Darstellung ausgeführt.
+\end{itemize}
+\textbf{Darstellungswechsel}
+\begin{itemize}
+	\item Betrachte zwei Eigenbasen $\{\left.\right|a_i\rangle\}$ und $\{\left.\right|b_i\rangle\}$
+  \item Allgemeiner Vektor $\left.\right|\gamma\rangle$ sein in $\{\left.\right|a_i\rangle\}$ Basis dargestellt, d.h. $\langle a_i\left.\right|\gamma\rangle$ sind bekannt.
+  \item Wie bekommt man daraus die Entwicklungskoeffizienten in $\{\left.\right|b_i\rangle\}$?
+  \begin{equation}
+  \begin{aligned}
+    \langle b_i \left.\right|\gamma\rangle&=\langle b_i\left.\right|\hat{1}\left.\right|\gamma\rangle\\
+    &=\langle b_i \left.\right|\left(\sum_j\left.\right|a_j\rangle\langle a_j\left.\right|\right)\left.\right|\gamma\rangle\\
+    &=\sum_j\langle b_i\left.\right|a_j\rangle\langle a_j\left.\right|\gamma\rangle
+  \end{aligned}
+  \end{equation}
+  \item Transformationsmatrix $U_{ij} =\langle b_ia_j\rangle$ ist unitär
+    \begin{equation}
+      U^{\dagger}U=\hat{1}
+     \end{equation}
+     \begin{equation}
+      \begin{aligned}
+      \sum_jU^{\dagger}_{ij}U_{jk}&=\sum_j\langle b_j\left.\right|a_i\rangle^{\dagger}\langle b_j\left.\right|a_k\rangle\\
+      U_{jk}^{\dagger}&=\sum_j\langle a_j\left.\right|b_j\rangle\langle b_j\left.\right|a_k\rangle\\
+      &=\langle a_j\left.\right|\hat{1}\left.\right|a_k\rangle\\
+      &=\langle a_j\left.\right|a_k\rangle\\
+      &=S_{ij}
+      \end{aligned}
+    \end{equation}
+\end{itemize}
+\textbf{Kontinuierliche Eigenbasen}
+\begin{itemize}
+	\item Betrachte hermiteschen Operator $\hat{B}$ mit kontinuierlichem Spektrum, d.h.
+    \begin{equation}
+    \hat{B}\left.\right|b\rangle =b\left.\right|b\rangle
+    \end{equation}
+    mit kontinuierlichen reellen EW.
+  \item Orthogonalität gilt wie bei diskreten Basen
+    \begin{equation}
+      \langle b\left.\right|b'\rangle=0 \quad \text{für} \quad b\neq b'
+    \end{equation}
+  \item Komplizierter werden Normierung und Vollständigkeit
+  \item Vollständigkeit: Analogie zur diskreten Basis $\{\left.\right|a_i\rangle\}$
+    \begin{equation}
+      \left.\right|\gamma\rangle =\sum_i\left.\right|a_i\rangle \langle a_i\left.\right|\gamma\rangle
+    \end{equation}
+    Übergang zu kontinuierlicher Basis $\{\left.\right|b\rangle\} \rightarrow$\\
+    Übergang von Summe $\sum_i$ nach Integral $\int db$
+    \begin{equation}
+    \left.\right|\gamma\rangle = \int db \left.\right|b\rangle \underbrace{\langle b\left.\right|\gamma\rangle}_{\text{kont. Funktion von b}}
+    \label{eq:integral}
+    \end{equation}
+  \item Zerlegung der $\hat{1}$ in kontinuierlicher Basis
+    \begin{equation}
+      \hat{1} = \int db \left.\right|b\rangle\langle b\left.\right|
+    \end{equation}
+  \item Normierung: Multipliziere (\ref{eq:integral}) von links mit $\langle b'\left.\right|$
+    \begin{equation}
+      \langle b'\left.\right|\gamma\rangle =\int db \langle b'\left.\right|b\rangle\langle b \left.\right|\gamma\rangle
+    \end{equation}
+    vergleiche mit
+    \begin{equation}
+    \begin{aligned}
+    &f(x') =\int dx \delta(x-x')f(x)\\
+    &\Rightarrow \langle b'\left.\right|b\rangle = \delta(b'-b)
+    \end{aligned}
+    \end{equation}
+    Orthonormierungsbedingung für kontinuierliche Basen
+  \item physikalische Interpretationen wird durch $\delta$-Distributionen schwieriger
+  \item Spektraldarstellung für $\hat{B}$ mit konstanter Eigenbasis
+    \begin{equation}
+    \hat{b}=\langle b\left.\right|b\left.\right|b\rangle %seltsam
+    \end{equation}
+\end{itemize}
+
+
+\subsection{Kommutatoren und simultane Eigenbasen}
+\begin{itemize}
+	\item physikalische Auswirkungen der Nicht-Vertauschbarkeit des Operatorprodukts formalisieren 
+  \item Kommutation zweier Operatoren $\hat{A}$ und $\hat{B}$
+    \begin{equation}
+    \left[\hat{A},\hat{B}\right]=\hat{A}\hat{B}-\hat{B}\hat{A}
+    \end{equation}
+  \item Kommutierende Operatoren
+    \begin{equation}
+    \Leftrightarrow \left[\hat{A},\hat{B}\right]=0
+    \end{equation}
+  \item Rechenregeln
+    \begin{equation}
+    \begin{aligned}
+      &\left[\hat{A},\hat{B}\right]=-\left[\hat{B},\hat{A}\right]\\
+      &\left[\hat{A},\hat{B}\right]^\dagger=\left[\hat{B}^\dagger,\hat{A}^\dagger\right]\\
+      &\left[\hat{A},\hat{B}+\hat{C}\right] =\left[\hat{A},\hat{B}\right]+\left[\hat{A},\hat{C}\right]\\
+      &\left[\hat{A},\hat{B}\hat{C}\right]=\left[\hat{A},\hat{B}\right]\hat{C}+\hat{B}\left[\hat{A},\hat{C}\right]\\
+      &\left[\hat{A},\left[\hat{B},\hat{C}\right]\right]+
+        \left[\hat{C},\left[\hat{A},\hat{B}\right]\right]+
+        \left[\hat{B},\left[\hat{C},\hat{A}\right]\right]=0
+        \quad\text{(Jacobi-Identität)}
+    \end{aligned}
+    \end{equation}
+  \item triviale Kommutation
+    \begin{equation}
+    \begin{aligned}
+      &\left[\hat{A},\hat{1}\right]=0\\
+      &\left[\hat{A},\hat{A}\right]=0
+    \end{aligned}
+    \end{equation}
+\end{itemize}
+
+
+\begin{flushright}
+Vorlesung 6 - 2.05.13
+\end{flushright}
+\textbf{Simultane Eigenbasen}
+  \begin{itemize}
+    \item Betrachte zwei kommutierende hermetische Operatoren $\hat{A},\hat{B}$
+      \begin{equation}
+        \left[\hat{A},\hat{B}\right]=0
+      \end{equation}
+      Es existiert eine simultane Eigenbasis $\left\{\left.\right|ab\rangle\right\}$
+      \begin{equation}
+      \begin{aligned}
+      \hat{A}\left.\right|ab\rangle&=a\left.\right|ab\rangle\\
+      \hat{B}\left.\right|ab\rangle&=b\left.\right|ab\rangle
+      \end{aligned}
+      \end{equation}
+    \item Beweis: Angenommen $\left[\hat{A},\hat{B}\right]=0$ und betrachte 
+      \begin{equation}
+      \hat{A}\left.\right|a\rangle=a\left.\right|a\rangle
+      \end{equation}
+      Multipliziere mit $\hat{B}$
+      \begin{equation}
+      \begin{aligned}
+      \hat{B}\hat{A}\left.\right|a\rangle=&\hat{B}a\left.\right|a\rangle\\
+      \hat{A}\left(\hat{B}\left.\right|a\rangle\right)&=a\left(\hat{B}\left.\right|a\rangle\right)
+      \end{aligned}
+      \end{equation}
+        $\Rightarrow$ $\left(\hat{B}\left.\right|a\rangle\right)$ erfüllt noch immer EW-Relation für $\hat{A}$
+    \item Für nicht entartetes a-Spektrum:\\
+      $\left(\hat{B}\left.\right|a\rangle\right)$ muss proportional zu $\left.\right|a\rangle$ sein:
+      \begin{equation}
+      \Rightarrow \hat{B}\left.\right|a\rangle=b\left.\right|a\rangle
+      \end{equation}
+      Daher sind $\left.\right|a\rangle$ simultane EV zu $\hat{A}$ und $\hat{B}$ $\rightarrow$ $\left.\right|ab\rangle$
+    \item Bei entarteten a-Spektrum:\\
+      Entartungsindex i in $\hat{A}$ EW-Relation
+      \begin{equation}
+      \hat{A}\left.\right|ai\rangle =a\left.\right|ai\rangle
+      \end{equation}
+      $\rightarrow \left(\hat{B}\left.\right|ai\rangle\right)$ ist weiterhin EV zu $\hat{A}$ aber nicht notwendig proportional zu $\left.\right|ai\rangle$\\
+      $\rightarrow$ Wähle orthonormierte Basis im entarteten Unterraum so, dass $\hat{B}\left.\right|ai\rangle$ prop. zu $\left.\right|ai\rangle$, d.h. wir lösen EW von $\hat{B}$ im ent. Unterraum
+    \item Wenn keine weiteren Entartungen auftreten, dann ist simultane EB eindeutig charakterisiert durch 
+      \begin{equation}
+      \begin{aligned}
+        \hat{A}\left.\right|ab\rangle&=a\left.\right|ab\rangle\\
+        \hat{B}\left.\right|ab\rangle&=b\left.\right|ab\rangle
+      \end{aligned}
+      \end{equation}
+      $\rightarrow$ Entartung vom $\hat{A}$-Spektrum durch Hinzunahme von $\hat{B}$ eliminiert oder gehoben.
+    \item Vollständiger Satz von kommutierenden Operatoren:\\
+      Für einen Satz von Operatoren $\left\{\hat{A},\hat{B},\hat{C},...\right\}$, die paarweise miteinander kommutieren
+      \begin{equation}
+      \left[\hat{A},\hat{B}\right]=\left[\hat{A},\hat{C}\right],...=0
+      \end{equation}
+      zu dem sich kein weiterer komm. Operator finden lässt, gibt es eine simultane Eigenbasis, 
+      \begin{equation}
+      \begin{aligned}
+        \hat{A}\left.\right|a,b,c...\rangle&=a\left.\right|a,b,c...\rangle\\
+        \hat{B}\left.\right|a,b,c...\rangle&=b\left.\right|a,b,c...\rangle
+      \end{aligned}
+      \end{equation}
+      die keine Entartung aufweist.
+  \end{itemize}
+\textbf{Unschärferelationen}
+  \begin{itemize}
+    \item Für nicht kommutierende Operatoren $\hat{A},\hat{B}$ mit 
+      $$
+      \left[\hat{A},\hat{B}\right]\neq 0
+      $$
+      existiert keine simultane Eigenbasis
+    \item Trotzdem wichtige Aussage zur Unschärfe möglich
+    \item Unschärfe oder Varianz des EW von A mit $\left.\right|\gamma\rangle$
+      \begin{equation}
+      \begin{aligned}
+        \Delta A_\gamma&=\sqrt{\langle\gamma\left.\right|\left(\hat{A}-\langle\gamma\left|\hat{A}\right|\gamma\rangle\right)^2\left.\right|\gamma\rangle}\\
+        &=\sqrt{\langle\gamma\left|\hat{A}^2\right|\gamma\rangle-\langle\left|\hat{A}\right|\gamma\rangle^2}\\
+        &=\sqrt{\langle\hat{H}^2\rangle_\gamma-\langle\hat{A}\rangle_\gamma^2}
+      \end{aligned}        
+      \end{equation}
+      mit $\hat{A}=\langle\gamma\left|\hat{A}\right|\gamma\rangle$
+    \item Für das Produkt der Unschärfe $\Delta A_j$ und $\Delta B_j$ gilt verallgemeinerte Unschärferelation
+      \begin{equation}
+      \Delta A_\gamma \Delta B_\gamma \geq \frac{1}{2}\left|\langle\gamma\left|\left[ \hat{A},\hat{B}\right]\right|\gamma\rangle\right|
+      \end{equation}
+    \item Beweis der Schwarzschen Ungleichung
+      \begin{equation}
+      \langle\alpha\left.\right|\alpha\rangle\langle\beta\left.\right|\beta\rangle \geq \left|\langle\alpha\left|\right.\beta\rangle\right|^2
+      \end{equation}
+      Definition von 
+      \begin{equation}
+      \begin{aligned}
+        \left.\right|\alpha\rangle=&\left(\hat{A}-\langle\hat{A}_\gamma\right)\left.\right|\gamma\rangle\\
+        \left.\right|\beta\rangle=&\left(\hat{B}-\langle\hat{B}_\gamma\right)\left.\right|\gamma\rangle
+      \end{aligned}
+      \end{equation}
+      Damit 
+      \begin{equation}
+      \Delta A_\gamma^2\Delta B_\gamma^2 \geq \left|\langle \left(\hat{A}-\langle\hat{A}\rangle_\gamma\right)\left(\hat{B}-\langle\hat{B}\rangle_\gamma\right)\rangle\right|^2
+      \end{equation}
+      Nutze Darstellung des Produkts zweier Operatoren über Kommutator $+$ Antikommutator
+      \begin{equation}
+      \begin{aligned}
+        \hat{C}\hat{D}&=\frac{1}{2}\left[\hat{C},\hat{D}\right]+\frac{1}{2}\underbrace{\left\{\hat{C},\hat{D}\right\}}_{\text{Antikommutator}}\\
+        &=\frac{1}{2i}\left(i\left[\hat{C},\hat{D}\right]\right)+\frac{1}{2}\left\{\hat{C},\hat{D}\right\} \quad \quad \text{; macht $\left[\hat{C},\hat{D}\right]$ hermitesch}
+      \end{aligned}
+      \end{equation}
+      Mit $\hat{C}=\hat{A}-\langle\hat{A}\rangle_\gamma$, $\hat{D}=\hat{B}-\langle\hat{B}\rangle_\gamma$
+      \begin{equation}
+      \begin{aligned}
+        &\left|\langle\left(\hat{A}\langle\hat{A}\rangle_\gamma\right)\left(\hat{B}\langle\hat{B}\rangle_\gamma\right)\rangle_\gamma\right|^2\\
+        &=\left|\langle\hat{C},\hat{D}\rangle_\gamma\right|^2\\
+        &=\left|\langle\frac{1}{2i}\left(i\left[\hat{C},\hat{D}\right]\right)+\frac{1}{2}\left\{\hat{C},\hat{D}\right\}\rangle_\gamma\right|^2\\
+        &=\left|\frac{1}{2i}\langle i\left[\hat{C},\hat{D}\right]\rangle_\gamma+\frac{1}{2}\langle\left\{\hat{C},\hat{D}\right\}\rangle_\gamma\right|^2\\
+        &=\frac{1}{4}\left|\langle\left[\hat{C},\hat{D}\right]\rangle_\gamma\right|^2+\frac{1}{4}\left|\langle\left\{\hat{C},\hat{D}\right\}\rangle_\gamma\right|^2
+      \end{aligned}
+      \end{equation}
+    \item Antikommutatorbeitrag $(\geq 0)$ wird auf rechter Seite der Schwarzschen Ungleichung weggelassen
+      \begin{equation}
+      \begin{aligned}
+        \Delta A_\gamma^2 \Delta B_\gamma^2 &\geq \frac{1}{4}\left|\langle\left[\hat{C},\hat{D}\right]\rangle_\gamma\right|^2\\
+        &=\frac{1}{4}\left|\langle\left[\hat{A},\hat{B}\right]\rangle_\gamma\right|^2\\
+        \Rightarrow \Delta A_\gamma \Delta B_\gamma &\geq \frac{1}{2}\left|\langle\left[\hat{A},\hat{B}\right]\rangle\right|
+      \end{aligned}
+      \end{equation}
+  \end{itemize}
+
+\section{Postulate der Quantenmechanik}
+\subsection{Die Postulate}
+ Mathematischer Formalismus mit physikalischer Größe koppeln
+      \begin{itemize}
+        \item Wie lässt sich der Zustand eines Quantensystems zu einem festen Zeitpunkt t beschreiben?
+        \item Wie sind Observablen formal repräsentiert?
+        \item Wie wird die Dynamik eines Quantensystems beschrieben?
+      \end{itemize}
+  \textbf{1. Postulat: Zustand eines Systems}
+    Der Zustand eines Systems zum \textbf{Zeitpunkt t} ist durch einen \textbf{normierten} Vektor $\left.\right|\Psi,t\rangle$ im \textbf{Hilbertraum} beschrieben. Der Zustandsvektor $\left.\right|\Psi,t\rangle$ enthält die \textbf{komplette Information} über das System.\\ \\
+  \textbf{2. Postulat: Observablen}\\
+    Jede physikalische Observable wird durch einen hermiteschen linearen Operator auf dem Hilbertraum beschrieben. 
+    \begin{itemize}
+      \item klare Trennung zwischen $\underbrace{\text{Zustand}}_{\text{ket-Vektoren}}$ des Systems und $\underbrace{\text{Observablen}}_{\text{Operatoren}}$
+      \item Observablen, die ein klassisches Analogon besitzen (z.B. Ort, Impuls, Drehimpuls, kin. Energie, Gesamtenergie...) werden über Korrespondenzregeln definiert. \\
+        Einer Observable, die durch eine Funktion $F(\vec{x},\vec{p})$ in der klassischen Physik beschrieben wird, wird ein hermitescher Operator zugeordnet, der sich aus Einsetzung ergibt. 
+        $$
+        \vec{x} \rightarrow \hat{\vec{x}} \quad, \quad \vec{p} \rightarrow \hat{\vec{p}}
+        $$
+        Zwischen $\hat{\vec{x}}$ und $\hat{\vec{p}}$ gilt die fundamentale Kommutatorrelation
+        \begin{equation}
+        \left[\hat{\vec{x}}_i, \hat{\vec{p}}_j\right]=i\hbar\delta_{ij}
+        \end{equation}
+      \item Manchmal führt Einsetzung auf einen nicht hermiteschen Operator, z. B. die Radialkomponente des Impulses
+        \begin{equation}
+        \begin{aligned}
+          \text{klassisch:} \quad &\vec{x}\vec{p}\\
+          \text{QM:} \quad &\frac{1}{2}\left(\hat{\vec{x}}\hat{\vec{p}}+\hat{\vec{p}}\hat{\vec{x}}\right)
+        \end{aligned}
+        \end{equation}
+        $\rightarrow$ explizite "`Hermitesierung"' notwendig
+      \item Bsp.: Energie der Observable:
+        \begin{equation}
+        \begin{aligned}
+          \text{klassisch: Hamiltonfunktion} \quad H(\vec{x},\vec{p})&=\frac{\vec{p}}{2m} + V(\vec{x})\\
+          \text{QM: Hamiltonoperator} \quad \hat{H}(\hat{\vec{x}},\hat{\vec{o}})&=\frac{\hat{\vec{p}}^2}{2m}+V(\hat{\vec{x}})
+        \end{aligned}
+        \end{equation}
+      \item Analogie des fundamentalen Kommutators mit Poisson-Klammern der klassischen Mechanik
+        \begin{equation}
+         \left\{x_i,p_j\right\}=\delta_{ij}
+        \end{equation}
+        mit 
+        \begin{equation}
+        \left\{A,B\right\}:=\sum_j\left(\frac{\partial A}{\partial x_i}\frac{\partial B}{\partial p_i}-\frac{\partial A}{\partial p_i}\frac{\partial B}{\partial x_i}\right)
+        \end{equation}
+      \item Observablen ohne klassische Analogien (z.B. Spin) müssen im Rahmen der QM konstruiert werden
+    \end{itemize}
+  \textbf{3. Postulat: ideale Messung}\\
+    Bei einer idealen Messung einer Observablen $\hat{A}$ an einem System im Zustand $\left.\right|\Psi,t\rangle$ kann nur einer der (diskreten) Eigenwerte des Operators $\hat{A}$ resultieren.\\
+    Der Zustand des Systems unmittelbar nach der Messung ist durch den Eigenvektor zum gemessenen Eigenwert gegeben.
+    \begin{itemize}
+      \item Direkter Zusammenhang zwischen EW-Spektrum des Operators der Observable und dem wirklichen Messergebnis
+        \begin{itemize}
+          \item diskretes Spektrum: nur spezielle, diskrete Messergebnisse sind möglich. $\rightarrow$ Quantisierung
+          \item kontinuierliche Spektren oder bei Entartung ein kleiner Unterraum, welcher sich aus Messunsicherheit bei kont. Observablen oder Entartung ergibt, ist nach der Messung als Information über den Zustand verfügbar
+          \item Messung ist ein ideales Werkzeug zur Präparation von Zuständen
+        \end{itemize}
+    \end{itemize}
+    Nachtrag: 
+    \begin{equation}
+      \hat{\vec{x}}=\left(\begin{array}{c} \hat{x}_1 \\ \hat{x}_2 \\ \hat{x}_3 \end{array}\right) \quad, \quad \hat{\vec{x}}\hat{\vec{p}}=\hat{x}_1\hat{p}_1 + \hat{x}_2\hat{p}_2 + \hat{x}_3\hat{p}_3 \quad, \quad \hat{\vec{x}}\left.\right|\hat{x}\rangle=\vec{x}\left.\right|\vec{x}\rangle
+    \end{equation}
+    \begin{equation}
+    \left(\begin{array}{c} \hat{x}_1 \\ \hat{x}_2 \\ \hat{x}_3 \end{array}\right)\left.\right|\vec{x}\rangle=\left(\begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right)\left.\right|\vec{x}\rangle
+    \end{equation}
+    \begin{equation}
+    \underbrace{\hat{x}_1}_{\text{Operator}}\left.\right|x_1x_2x_3\rangle=\underbrace{x_1}_{\text{Eigenwert}}\left.\right|x_1x_2x_3\rangle
+    \end{equation}
+  \textbf{4. Postulat: Wahrscheinlichkeitsaussage}\\
+    Für ein Spektrum im Zustand $\left.\right|\Psi,t\rangle$ liefert das Skalarprodukt mit den Eigenzuständen der Observable eine Wahrscheinlichkeitsamplitude für die Messung der zugeordneten, zugehörigen Eigenwerte.
+    
+
+\begin{flushright}
+Vorlesung 8 - 14.05.13
+\end{flushright}
+ 
+\subsection{Darstellung und Wellenfunktion}
+Ortsdarstellung (OD)\\
+kontinuierliche Eigenbasis des Ortsoperators $\hat{\vec{x}}$.
+$$
+\hat{\vec{x}}=\left(\begin{array}{c} \hat{x}_1 \\ \hat{x}_2 \\ \hat{x}_3 \end{array}\right)
+$$
+$$
+\hat{\vec{x}}\left.\right|\vec{x}\rangle=\hat{x}\left.\right|\vec{x}\rangle
+$$
+\textcolor[rgb]{1,0,0}{???}
+\begin{equation}
+\langle\vec{x}\left.\right|\vec{x}\rangle=\hat{\delta}(\hat{x}-\vec{x})
+\end{equation}
+Zerlegung des Eins-Operators
+$$
+\hat{1}=\int\ dx \left|\vec{x}\rangle\langle\vec{x}\right|
+$$
+\begin{equation}
+\left.\right|\Psi,t\rangle=\int\ dx\left|\vec{x}\rangle\langle\vec{x}\right|\Psi,t\rangle
+\label{eq:WellenfunktionOrtsdarstellung}
+\end{equation}
+Annahme: Teilchen mit Masse m in klassischem Potential $V(\vec{x})$
+\begin{equation}
+\xrightarrow{\text{2. Post.}} \quad \hat{H}=\frac{\hat{\vec{p}}^2}{2m}+V(\vec{x})
+\label{eq:Hamiltonoperator}
+\end{equation}
+OD eines allg. Operators\footnote{Wichtiger Unterschied zwischen Operator im Hilbertraum und im 3D-Raum (Ortsdarstellung)} $\hat{A}$
+$$
+\langle\vec{x}\left|\right.\hat{A}\left.\right|\alpha\rangle \quad \quad \left.\right|\alpha\rangle \quad \text{beliebig}
+$$
+OD des Ortsoperators $\hat{\vec{x}}$
+$$
+\langle\vec{x}\left.\right|\hat{\vec{x}}\left.\right|\alpha\rangle=\vec{x}\langle\vec{x}\left.\right|\alpha\rangle
+$$
+OD einer Funktion von $\vec{x}$
+$$
+\langle\vec{x}\left.\right|V(\vec{x})\left.\right|\alpha\rangle=V(\vec{x})\langle\vec{x}\left.\right|\alpha\rangle
+$$
+OD Impulsoperator\\
+keine einfache EW Relation, aber wir wissen
+\begin{align}
+[\hat{x}_i,\hat{p}_j]&=i\hbar\delta_{ij} \nonumber\\ \nonumber
+\langle\vec{x}\left.\right|\hat{\vec{p}}\left.\right|\alpha\rangle&=-i\hbar\vec{\nabla}\langle\vec{x}\left.\right|\alpha\rangle\\ \nonumber
+\langle\vec{x}\left.\right|\hat{p}_i\left.\right|\alpha\rangle&=i\hbar\frac{\partial}{\partial_i}\langle\vec{x}\left.\right|\alpha\rangle\\ \nonumber
+\langle\vec{x}\left.\right|[\hat{x}_i,\hat{p}_j]\left.\right|\alpha\rangle&=\langle\vec{x}\left.\right|\hat{x}_i,\hat{p}_j\left.\right|\alpha\rangle-\langle\vec{x}\left.\right|\hat{x}_j,\hat{p}_i\left.\right|\alpha\rangle\\ 
+&=x_i\langle\vec{x}_i,\hat{p}_j\left.\right|\alpha\rangle+i\hbar\frac{\partial}{\partial x_i}x_i\langle\hat{x}\left.\right|\alpha\rangle\nonumber\\
+&=i\hbar\delta_{ij}\langle\vec{x}\left.\right|\alpha\rangle
+\end{align}
+OD des $\hat{H}$-Operators 
+\begin{equation}
+\langle\vec{x}\left.\right|\hat{H}\left.\right|\alpha\rangle=\left[\frac{-\hbar^2}{2m}\vec{\nabla}^2+V(\vec{x})\right]\langle\vec{x}\left.\right|\alpha\rangle
+\label{eq:Hamiltonoperator Ortsdarstellung}
+\end{equation}
+Eigenwertproblem von $\hat{H}$
+\begin{align}
+&\hat{H}\left.\right|E_i\rangle=E_i\left.\right|E_i\rangle\nonumber\\
+&\xrightarrow{OD}\left(\frac{-\hbar^2}{2m}\cdot \Delta+V(\vec{x})\right)\langle\vec{x}\left.\right|\alpha\rangle=E_i\langle\vec{x}_i\left.\right|E_i\rangle
+\end{align}
+$\rightarrow$ Wellenfunktion des Energieeigenzustandes in OD\\
+$\rightarrow$ stationäre Schrödingergleichung in OD\\\\
+\textbf{5. Postulat}: Allgemeine Schrödingergleichung
+\begin{equation}
+i\hbar\frac{\partial}{\partial t}\left.\right|\Psi,t\rangle=\hat{H}\left.\right|\Psi,t\rangle
+\label{eq:Allgemeine Schrödingergleichung}
+\end{equation}
+Allgemeine Schrödingergleichung in OD
+\begin{equation}
+i\hbar\frac{\partial}{\partial t}\langle\vec{x}\left.\right|\Psi,t\rangle=\left(-\frac{\hbar^2}{2m} \Delta+V(\vec{x})\right)\langle\vec{x}\left.\right|\Psi,t\rangle
+\label{eq:Allgemeine Schrödingergleichung in OD}
+\end{equation}
+$\rightarrow$ einfache DGL, stark vereinfacht\\
+abstrakte Schrödingergleichung ist viel allgemeiner als diese DGL (1 Teilchen ohne innere Freiheitsgrade im klassischen Potential $V(\vec{x})$.\\\\
+\textbf{Impulsdarstellung}\\
+kont. Eigenbasis des Impulsoperators\\
+
+\textcolor[rgb]{1,0,0}{fehlt}\\
+Orts- und Impulsraumwellenfunktionen enthalten gleiche Information, lediglich in Unterschiedlichen Darstellungen von $\left.\right|\Psi,t\rangle$\\
+Durch Einsetzen eines Eins-Operators können wir zwischen Darstellungen wechseln
+\begin{equation}
+\Psi(\vec{x},t)=\langle\vec{x}\left.\right|\Psi,t)=\int d^3p\langle\vec{x}\left.\right|\vec{p}\rangle\underbrace{\langle\vec{p}\left.\right|\Psi,t\rangle}_{\Psi(\vec{p},t)}
+\end{equation}
+
+\textcolor[rgb]{1,0,0}{FEHLT}
+
+\begin{flushright}
+Vorlesung 9 - 16.05.2013
+\end{flushright}
+
+\subsection{Zeitentwicklung und stationäre Zustände}
+Zeitentwicklung von $\left.\right|\Psi,t\rangle$ durch SGL\footnote{Schrödingergleichung} 
+\begin{equation}
+i\hbar \frac{\partial}{\partial t}\left.\right|\Psi,t\rangle=\hat{H}\left.\right|\Psi,t\rangle
+\label{eq:Schrödingergleichung}
+\end{equation}
+Diese lineare DGL erster Ordnung lässt sich formal für gegebenen Anfangszustand $\left.\right|\Psi,t_0\rangle$ durch Anwendung eines linearen Zeitentwicklungsoperators $\hat{U}_{(t,t_0)}$ lösen.
+\begin{equation}
+\left.\right|\Psi,t\rangle=\hat{U}_{(t,t_0)}\left.\right|\Psi,t_0\rangle
+\end{equation}
+Zeitentwicklungsoperator
+\begin{align}
+i\hbar\frac{\partial}{\partial t}\hat{U}_{(t,t_0)}\left.\right|\Psi,t_0\rangle&=\hat{H}\hat{U}_{(t,t_0)}\left.\right|\Psi,t_0\rangle \quad \text{mit} \quad \left.\right|\Psi,t_0\rangle \quad \text{beliebig}\\
+\rightarrow i\hbar \frac{\partial}{\partial t}\hat{U}_{(t,t_0)}&=\hat{H}\hat{U}_{(t,t_0)}
+\end{align}
+\subsubsection{Zeitunabhängiger Hamiltonoperator}
+\begin{equation}
+\hat{U}_{(t,t_0)}=\hat{U}_{(t,-t_0)}=\exp\left(-\frac{i}{\hbar}\hat{H}(t-t_0)\right)
+\end{equation}
+mit $\hat{U}_{(t_0,t_0)}=\hat{1}$ wenn $\hat{H}^\dagger=\hat{H}$\\
+$\rightarrow$ Norm eines Zustandes bleibt während der Zeitentwicklung erhalten\\
+Exponentialfunktion mit einem hermiteschen Operator im Exponenten ist typisch für kontinuierliche Transformationen (Translation, Rotation). In diesem Zusammenhang bezeichnet man $\hat{H}$ auch als Generator der zeitlichen Translation.\\
+\subsubsection{Zeitabhängiger Hamiltonoperator}
+Nur wenn gilt 
+\begin{equation}
+\left[\hat{H}_{(t)},\hat{H}_{(t')}\right]=0
+\label{eq:Kommutatorrelation2}
+\end{equation}
+lässt sich die DGL geschlossen lösen.
+\begin{equation}
+\hat{U}_{(t,t_0)}=\exp\left(-\frac{i}{\hbar}\int_{t_0}^t \ \text{d}t'\hat{H}_{(t')}\right)
+\end{equation}
+Für (\ref{eq:Kommutatorrelation2}) $\neq$ 0 kann DGL nicht durch Exponentialfunktion gelöst werden.\\
+Hier bleibt nur noch iterative Lösung in Form der Dyson-Reihe.
+\begin{align}
+&i\hbar\frac{\partial}{\partial t} \hat{U}_{(t,t_0)}=\hat{H}_{(t)}\hat{U}_{(t,t_0)}\\
+&\hat{U}_{(t,t_0)}=\hat{1}-\frac{i}{\hbar} \ \int^t_{t_0}\ \text{d}t_1\hat{H}_{t_1}\hat{U}_{(t_1,t_0)}
+\end{align}
+Iteratives Einsetzen von $\hat{U}_{(t,t_0)}$ auf der rechten Seite führt zu Dyson-Reihe.\\
+\subsubsection{Stationäre Zustände}
+Der Zeitentwicklungsoperator für zeitunabhängigen $\hat{H}$ und $t_0=0$
+\begin{equation}
+\hat{U}_{(t)}=\exp\left(-\frac{i}{\hbar}\hat{H}t\right)
+\end{equation}
+stellt formal Lösung der SGL der Anwendung von $\hat{U}_{(t)}$ dar, ist aber meist ebenso kompliziert wie das direkte Lösen der SGL. Ausnahme bilden Eigenzustände von $\hat{H}$.
+\begin{align}
+\hat{H}\left.\right|E_n\rangle&=E_n\left.\right|E_n\rangle\\
+\rightarrow \left.\right|E_n,t\rangle&=\hat{U}_{(t)}\left.\right|E_n\rangle=\exp\left(-\frac{i}{\hbar}\hat{H}t\right)E_n\\
+&=\exp\left(-\frac{i}{\hbar}E_nt\right)\left.\right|E_n\rangle
+\end{align}
+Zeitabhängigkeit des Zustandes beschränkt sich auf einen komplexen Phasenfaktor. \\
+Frequenz mit der diese Phase des Zustandes rotiert ist
+\begin{equation}
+w_n=\frac{E_n}{\hbar}
+\end{equation}
+Bei der Berechnung von beobachtbaren Größen (z.B. Betragsquadrate von Skalarprodukten  oder Erwartungswerten) fällt dieser Phasenfaktor heraus.
+\begin{align}
+\langle E,t\left.\right|\hat{A}\left.\right|E,t\rangle&=\langle E_n \left.\right|\exp\left(+\frac{i}{\hbar}E_nt\right)\hat{A}\exp\left(-\frac{i}{\hbar}E_nt\right)\left.\right|E_n\rangle\\
+&=\langle E_n\left.\right|\hat{A}\left.\right|E_n\rangle
+\end{align}
+Daher werden EZ von $\hat{H}$ auch als stationäre Zustände bezeichnet, und die entsprechende EW-Gleichung als stationäre Schrödingergleichung.\\
+Zeitentwicklung eines beliebigen Zustandes $\left.\right|\Psi,0\rangle$\\
+$\left.\right|E_n\rangle$ bilden eine vollständige orthonormierte Basis
+\begin{align}
+\left.\right|\Psi,0\rangle&=\sum_n\left.\right|E_n\rangle\langle E_n\left.\right|\Psi,0\rangle\\
+\rightarrow \left.\right|\Psi,t\rangle&=\sum_n\hat{U}_{(t)}\left.\right|E_n\rangle\langle E_n\left.\right|\Psi,0\rangle\\
+&=\sum_n\exp\left(-\frac{i}{\hbar}E_nt\right)\langle E_n \left.\right|\Psi,0\rangle\\
+\left.\right|\Psi,t\rangle&=\sum_nc_n(t)\left.\right|E_n\rangle \quad \text{mit} \\
+&c_n(t)=\exp\left(-\frac{i}{\hbar}E_nt\right)\cdot c_n(0)\\
+&c_n(0)=\langle E_n\left.\right|\Psi,0\rangle
+\end{align}
+\subsubsection{Schrödingerbild}
+In bisheriger Sichtweise tragen Zustände die Zeitabhängigkeit, formal durch Zeitentwicklungsoperator beschrieben.\\
+Zeitabhängigkeit von Observablen, z.B. Erwartungswerte
+\begin{equation}
+\langle\hat{A}\rangle_{(t)}=\langle\Psi,t\left.\right|\hat{A}\left.\right|\Psi,t\rangle
+\end{equation}
+resultiert aus Zeitabh- der Zustände, Operatoren sind zeitunabhängig
+\subsubsection{Heisenbergbild}
+Alternative Interpretation der Zeitentwicklung des Erwartungswertes 
+\begin{align}
+\langle\hat{A}\rangle_{(t)}&=\langle\Psi,t\left.\right|\hat{A}\left.\right|\Psi,t\rangle\\
+&=\langle\Psi,0\left.\right|\hat{U}^\dagger_{(t)}\hat{A}\ \hat{U}_{(t)}\left.\right|\Psi,0\rangle\\
+&=\langle\Psi,0\left.\right|\hat{A yfvfdsdhkbrfkvhdskedhv}_{\hat{H}(t)}\left.\right|\Psi,0\rangle
+\end{align}
+$\rightarrow$ unitäre Transformation des Operators\\
+OP der Observablen entwickeln sich in der Zeit, während die Zustände selbst zeitunabhängig sind. Schrödinger- und Heisenbergbilder sind Darstellungen derselben Physik.
+\begin{align}
+&\hat{A}_{H(t)}=\hat{U}^\dagger_{(t)}\hat{A}\hat{U}_{(t)}\\
+&\frac{\text{d}}{\text{d}t}\hat{A}_{H(t)}=\frac{i}{\hbar}\left[\hat{H},\hat{A}_{H(t)}\right]+\frac{\partial \hat{A}}{\partial t}H(t)
+\end{align}
+
+\begin{flushright}
+Vorlesung 10 - 21.05.2013
+\end{flushright}
+
+\subsection{Observablen und Vorhersagen}
+\begin{itemize}
+	\item 4. Postulat: Für ideale Messung können Wahrscheinlichkeiten für einen der Eigenwerte der Observablen $\hat{A}$ vorhergesagt werden (diskretes Spektrum).
+    \begin{equation}
+      P_\Psi(a_i)=\left|\langle a_i\left.\right|\Psi\rangle\right|^2 \quad \text{für System im Zustand} \quad \left.\right|\Psi\rangle
+    \end{equation}
+  \item Experimenteller Zugang: Große Zahl von Messungen der Observablen an Systemen in \textbf{identischen} Zuständen $\left.\right|\Psi\rangle$\\
+    $\rightarrow$ Experimentelle Häufigkeitsverteilung\\
+    $\rightarrow$ Vergleichbar mit Wahrscheinlichkeitsverteilung $P_\Psi(a_i)$ aus der QM-Beschreibung
+  \item Bsp.: Doppelspaltexperiment mit Elektronen\\
+    Häufigkeitsverteilung der Position der Elektronen auf dem Schirm ist Abb. des Betragsquadrats der Wellenfunktion in Ortsdarstellung
+  \item Oft ist nicht komplette Verteilung von Interesse, sondern nur einfache Kenngrößen: Mittelwerte \& Varianz
+  \item Mittelwert der Verteilung $P_\Psi(a_i)$
+    \begin{equation}
+    \langle\hat{A}\rangle_\Psi=\sum_iP_\Psi(a_i) a_i
+    \end{equation}
+    Im QM-Kontext
+    \begin{align}
+    \langle\hat{A}\rangle_\Psi&=\sum_i\left|\langle a_i\left.\right|\Psi\rangle\right|^2a_i\\
+    &=\sum_i\langle\Psi\left.\right|a_i\rangle a_i\langle a_i\left.\right|\Psi\rangle\\
+    &=\langle\Psi\left.\right|\hat{A}\left.\right|\Psi\rangle
+    \end{align}
+    Erwartungswert der Observablen $\hat{A}$ $\Leftrightarrow$ Mittelwert der Wahrscheinlichkeitstheorie 
+  \item Analog: Varianz der Verteilung $P_\Psi(a_i)$ $\Leftrightarrow$ Unschärfe $\Delta A_\Psi$
+  \item Spezialfall: $\left.\right|\Psi\rangle=\left.\right|a_i\rangle$\\
+    Erwartungswert: $\langle\Psi\left.\right|\hat{A}\left.\right|\Psi\rangle=\langle a_i\left.\right|\hat{A}\left.\right|a_i\rangle=\langle a_i\left.\right|a_i\left.\right|a_i\rangle=a_i$\\
+    Unschärfe: $\Delta A_{a_i}=0$
+\end{itemize}
+\textbf{Messung kompatibler Observablen}\\
+\begin{itemize}
+	\item Betrachte sequentielle Messung zweier Observablen. Beide Messungen unmittelbar nacheinander, sodass Zeitentwicklung zwischen beiden Messungen irrelevant ist.
+  \item Angenommen $\left[\hat{A},\hat{B}\right]=0$\\
+    Es existiert simultane Eigenbasis
+    \begin{align}
+      \hat{A}\left.\right|a_ib_j\rangle&=a_i\left.\right|a_ib_j\rangle\\
+      \hat{B}\left.\right|a_ib_j\rangle&=b_j\left.\right|a_ib_j\rangle
+    \end{align}
+    Im Falle von diskrete Spektren und keiner Entartung.
+  \item Ausgangszustand $\left.\right|\Psi\rangle$ entwickelt in simultaner Eigenbasis
+    \begin{equation}
+    \left.\right|\Psi\rangle=\sum_{ij}C_{ij}\left.\right|a_ib_j\rangle
+    \end{equation}
+  \item 1. Messung von $\hat{A}$. Wahrscheinlichkeitsverteilung $P_\Psi(a_i)$
+    \begin{align}
+      P_\Psi(a_i)&=\sum_j\left|\langle a_ib_j\left.\right|\Psi\rangle\right|^2\\
+      &=\sum_j\left|\langle a_ib_j\left.\right|\left(\sum_{i'j'}C_{i'j'}\left.\right|a_{i'}b_{j'}\rangle\right)\right|^2\\
+      &=\sum_j\left|\sum_{i'j'}C_{i'j'}\langle\underbrace{a_ib_j\left.\right|a_{i'}b_{j'}}_{\delta_{ii'}\delta_{jj'}}\rangle\right|^2\\
+      &=\sum_j\left|C_{ij}\right|^2
+    \end{align}
+  \item 1. Messung: Zustand nach $a_i$ Messung konstruieren\\
+    $\rightarrow$ Projektion auf Unterraum zum Eigenwert $a_i$.
+  \item Projektionsoperator $\hat{\Pi}(a_i)$
+    \begin{equation}
+      \hat{\Pi}(a_i)=\sum_j|a_ib_j\rangle\langle a_ib_j|
+    \end{equation}
+    Verbindung zum $\hat{1}$-Operator 
+    \begin{equation}
+    \hat{1}=\sum_i\hat{\Pi}(a_i)
+    \end{equation}
+  \item Eigenschaften von Projektionsoperator 
+    \begin{align}
+      \hat{\Pi}^\dagger&=\hat{\Pi} \quad \text{hermitesch}\\
+      \hat{\Pi}^2&=\hat{\Pi} \quad \text{itempotenz}
+    \end{align}
+  \item Zustand nach $a_i$-Messung
+    \begin{align}
+      |\Psi'(a_i)\rangle&=\hat{\Pi}(a_i)|\Psi\rangle\\
+      &=\sum_jC_{ij}|a_ib_j\rangle
+    \end{align}
+    keine Summation über i
+  \item Nachnormierung 
+    \begin{equation}
+    |\Psi(a_i)\rangle=\frac{1}{\left(\sum_j|C_{ij}|^2\right)^{1/2}}\sum_jC_{ij}|a_ib_j\rangle
+    \end{equation}
+  \item 2. Messung: Wsk. für Messergebnis $b_j$
+    \begin{align}
+      P_{\Psi'(a_i)}(b_j)&=\sum_i\left|\langle a_{i'}b_j|\Psi'(a_i)\rangle\right|^2\\
+      &=\sum_{i'}\left|\frac{1}{\left(\sum_j |C_{ij}|^2\right)^{1/2}}\sum_{j'}C_{ij'}\underbrace{a_{i'}b_j|a_ib_{j'}\rangle}_{\delta_{ii'}\delta_{jj'}}\right|^2\\
+      &=\frac{|C_{ij}|^2}{\sum_{j'}|C_{ij'}|^2}
+    \end{align}
+  \item Kombinierte Wahrscheinlichkeit für Messung von $a_i$ und $b_j$
+    \begin{equation}
+    P_\Psi(a_i,b_j)=P_\Psi(a_i)P_{\Psi(a_i)}(b_j)=|C_{ij}|^2
+    \end{equation}
+  \item 2. Messung: Zustand
+    \begin{equation}
+    |\Psi''(a_ib_j)\rangle=|a_ib_j\rangle
+    \end{equation}
+  \item Sequentielle Messung weiterer Observablen $\hat{A},\hat{B}$ mit $[\hat{A},\hat{B}]=0$ gilt:
+    \begin{itemize}
+      \item Wahrscheinlichkeit für bestimmte Kombination von Messergebnissen ($a_i,b_j$)
+        \begin{equation}
+        P_\Psi(a_ib_j)=|C_{ij}|^2=\left|\langle a_ib_j|\Psi\rangle\right|^2
+        \end{equation}
+      \item Zustand nach beiden Messungen
+        \begin{equation}
+        |\Psi''(a_ib_j)\rangle=|a_ib_j\rangle
+        \end{equation}
+        ist der simultane EZ zu beiden Messergebnissen
+      \item Wahrscheinlichkeiten von 2. Zustand sind unabhängig von Reihenfolge der Messungen
+      \item Wiederholte Messungen von $\hat{A}$ oder $\hat{B}$ in beliebiger Reihenfolge reproduzieren die ersten Messergebnisse $a_ib_j$.
+    \end{itemize}
+\end{itemize}
+
+\begin{flushright}
+Vorlesung 11 - 23.05.2013
+\end{flushright}
+
+\begin{flushright}
+Vorlesung 12 - 28.05.2013
+\end{flushright}
+\subsection{Stückweise konstante Potentiale}
+\begin{itemize}
+	\item stückweise konstante Potentiale $\rightarrow$ V(x)
+    \begin{equation}
+    V(x)=\left\{
+    \begin{aligned}
+    &\stackrel{:}{.}\\
+    &V_{12} \quad \text{für} \quad \xi_1<x<\xi_2\\
+    &V_{23} \quad \text{für} \quad \xi_2<x<\xi_3\\
+    &\stackrel{:}{.}
+    \end{aligned}
+    \right.
+    \end{equation}
+  \item stationäre Schrödingergleichung
+    \begin{align}
+      &\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right)\Psi_E(x)=E\Psi_E(x)\\
+      &-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\Psi_E(x)=\left[E-V(x)\right]\Psi_E(x)\\
+      &\frac{\partial^2}{\partial x^2}\Psi_E(x)=\frac{2m}{\hbar^2}\left[V(x)-E\right]\Psi_E(x)
+    \end{align}
+  \item Anschaulich ist die zweite Ableitung der Wellenfunktion (Krümmung) mit Differenz $(V(x)-E)$ verknüpft.
+  \item $E>V(x)$: Zweite Ableitung $\Psi_E''(x)$ hat umgekehrtes Vorzeichen wie $\Psi_E(x)$ $\rightarrow$ Krümmung zur Achse.
+  \item $E<V(x)$: $\Psi_E''(x)$ hat das selbe Vorzeichen wie $\Psi_E(x)$ $\rightarrow$ Krümmung von Achse weg.
+  \item stückweise konst. Potential in einem der Intervalle mit $V(x)=V_0$
+    \begin{equation}
+    \frac{\partial^2}{\partial x^2}\Psi_E(x)=\frac{2m}{\hbar^2}[V_0-E]\Psi_E(x)
+    \end{equation}
+    Allgemeine Lösung: ebene Welle 
+    \begin{equation}
+    \Psi_E(x)=C\exp\left(\pm\sqrt{\frac{2m}{\hbar^2}[V_0-E]}x\right)
+    \end{equation}
+  \item Unterscheide $E>V_0, \ E<V_0$\\
+    1. $E>V_0$\\
+    \begin{align}
+    \Psi_E(x)&=Ae^{ikx}+Be^{-ikx}\\
+    &=A'\sin(kx)+B'\cos(kx)
+    \end{align}
+    \begin{equation}
+    k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)} \in \mathbb{R}
+    \end{equation}
+    $\rightarrow$ Oszillatorische Lösung\\
+    2. $E>V_0$
+    \begin{align}
+    \Psi_E(x)\\&=Ae^{K x}+Be^{-K x}\\
+    &K=\sqrt{\frac{2m}{\hbar^2}(V_0-E)}\in \mathbb{R}
+    \end{align}
+    $\rightarrow$ Exponentieller Anstieg/Abfall
+  \item Vorsicht in der Umgebung der Sprungstelle/Unstetigkeiten im Potential $\rightarrow$ Stetigkeitsbedingung
+  \item Betrachte $\epsilon$-Umgebung um eine Sprungstelle und integriere (formal) die SGL.
+    \begin{align}
+    &\int_{\xi-\epsilon}^{\xi+\epsilon}\ dx \ \frac{\partial^2\Psi_E(x)}{\partial x^2}=\int_{\xi-\epsilon}^{\xi+\epsilon}\ dx \ \frac{2m}{\hbar^2}(V(x)-E)\Psi_E(x)\\
+    &\Psi_E'(\xi+\epsilon)-\Psi_E'(\xi-\epsilon)=\frac{2m}{\hbar^2} \int_{\xi-\epsilon}^{\xi+\epsilon}\ dx \ (V(x)-E) \Psi_E(x)
+    \end{align}
+  \item Aus $\epsilon\rightarrow 0$ Betrachtung:\\
+    $\frac{\partial}{\partial x}\Psi_E(x)$ und $\Psi_E(x)$ sind an der Sprungstelle stetig, wenn V(x) endlich.
+\end{itemize}
+\subsection{Potentialtopf}
+\begin{itemize}
+	\item Potentialtopf
+    \begin{equation}
+    V(x)=\left\{
+    \begin{aligned}
+    &V_0 \ : \ x\leq -a/2 \quad (I)\\
+    &0 \ : \ -a/2\leq x\leq a/2 \quad (II) \\
+    &V_0 \ : \ x\geq a/2 \quad (III)
+    \end{aligned}
+    \right.
+    \end{equation}
+    Zwei Klassen von Lösungen
+    \begin{itemize}
+      \item $E\leq V_0$ : gebundene Zustände
+      \item $E>V_0$ : ungebundene Zustände
+    \end{itemize}
+    \end{itemize}
+    \textbf{Bindungszustand:} $0\leq E \leq V_0$
+    \begin{itemize}
+      \item Drei Bereiche:
+        \begin{align}
+          (I) \quad E<V_0: \quad &K=\sqrt{\frac{2m}{\hbar^2}(V_0-E)}\\
+          &\Psi_I(x)=Ae^{Kx}+A'e^{-Kx}\\
+          (II) \quad E>0: \quad &k=\sqrt{\frac{2m}{\hbar^2}E}\\
+          &\Psi_{II}(x)=B\sin(kx)+B'\cos(kx)\\
+          (III) \quad E<V_0: \quad &K=\sqrt{\frac{2m}{\hbar^2}(V_0-E)}\\
+          &\Psi_{III}(x)=Ce^{Kx}+C'e^{-Kx}
+        \end{align}
+        $\rightarrow$ 6 Integrationskonstanten
+      \item 1. Normierbarkeit: Exponentiell Anwachsenden Terme für $x\rightarrow \pm$ dürfen nicht beitragen, da sonst nicht normierbar.
+        \begin{align}
+          &\rightarrow A'=0 \, \quad C=0\\
+          &\Psi_I(x)=Ae^{Kx}\\
+          &\Psi_{II}(x)=B\sin(kx)+B'\cos(kx)\\
+          &\Psi_{III}(x)=C'e^{-Kx}
+        \end{align}
+      \item 2. Potential symmetrisch unter $x\rightarrow-x$
+      \item Formal wird $x\rightarrow-x$ durch Paritätsoperator beschrieben.
+        \begin{equation}
+        \hat{\Pi}|x\rangle=|-x\rangle
+        \end{equation}
+      \item Hamiltonian ist invariant unter Paritätstransformation
+        \begin{align}
+          &\hat{\Pi}^{-1}\hat{H}\hat{\Pi} \quad \text{oder} \hat{H}\hat{\Pi}=\hat{\Pi}\hat{H}\\
+          &[\hat{H},\hat{\Pi}]=0
+        \end{align}
+        $\rightarrow$ Hamiltonop. und $\hat{\Pi}$ haben simultane Eigenbasis
+        \begin{align}
+        &\langle x|\hat{\Pi}|E_n\rangle=\langle-x|E_n\rangle\\
+        &\pm\langle x|E_n\rangle
+        \end{align}
+        $\rightarrow$ stat. Wellenfunktionen haben entweder gerade oder ungerade Parität
+        \begin{align}
+        \text{gerade:}\quad \Psi_{E_n}(-x)&=\Psi_{E_n}(x)\\
+        \text{ungerade:}\quad \Psi_{E_n}(-x)&=-\Psi_{E_n}(x)
+        \end{align}
+    \end{itemize}
+ 
 
 \end{document}
