@@ -7,6 +7,7 @@
 \usepackage{float} %Für Position von Abbildungen%
 \usepackage[onehalfspacing]{setspace}
 \usepackage{nccmath}
+\usepackage{ulem} % Unterstreichungen
 \usepackage[colorlinks,
 pdfpagelabels,
 pdfstartview = FitH,
@@ -1133,6 +1134,115 @@ Vorlesung 10 - 21.05.2013
 \begin{flushright}
 Vorlesung 11 - 23.05.2013
 \end{flushright}
+\section{Einfache eindimensionale Probleme}
+\begin{itemize}
+  \item Betrachte Teilchen mit Masse m in einer Dimension im Potential V(x)
+  \item Suche Lösungen des EW-Problems des Hamiltonoperators
+    \begin{equation}
+      \hat{H}=\frac{1}{2m}\hat{p} + V(\hat{x}) \quad \quad \hat{H}|E_n\rangle = E_n|E_n\rangle
+    \end{equation}
+   \item Wähle OD um das EW-Problem zu lösen [dadurch wird $V(\hat{x})$ einfacher]
+     \begin{itemize}
+       \item Eigenzustände werden über Wsk.fkt. in OD:
+          \begin{equation}
+            \Psi_{E_n}(x) := \langle x|E_n \rangle
+          \end{equation}
+       \item Eigenwertproblem von $\hat{H}$ definiert die stationäre SGL in OD:
+          \begin{equation}
+            \left(-\frac{\hbar}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right)\Psi_{E_n}(x) = E_n \Psi_{E_n}(x)
+          \end{equation}
+          $\rightarrow$ homog. lin. DGL 2. Ordnung
+     \end{itemize}
+   \item Wichtige Nebenbedingung: physikalisch sinnvolle Zustände bzw. Wellenfkt. müssen normiert/normierbar sein:
+      \begin{itemize}
+       \item für Zustandskets: $\langle \Psi | \Psi \rangle = 1 $
+       \item für Wellenfkt.: $ 1= \langle \psi | \psi \rangle = \int \langle \psi | x \rangle \langle x | \psi \rangle \mathrm{d}x = \int \psi^*(x)\psi(x) \mathrm{d}x = \int |\psi(x)|^2 \mathrm{d}x $
+       \item Um normierbar zu sein muss die Wellenfkt. quadratintegrabel und das Integral endlich sein.
+      \end{itemize}
+   \item Unterscheide zwei Klassen von Lösungen der stationären SGL:
+      \begin{enumerate}
+       \item gebundene Zustände
+          \begin{itemize}
+           \item räumlich in endlichem Gebiet lokalisiert, d.h. $ \psi(x) \overset{|x| \rightarrow \infty}{\longrightarrow} 0 $
+           \item $ \hookrightarrow $ Wellenfkt. ist normierbar
+           \item Normierbarkeit führt auf diskretes Spektrum
+          \end{itemize}
+       \item ungebundene Zustände
+          \begin{itemize}
+           \item Wellenfkt. verschwindet nicht für $ |x| \rightarrow \infty $
+           \item $ \hookrightarrow $ Wellenfkt. ist \uline{nicht} normierbar und damit kein physikalisch erlaubter Zustand
+          \end{itemize}
+      \end{enumerate}
+\end{itemize}
+
+
+      
+\subsection{Freies Teilchen}
+\begin{itemize}
+ \item Lsg. d. stationären SGL für $ V(x) = 0 $
+    \begin{equation}
+        -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \phi_E(x) = E\phi_E(x)
+    \end{equation}
+  \item absorbiere Vorfaktor d. kin. Energie in einer Umdef. v. E:
+    \begin{equation}
+      E := \frac{\hbar^2}{2m}k^2 \quad \quad k: \text{Wellenzahl}
+    \end{equation}
+    \begin{equation}
+      \hookrightarrow -\frac{\partial^2}{\partial x^2} \phi_E(x) = k^2 \phi_E(x)
+    \end{equation}
+    $ \hookrightarrow $ Analogie zu Schwingungs-DGL aus klass. Mechanik
+    $ \hookrightarrow $ allg. Lsg.:
+    \begin{equation}
+     \phi_E(x) = A e^{ikx} + B e^{-ikx} = A'\sin{kx} + B'\cos{kx}
+    \end{equation}
+  \item Alternativ: EW-Problem von $ \hat{p} $ ist schon bekannt. Lsg. f. EW-Problem von $ \hat{p} $:
+    \begin{equation}
+     \hat{p} |p\rangle = p |p \rangle
+    \end{equation}
+    \begin{equation}
+    % TODO
+      \langle x | p \rangle \propto e^{\frac{i}{\hbar}px} = e^{ikx}
+    \end{equation}
+  \item EW-Problem von $ \hat{p}^2 $ and $ \hat{p}^2 | p \rangle = p^2 | p \rangle \rightarrow $ zweifache Entartung des $ p^2 $ Spektrums
+      $ \hookrightarrow $ allg. Form für Eigenzustände zu $ \hat{p}^2 $ : $ A |p \rangle + B|-p \rangle $
+  \item kontinuierliches Spektrum/ungebundene Zustände:
+    \begin{itemize}
+     \item Wellenfkt. $ \phi_E(x) $ ist nicht lokalisiert und nicht normierbar
+     \item $ \hookrightarrow \phi_E(x) $ können nicht als physikalisch sinnvoller Systemzustand interpretiert werden
+     \item trotzdem nützliche Basis für Beschreibung eines freien Teilchens
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Wellenpakete}
+\begin{itemize}
+  \item physikalische Perspektive: ``freie Teilchen'' sind typischerweise in endlichem räumlichen Gebiet lokalisiert
+  \item Betrachte Superposition von ebene-Welle-Lösungen $ \phi_E(x) $ mit Koeffizienten die durch die Fkt. $C(E) = C(k^2) $ gegeben:
+    \begin{equation}
+       \phi(x) = \int_{0}^{\infty} C(E)e^{ikx} + C'(E)e^{-ikx} \, \mathrm{d}E = \int_{-\infty}^{\infty} C(k)e^{ikx} \, \mathrm{d}k
+    \end{equation}
+    $ \hookrightarrow $ Fouriertrafo: Amplitudenfkt. C(k) ist gerade die Wellenfkt. in ID, bezeichnet mit $ \tilde{\phi}(k) $
+  \item Normierbaarkeit: Wellenfkt. in ID muss quadratintegrabel \& endlich sein:
+    \begin{equation}
+      \int_{-\infty}^{\infty} |\tilde{\psi}(k)|^2 \, \mathrm{d}k = \int_{-\infty}^{\infty} |C(k)|^2 \, \mathrm{d}k
+    \end{equation}
+    $ \hookrightarrow $ lässt sich gewährleisten, wenn C(k) im Unendlichen (in k) verschwindet, d.h. lokalisiert in Wellenzahl
+  \item Prototyp: Gaußsches Wellenpaket:
+    \begin{equation}
+      C(k) = \left(\frac{2}{\pi}a^2 \right)^{1/4} e^{-a^2k^2}
+    \end{equation}
+    $ \hookrightarrow $ Fouriertrafo, also Wellenfkt. i. OD ist ebenfalls gaußförmig
+    \begin{equation}
+      \psi(x) = \left(\frac{1}{2\pi a^2} \right)^{1/4} e^{-\frac{x^2}{4a^2}}
+    \end{equation}
+
+
+
+
+\end{itemize}
+
+
+
 
 \begin{flushright}
 Vorlesung 12 - 28.05.2013
@@ -1194,7 +1304,7 @@ Vorlesung 12 - 28.05.2013
 \end{itemize}
 \subsection{Potentialtopf}
 \begin{itemize}
-	\item Potentialtopf
+  \item Potentialtopf
     \begin{equation}
     V(x)=\left\{
     \begin{aligned}
