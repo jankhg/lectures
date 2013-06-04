@@ -262,7 +262,7 @@ Für Produkte von Operatoren
   &\hat{A}(\hat{B} + \hat{C}) = \hat{A}\hat{B} + \hat{B}\hat{C}
 \end{aligned}
 \end{equation}
-\item Vorsicht: Multiplikation ist nicht multiplikativ
+\item Vorsicht: Multiplikation ist nicht kommutativ
 \begin{equation}
 \hat{A}\hat{B} \not= \hat{B}\hat{A}
 \end{equation}
@@ -1279,12 +1279,13 @@ $\Rightarrow$ B=0 \& A=C' (Achsensymmetrie)
 &\Psi_{II}(x)=B'\cos(Kx)\\
 &\Psi_{III}(x)=Ae^{-kx}
 \end{aligned}
-\right\} \xrightarrow{\text{Stetigkeit bei x=0}}
+\right\} \xrightarrow{\text{Stetigkeit bei x=0}}\left\{
 \begin{aligned}
 B'\cos(Ka)&=Ae^{-ka}\\
 -B'K\sin{Ka}&=-kAe^{-ka}\\
 \rightarrow K\tan(Ka)&=k (1)
 \end{aligned}
+\right.
 \end{equation}
 \textbf{Ungerade Parität}
 $\Rightarrow$ B'=0 \& A=-C' (Achsensymmetrie)
@@ -1295,12 +1296,13 @@ $\Rightarrow$ B'=0 \& A=-C' (Achsensymmetrie)
 &\Psi_{II}(x)=B\sin(Kx)\\
 &\Psi_{III}(x)=Ae^{-kx}
 \end{aligned}
-\right\} \xrightarrow{\text{Stetigkeit bei x=0}}
+\right\} \xrightarrow{\text{Stetigkeit bei x=0}}\left\{
 \begin{aligned}
 B\sin(ka)&=Ae^{-ka}\\
 -B'K\cos{Ka}&=-kAe^{-ka}\\
 \rightarrow K\cot(Ka)&=-k (2)
 \end{aligned}
+\right.
 \end{equation}
 Die beiden transzendenten Gleichungen (1), (2) führen auf ganz bestimmte Energien für die die Stetigkeitsbedingungen erfüllt sind. Die Energiequantisierung ergibt sich aus den Ausschlussbedingungen.\\
 Die Bestimmung der Energieeigenwerte $E_n$ kann graphisch oder numerisch bestimmt werden.
@@ -1358,8 +1360,8 @@ In Region I und III
 \end{align}
 Interpretation als Streuproblem\\
 A: Amplitude der einlaufenden Welle\\
-A': ...reflektierten\\
-C: ...transmittierten\\
+A': ...reflektierten...\\
+C: ...transmittierten...\\
 C': 0, da keine Welle von rechter Seite\\
 Entsprechend ergeben sich die Beiträge zur Wahrscheinlichkeitsstromdichte
 \begin{equation}
