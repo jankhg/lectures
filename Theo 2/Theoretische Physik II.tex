@@ -531,7 +531,12 @@ $\hookrightarrow$ normale Anschauung versagt.
       \sum_i\langle a_j|\hat{B}|a_i\rangle\langle a_i|b\rangle =&b\langle a_j|b\rangle      
     \end{aligned}
     \end{equation}
-  In "`Matrixnotation"'$\Rightarrow$ Matrix-Eigenwertproblem %fehlt
+  In "`Matrixnotation\footnote{Indizes laufen in Pfeilrichtung}"'$\Rightarrow$ Matrix-Eigenwertproblem 
+  \begin{equation}
+    j \downarrow \left(\begin{array}{c} \rightarrow i \\ \langle a_j|\hat{B}|a_i\rangle \\ \left.\right.\end{array}\right)\cdot 
+    \left(\begin{array}{c} i \downarrow \\ \langle a_i|b\rangle \\ \left.\right.\end{array}\right)=
+    \left(\begin{array}{c} j \downarrow \\ \langle a_j|b\rangle \\ \left.\right.\end{array}\right)
+  \end{equation}
 \item Praktische Rechnung wird letztendlich in eine geschickt gewählten Darstellung ausgeführt.
 \end{itemize}
 \textbf{Darstellungswechsel}
@@ -916,16 +921,48 @@ i\hbar\frac{\partial}{\partial t}\langle\vec{x}|\psi,t\rangle=\left(-\frac{\hbar
 $\hookrightarrow$ einfache DGL, stark vereinfacht\\
 abstrakte Schrödingergleichung ist viel allgemeiner als diese DGL (1 Teilchen ohne innere Freiheitsgrade im klassischen Potential $V(\vec{x})$.\\\\
 \textbf{Impulsdarstellung}\\
-kont. Eigenbasis des Impulsoperators\\
-
-\textcolor[rgb]{1,0,0}{fehlt}\\
+kont. Eigenbasis des Impulsoperators $\hat{\vec{p}}$\\
+\begin{align}
+&\hat{\vec{p}}|\vec{p}\rangle=\vec{p}|\vec{p}\rangle\\
+\text{mit} \quad &\hat{1}=\int \mathrm{d}^3p\ |\vec{p}\rangle\langle\vec{p}|\\
+&\langle\vec{p}|\vec{p}'\rangle=\delta^3(\vec{p}-\vec{p}')
+\end{align}
+Wellenfunktion in ID
+\begin{align}
+&\tilde{\psi}(\vec{p},t)=\langle\vec{p}|\psi,t\rangle\\
+&\left|\tilde{\psi}(\vec{p},t)\right|^2\ : \quad \text{Wahrscheinlichkeitsdichte für den Impuls $\vec{p}$}
+\end{align}
 Orts- und Impulsraumwellenfunktionen enthalten gleiche Information, lediglich in Unterschiedlichen Darstellungen von $|\psi,t\rangle$\\
-Durch Einsetzen eines Eins-Operators können wir zwischen Darstellungen wechseln
+Durch Einsetzen eines Eins-Operators können wir zwischen Darstellungen wechseln:
 \begin{equation}
-\psi(\vec{x},t)=\langle\vec{x}|\psi,t)=\int d^3p\langle\vec{x}|\vec{p}\rangle\underbrace{\langle\vec{p}|\psi,t\rangle}_{\psi(\vec{p},t)}
+\psi(\vec{x},t)=\langle\vec{x}|\psi,t)=\int d^3p\langle\vec{x}|\vec{p}\rangle\underbrace{\langle\vec{p}|\psi,t\rangle}_{\psi(\vec{p},t)} \quad (*)
 \end{equation}
-
-\textcolor[rgb]{1,0,0}{FEHLT}
+\begin{align}
+&\phi_{\vec{p}}(\vec{x})=\langle\vec{x}|\vec{p}\rangle\quad \text{OD des Impulszustandes}\\
+&\langle\vec{x}|\hat{\vec{p}}|\vec{p}\rangle=\vec{p}\langle\vec{x}|\vec{p}\rangle\Leftrightarrow -i\hbar\vec{\nabla}\langle\vec{x}|\vec{p}\rangle=\vec{p}\langle\vec{x}|\vec{p}\rangle\quad\text{einfache DGL}\\
+&\phi_{\vec{p}}(\vec{x})=N_p\exp\left(\frac{i}{\hbar}\vec{x}\vec{p}\right), \quad N_p=\frac{1}{(2\pi\hbar)^{3/2}}\\
+&\delta^3(\vec{p}'-\vec{p})=\left(\frac{1}{2\pi\hbar}\right)^3\int \mathrm{d}^3x\ \exp\left(\frac{i}{\hbar}(\vec{p}'-\vec{p})\vec{x}\right)
+\end{align}
+$\phi_{\vec{p}}(\vec{x})$ ist eine komplexe ebene Welle mit konstantem Betragsquadrat
+\begin{equation}
+\left|\phi_{\vec{p}}(\vec{x})\right|^2=\left(\frac{1}{2\pi\hbar}\right)^3
+\end{equation}
+Einsetzen in (*):
+\begin{equation}
+\psi(\vec{x},t)=\frac{1}{(2\pi\hbar)^{3/2}}\int\mathrm{d}^3p\ \exp\left(\frac{i}{\hbar}\vec{x}\vec{p}\right)\tilde{\psi}(\vec{x},t)\quad \text{Fouriertransformation}
+\end{equation}
+Umkehrtransformation
+\begin{equation}
+\tilde{\psi}(\vec{p},t)=\frac{1}{(2\pi\hbar)^{3/2}}\int\mathrm{d}^3x\ \exp\left(-\frac{i}{\hbar}\vec{x}\vec{p}\right)\psi(\vec{x},t)
+\end{equation}
+\textbf{ID von Impuls und Ortsoperator}
+\begin{equation}
+\langle\vec{p}|\hat{\vec{p}}|\alpha\rangle=\vec{p}\langle\vec{p}|\alpha\rangle\quad \langle\vec{p}|\hat{\vec{x}}|\alpha\rangle=i\hbar\vec{\nabla}_p\langle\vec{p}|\alpha\rangle \quad \text{mit}\quad \vec{\nabla}_p=\left(\begin{array}{c} \partial/\partial p_1 \\ \partial/\partial p_2 \\ \partial/\partial p_3\end{array}\right)
+\end{equation}
+\begin{equation}
+\hat{H}=\frac{1}{2m}\hat{\vec{p}}^2+V(\vec{x})\xrightarrow{IP} \langle\vec{p}|\hat{H}|\alpha\rangle=\left(\frac{\vec{p}^2}{2m}+V(i\hbar\vec{\nabla}_p)\right)\langle\vec{p}|\alpha\rangle
+\end{equation}
+Hieraus lässt sich wiederum eine DGL für das EW-Problem von $\hat{H}$ herleiten. Lösung solcher DGL in ID ist meist nicht möglich, da i.A. das Potential $V(\vec{x})$ eine komplexe Funktion des Ortes ist, die in ID zu einem komplexen Differentialoperator wird.
 
 \begin{flushright}
 Vorlesung 9 - 16.05.2013
