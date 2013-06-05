@@ -1324,13 +1324,13 @@ Vorlesung 12 - 28.05.2013
     \begin{equation}
     k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)} \in \mathbb{R}
     \end{equation}
-    $\rightarrow$ Oszillatorische Lösung\\
+    $\hookrightarrow$ Oszillatorische Lösung\\
     2. $E>V_0$
     \begin{align}
-    \psi_E(x)\\&=Ae^{K x}+Be^{-K x}\\
+    \psi_E(x)&=Ae^{K x}+Be^{-K x}\\
     &K=\sqrt{\frac{2m}{\hbar^2}(V_0-E)}\in \mathbb{R}
     \end{align}
-    $\rightarrow$ Exponentieller Anstieg/Abfall
+    $\hookrightarrow$ Exponentieller Anstieg/Abfall
   \item Vorsicht in der Umgebung der Sprungstelle/Unstetigkeiten im Potential $\rightarrow$ Stetigkeitsbedingung
   \item Betrachte $\epsilon$-Umgebung um eine Sprungstelle und integriere (formal) die SGL.
     \begin{align}
@@ -1370,9 +1370,9 @@ Vorlesung 12 - 28.05.2013
           &\psi_{III}(x)=Ce^{Kx}+C'e^{-Kx}
         \end{align}
         $\rightarrow$ 6 Integrationskonstanten
-      \item 1. Normierbarkeit: Exponentiell Anwachsenden Terme für $x\rightarrow \pm$ dürfen nicht beitragen, da sonst nicht normierbar.
+      \item 1. Normierbarkeit: Exponentiell Anwachsenden Terme für $x\rightarrow \pm \infty$ dürfen nicht beitragen, da sonst nicht normierbar.
         \begin{align}
-          &\rightarrow A'=0 \, \quad C=0\\
+          \hookrightarrow &A'=0 \, \quad C=0\\
           &\psi_I(x)=Ae^{Kx}\\
           &\psi_{II}(x)=B\sin(kx)+B'\cos(kx)\\
           &\psi_{III}(x)=C'e^{-Kx}
@@ -1380,12 +1380,11 @@ Vorlesung 12 - 28.05.2013
       \item 2. Potential symmetrisch unter $x\rightarrow-x$
       \item Formal wird $x\rightarrow-x$ durch Paritätsoperator beschrieben.
         \begin{equation}
-        \hat{\Pi}|x\rangle=|-x\rangle
+        \hat{\Pi}|x\rangle=|-x\rangle \quad \text{wobei} \quad \hat{\Pi}^2=\hat{1} \, , \quad \hat{\Pi}^\dagger=\hat{\Pi} \, , \quad
         \end{equation}
       \item Hamiltonian ist invariant unter Paritätstransformation
         \begin{align}
-          &\hat{\Pi}^{-1}\hat{H}\hat{\Pi} \quad \text{oder} \hat{H}\hat{\Pi}=\hat{\Pi}\hat{H}\\
-          &[\hat{H},\hat{\Pi}]=0
+          &\hat{\Pi}^{-1}\hat{H}\hat{\Pi}=\hat{H} \quad \text{und damit} \quad [\hat{H},\hat{\Pi}]=0
         \end{align}
         $\rightarrow$ Hamiltonop. und $\hat{\Pi}$ haben simultane Eigenbasis
         \begin{align}
@@ -1507,10 +1506,10 @@ In Region I und III
 \psi_{III}(x)&=Ce^{ikx}+C'e^{-ikx}
 \end{align}
 Interpretation als Streuproblem\\
-A: Amplitude der einlaufenden Welle\\
-A': ...reflektierten...\\
-C: ...transmittierten...\\
-C': 0, da keine Welle von rechter Seite\\
+$A$: Amplitude der einlaufenden Welle\\
+$A'$: ...reflektierten...\\
+$C$: ...transmittierten...\\
+$C'$: 0, da keine Welle von rechter Seite\\
 Entsprechend ergeben sich die Beiträge zur Wahrscheinlichkeitsstromdichte
 \begin{equation}
 j(x)=\frac{\hbar}{2mi}\left[\psi^*(x)\frac{\partial\psi(x)}{\partial x}-\psi(x)\frac{\partial\psi^*(x)}{\partial x}\right]
