@@ -350,9 +350,9 @@ sind sinnnlos!
 \item Duale Korrespondenz
   \begin{equation}
   \begin{aligned}
-  &\left|\right.\alpha'\rangle &=\hat{A}\left|\right.\alpha\rangle \\
-  & \quad \quad \quad \updownarrow&\\
-  &\langle \alpha'\left|\right.&= \ \langle \alpha\left|\right.\hat{A}^{\dagger}
+  \left|\right.\alpha'\rangle &=\hat{A}\left|\right.\alpha\rangle \\
+    &\updownarrow\\
+  \langle \alpha'\left|\right.&= \ \langle \alpha\left|\right.\hat{A}^{\dagger}
   \end{aligned}
   \end{equation}
 \end{itemize}
@@ -679,7 +679,7 @@ Vorlesung 6 - 2.05.13
       \Rightarrow \hat{B}|a\rangle=b|a\rangle
       \end{equation}
       Daher sind $|a\rangle$ simultane EV zu $\hat{A}$ und $\hat{B}$ $\rightarrow$ $|ab\rangle$
-    \item Bei entarteten a-Spektrum:\\
+    \item Bei entartetem a-Spektrum:\\
       Entartungsindex i in $\hat{A}$ EW-Relation
       \begin{equation}
       \hat{A}|ai\rangle =a|ai\rangle
@@ -842,7 +842,9 @@ Vorlesung 6 - 2.05.13
     \end{equation}
   \textbf{4. Postulat: Wahrscheinlichkeitsaussage}\\
     Für ein Spektrum im Zustand $|\psi,t\rangle$ liefert das Skalarprodukt mit den Eigenzuständen der Observable eine Wahrscheinlichkeitsamplitude für die Messung der zugeordneten, zugehörigen Eigenwerte.
-    
+    \begin{equation}
+      P_\psi(a_i)=\left|\langle a_i|\psi\rangle\right|^2 \quad \text{für System im Zustand} \quad |\psi\rangle
+    \end{equation}
 
 \begin{flushright}
 Vorlesung 8 - 14.05.13
@@ -857,9 +859,8 @@ $$
 $$
 \hat{\vec{x}}|\vec{x}\rangle=\hat{x}|\vec{x}\rangle
 $$
-\textcolor[rgb]{1,0,0}{???}
 \begin{equation}
-\langle\vec{x}|\vec{x}\rangle=\hat{\delta}(\hat{x}-\vec{x})
+\langle\vec{x}|\vec{x}\rangle=\hat{\delta}(\vec{x}-\vec{x})
 \end{equation}
 Zerlegung des Eins-Operators
 $$
@@ -947,7 +948,7 @@ $\phi_{\vec{p}}(\vec{x})$ ist eine komplexe ebene Welle mit konstantem Betragsqu
 \begin{equation}
 \left|\phi_{\vec{p}}(\vec{x})\right|^2=\left(\frac{1}{2\pi\hbar}\right)^3
 \end{equation}
-Einsetzen in (*):
+Einsetzen in ($*$):
 \begin{equation}
 \psi(\vec{x},t)=\frac{1}{(2\pi\hbar)^{3/2}}\int\mathrm{d}^3p\ \exp\left(\frac{i}{\hbar}\vec{x}\vec{p}\right)\tilde{\psi}(\vec{x},t)\quad \text{Fouriertransformation}
 \end{equation}
@@ -960,7 +961,7 @@ Umkehrtransformation
 \langle\vec{p}|\hat{\vec{p}}|\alpha\rangle=\vec{p}\langle\vec{p}|\alpha\rangle\quad \langle\vec{p}|\hat{\vec{x}}|\alpha\rangle=i\hbar\vec{\nabla}_p\langle\vec{p}|\alpha\rangle \quad \text{mit}\quad \vec{\nabla}_p=\left(\begin{array}{c} \partial/\partial p_1 \\ \partial/\partial p_2 \\ \partial/\partial p_3\end{array}\right)
 \end{equation}
 \begin{equation}
-\hat{H}=\frac{1}{2m}\hat{\vec{p}}^2+V(\vec{x})\xrightarrow{IP} \langle\vec{p}|\hat{H}|\alpha\rangle=\left(\frac{\vec{p}^2}{2m}+V(i\hbar\vec{\nabla}_p)\right)\langle\vec{p}|\alpha\rangle
+\hat{H}=\frac{1}{2m}\hat{\vec{p}}^2+V(\vec{x})\xrightarrow{ID} \langle\vec{p}|\hat{H}|\alpha\rangle=\left(\frac{\vec{p}^2}{2m}+V(i\hbar\vec{\nabla}_p)\right)\langle\vec{p}|\alpha\rangle
 \end{equation}
 Hieraus lässt sich wiederum eine DGL für das EW-Problem von $\hat{H}$ herleiten. Lösung solcher DGL in ID ist meist nicht möglich, da i.A. das Potential $V(\vec{x})$ eine komplexe Funktion des Ortes ist, die in ID zu einem komplexen Differentialoperator wird.
 
@@ -969,7 +970,7 @@ Vorlesung 9 - 16.05.2013
 \end{flushright}
 
 \subsection{Zeitentwicklung und stationäre Zustände}
-Zeitentwicklung von $|\psi,t\rangle$ durch SGL\footnote{Schrödingergleichung} 
+Zeitentwicklung von $|\psi,t\rangle$ durch SGL 
 \begin{equation}
 i\hbar \frac{\partial}{\partial t}|\psi,t\rangle=\hat{H}|\psi,t\rangle
 \label{eq:Schrödingergleichung}
@@ -1015,7 +1016,7 @@ Der Zeitentwicklungsoperator für zeitunabhängigen $\hat{H}$ und $t_0=0$
 stellt formal Lösung der SGL der Anwendung von $\hat{U}_{(t)}$ dar, ist aber meist ebenso kompliziert wie das direkte Lösen der SGL. Ausnahme bilden Eigenzustände von $\hat{H}$.
 \begin{align}
 \hat{H}|E_n\rangle&=E_n|E_n\rangle\\
-\rightarrow |E_n,t\rangle&=\hat{U}_{(t)}|E_n\rangle=\exp\left(-\frac{i}{\hbar}\hat{H}t\right)E_n\\
+\rightarrow |E_n,t\rangle&=\hat{U}_{(t)}|E_n\rangle=\exp\left(-\frac{i}{\hbar}\hat{H}t\right)|E_n\rangle\\
 &=\exp\left(-\frac{i}{\hbar}E_nt\right)|E_n\rangle
 \end{align}
 Zeitabhängigkeit des Zustandes beschränkt sich auf einen komplexen Phasenfaktor. \\
@@ -1200,14 +1201,14 @@ Vorlesung 11 - 23.05.2013
       \begin{enumerate}
        \item gebundene Zustände
           \begin{itemize}
-           \item räumlich in endlichem Gebiet lokalisiert, d.h. $ \psi(x) \xrightarrow{|x| \rightarrow \infty} 0 $
-           \item $ \hookrightarrow $ Wellenfkt. ist normierbar
+           \item räumlich in endlichem Gebiet lokalisiert, d.h. $ \psi(x) \xrightarrow{|x| \rightarrow \infty} 0 $\\
+           $ \hookrightarrow $ Wellenfkt. ist normierbar
            \item Normierbarkeit führt auf diskretes Spektrum
           \end{itemize}
        \item ungebundene Zustände
           \begin{itemize}
-           \item Wellenfkt. verschwindet nicht für $ |x| \rightarrow \infty $
-           \item $ \hookrightarrow $ Wellenfkt. ist \textbf{nicht} normierbar und damit kein physikalisch erlaubter Zustand
+           \item Wellenfkt. verschwindet nicht für $ |x| \rightarrow \infty $\\
+           $ \hookrightarrow $ Wellenfkt. ist \textbf{nicht} normierbar und damit kein physikalisch erlaubter Zustand
           \end{itemize}
       \end{enumerate}
 \end{itemize}
@@ -1220,14 +1221,14 @@ Vorlesung 11 - 23.05.2013
     \begin{equation}
         -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \phi_E(x) = E\phi_E(x)
     \end{equation}
-  \item absorbiere Vorfaktor d. kin. Energie in einer Umdef. v. E:
+  \item absorbiere Vorfaktor der kin. Energie in einer Umdefinition von E:
     \begin{equation}
       E := \frac{\hbar^2}{2m}k^2 \quad \quad k: \text{Wellenzahl}
     \end{equation}
     \begin{equation}
       \hookrightarrow -\frac{\partial^2}{\partial x^2} \phi_E(x) = k^2 \phi_E(x)
     \end{equation}
-    $ \hookrightarrow $ Analogie zu Schwingungs-DGL aus klass. Mechanik
+    $ \hookrightarrow $ Analogie zu Schwingungs-DGL aus klass. Mechanik\\
     $ \hookrightarrow $ allg. Lsg.:
     \begin{equation}
      \phi_E(x) = A e^{ikx} + B e^{-ikx} = A'\sin{kx} + B'\cos{kx}
@@ -1240,7 +1241,7 @@ Vorlesung 11 - 23.05.2013
     % TODO
       \langle x | p \rangle \propto e^{\frac{i}{\hbar}px} = e^{ikx}
     \end{equation}
-  \item EW-Problem von $ \hat{p}^2 $ and $ \hat{p}^2 | p \rangle = p^2 | p \rangle \rightarrow $ zweifache Entartung des $ p^2 $ Spektrums
+  \item EW-Problem von $ \hat{p}^2 $ und $ \hat{p}^2 | p \rangle = p^2 | p \rangle \rightarrow $ zweifache Entartung des $ p^2 $ Spektrums
       $ \hookrightarrow $ allg. Form für Eigenzustände zu $ \hat{p}^2 $ : $ A |p \rangle + B|-p \rangle $
   \item kontinuierliches Spektrum/ungebundene Zustände:
     \begin{itemize}
@@ -1258,8 +1259,8 @@ Vorlesung 11 - 23.05.2013
     \begin{equation}
        \phi(x) = \int_{0}^{\infty} C(E)e^{ikx} + C'(E)e^{-ikx} \, \mathrm{d}E = \int_{-\infty}^{\infty} C(k)e^{ikx} \, \mathrm{d}k
     \end{equation}
-    $ \hookrightarrow $ Fouriertrafo: Amplitudenfkt. C(k) ist gerade die Wellenfkt. in ID, bezeichnet mit $ \tilde{\phi}(k) $
-  \item Normierbaarkeit: Wellenfkt. in ID muss quadratintegrabel \& endlich sein:
+    $ \hookrightarrow $ Fouriertransformation: Amplitudenfkt. C(k) ist gerade die Wellenfkt. in ID, bezeichnet mit $ \tilde{\phi}(k) $
+  \item Normierbarkeit: Wellenfkt. in ID muss quadratintegrabel \& endlich sein:
     \begin{equation}
       \int_{-\infty}^{\infty} |\tilde{\psi}(k)|^2 \, \mathrm{d}k = \int_{-\infty}^{\infty} |C(k)|^2 \, \mathrm{d}k
     \end{equation}
@@ -1268,7 +1269,7 @@ Vorlesung 11 - 23.05.2013
     \begin{equation}
       C(k) = \left(\frac{2}{\pi}a^2 \right)^{1/4} e^{-a^2k^2}
     \end{equation}
-    $ \hookrightarrow $ Fouriertrafo, also Wellenfkt. i. OD ist ebenfalls gaußförmig
+    $ \hookrightarrow $ Fouriertransformation also Wellenfkt. in OD ist ebenfalls gaußförmig
     \begin{equation}
       \psi(x) = \left(\frac{1}{2\pi a^2} \right)^{1/4} e^{-\frac{x^2}{4a^2}}
     \end{equation}
@@ -1405,17 +1406,17 @@ Vorlesung 13 - 04.06.2013
 \subsection{Bindungszustände im Potentialtopf}
 (Skizze Potentialtopf symmetrisch um x=0)
 \begin{align}
-I E&<V_0 \quad &k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)}\quad &\psi_I(x)=Ae^{kx}+A'e^{-kx}\\
-II E&>0 \quad &K=\sqrt{\frac{2m}{\hbar^2}E}\quad &\psi_{II}(x)=B\sin(kx)+B'\cos(kx)\\
-III E&<V_0 \quad &k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)}\quad &\psi_{III}(x)=Ce^{kx}+C'e^{-kx}
+&I \quad &E<V_0 \quad &k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)}\quad &\psi_I(x)=Ae^{kx}+A'e^{-kx}\\
+&II\quad &E>0 \quad &K=\sqrt{\frac{2m}{\hbar^2}E}\quad &\psi_{II}(x)=B\sin(kx)+B'\cos(kx)\\
+&III\quad &E<V_0 \quad &k=\sqrt{\frac{2m}{\hbar^2}(E-V_0)}\quad &\psi_{III}(x)=Ce^{kx}+C'e^{-kx}
 \end{align}
-Wegen Stetigkeitsbedingung von $\psi$, $\psi'$ und Skalierung
+Wegen Stetigkeitsbedingung von $\psi$, $\psi'$ und Skalierun
 \begin{equation}
 A'=0, \quad C=0
 \end{equation}
 \textbf{Paritätssymmetrie}
 \begin{equation}
-\hat{\Pi}|x\rangle=|-x\langle;\quad [\hat{\Pi},\hat{H}]=0
+\hat{\Pi}|x\rangle=|-x\rangle;\quad [\hat{\Pi},\hat{H}]=0
 \end{equation}
 Betrachten wir zunächst die \textbf{gerade (positive) Parität}\\
 $\Rightarrow$ B=0 \& A=C' (Achsensymmetrie)
@@ -1434,7 +1435,7 @@ B'\cos(Ka)&=Ae^{-ka}\\
 \end{aligned}
 \right.
 \end{equation}
-\textbf{Ungerade Parität}
+\textbf{Ungerade Parität}\\
 $\Rightarrow$ B'=0 \& A=-C' (Achsensymmetrie)
 \begin{equation}
 \left.
@@ -1503,7 +1504,7 @@ V_0,\quad 0\leq x\leq a\\
 In Region I und III
 \begin{align}
 \psi_{I}(x)&=Ae^{ikx}+A'e^{-ikx} \quad k=\sqrt{\frac{2m}{\hbar^2}E}\\
-\psi_{II}(x)&=Ce^{ikx}+C'e^{-ikx}
+\psi_{III}(x)&=Ce^{ikx}+C'e^{-ikx}
 \end{align}
 Interpretation als Streuproblem\\
 A: Amplitude der einlaufenden Welle\\
