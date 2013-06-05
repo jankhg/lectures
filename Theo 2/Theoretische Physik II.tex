@@ -151,10 +151,10 @@ wobei: $\langle \alpha\left|\right.\alpha\rangle  \ \ = 0 \Leftrightarrow \left|
 \item Kombination von Schief-Symmetrie und Linearität im Ket:
 \begin{equation}
 \begin{aligned}
-\left|\right.\Psi\rangle  \ = C\left|\right.\beta\rangle +D\left|\right.\gamma\rangle \\
-\langle \alpha\left|\right.\Psi\rangle  \ =C\langle \alpha\left|\right.\beta\rangle  +D\langle \alpha\left|\right
+\left|\right.\psi\rangle  \ = C\left|\right.\beta\rangle +D\left|\right.\gamma\rangle \\
+\langle \alpha\left|\right.\psi\rangle  \ =C\langle \alpha\left|\right.\beta\rangle  +D\langle \alpha\left|\right
 .\gamma\rangle \\
-\langle \Psi\left|\right.\alpha\rangle  \ =\langle \alpha\left|\right.\Psi\rangle ^* \\
+\langle \psi\left|\right.\alpha\rangle  \ =\langle \alpha\left|\right.\psi\rangle ^* \\
  =(C \langle \alpha\left|\right.\beta\rangle  + D\langle \alpha\left|\right.\gamma\rangle )^*\\
 =C^*(\langle \alpha\left|\right.\beta\rangle )^* + ^*(\langle \alpha\left|\right.\gamma\rangle )^*\\
 =C^*\langle \beta\left|\right.\alpha\rangle  +D^*\langle \gamma\left|\right.\alpha\rangle 
@@ -171,9 +171,9 @@ Entscheidende Eigenschaft:
  
 \begin{equation}
 \begin{aligned}
-\left|\right.\Psi\rangle  \ &= C \left|\right.\alpha\rangle  +D\left|\right.\beta\rangle \\
+\left|\right.\psi\rangle  \ &= C \left|\right.\alpha\rangle  +D\left|\right.\beta\rangle \\
 &\Updownarrow\\
-\langle \Psi\left|\right.&=C^*\langle \alpha\left|\right. +D^* \langle \beta\left|\right.
+\langle \psi\left|\right.&=C^*\langle \alpha\left|\right. +D^* \langle \beta\left|\right.
 \end{aligned}
 \end{equation}
  
@@ -314,7 +314,7 @@ $\hookrightarrow$ Reihenfolge ist wesentlich
 \begin{itemize}
 \item Übertragung der hermiteschen adjungierten für Matrizen auf Operatoren
   \begin{equation}
-  \langle \alpha\left|\right.\hat{A}\left|\right.\beta\rangle  \ \xrightarrow{herm. adj.} (\langle 
+  \langle \alpha\left|\right.\hat{A}\left|\right.\beta\rangle  \ \xrightarrow{\text{herm. adj.}} (\langle 
 \beta \left|\right.\hat{A}\left|\right.\alpha\rangle )^*
   \end{equation}
   Definition hermitesch adjungierter Operator
@@ -504,7 +504,7 @@ Besondere Eigenschaften für EW-Problem hermitescher Operatoren
 \end{itemize}
 
 \begin{flushright}
-Vorlesung 5 - 30.03.2013
+Vorlesung 5 - 30.04.2013
 \end{flushright}
 \textbf{Darstellung}\\
 $\hookrightarrow$ normale Anschauung versagt.
@@ -775,7 +775,7 @@ Vorlesung 6 - 2.05.13
         \item Wie wird die Dynamik eines Quantensystems beschrieben?
       \end{itemize}
   \textbf{1. Postulat: Zustand eines Systems}
-    Der Zustand eines Systems zum \textbf{Zeitpunkt t} ist durch einen \textbf{normierten} Vektor $|\Psi,t\rangle$ im \textbf{Hilbertraum} beschrieben. Der Zustandsvektor $|\Psi,t\rangle$ enthält die \textbf{komplette Information} über das System.\\ \\
+    Der Zustand eines Systems zum \textbf{Zeitpunkt t} ist durch einen \textbf{normierten} Vektor $|\psi,t\rangle$ im \textbf{Hilbertraum} beschrieben. Der Zustandsvektor $|\psi,t\rangle$ enthält die \textbf{komplette Information} über das System.\\ \\
   \textbf{2. Postulat: Observablen}\\
     Jede physikalische Observable wird durch einen hermiteschen linearen Operator auf dem Hilbertraum beschrieben. 
     \begin{itemize}
@@ -815,7 +815,7 @@ Vorlesung 6 - 2.05.13
       \item Observablen ohne klassische Analogien (z.B. Spin) müssen im Rahmen der QM konstruiert werden
     \end{itemize}
   \textbf{3. Postulat: ideale Messung}\\
-    Bei einer idealen Messung einer Observablen $\hat{A}$ an einem System im Zustand $|\Psi,t\rangle$ kann nur einer der (diskreten) Eigenwerte des Operators $\hat{A}$ resultieren.\\
+    Bei einer idealen Messung einer Observablen $\hat{A}$ an einem System im Zustand $|\psi,t\rangle$ kann nur einer der (diskreten) Eigenwerte des Operators $\hat{A}$ resultieren.\\
     Der Zustand des Systems unmittelbar nach der Messung ist durch den Eigenvektor zum gemessenen Eigenwert gegeben.
     \begin{itemize}
       \item Direkter Zusammenhang zwischen EW-Spektrum des Operators der Observable und dem wirklichen Messergebnis
@@ -836,7 +836,7 @@ Vorlesung 6 - 2.05.13
     \underbrace{\hat{x}_1}_{\text{Operator}}|x_1x_2x_3\rangle=\underbrace{x_1}_{\text{Eigenwert}}|x_1x_2x_3\rangle
     \end{equation}
   \textbf{4. Postulat: Wahrscheinlichkeitsaussage}\\
-    Für ein Spektrum im Zustand $|\Psi,t\rangle$ liefert das Skalarprodukt mit den Eigenzuständen der Observable eine Wahrscheinlichkeitsamplitude für die Messung der zugeordneten, zugehörigen Eigenwerte.
+    Für ein Spektrum im Zustand $|\psi,t\rangle$ liefert das Skalarprodukt mit den Eigenzuständen der Observable eine Wahrscheinlichkeitsamplitude für die Messung der zugeordneten, zugehörigen Eigenwerte.
     
 
 \begin{flushright}
@@ -861,7 +861,7 @@ $$
 \hat{1}=\int\ dx \left|\vec{x}\rangle\langle\vec{x}\right|
 $$
 \begin{equation}
-|\psi,t\rangle=\int\ dx\left|\vec{x}\rangle\langle\vec{x}\right|\Psi,t\rangle
+|\psi,t\rangle=\int\ dx\left|\vec{x}\rangle\langle\vec{x}\right|\psi,t\rangle
 \label{eq:WellenfunktionOrtsdarstellung}
 \end{equation}
 Annahme: Teilchen mit Masse m in klassischem Potential $V(\vec{x})$
@@ -905,12 +905,12 @@ $\hookrightarrow$ Wellenfunktion des Energieeigenzustandes in OD\\
 $\hookrightarrow$ stationäre Schrödingergleichung in OD\\\\
 \textbf{5. Postulat}: Allgemeine Schrödingergleichung
 \begin{equation}
-i\hbar\frac{\partial}{\partial t}|\Psi,t\rangle=\hat{H}|\Psi,t\rangle
+i\hbar\frac{\partial}{\partial t}|\psi,t\rangle=\hat{H}|\psi,t\rangle
 \label{eq:Allgemeine Schrödingergleichung}
 \end{equation}
 Allgemeine Schrödingergleichung in OD
 \begin{equation}
-i\hbar\frac{\partial}{\partial t}\langle\vec{x}|\Psi,t\rangle=\left(-\frac{\hbar^2}{2m} \Delta+V(\vec{x})\right)\langle\vec{x}|\Psi,t\rangle
+i\hbar\frac{\partial}{\partial t}\langle\vec{x}|\psi,t\rangle=\left(-\frac{\hbar^2}{2m} \Delta+V(\vec{x})\right)\langle\vec{x}|\psi,t\rangle
 \label{eq:Allgemeine Schrödingergleichung in OD}
 \end{equation}
 $\hookrightarrow$ einfache DGL, stark vereinfacht\\
@@ -919,10 +919,10 @@ abstrakte Schrödingergleichung ist viel allgemeiner als diese DGL (1 Teilchen o
 kont. Eigenbasis des Impulsoperators\\
 
 \textcolor[rgb]{1,0,0}{fehlt}\\
-Orts- und Impulsraumwellenfunktionen enthalten gleiche Information, lediglich in Unterschiedlichen Darstellungen von $|\Psi,t\rangle$\\
+Orts- und Impulsraumwellenfunktionen enthalten gleiche Information, lediglich in Unterschiedlichen Darstellungen von $|\psi,t\rangle$\\
 Durch Einsetzen eines Eins-Operators können wir zwischen Darstellungen wechseln
 \begin{equation}
-\Psi(\vec{x},t)=\langle\vec{x}|\Psi,t)=\int d^3p\langle\vec{x}|\vec{p}\rangle\underbrace{\langle\vec{p}|\Psi,t\rangle}_{\Psi(\vec{p},t)}
+\psi(\vec{x},t)=\langle\vec{x}|\psi,t)=\int d^3p\langle\vec{x}|\vec{p}\rangle\underbrace{\langle\vec{p}|\psi,t\rangle}_{\psi(\vec{p},t)}
 \end{equation}
 
 \textcolor[rgb]{1,0,0}{FEHLT}
@@ -932,18 +932,18 @@ Vorlesung 9 - 16.05.2013
 \end{flushright}
 
 \subsection{Zeitentwicklung und stationäre Zustände}
-Zeitentwicklung von $|\Psi,t\rangle$ durch SGL\footnote{Schrödingergleichung} 
+Zeitentwicklung von $|\psi,t\rangle$ durch SGL\footnote{Schrödingergleichung} 
 \begin{equation}
-i\hbar \frac{\partial}{\partial t}|\Psi,t\rangle=\hat{H}|\Psi,t\rangle
+i\hbar \frac{\partial}{\partial t}|\psi,t\rangle=\hat{H}|\psi,t\rangle
 \label{eq:Schrödingergleichung}
 \end{equation}
-Diese lineare DGL erster Ordnung lässt sich formal für gegebenen Anfangszustand $|\Psi,t_0\rangle$ durch Anwendung eines linearen Zeitentwicklungsoperators $\hat{U}_{(t,t_0)}$ lösen.
+Diese lineare DGL erster Ordnung lässt sich formal für gegebenen Anfangszustand $|\psi,t_0\rangle$ durch Anwendung eines linearen Zeitentwicklungsoperators $\hat{U}_{(t,t_0)}$ lösen.
 \begin{equation}
-|\Psi,t\rangle=\hat{U}_{(t,t_0)}|\Psi,t_0\rangle
+|\psi,t\rangle=\hat{U}_{(t,t_0)}|\psi,t_0\rangle
 \end{equation}
 Zeitentwicklungsoperator
 \begin{align}
-i\hbar\frac{\partial}{\partial t}\hat{U}_{(t,t_0)}|\Psi,t_0\rangle&=\hat{H}\hat{U}_{(t,t_0)}|\Psi,t_0\rangle \quad \text{mit} \quad |\Psi,t_0\rangle \quad \text{beliebig}\\
+i\hbar\frac{\partial}{\partial t}\hat{U}_{(t,t_0)}|\psi,t_0\rangle&=\hat{H}\hat{U}_{(t,t_0)}|\psi,t_0\rangle \quad \text{mit} \quad |\psi,t_0\rangle \quad \text{beliebig}\\
 \rightarrow i\hbar \frac{\partial}{\partial t}\hat{U}_{(t,t_0)}&=\hat{H}\hat{U}_{(t,t_0)}
 \end{align}
 \subsubsection{Zeitunabhängiger Hamiltonoperator}
@@ -992,29 +992,29 @@ Bei der Berechnung von beobachtbaren Größen (z.B. Betragsquadrate von Skalarpr
 &=\langle E_n|\hat{A}|E_n\rangle
 \end{align}
 Daher werden EZ von $\hat{H}$ auch als stationäre Zustände bezeichnet, und die entsprechende EW-Gleichung als stationäre Schrödingergleichung.\\
-Zeitentwicklung eines beliebigen Zustandes $|\Psi,0\rangle$\\
+Zeitentwicklung eines beliebigen Zustandes $|\psi,0\rangle$\\
 $|E_n\rangle$ bilden eine vollständige orthonormierte Basis
 \begin{align}
-|\Psi,0\rangle&=\sum_n|E_n\rangle\langle E_n|\Psi,0\rangle\\
-\rightarrow |\Psi,t\rangle&=\sum_n\hat{U}_{(t)}|E_n\rangle\langle E_n|\Psi,0\rangle\\
-&=\sum_n\exp\left(-\frac{i}{\hbar}E_nt\right)\langle E_n |\Psi,0\rangle\\
-|\Psi,t\rangle&=\sum_nc_n(t)|E_n\rangle \quad \text{mit} \\
+|\psi,0\rangle&=\sum_n|E_n\rangle\langle E_n|\psi,0\rangle\\
+\rightarrow |\psi,t\rangle&=\sum_n\hat{U}_{(t)}|E_n\rangle\langle E_n|\psi,0\rangle\\
+&=\sum_n\exp\left(-\frac{i}{\hbar}E_nt\right)\langle E_n |\psi,0\rangle\\
+|\psi,t\rangle&=\sum_nc_n(t)|E_n\rangle \quad \text{mit} \\
 &c_n(t)=\exp\left(-\frac{i}{\hbar}E_nt\right)\cdot c_n(0)\\
-&c_n(0)=\langle E_n|\Psi,0\rangle
+&c_n(0)=\langle E_n|\psi,0\rangle
 \end{align}
 \subsubsection{Schrödingerbild}
 In bisheriger Sichtweise tragen Zustände die Zeitabhängigkeit, formal durch Zeitentwicklungsoperator beschrieben.\\
 Zeitabhängigkeit von Observablen, z.B. Erwartungswerte
 \begin{equation}
-\langle\hat{A}\rangle_{(t)}=\langle\Psi,t|\hat{A}|\Psi,t\rangle
+\langle\hat{A}\rangle_{(t)}=\langle\psi,t|\hat{A}|\psi,t\rangle
 \end{equation}
 resultiert aus Zeitabh- der Zustände, Operatoren sind zeitunabhängig
 \subsubsection{Heisenbergbild}
 Alternative Interpretation der Zeitentwicklung des Erwartungswertes 
 \begin{align}
-\langle\hat{A}\rangle_{(t)}&=\langle\Psi,t|\hat{A}|\Psi,t\rangle\\
-&=\langle\Psi,0|\hat{U}^\dagger_{(t)}\hat{A}\ \hat{U}_{(t)}|\Psi,0\rangle\\
-&=\langle\Psi,0|\hat{A yfvfdsdhkbrfkvhdskedhv}_{\hat{H}(t)}|\Psi,0\rangle
+\langle\hat{A}\rangle_{(t)}&=\langle\psi,t|\hat{A}|\psi,t\rangle\\
+&=\langle\psi,0|\hat{U}^\dagger_{(t)}\hat{A}\ \hat{U}_{(t)}|\psi,0\rangle\\
+&=\langle\psi,0|\hat{A}_{\hat{H}(t)}|\psi,0\rangle
 \end{align}
 $\rightarrow$ unitäre Transformation des Operators\\
 OP der Observablen entwickeln sich in der Zeit, während die Zustände selbst zeitunabhängig sind. Schrödinger- und Heisenbergbilder sind Darstellungen derselben Physik.
@@ -1031,28 +1031,28 @@ Vorlesung 10 - 21.05.2013
 \begin{itemize}
 	\item 4. Postulat: Für ideale Messung können Wahrscheinlichkeiten für einen der Eigenwerte der Observablen $\hat{A}$ vorhergesagt werden (diskretes Spektrum).
     \begin{equation}
-      P_\Psi(a_i)=\left|\langle a_i|\Psi\rangle\right|^2 \quad \text{für System im Zustand} \quad |\Psi\rangle
+      P_\psi(a_i)=\left|\langle a_i|\psi\rangle\right|^2 \quad \text{für System im Zustand} \quad |\psi\rangle
     \end{equation}
-  \item Experimenteller Zugang: Große Zahl von Messungen der Observablen an Systemen in \textbf{identischen} Zuständen $|\Psi\rangle$\\
+  \item Experimenteller Zugang: Große Zahl von Messungen der Observablen an Systemen in \textbf{identischen} Zuständen $|\psi\rangle$\\
     $\rightarrow$ Experimentelle Häufigkeitsverteilung\\
-    $\rightarrow$ Vergleichbar mit Wahrscheinlichkeitsverteilung $P_\Psi(a_i)$ aus der QM-Beschreibung
+    $\rightarrow$ Vergleichbar mit Wahrscheinlichkeitsverteilung $P_\psi(a_i)$ aus der QM-Beschreibung
   \item Bsp.: Doppelspaltexperiment mit Elektronen\\
     Häufigkeitsverteilung der Position der Elektronen auf dem Schirm ist Abb. des Betragsquadrats der Wellenfunktion in Ortsdarstellung
   \item Oft ist nicht komplette Verteilung von Interesse, sondern nur einfache Kenngrößen: Mittelwerte \& Varianz
-  \item Mittelwert der Verteilung $P_\Psi(a_i)$
+  \item Mittelwert der Verteilung $P_\psi(a_i)$
     \begin{equation}
-    \langle\hat{A}\rangle_\Psi=\sum_iP_\Psi(a_i) a_i
+    \langle\hat{A}\rangle_\psi=\sum_iP_\psi(a_i) a_i
     \end{equation}
     Im QM-Kontext
     \begin{align}
-    \langle\hat{A}\rangle_\Psi&=\sum_i\left|\langle a_i|\Psi\rangle\right|^2a_i\\
-    &=\sum_i\langle\Psi|a_i\rangle a_i\langle a_i|\Psi\rangle\\
-    &=\langle\Psi|\hat{A}|\Psi\rangle
+    \langle\hat{A}\rangle_\psi&=\sum_i\left|\langle a_i|\psi\rangle\right|^2a_i\\
+    &=\sum_i\langle\psi|a_i\rangle a_i\langle a_i|\psi\rangle\\
+    &=\langle\psi|\hat{A}|\psi\rangle
     \end{align}
     Erwartungswert der Observablen $\hat{A}$ $\Leftrightarrow$ Mittelwert der Wahrscheinlichkeitstheorie 
-  \item Analog: Varianz der Verteilung $P_\Psi(a_i)$ $\Leftrightarrow$ Unschärfe $\Delta A_\Psi$
-  \item Spezialfall: $|\Psi\rangle=|a_i\rangle$\\
-    Erwartungswert: $\langle\Psi|\hat{A}|\Psi\rangle=\langle a_i|\hat{A}|a_i\rangle=\langle a_i|a_i|a_i\rangle=a_i$\\
+  \item Analog: Varianz der Verteilung $P_\psi(a_i)$ $\Leftrightarrow$ Unschärfe $\Delta A_\psi$
+  \item Spezialfall: $|\psi\rangle=|a_i\rangle$\\
+    Erwartungswert: $\langle\psi|\hat{A}|\psi\rangle=\langle a_i|\hat{A}|a_i\rangle=\langle a_i|a_i|a_i\rangle=a_i$\\
     Unschärfe: $\Delta A_{a_i}=0$
 \end{itemize}
 \textbf{Messung kompatibler Observablen}\\
@@ -1065,13 +1065,13 @@ Vorlesung 10 - 21.05.2013
       \hat{B}|a_ib_j\rangle&=b_j|a_ib_j\rangle
     \end{align}
     Im Falle von diskrete Spektren und keiner Entartung.
-  \item Ausgangszustand $|\Psi\rangle$ entwickelt in simultaner Eigenbasis
+  \item Ausgangszustand $|\psi\rangle$ entwickelt in simultaner Eigenbasis
     \begin{equation}
-    |\Psi\rangle=\sum_{ij}C_{ij}|a_ib_j\rangle
+    |\psi\rangle=\sum_{ij}C_{ij}|a_ib_j\rangle
     \end{equation}
-  \item 1. Messung von $\hat{A}$. Wahrscheinlichkeitsverteilung $P_\Psi(a_i)$
+  \item 1. Messung von $\hat{A}$. Wahrscheinlichkeitsverteilung $P_\psi(a_i)$
     \begin{align}
-      P_\Psi(a_i)&=\sum_j\left|\langle a_ib_j|\Psi\rangle\right|^2\\
+      P_\psi(a_i)&=\sum_j\left|\langle a_ib_j|\psi\rangle\right|^2\\
       &=\sum_j\left|\langle a_ib_j|\left(\sum_{i'j'}C_{i'j'}|a_{i'}b_{j'}\rangle\right)\right|^2\\
       &=\sum_j\left|\sum_{i'j'}C_{i'j'}\langle\underbrace{a_ib_j|a_{i'}b_{j'}}_{\delta_{ii'}\delta_{jj'}}\rangle\right|^2\\
       &=\sum_j\left|C_{ij}\right|^2
@@ -1093,37 +1093,37 @@ Vorlesung 10 - 21.05.2013
     \end{align}
   \item Zustand nach $a_i$-Messung
     \begin{align}
-      |\Psi'(a_i)\rangle&=\hat{\Pi}(a_i)|\Psi\rangle\\
+      |\psi'(a_i)\rangle&=\hat{\Pi}(a_i)|\psi\rangle\\
       &=\sum_jC_{ij}|a_ib_j\rangle
     \end{align}
     keine Summation über i
   \item Nachnormierung 
     \begin{equation}
-    |\Psi(a_i)\rangle=\frac{1}{\left(\sum_j|C_{ij}|^2\right)^{1/2}}\sum_jC_{ij}|a_ib_j\rangle
+    |\psi(a_i)\rangle=\frac{1}{\left(\sum_j|C_{ij}|^2\right)^{1/2}}\sum_jC_{ij}|a_ib_j\rangle
     \end{equation}
   \item 2. Messung: Wsk. für Messergebnis $b_j$
     \begin{align}
-      P_{\Psi'(a_i)}(b_j)&=\sum_i\left|\langle a_{i'}b_j|\Psi'(a_i)\rangle\right|^2\\
+      P_{\psi'(a_i)}(b_j)&=\sum_i\left|\langle a_{i'}b_j|\psi'(a_i)\rangle\right|^2\\
       &=\sum_{i'}\left|\frac{1}{\left(\sum_j |C_{ij}|^2\right)^{1/2}}\sum_{j'}C_{ij'}\underbrace{a_{i'}b_j|a_ib_{j'}\rangle}_{\delta_{ii'}\delta_{jj'}}\right|^2\\
       &=\frac{|C_{ij}|^2}{\sum_{j'}|C_{ij'}|^2}
     \end{align}
   \item Kombinierte Wahrscheinlichkeit für Messung von $a_i$ und $b_j$
     \begin{equation}
-    P_\Psi(a_i,b_j)=P_\Psi(a_i)P_{\Psi(a_i)}(b_j)=|C_{ij}|^2
+    P_\psi(a_i,b_j)=P_\psi(a_i)P_{\psi(a_i)}(b_j)=|C_{ij}|^2
     \end{equation}
   \item 2. Messung: Zustand
     \begin{equation}
-    |\Psi''(a_ib_j)\rangle=|a_ib_j\rangle
+    |\psi''(a_ib_j)\rangle=|a_ib_j\rangle
     \end{equation}
   \item Sequentielle Messung weiterer Observablen $\hat{A},\hat{B}$ mit $[\hat{A},\hat{B}]=0$ gilt:
     \begin{itemize}
       \item Wahrscheinlichkeit für bestimmte Kombination von Messergebnissen ($a_i,b_j$)
         \begin{equation}
-        P_\Psi(a_ib_j)=|C_{ij}|^2=\left|\langle a_ib_j|\Psi\rangle\right|^2
+        P_\psi(a_ib_j)=|C_{ij}|^2=\left|\langle a_ib_j|\psi\rangle\right|^2
         \end{equation}
       \item Zustand nach beiden Messungen
         \begin{equation}
-        |\Psi''(a_ib_j)\rangle=|a_ib_j\rangle
+        |\psi''(a_ib_j)\rangle=|a_ib_j\rangle
         \end{equation}
         ist der simultane EZ zu beiden Messergebnissen
       \item Wahrscheinlichkeiten von 2. Zustand sind unabhängig von Reihenfolge der Messungen
@@ -1145,7 +1145,7 @@ Vorlesung 11 - 23.05.2013
      \begin{itemize}
        \item Eigenzustände werden über Wsk.fkt. in OD:
           \begin{equation}
-            \Psi_{E_n}(x) := \langle x|E_n \rangle
+            \psi_{E_n}(x) := \langle x|E_n \rangle
           \end{equation}
        \item Eigenwertproblem von $\hat{H}$ definiert die stationäre SGL in OD:
           \begin{equation}
@@ -1155,7 +1155,7 @@ Vorlesung 11 - 23.05.2013
      \end{itemize}
    \item Wichtige Nebenbedingung: physikalisch sinnvolle Zustände bzw. Wellenfkt. müssen normiert/normierbar sein:
       \begin{itemize}
-       \item für Zustandskets: $\langle \Psi | \Psi \rangle = 1 $
+       \item für Zustandskets: $\langle \psi | \psi \rangle = 1 $
        \item für Wellenfkt.: $ 1= \langle \psi | \psi \rangle = \int \langle \psi | x \rangle \langle x | \psi \rangle \mathrm{d}x = \int \psi^*(x)\psi(x) \mathrm{d}x = \int |\psi(x)|^2 \mathrm{d}x $
        \item Um normierbar zu sein muss die Wellenfkt. quadratintegrabel und das Integral endlich sein.
       \end{itemize}
@@ -1163,7 +1163,7 @@ Vorlesung 11 - 23.05.2013
       \begin{enumerate}
        \item gebundene Zustände
           \begin{itemize}
-           \item räumlich in endlichem Gebiet lokalisiert, d.h. $ \psi(x) \overset{|x| \rightarrow \infty}{\longrightarrow} 0 $
+           \item räumlich in endlichem Gebiet lokalisiert, d.h. $ \psi(x) \xrightarrow{|x| \rightarrow \infty} 0 $
            \item $ \hookrightarrow $ Wellenfkt. ist normierbar
            \item Normierbarkeit führt auf diskretes Spektrum
           \end{itemize}
