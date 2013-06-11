@@ -5,7 +5,7 @@
 \usepackage[english,ngerman]{babel} %deutsche Schriftzeichen%
 \usepackage{amsmath} %für Formeln%
 \usepackage{float} %Für Position von Abbildungen%
-\usepackage[onehalfspacing]{setspace}
+\usepackage[singlespacing]{setspace}
 \usepackage{nccmath}
 \usepackage{ulem} % Unterstreichungen
 \usepackage[colorlinks,
@@ -19,12 +19,15 @@ hypertexnames = false,
 citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis% 
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}%Ränder
 \usepackage{amssymb}%Für R reele zahlen
+
+% small item distance
+\usepackage{enumitem}
+\setlist[1]{itemsep=-2pt}
+
 \title{Theoretische Physik II}
 \subtitle{Prof. Robert Roth - SS 2013}
 \author{Jan Krause und Philipp Dijkstal}
 \date{ }
-%\subtitle{Professor: Dr. Gernot Alber\\
-%Mitschrift von Philipp Dijkstal}
 %\subsubtitle{email: \textaccent{philipp.dijkstal@web.de}}
 %\institution{Fachbereich Physik}
 \begin{document}
