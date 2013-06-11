@@ -1603,4 +1603,144 @@ Vorlesung 14 - 06.06.2013
     \item Für $E/V_0>1$ zeigt sich die Reflexion durch eine Reduktion von T.
   \end{itemize}
  
+
+\begin{flushright}
+Vorlesung 15 - 11.06.2013
+\end{flushright}
+\section{Harmonischer Oszillator (HO)}
+\subsection{Grundlagen}
+\begin{itemize}
+	\item HO eines der wenigen exakt lösbaren Probleme der QM.
+  \item Ausgangspunkt: Potentielle Energie V(x) einer Masse m als Funktion der Auslenkung x aus der Ruhelage x=0.
+    \begin{equation}
+    V(x)=\frac{m\omega^2}{2}x^2\quad \text{$\omega$ Eigenfrequenz des HO}
+    \end{equation}
+    Beispiele aus klassischer Mechanik:
+    \begin{align}
+    \omega&=\sqrt{\frac{D}{m}}\quad \text{Federpendel}\\
+    \omega&=\sqrt{\frac{a}{l}}\quad \text{Fadenpendel}
+    \end{align}
+    HO als Näherung für andere Potentiale in der Nähe ihres Minimums\\
+    $\hookrightarrow$ Taylorentwicklung\\
+    Hamiltonoperator für Teilchen der Masse m in 1-D HO-Potential
+    \begin{equation}
+    \hat{H}=\frac{1}{2m}\hat{p}^2+\frac{m\omega^2}{2}\hat{x}^2
+    \end{equation}
+    $\hookrightarrow$ besondere Symmetrie bezüglich $\hat{x}$ und $\hat{p}$ ist Grundlage für viele spezielle Eigenschaften des HO.
+  \item Lösung der stationären SG- kann aufgrund der Symmetrie von $\hat{H}$ bezüglich $\hat{x}$ und $\hat{p}$ in Orts- und Impulsdarstellung erfolgen.\\
+    Außerdem "`algebraische Lösung"' $\rightarrow$ Kapitel 5.3
+\end{itemize}
+\subsection{Eigenwertproblem in Ortsdarstellung}
+\begin{itemize}
+	\item Stationäre SGL in Ortsdarstellung
+    \begin{equation}
+    \left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+\frac{m\omega^2}{2}x^2\right)\psi_n(x)=E_n\psi_n(x)
+    \end{equation}
+    \begin{equation}
+    \text{mit}\quad\psi_n(x)=\langle x|E_n\rangle \quad \text{Ortsdarstellung der Energieeigenzustände}
+    \end{equation}
+  \item Verwende reduzierte Einheiten für x und $E_n$ um die DGL zu lösen.
+    \begin{equation}
+    \left(-\frac{\partial^2}{\partial x^2}+\frac{m^2\omega^2}{\hbar^2}x^2\right)\psi_n(x)=\frac{2m}{\hbar^2}E_n\psi_n(x)
+    \end{equation}
+    $\hookrightarrow$ definiere charakteristische Längenskala, die sogenannte Oszillatorlänge
+    \begin{equation}
+    a=\sqrt{\frac{\hbar}{m\omega}}
+    \end{equation}
+    Definiere dimensionslose reduzierte Koordinate 
+    \begin{equation}
+    \xi=\frac{x}{a}
+    \end{equation}
+    \begin{align}
+    \Rightarrow\left(-\frac{1}{a^2}\frac{\partial^2}{\partial\xi^2}+\frac{1}{a^2}\xi^2\right)\psi_n(\xi)&=\frac{2m}{\hbar^2}E_n\psi_n(\xi)\quad |\cdot a^2\\
+    \left(-\frac{\partial^2}{\partial\xi^2}+\xi^2\right)\psi_n(\xi)&=\frac{2m}{\hbar^2}a^2E_n\psi_n(\xi)\\
+    &=2\epsilon_n\psi_n(\xi)\\
+    \text{mit}\quad \epsilon_n=\frac{m}{\hbar^2}a^2E_n&=\frac{1}{\hbar \omega}E_n \quad \text{reduzierte Energie}\\
+    \hookrightarrow \frac{\partial^2}{\partial\xi^2}\psi_n(\xi)&=(\xi^2-2\epsilon_n)\psi_n(\xi)
+    \end{align}
+  \item Zur Lösung der DGL betrachte zunächst das asymptotische Verhalten für $\xi\rightarrow\infty$
+    \begin{equation}
+    \Rightarrow \frac{\partial^2}{\partial\xi^2}\psi_n(\xi)=\xi^2\psi_n(\xi) \quad \text{für}\quad \xi\rightarrow\infty
+    \end{equation}
+    mit den allgemeinen Lösungen
+    \begin{equation}
+    \psi_n(\xi)\sim e^{\pm\xi^2/2} \quad \text{für}\quad \xi\rightarrow\infty
+    \end{equation}
+  \item HO hat nur Bindungszustände $\rightarrow$ $e^{+\xi^2/2}$ kommt wegen Quadratintegrabilität nicht in Frage!\\
+    $\hookrightarrow$ Wfkt. müssen folgendes asymptotisches Verhalten zeigen:
+    \begin{equation}
+    \psi_n(\xi)\sim e^{-\xi^2/2} \quad \text{für}\quad \xi\rightarrow\infty
+    \end{equation}
+    \item Test: setze asymptotische Lösung in komplette DGL ein
+    \begin{equation}
+    \frac{\partial^2}{\partial\xi^2}e^{-\xi^2/2}=-\frac{\partial}{\partial\xi}\left(\xi e^{-\xi^2/2}\right)=(\xi^2-1)e^{-\xi^2/2}=(\xi^2-2\epsilon_n)e^{-\xi^2/2}
+    \end{equation}
+    offenbar erfüllt
+    \begin{align}
+    &\psi(\xi)=ce^{-\xi^2/2}\quad\text{bzw.}\quad\psi_n(x)=ce^{-\frac{x^2}{2a^2}}\quad\text{die SGL}\\
+    &\epsilon_0=\frac{1}{2}\quad\text{bzw.}\quad E_0=\frac{1}{2}\hbar\omega
+    \end{align}
+    $\hookrightarrow$ Wfkt. und Energieeigenwert des Grundzustandes
+    %\begin{equation}
+    %\Rightarrow \frac{\partial^2}{\partial\xi^2}\psi_n(\xi)=(\xi^2-2\epsilon_n)\psi_n(\xi)
+    %\end{equation}
+\end{itemize}
+\textbf{Allgemeine Lösung}\\
+\begin{itemize}
+	\item Starte vom asymptotischen Verhalten der Wfkt., um die allgemeine Lösung der stationären SGL abzuleiten:
+    \begin{equation}
+    \psi_n(\xi)=e^{-\xi^2/2}\cdot H_n(\xi)
+    \end{equation}
+    $H_n(\xi)$ noch zu bestimmende Funktion
+  \item Einsetzen in SGL.
+    \begin{align}
+      \frac{\partial^2}{\partial\xi^2}\left(e^{-\xi^2/2}H_n(\xi)\right)&=(\xi^2-2\epsilon_n)e^{-\xi^2/2}H_n(\xi)\\
+      \Leftrightarrow e^{-\xi^2/2}\left(\frac{\partial^2}{\partial\xi^2}H_n(\xi)-2\xi\frac{\partial}{\partial\xi}H_n(\xi)+(\xi^2-1)H_n(\xi)\right)&=(\xi^2-2\epsilon_n)e^{-\xi^2/2}H_n(\xi)\\
+      \Leftrightarrow \frac{\partial^2}{\partial\xi^2}H_n(\xi)-2\epsilon\frac{\partial}{\partial\xi}H_n(\xi)+(2\epsilon_n-1)H_n(\xi)&=0
+    \end{align}
+    \textbf{Hermite-DGL}
+  \item Lösung der Hermite-DGL über Reihenansatz\\
+    $\hookrightarrow$ Unterscheide Wfkt. gerader und ungerader Parität\footnote{Dies ist möglich, da $\hat{H}$ und $\hat{\Pi}$ kommutieren}
+  \item \textbf{Wfkt gerader Parität}\\
+    $\hookrightarrow$ Ansatz für $H(\xi)$:
+    \begin{equation}
+    H(\xi)=\sum^\infty_{k=0}c_k\cdot\epsilon^{2k}
+    \end{equation}
+    $\hookrightarrow$ Einsetzen in Hermite-DGL:
+    \begin{equation}
+    \sum_{k=1}^\infty 2k(2k-1)c_k\xi^{2(k-1)}+\sum_{k=0}^\infty(2\epsilon-1-4k)c_k\xi^{2k}=0
+    \end{equation}
+    Fasse Beiträge zu gegebener Potenz von $\xi$ zusammen
+    \begin{equation}
+    \Rightarrow \sum_{k=0}^\infty\left[2(k+1)(2k+1)c_{k+1}+(2\epsilon-1-4k)c_k\right]\xi^{2k}
+    \end{equation}
+  \item für beliebige $\xi$ muss jeder Summand einzeln verschwinden, d.h.
+    \begin{align}
+    &2(k+1)(2k+1)c_{k+1}+(2\epsilon-1-4k)c_k=0\\
+    &\text{bzw.} \quad \frac{c_{k+1}}{c_k}=\frac{4k+1-2\epsilon}{2(k+1)(2k+1)}\quad\rightarrow\text{Rekursionsrelation für Koeffizienten $c_k$}
+    \end{align}
+  \item bestimme die noch unbekannten Energieeigenwerte $c_n$ über Normierbarkeit der Wellenfunktion\\
+    Betrachte Rekursionsrelation für große k. Falls Reihe \textbf{nicht} in endlicher Ordnung abbricht:
+    \begin{equation}
+    \frac{c_{k+1}}{c_k}\sim\frac{1}{k}\quad \text{für}\quad k\gg 1
+    \end{equation}
+  \item Dieses Verhalten findet man auch für Funktionen der Form 
+    \begin{equation}
+    \xi^{2p}e^{\xi^2} \quad \text{mit p endlich}
+    \end{equation}
+    $\hookrightarrow$ asymptotische Wfkt.:
+    \begin{equation}
+    \psi(\xi)\sim\xi^{2p}e^{\xi^2/2}
+    \end{equation}
+    für $\xi\rightarrow\infty$ divergiert dies und ist nicht normierbar!\\
+    $\hookrightarrow$ Normierbarkeit erzwingt, dass Potenzreihe in endlicher Ordnung abbricht.\\
+    $H_n(\xi)$: Polynome endlicher Ordnung
+  \item Annahme: höchste beitragende Potenz sei $\xi^{2N}$, d.h. $c_N\neq0,\ c_{N+1}=0$
+    \begin{equation}
+    0=4N+1-2\epsilon_n \quad\text{bzw.}\quad \epsilon_N=2N+\frac{1}{2}\quad,\ N=0,1,2,...
+    \end{equation}
+    Energieeigenwerte für gerade Wfkt.
+\end{itemize}
+
+
 \end{document}
