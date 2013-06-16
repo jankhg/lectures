@@ -34,7 +34,45 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \newpage
 \bibliographystyle{abbrv}
 \section{Einleitung}
+Ein Hochfrequenzresonator (im Folgenden HFR) ist ein metallisches Gefäß, dessen Hohlraumgeometrie man sich zunutze machen kann,
+um einen Resonator zu realisieren. Im allgemeinen Fall lassen sich die Resonanzfrequenzen eines HFR nicht analytisch bestimmen.
+Für einfache Geometrien, wie z.B. einen Würfel oder einen Zylinder, ist dies jedoch möglich. Im Falle eines wie hier betrachteten
+Zylinders bedient man sich dabei der so genannten Besselfunktionen 1. Art.
+
+Besonders in der Beschleunigerphysik spielen Hochfrequenzresonatoren eine zentrale Rolle, wenn es darum geht, geladene Teilchen
+zu beschleunigen.
+
 \section{Grundlagen}
+
+\subsection{Zylinderresonator}
+Im vorliegenden Versuch betrachten wir einen Zylinderresonator, dessen Resonanzfrequenzen sich wie bereits erwähnt mit Hilfe der
+Besselfunktionen 1. Art analytisch bestimmen lassen.
+
+\begin{align*}
+&m: &\text{azimutale Quantenzahl}\\
+&n: &\text{radiale Quantenzahl}\\
+&p: &\text{axiale Quantenzahl}\\
+&j_{m,n}: &\text{n-te Nullstelle der Besselfunktion} J_m
+\end{align*}
+
+
+\begin{equation}
+ f_{mnp}^{TM} = \frac{c}{2\pi} \sqrt{\left(\frac{j_{m,n}}{R}\right)^2 + \left(\frac{p\pi}{h}\right)^2}
+\end{equation}
+
+\begin{equation}
+ f_{mnp}^{TE} = \frac{c}{2\pi} \sqrt{\left(\frac{j'_{m,n}}{R}\right)^2 + \left(\frac{p\pi}{h}\right)^2}
+\end{equation}
+
+mit den Besselfunktionen
+\begin{equation}
+ J_m(x) = \sum_{k=0}^{\infty} \frac{(-1)^k}{k! \Gamma(k+m+1)} \left(\frac{x}{2}\right)^{2k+m}
+\end{equation}
+
+
+
+
+
 \section{Auswertung}
 
 \end{document}
