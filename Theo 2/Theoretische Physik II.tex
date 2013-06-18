@@ -34,7 +34,7 @@ citecolor = black] {hyperref} %Für verlinktes Inhaltsverzeichnis%
 \newpage
 \begin{flushright}Vorlesung 2 - 18.04.2013\end{flushright}
 \section{Formalismus der Quantenmechanik}
-$\rightarrow$ mathematisches Handwerkszeug bereitstellen\\
+$\rightarrow$ mathematisches Handwerkszeug bereitstellen
 \begin{itemize}
 \item Lineare Algebra
 \item später: Analysis, Funktionentheorie
@@ -528,7 +528,7 @@ $\hookrightarrow$ normale Anschauung versagt.
     \begin{aligned}
       \hat{B}\hat{1}|b\rangle=&b|b\rangle\\
       \hat{B}\left(\sum_i|a_i\rangle\langle a_i|\right)|b\rangle=&b|b\rangle\\
-      \langle a_j|\hat{B}\left(\sum_i|a_i\rangle\langle a_i|\right)|b\rangle’=&\langle a_j|b|b\rangle\\
+      \langle a_j|\hat{B}\left(\sum_i|a_i\rangle\langle a_i|\right)|b\rangle'=&\langle a_j|b|b\rangle\\
       \sum_i\langle a_j|\hat{B}|a_i\rangle\langle a_i|b\rangle =&b\langle a_j|b\rangle      
     \end{aligned}
     \end{equation}
@@ -780,7 +780,7 @@ Vorlesung 6 - 2.05.13
         \item Wie sind Observablen formal repräsentiert?
         \item Wie wird die Dynamik eines Quantensystems beschrieben?
       \end{itemize}
-  \textbf{1. Postulat: Zustand eines Systems}
+  \textbf{1. Postulat: Zustand eines Systems}\\
     Der Zustand eines Systems zum \textbf{Zeitpunkt t} ist durch einen \textbf{normierten} Vektor $|\psi,t\rangle$ im \textbf{Hilbertraum} beschrieben. Der Zustandsvektor $|\psi,t\rangle$ enthält die \textbf{komplette Information} über das System.\\ \\
   \textbf{2. Postulat: Observablen}\\
     Jede physikalische Observable wird durch einen hermiteschen linearen Operator auf dem Hilbertraum beschrieben. 
@@ -923,7 +923,7 @@ i\hbar\frac{\partial}{\partial t}\langle\vec{x}|\psi,t\rangle=\left(-\frac{\hbar
 $\hookrightarrow$ einfache DGL, stark vereinfacht\\
 abstrakte Schrödingergleichung ist viel allgemeiner als diese DGL (1 Teilchen ohne innere Freiheitsgrade im klassischen Potential $V(\vec{x})$.\\\\
 \textbf{Impulsdarstellung}\\
-kont. Eigenbasis des Impulsoperators $\hat{\vec{p}}$\\
+kont. Eigenbasis des Impulsoperators $\hat{\vec{p}}$
 \begin{align}
 &\hat{\vec{p}}|\vec{p}\rangle=\vec{p}|\vec{p}\rangle\\
 \text{mit} \quad &\hat{1}=\int \mathrm{d}^3p\ |\vec{p}\rangle\langle\vec{p}|\\
@@ -991,7 +991,7 @@ i\hbar\frac{\partial}{\partial t}\hat{U}_{(t,t_0)}|\psi,t_0\rangle&=\hat{H}\hat{
 \end{equation}
 mit $\hat{U}_{(t_0,t_0)}=\hat{1}$ wenn $\hat{H}^\dagger=\hat{H}$\\
 $\rightarrow$ Norm eines Zustandes bleibt während der Zeitentwicklung erhalten\\
-Exponentialfunktion mit einem hermiteschen Operator im Exponenten ist typisch für kontinuierliche Transformationen (Translation, Rotation). In diesem Zusammenhang bezeichnet man $\hat{H}$ auch als Generator der zeitlichen Translation.\\
+Exponentialfunktion mit einem hermiteschen Operator im Exponenten ist typisch für kontinuierliche Transformationen (Translation, Rotation). In diesem Zusammenhang bezeichnet man $\hat{H}$ auch als Generator der zeitlichen Translation.
 \subsubsection{Zeitabhängiger Hamiltonoperator}
 Nur wenn gilt 
 \begin{equation}
@@ -1008,7 +1008,7 @@ Hier bleibt nur noch iterative Lösung in Form der Dyson-Reihe.
 &i\hbar\frac{\partial}{\partial t} \hat{U}_{(t,t_0)}=\hat{H}_{(t)}\hat{U}_{(t,t_0)}\\
 &\hat{U}_{(t,t_0)}=\hat{1}-\frac{i}{\hbar} \ \int^t_{t_0}\ \text{d}t_1\hat{H}_{t_1}\hat{U}_{(t_1,t_0)}
 \end{align}
-Iteratives Einsetzen von $\hat{U}_{(t,t_0)}$ auf der rechten Seite führt zu Dyson-Reihe.\\
+Iteratives Einsetzen von $\hat{U}_{(t,t_0)}$ auf der rechten Seite führt zu Dyson-Reihe.
 \subsubsection{Stationäre Zustände}
 Der Zeitentwicklungsoperator für zeitunabhängigen $\hat{H}$ und $t_0=0$
 \begin{equation}
@@ -1094,7 +1094,7 @@ Vorlesung 10 - 21.05.2013
     Erwartungswert: $\langle\psi|\hat{A}|\psi\rangle=\langle a_i|\hat{A}|a_i\rangle=\langle a_i|a_i|a_i\rangle=a_i$\\
     Unschärfe: $\Delta A_{a_i}=0$
 \end{itemize}
-\textbf{Messung kompatibler Observablen}\\
+\textbf{Messung kompatibler Observablen}
 \begin{itemize}
 	\item Betrachte sequentielle Messung zweier Observablen. Beide Messungen unmittelbar nacheinander, sodass Zeitentwicklung zwischen beiden Messungen irrelevant ist.
   \item Angenommen $\left[\hat{A},\hat{B}\right]=0$\\
@@ -1317,7 +1317,7 @@ Vorlesung 12 - 28.05.2013
     \psi_E(x)=C\exp\left(\pm\sqrt{\frac{2m}{\hbar^2}[V_0-E]}x\right)
     \end{equation}
   \item Unterscheide $E>V_0, \ E<V_0$\\
-    1. $E>V_0$\\
+    1. $E>V_0$
     \begin{align}
     \psi_E(x)&=Ae^{ikx}+Be^{-ikx}\\
     &=A'\sin(kx)+B'\cos(kx)
@@ -1686,7 +1686,7 @@ Vorlesung 15 - 11.06.2013
     %\Rightarrow \frac{\partial^2}{\partial\xi^2}\psi_n(\xi)=(\xi^2-2\epsilon_n)\psi_n(\xi)
     %\end{equation}
 \end{itemize}
-\textbf{Allgemeine Lösung}\\
+\textbf{Allgemeine Lösung}
 \begin{itemize}
 	\item Starte vom asymptotischen Verhalten der Wfkt., um die allgemeine Lösung der stationären SGL abzuleiten:
     \begin{equation}
@@ -1744,4 +1744,270 @@ Vorlesung 15 - 11.06.2013
 \end{itemize}
 
 
+
+\begin{flushright}
+Vorlesung 16 - 13.06.2013
+\end{flushright}
+\textbf{Ungerade Parität}\\
+\begin{align}
+\text{Ansatz:} \quad H(\xi)=\sum_{k=0}^\infty d_k \xi^{2k+1}
+\end{align}
+\begin{align}
+\text{(Analoge Herleitung)} &\rightarrow\ \text{Rekursionsrelation:}\ \frac{d_{k+1}}{d_k}=\frac{4k+3-2\epsilon}{2(k+1)(2k+3)}\\
+\text{(selbes Argument)}\ &\rightarrow\ \text{für k $\gg$ 1: verhält sich wie $\frac{1}{k}$}\\
+&\rightarrow\ \text{Entwicklung muss in endlicher Ordnung abbrechen}
+\end{align}
+\begin{equation}
+\Rightarrow \epsilon_N=2N+\frac{3}{2},\quad N=0,1,2,...
+\end{equation}
+\textbf{insgesamt}
+\begin{align}
+\epsilon_n&=n+\frac{1}{2},\quad n=0,1,2,...\\
+\text{bzw.} \quad E_n&=\hbar\omega(n+\frac{1}{2})
+\end{align}
+\begin{itemize}
+  \item gerade Quantenzahl n $\rightarrow$ gerade Z.\\
+    ungerade Quantenzahl n $\rightarrow$ ungerade Z.
+  \item Energiespektrum ist äquidistand mit Abstand 1 bzw. $\hbar\omega$
+  \item Wellenfunktion mit Normierungskonstante N:
+    \begin{equation}
+    \psi_n(\xi)=N_n e^{-xi^2/2}H_n(\xi)
+    \end{equation}
+  \item Hermite-Polynome $H_n(/xi)$
+    \begin{align}
+    H_0(\xi)&=1\\
+    H_1(\xi)&=2\xi\\
+    H_2(\xi)&=4\xi^2-2\\
+    H_3(\xi)&=8\xi^2-12\xi
+    \end{align}
+  \item Normierung
+    \begin{equation}
+    N_n=\left(\frac{1}{\sqrt{\pi}2^nn!a}\right)^{1/2}=\left(\frac{m\omega}{\pi\hbar2^{2n}(n!)^2}\right)^{1/4}
+    \end{equation}
+  \item Orhonormierungsrelation:
+    \begin{equation}
+    \int_{-\infty}^\infty\text{d}x\ \psi_n^*(x)\psi_{n'}(x)=\delta_{nn'}
+    \end{equation}
+\end{itemize}
+
+
+\subsection{Algebraische Lösung}
+\begin{itemize}
+  \item Elegantere Methode (nutze spezielle Form des harmonischen Oszillators)\\
+    $\hookrightarrow$ funktioniert nur für den HO!\\
+  \item Abstrakter Hamiltonoperator:
+    \begin{equation}
+    \hat{h}=\frac{1}{\hbar\omega}\hat{H}=\frac{a^2}{2\hbar}\hat{p}^2+\frac{1}{2a}\hat{x}^2=\left(\frac{a}{\sqrt{2}\hbar}\hat{p}\right)^2+\left(\frac{1}{\sqrt{2}a}\hat{x}\right)^2
+    \end{equation}
+  \item Summe quadratischer Terme
+    \begin{align}
+    \text{Zahlen:}\quad &a^2+b^2=(a-ib)(a+ib)\\
+    \text{Operatoren:}\quad &\text{i.A. nicht kommutativ, d.h. Mischterme bleiben stehen!}
+    \end{align}
+  \item Definiere neue Operatoren
+    \begin{align}
+    \hat{a}&=\frac{1}{\sqrt{2}a}\hat{x}+i\frac{a}{\sqrt{2}\hbar}\hat{p}\\
+    \hat{a}^\dagger&=\frac{1}{\sqrt{2}a}\hat{x}-i\frac{a}{\sqrt{2}\hbar}\hat{p}
+    \end{align}
+    $\Rightarrow$ $\hat{h}=\hat{a}^\dagger\hat{a}+\hat{c}$
+  \item Bestimme Differenz von $\hat{h}$ und $\hat{a}^\dagger\hat{a}$:
+    \begin{align}
+    \hat{a}^\dagger\hat{a}&=\left(\frac{1}{\sqrt{2}a}\hat{x}-i\frac{a}{\sqrt{2}\hbar}\hat{p}\right)\left(\frac{1}{\sqrt{2}a}\hat{x}+i\frac{a}{\sqrt{2}\hbar}\hat{p}\right)\\
+    &=\underbrace{\frac{1}{2a^2}\hat{x}^2+\frac{a^2}{2\hbar^2}\hat{p}}_{=\hat{h}}+\frac{i}{2\hbar}\underbrace{(\hat{x}\hat{p}-\hat{p}\hat{x})}_{=i\hbar\hat{1}}\\
+    \Rightarrow &\hat{c}=\frac{1}{2}\hat{1}\\
+    \Rightarrow &\hat{h}=\hat{a}^\dagger\hat{a}+\frac{1}{2}\hat{1}=\hat{n}+\frac{1}{2}\hat{1} \quad \text{mit}\quad \hat{n}:=\hat{a}^\dagger\hat{a}
+    \end{align}
+  \item Bisher nur formale Umformungen bzw. neue Definitionen\\
+    Interpretiere nun die neuen Operatoren\\
+    Informationsquelle: Kommutatorrelation
+    \begin{equation}
+    \begin{aligned}
+    &[\hat{a},\hat{a}^\dagger]=\hat{1}\\
+    &[\hat{n},\hat{a}]=-\hat{a}\\
+    &[\hat{n},\hat{a}^\dagger]=\hat{a}^\dagger
+    \end{aligned}
+    \ \rightarrow\
+    \begin{aligned}
+    &\\
+    &[\hat{h},\hat{a}]=-\hat{a}\\
+    &[\hat{h},\hat{a}^\dagger]=\hat{a}^\dagger
+    \end{aligned}
+    \end{equation}
+  \item Wirkungsweise von $\hat{a},\hat{a}^\dagger$: 
+    \begin{align}
+    \hat{h}|\epsilon\rangle&=\epsilon|\epsilon\rangle\\
+    \hat{h}\hat{a}|\epsilon\rangle&=(\hat{a}\hat{h}+[\hat{h},\hat{a}])|\epsilon\rangle\\
+    &=(\hat{a}\hat{h}-\hat{a})|\epsilon\rangle\\
+    &=\hat{a}(\hat{h}-\hat{1})|\epsilon\rangle\\
+    &=\hat{a}(\epsilon-1)|\epsilon\rangle\\
+    &=(\epsilon -1)\hat{a}|\epsilon\rangle
+    \end{align}
+    $\hookrightarrow$ offenbar gilt:
+    \begin{equation}
+    \hat{a}|\epsilon\rangle=c_{\epsilon-1}|\epsilon-1\rangle \quad \text{mit Normierungskonstante $c_{\epsilon-1}$}
+    \end{equation}
+    analog:
+    \begin{align}
+    \hat{h}\hat{a}^\dagger|\epsilon\rangle&=(\epsilon+1)\hat{a}|\epsilon\rangle\\
+    \rightarrow \hat{a}^\dagger|\epsilon\rangle&=c_{\epsilon+1}|\epsilon\rangle
+    \end{align}
+  \item $\hookrightarrow$ Operatoren $\hat{a}$ und $\hat{a}^\dagger$ bilden Eigenzustände$|\epsilon\rangle$ zum Eigenwert $\epsilon$ auf benachbarte Eigenzustände zu Eigenwerten $(\epsilon-1)$ und $(\epsilon+1)$ ab. Sie werden auch "`Leiteroperatoren"' bzw. Auf- und Abstiegsoperatoren genannt.
+  \item Das Spektrum des HO ist nach unten beschränkt.\\
+    $\hookrightarrow$ Einschränkung für $\hat{a}$:
+    \begin{equation}
+    \hat{a}|\epsilon_0\rangle=0 \quad \text{bzw.}\quad c_{\epsilon_0}=0 \quad \text{kein physikalischer Zustand}
+    \end{equation}
+  \item Komplettes Spektrum
+    \begin{equation}
+    \epsilon_n=n+\frac{1}{2},\quad n=0,1,2,...
+    \end{equation}
+  \item Interpretiere $\hat{n}$
+    \begin{align}
+    \hat{n}|\epsilon_n\rangle=\left(\hbar-\frac{1}{2}\right)|\epsilon_n\rangle&=\left(\epsilon_n-\frac{1}{2}\right)|\epsilon_n\rangle\\
+    &=n|\epsilon_n\rangle
+    \end{align}
+    $\hookrightarrow$ $\hat{n}$ heißt "`Anzahloperator"' und zählt die Anzahl der Anregungsschritte
+  \item Berechne $c_n,c_{n+1}$:
+    \begin{align}
+    \hat{a}|\epsilon_n\rangle=c_n|\epsilon_{n-1}\rangle\quad \Rightarrow \quad \langle\epsilon_n|\hat{a}^\dagger=\langle\epsilon_{n-1}|c_n^*\\
+    \Rightarrow \langle \epsilon_n | \underbrace{\hat{a}^\dagger\hat{a}}_{=\hat{h}}=\underbrace{\langle\epsilon_{n-1}|\epsilon_{n-1}\rangle}_{=1}|c_1|^2\\
+    \langle\epsilon_n|\hat{n}|\epsilon_n\rangle=n\underbrace{\langle\epsilon_n|\epsilon_n\rangle}{=1}\\
+    \Rightarrow c_n=\sqrt{n}
+    \end{align}
+    analog:
+    \begin{align}
+    \hat{a}^\dagger|c_n\rangle&=\sqrt{n+1}|\epsilon_{n+1}\rangle\\
+    \Rightarrow c_{n+1}&=\sqrt{n-1}
+    \end{align}
+  \item Eigenzustände in Ortsdarstellung:
+    \begin{align}
+    \hat{a}|\epsilon_0\rangle=0 \quad &\Rightarrow \quad \langle x|\hat{a}|\epsilon_0\rangle=0\\
+    &\Rightarrow \quad \langle x|\frac{1}{\sqrt{2}a}\hat{x}+i\frac{a}{\sqrt{2}\hbar}\hat{p}|\epsilon_0\rangle=0\\
+    &\Rightarrow \quad 0=\left(\frac{1}{\sqrt{2}a}x+\frac{a}{\sqrt{2}}\frac{\partial}{\partial x}\right)\underbrace{\langle x|\epsilon_0\rangle}_{=\psi_0(x)}\\
+    &\Rightarrow \quad \left(a\frac{\partial}{\partial x}+\frac{x}{a}\right)\psi_0(x)=0\\
+    &\quad \text{bzw.} \quad \left(\frac{\partial}{\partial \xi}+\xi\right)\psi_0(\xi)=0
+    \end{align}
+  \item Das ist nicht die Schrödingergleichung, sondern eine einfache DGL 1. Ordnung
+    \begin{align}
+    &\Rightarrow \quad \psi_0(x)=N_0e^{-x^2/2a^2} \quad \text{mit}\quad N_0=\left(\frac{1}{\sqrt{\pi}a}\right)^{1/2}\\
+    &|\epsilon_n\rangle=\frac{(\hat{a}^\dagger)^n}{\sqrt{n!}}|\epsilon_0\rangle
+    \end{align}
+    \begin{align}
+    \Rightarrow \quad \underbrace{\langle x|\epsilon_n\rangle}_{=\psi_n(x)}&=\frac{1}{\sqrt{n!}}\langle x|(\hat{a}^\dagger)^n|\epsilon_0\rangle\\
+    &=\frac{1}{\sqrt{n!}}\langle x|(\frac{1}{\sqrt{2}a}\hat{x}+\frac{a}{\sqrt{2}\hbar}\hat{p})^n|\epsilon_0\rangle\\
+    &=\frac{1}{\sqrt{n!}}(\frac{1}{\sqrt{2}a}x+\frac{a}{\sqrt{2}}\frac{\partial}{\partial x})^n\underbrace{\langle x|\epsilon_0\rangle}_{=\psi_0(x)}
+    \end{align}
+    \begin{align}
+    \Rightarrow &\psi_n(x)=N_0 (\frac{1}{\sqrt{2}a}x+\frac{a}{\sqrt{2}}\frac{\partial}{\partial x})^ne^{-x^2/2a^2}\\
+    \text{bzw.}\quad &\psi_n(\xi)=N_0\left(\frac{1}{\sqrt{2}}\xi-\frac{1}{\sqrt{2}}\frac{\partial}{\partial\xi}\right)^ne^{-\xi^2/2}
+    \end{align}
+\end{itemize}
+
+
+
+\begin{flushright}
+Vorlesung 17 - 18.06.2013
+\end{flushright}
+\section{Drehimpuls \& Spin}
+\subsection{Bahndrehimpuls}
+\begin{itemize}
+	\item Wichtig bei Behandlung von 3D Problemen, insbesondere wenn Rotationssymmetrie vorliegt.
+  \item QM-Formulierung des Bahndrehimpulses: Korrespondenzregeln: 
+    \begin{align}
+    \vec{L}&=\vec{x}\times\vec{p}\\
+    &\Updownarrow \nonumber\\ 
+    \hat{\vec{L}}&=\hat{\vec{x}}\times\hat{\vec{p}}
+    \end{align}
+    oder komponentenweise
+    \begin{align}
+    \hat{\vec{L}}=\left(\begin{array}{c} \hat{L}_1 \\ \hat{L}_2 \\ \hat{L}_3\end{array}\right),\quad
+     \hat{\vec{x}}&=\left(\begin{array}{c} \hat{x}_1 \\ \hat{x}_2 \\ \hat{x}_3\end{array}\right), \quad
+     \hat{\vec{p}}=\left(\begin{array}{c} \hat{p}_1 \\ \hat{p}_2 \\ \hat{p}_3\end{array}\right)\\
+    \hat{L}_1&=\hat{x}_2\hat{p}_3-\hat{x}_3\hat{p}_2\\
+    \hat{L}_2&=\hat{x}_3\hat{p}_1-\hat{x}_1\hat{p}_3\\
+    \hat{L}_3&=\hat{x}_1\hat{p}_2-\hat{x}_2\hat{p}_1
+    \end{align}
+  \item Wichtige Eigenschaft: Kommutatorrelationen zwischen kartesischen Komponenten des Bahndrehimpulsoperators
+  \item Erinnerung: Analoge Kommutatoren für Komponenten von  $\hat{\vec{x}}$ oder $\hat{\vec{p}}$
+    \begin{equation}
+    [\hat{p}_1,\hat{p}_2]=0,\quad  [\hat{p}_1,\hat{p}_3]=0,\ ...
+    \end{equation}
+  \item Berechne exemplarisch $[\hat{L}_1,\hat{L}_2]$
+    \begin{align}
+      [\hat{L}_1,\hat{L}_2]&=[\hat{x}_2\hat{p}_3-\hat{x}_3\hat{p}_2,\hat{x}_3\hat{p}_1-\hat{x}_1\hat{p}_3]\\
+      &=\underbrace{[\hat{x}_2\hat{p}_3,\hat{x}_3\hat{p}_1]}_{\text{Für diesen Kommutator}}-[\hat{x}_2\hat{p}_3,\hat{x}_1\hat{p}_3]-[\hat{x}_3\hat{p}_2,\hat{x}_3\hat{p}_1]+[\hat{x}_3\hat{p}_2,\hat{x}_1\hat{p}_3]\\
+      [\hat{x}_2\hat{p}_3,\hat{x}_3\hat{p}_1]&=\hat{x}_2[\hat{p}_3,\hat{x}_3\hat{p}_1]+[\hat{x}_2,\hat{x}_3\hat{p}_1]\hat{p}_3\\
+      &=\hat{x}_2[\hat{p}_3,\hat{x}_3]\hat{p}_1\\
+      &=-i\hbar\hat{x}_2\hat{p}_1 \quad \text{mit}\quad [\hat{x}_i,\hat{p}_j]=i\hbar\delta_{ij}
+    \end{align}
+  \item Analog für alle Beiträge, liefert 
+    \begin{align}
+    [\hat{L}_1,\hat{L}_2]&=i\hbar(\hat{x}_1\hat{p}_2-\hat{x}_2\hat{p}_1)\\
+    &=i\hbar\hat{L}_3
+    \end{align}
+  \item Drehimpuls-Kommuatorrelationen, Drehimpuls-Algebra
+    \begin{align}
+    [\hat{L}_1,\hat{L}_2]&=i\hbar\hat{L}_3\\
+    [\hat{L}_2,\hat{L}_3]&=i\hbar\hat{L}_1\\
+    [\hat{L}_3,\hat{L}_1]&=i\hbar\hat{L}_2\\
+    [\hat{L}_i,\hat{L}_j]&=\sum_k\epsilon_{ijk}\hat{L}_k
+    \end{align}
+    $\hookrightarrow$ Kommutatorrelationen sind definierende Eigenschaft jedes Drehimpulses
+  \item Unterscheide:\\
+    1. allgemeiner Drehimpuls $\hat{\vec{J}}$: nur Kommutatorrel. sind gegeben
+    \begin{equation}
+    [\hat{J}_1,\hat{J}_2]=i\hbar\hat{J}_3 \quad \text{zyklisch}
+    \end{equation}
+    2. Bahndrehimpuls $\hat{\vec{L}}$
+    \begin{align}
+    [\hat{L}_1,\hat{L}_2]&=i\hbar\hat{L}_3 \quad \text{zyklisch}\\
+    \hat{\vec{L}}&=\hat{\vec{x}}\times\hat{\vec{p}}
+    \end{align}
+\end{itemize}
+
+\subsection{Eigenwertproblem des allgem. Drehimpulses}
+\begin{itemize}
+	\item Aufgrund der nicht-Kommutation der Komponenten von $\hat{\vec{J}}$ existiert keine simultane Eigenbasis zu allen Komponenten. (anders als bei $\hat{\vec{x}},\hat{\vec{p}}$)
+  \item Wähle eine Komponente, traditionell $\hat{J}_3$, und suche nach weiteren Operatoren, die mit $\hat{J}_3$ kommutieren.
+    \begin{equation}
+    \text{Geraten:}\quad \hat{\vec{J}}^2=\hat{J}_1^2+\hat{J}_2^2+\hat{J}_3^2
+    \end{equation}
+  \item Berechne Kommutator $[\hat{\vec{J}}^2,\hat{J}_3]$:
+    \begin{align}
+    [\hat{\vec{J}}^2,\hat{J}_3]&=0\\
+    \text{allgemein:}\quad  [\hat{\vec{J}}^2,\hat{J}_i]&=0
+    \end{align}
+  \item Konstruiere simultane Eigenbasis von $\hat{\vec{J}}^2$ und $\hat{J}_3$\\
+    $\hookrightarrow$ Drehimpuls-Eigenbasis
+    \begin{align}
+    \hat{\vec{J}}^2|a,b\rangle&=\hbar^2a|ab\rangle\\
+    \hat{J}_3|ab\rangle&=\hbar b|ab\rangle
+    \end{align}
+    Aufgabe: Was sind die möglichen Eigenwerte a,b?\\
+    Simultane Eigenbasis soll orthonormiert sein:
+    \begin{equation}
+    \langle ab|a'b'\rangle=\delta_{aa'}\delta_{bb'}
+    \end{equation}
+  \item Lösungsstrategie: Leiteroperatoren analog zu algebraischer Lösung des HO
+  \item Auf- und Absteigeoperatoren für Drehimpuls
+    \begin{align}
+    \hat{J}_\pm=\hat{J}_1\pm i\hat{J}_2
+    \end{align}
+    Herm. Adjunktion
+    \begin{align}
+    (\hat{J}_+)^\dagger=\hat{J}_-,\quad (\hat{J}_-)^\dagger=\hat{J}_+
+    \end{align}
+    Inverse Relationen
+    \begin{align}
+    \hat{J}_1&=\frac{1}{2}(\hat{J}_++\hat{J}_-)\\
+    \hat{J}_2&=\frac{1}{2}(\hat{J}_+-\hat{J}_-)
+    \end{align}
+  \item Entscheidende Eigenschaft: Kommutatoren von $\hat{J}_\pm$ mit $\hat{\vec{J}}^2,\hat{J}_3$
+    \begin{align}
+    [\hat{\vec{J}}^2,\hat{J}_\pm]&=0\\
+    [\hat{J}_3,\hat{J}_\pm]&=\pm \hbar \hat{J}_\pm
+    \end{align}
+    Analogie zum HO: $\hat{J}_\pm$ hat keinen Einfluss auf $\hat{\vec{J}}^2$ Quantenzahl
+  \item $\hat{J}_\pm$ wird die $\hat{J}_3$ Quantenzahl erhöhen oder erniedrigen.
+\end{itemize}
 \end{document}
