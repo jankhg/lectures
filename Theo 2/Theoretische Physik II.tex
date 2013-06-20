@@ -2010,4 +2010,152 @@ Vorlesung 17 - 18.06.2013
     Analogie zum HO: $\hat{J}_\pm$ hat keinen Einfluss auf $\hat{\vec{J}}^2$ Quantenzahl
   \item $\hat{J}_\pm$ wird die $\hat{J}_3$ Quantenzahl erhöhen oder erniedrigen.
 \end{itemize}
+
+
+\begin{flushright}
+Vorlesung 18 - 20.06.2013
+\end{flushright}
+
+
+\begin{itemize}
+	\item Betrachte die Wirkung von $\hat{J}_+$ auf $ab\rangle$
+    \begin{align}
+    \hat{J}_3\hat{J}_+|ab\rangle&=(\hat{J}_+\hat{J}_3+[\hat{J}_3,\hat{J}_+])|ab\rangle\\
+    &=(\hat{J}_+\hat{J}_3+\hbar\hat{J}_+)|ab\rangle\\
+    &=(\hat{J}_+\hbar b+\hbar\hat{J}_+)|ab\rangle\\
+    &=\hbar(b+1)\hat{J}_+|ab\rangle
+    \end{align}
+    $\Rightarrow$ Zustand $\hat{J}_+|ab\rangle$ ist EZ zu $\hat{J}_3$ mit EV $\hbar(b+1)$.
+    \begin{align}
+    \hat{J}_+|ab\rangle=C_{ab}^{(+)}|a(b+1)\rangle
+    \end{align}
+  \item Analog für $\hat{J}_-$
+    \begin{align}
+    \hat{J}_-|ab\rangle=C_{ab}^{(-)}|a(b-1)\rangle
+    \end{align}
+  \item Zweiter Input: Beschränkung des b-Spektrums. Betrachte
+    \begin{align}
+    \hat{\vec{J}}^2-\hat{J}^2_3=\hat{J}^2_1+\hat{J}^2_2
+    \end{align}
+    ist positiver Operator.
+    \begin{align}
+    &\langle ab|\hat{\vec{J}}^2-\hat{J}^2_3|ab\rangle=\hbar^2a-\hbar^2b^2\geq0\\
+    &\Rightarrow \quad a\geq b
+    \end{align}
+    $\hookrightarrow$ b-Spektrum ist für gegebenes a nach oben \& unten beschränkt!
+  \item Größter b-Eigenwert sei $b_{\text{max}}$, dann
+    \begin{align}
+    \hat{J}_+|ab_{\text{max}}\rangle=0
+    \end{align}
+    Mit Identität
+    \begin{align}
+    &\hat{J}_+\hat{J}_-=\hat{\vec{J}}^2-\hat{J}^2_3-\hbar\hat{J}_3\\
+    0&=\hat{J}_-\hat{J}_+|ab_{\text{max}}\rangle\\
+    &=(\hat{\vec{J}}^2-\hat{J}_3^2-\hbar\hat{J}_3)|ab_{\text{max}}\rangle\\
+    &=\hbar^2(a-b_\text{max}^2-b_\text{max})|ab_\text{max}\rangle\\
+    &\Rightarrow \quad a=b_\text{max}^2+b_\text{max}
+    \end{align}
+  \item Analog für $b_\text{min}$ mit $\hat{J}_-$
+    \begin{align}
+    a=b_\text{min}(b_\text{min}-1)
+    \end{align}
+  \item Damit gilt auch 
+    \begin{align}
+    b_\text{max}=-b_\text{min}
+    \end{align}
+  \item Ausgehend von $|ab\rangle$ soll $|ab_\text{max}\rangle$ durch n-fache Anwendung von $\hat{J}_+$ erzeugt werden:
+    \begin{align}
+    b_\text{max}=b_\text{min}+n
+    \end{align}
+    $\Rightarrow$ Mit $b_\text{max}=-b_\text{min}$:
+    \begin{align}
+    b_\text{max}=\frac{n}{2} \quad n=0,1,2,3,...
+    \end{align}
+ \item Neue Nomenklatur für QZ
+   \begin{align}
+   &j=b_\text{max}\\
+   &m=b
+   \end{align}
+   Der Eigenwert zu $\hat{\vec{J}}^2$ lautet
+   \begin{align}
+    a=j(j+1)
+   \end{align}
+  \item simultane Eigenbasis zu $\hat{\vec{J}}^2$, $\hat{J}_3$
+ 
+  \begin{align}
+   &\hat{\vec{J}}^2|jm\rangle=\hbar j(j+1)|jm\rangle\\
+   &\hat{J}_3|jm\rangle=\hbar m |jm\rangle
+  \end{align}
+  mit QZ
+  \begin{align}
+   j&=0,1/2,1,3/2...\\
+   m&=-j,-j+1,...,j
+  \end{align}
+\item Spreichweise ``Der Drehimpuls'': j, ``mag. Quantenzahl oder Drehimpulsprojektion'': m
+\item Für gegebenes j sind 2j+1 m-QZ möglich
+\item Orhonormierung der EZ
+\begin{align}
+ \langle jm|j'm'\rangle=\delta_{jj'}\delta_{mm'}
+\end{align}
+\item Bestimmung der Konstanten $C_{jm}^{(\pm)}$
+\begin{align}
+ \hat{J}_\pm|jm\rangle=C_{jm}^{(\pm)}|j(m\pm1)\rangle
+\end{align}
+\item Norm:
+\begin{align}
+\langle jm|(\hat{J}_+)^\dagger\hat{J}_+|jm\rangle&=|C_{jm}^{(\pm)}|^2\\
+&=\langle jm|\hat{J}_-\hat{J}_+|jm\rangle\\
+&=\langle jm|\hat{\vec{J}}^2-\hat{J}_3^2-\hbar\hat{J}_3|jm\rangle\\
+&=\hbar[j(j+1)-m(m+1)]
+\end{align}
+  \item damit explizit:
+    \begin{align}
+    \hat{J}_+|jm\rangle=\hbar\sqrt{j(j+1)-m(m+1)}|j,m+1\rangle\\
+    \hat{J}_-|jm\rangle=\hbar\sqrt{j(j+1)-m(m+1)}|j,m-1\rangle
+    \end{align}
+  \item nützliche Anwendung: Wirkung von $\hat{J}_1$ oder $\hat{J}_2$ auf $|jm\rangle$
+    \begin{align}
+    \hat{J}_1|jm\rangle&=\frac{1}{2}(\hat{J}_+n\hat{J}_-|jm\rangle\\
+    &=\frac{\hbar}{2}\sqrt{j(j+1)-m(m+1)}|j,m+1\rangle+\frac{\hbar}{2}\sqrt{j(j+1)-m(m+1)}|j,m-1\rangle
+    \end{align}
+\end{itemize}
+
+
+
+\subsection{Eigenwertproblem des Bahndrehimpulsoperators}
+\begin{itemize}
+	\item Bahndrehimpuls $\hat{\vec{L}}$ ist Spezialfall des allgemeinen Drehimpulses.
+  \item analoge Struktur des EW-Problems
+    \begin{align}
+    &\hat{\vec{L}}^2|lm\rangle=\hbar^2l(l+1)|lm\rangle\\
+    &\hat{L}_3|lm\rangle=\hbar m|lm\rangle\\
+    &\text{mit}\quad l=0,\frac{1}{2},1,\frac{3}{2},...\quad m=-l,-l+1,...+l
+    \end{align}
+  \item Zusätzlich
+    \begin{align}
+    &\hat{\vec{L}}=\hat{\vec{x}}\times\hat{\vec{p}}\quad\Rightarrow\quad\text{Bahndrehimpuls kann in OD betrachtet werden}\\
+    &\langle\vec{x}|\hat{\vec{L}}|\alpha\rangle=-i\hbar(\vec{x}\times\vec{\nabla})\langle\vec{x}|\alpha\rangle
+    \end{align}
+  \item Ortsvektor lässt sich bequem in Kugelkoordinaten darstellen
+    \begin{align}
+    &|\vec{x}\rangle=|r\vartheta\varphi\rangle\\
+    \text{mit}\quad&x=r\sin\vartheta\cos\varphi\\
+    &y=r\sin\vartheta\sin\varphi\\
+    &z=r\cos\vartheta
+    \end{align}
+  \item Für kartesische Komponenten von $\vec{L}$ gilt: Kugelkoordinaten-OD
+    \begin{align}
+    &\langle r\vartheta\varphi|\hat{L}_1|\alpha\rangle=-i\hbar\left(-\sin\varphi\frac{\partial}{\partial\vartheta}-\cot\vartheta\cos\varphi\frac{\partial}{\partial\varphi}\right)\langle r\vartheta\varphi|\alpha\rangle\\
+    &\langle r\vartheta\varphi|\hat{L}_2|\alpha\rangle=-i\hbar\left(\cos\varphi\frac{\partial}{\partial\vartheta}-\cot\vartheta\sin\varphi\frac{\partial}{\partial\varphi}\right)\langle r\vartheta\varphi|\alpha\rangle\\
+    &\langle r\vartheta\varphi|\hat{L}_3|\alpha\rangle=-i\hbar\frac{\partial}{\partial\varphi}\\
+    &\langle r\vartheta\phi|\hat{\vec{L}}^2|\alpha\rangle=-\hbar^2\underbrace{\left[\frac{1}{\sin\vartheta}\frac{\partial}{\partial\vartheta}\left(\sin\vartheta\frac{\partial}{\partial\vartheta}\right)+\frac{1}{\sin^2\vartheta}\frac{\partial^2}{\partial\varphi^2}\right]}_{\text{Winkelanteil des Laplace-Operators in Kugelkoord.}}\langle r\vartheta\varphi|\alpha\rangle
+    \end{align}
+  \item Ziel: Lösung des EW-Problems für $\hat{\vec{L}}^2,\hat{L}_3$ in OD\\
+  $\hookrightarrow$ OD von $|lm\rangle$
+  \begin{equation}
+  Y_{lm}(\vartheta,\varphi)=\langle\vartheta\varphi|lm\rangle
+  \end{equation}
+\end{itemize}
+
+
 \end{document}
