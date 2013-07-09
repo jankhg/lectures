@@ -2474,4 +2474,127 @@ Vorlesung 20 - 27.06.2013
     \end{matrix}\right)\right.|(ls)jm\rangle\\
     \end{align}
 \end{itemize}
+
+\begin{flushright}
+Vorlesung 21 - 04.07.2013
+\end{flushright}
+
+\begin{flushright}
+Vorlesung 22 - 09.07.2013
+\end{flushright}
+
+\noindent\textbf{Lösung der Relativgleichung}
+\begin{itemize}
+	\item Relativ Hamiltonian
+    \begin{align}
+    \hat{H}_\text{rel}=\frac{1}{2\mu}\hat{\vec{q}}^2+V(\hat{r})
+    \end{align}
+  \item Simultane Eigenbasis 
+    \begin{align}
+    \hat{H}_\text{rel}|nlm\rangle&=E_n"|nlm\rangle\\
+    \hat{\vec{L}}^2"|nlm\rangle&=\hbar^2l(l+1)|nlm\rangle\\
+    \hat{L}_3|nlm\rangle&=\hbar m|nlm\rangle
+    \end{align}
+  \item Ortsdarstellung der $|nlm\rangle$
+    \begin{align}
+    \psi_{nlm}(r,\vartheta,\varphi)&=\langle r\vartheta\varphi|nlm\rangle\\
+    &=R_{nl}(r)Y_{lm}(\vartheta,\varphi)\\
+    &=\frac{u_{nl}(r)}{r}Y_{lm}(\vartheta,\varphi)
+    \end{align}
+  \item Radial-Schrödingergleichung
+    \begin{align}
+    &\left\{-\frac{\hbar^2}{2\mu}\frac{\partial^2}{\partial r^2}+\frac{\hbar^2}{2\mu}\frac{l(l+1)}{r^2}+V(r)\right\}u_{nl}(r)=E_nu_{nl}(r)\\
+    &\text{mit}\quad V(r)=-\frac{e^2}{r}
+    \end{align}
+    \textcircled{1} Asymptotisches Verhalten\\
+    \textcircled{a} r $\rightarrow$ 0 Radialgleichung durch führenden $\frac{1}{r^2}$~Term bestimmt.
+    \begin{align}
+    -\frac{\partial^2}{\partial r^2}u_{nl}(r)+\frac{l(l+1)}{r^2}u_{nl}(r)=0
+    \end{align}
+    Allgemeine Lösung
+    \begin{align}
+    u_{nl}(r)=Ar^{l+1}+Br^{-l}
+    \end{align}
+    Wegen $u(r=0)=0$ bleibt nur $r^{l+1}$~Term als möglicher Beitrag übrig.\\
+    \textcircled{b} r $\rightarrow~\infty$ Radialgl.
+    \begin{align}
+    \frac{\partial^2}{\partial r^2}u_{nl}(r)+\frac{2\mu}{\hbar^2}E_ru_{nl}(r)=0
+    \end{align}
+    Allgemeine Lösung
+    \begin{align}
+    &u_nl(r)=Ae^{-\lambda r}+Be^{+\lambda r}\\
+    &\lambda=\sqrt{-\frac{2\mu}{\hbar^2}E_n}
+    \end{align}
+    Aus Normierbarkeit folgt, dass nur $e^{-\lambda r}$ sinnvolle Lösung ist.
+  \item Ansatz für Radialwellenfunktion
+    \begin{align}
+    u_{nl}(r)=r^{l+1}f(r)e^{-\lambda r}
+    \end{align}
+    \textcircled{2} Lsg. der vollen Radialgleichung über Reihenansatz für $f(r)$
+  \item Dgl. für f(r)
+    \begin{align}
+    \frac{\partial^2}{\partial r^2}f(r)+z\left(\frac{l+1}{r}-\lambda\right)\frac{\partial}{\partial r}f(r)+2\left(\frac{-\lambda(l+1)+\mu e^2/\hbar^2}{r}\right)f(r)=0
+    \end{align}
+  \item Reihenansatz für $f(r)$
+    \begin{align}
+    f(r)=\sum^\infty_{k=0}b_kr^k
+    \end{align}
+    $\Rightarrow$ Rekursionsrelation durch Einsetzen in f-Dgl
+    \begin{align}
+    \frac{b_k}{b_{k-1}}=\frac{2\left(\lambda(k+l)-\frac{\mu e^2}{\hbar^2}\right)}{k(k+2l+1)}
+    \end{align}
+  \item Rekursionsrelation für sehr große k entspricht einer analogen Rekursion für die Reihendarstellung von $e^{+2\lambda r}$\\
+    $\hookrightarrow$ Rekursion muss in endlicher Ordnung abbrechen, um Normierbarkeit zu gewährleisten
+  \item Erzwinge Abbruch in Ordnung $k=N$
+    \begin{align}
+    \frac{b_{N+1}}{b_N}=0\quad \Rightarrow\quad \lambda(N+1+l)-\frac{\mu e^2}{\hbar^2}=0
+    \end{align}
+  \item Über Zusammenhang von $\lambda$ und $E_n$ ergibt sich aus Abbruchbedingung eine Quantisierungsbedingung für $E_n$ 
+    \begin{align}
+    E_n=E_{Nl}&=-\frac{\mu e^4}{2\hbar^2}\frac{1}{(N+l+1)}\\
+    &=-\frac{\mu e^4}{2\hbar^2}\frac{1}{n^2}
+    \end{align}
+    \begin{align}
+    n&=N+l+1=1,2,3,...&\text{Hauptquantenzahl}\\
+    N&=0,1,2,...&\text{Radialquantenzahl}\\
+    L&=0,1,2,... &\text{Bahndrehimpuls}
+    \end{align}
+  \item Grundzustand für $n=1$ 
+    \begin{align}
+    E_1=-\frac{\mu e^4}{2\hbar^2}=-\frac{e^2}{2a_0}=-13.6~\text{eV}
+    \end{align}
+    Bohrradius:
+    \begin{align}
+    a_0=\frac{\hbar^2}{\mu e^2}=0.53~\mathring{A}
+    \end{align}
+  \item Spektrum (Zeichnung der Energieniveaus, l-Entartung)
+  \item Spezialität 1: Unendlich viele Bindungszustände, Spektrum wird mit $n\rightarrow\infty$ immer dichter.
+  \item Spezialität 2: Weitere dynamische Symmetrie, die zur Entartung der verschiedenen l-Zustände führt.\\
+    klass. Mechanik: Runge-Lenz Vektor für Kepler-Problem
+  \item Entartung bezüglich m (Rotationssymmetrie)
+    \begin{align}
+    g_{nl}=(2l+1)
+    \end{align}
+  \item Entartung bezüglich l (Runge-Lenz)
+    \begin{align}
+    g_n=\sum_{l=0}^{n-1}(2l+1)=n^2
+    \end{align}
+\end{itemize}
+
+
+\noindent\textbf{Wellenfunktionenen}
+
+\begin{itemize}
+  \item Wellenfunktionen ergeben direkt aus den Rekursionskoeff. bei gegebenem $E_n$\\
+    $\hookrightarrow$ f-Dgl. liefert die sog. assoziierten Laguerre-Polynome
+    \begin{align}
+    L^N_k(x)=\frac{\partial^N}{\partial x^N}L_k(x)=\frac{\partial^N}{\partial x^N}\left(e^x\frac{\partial^k}{\partial x^k}(x_k e^{-x})\right)
+    \end{align}
+  \item Radialwellenfunktion $R_{nl}(r)$
+    \begin{align}
+    R_{nl}(r)&=N_{nl}\left(\frac{2r}{na_0}\right)^le^{-r/na_0}L^{2l+1}_{n+l}\left(\frac{2r}{na_0}\right)\\
+    N_{nl}&=-\frac{2}{na_0}^{3/2}\sqrt{\frac{(n-l-1)!}{2n[(n+l)!]^3}}
+    \end{align}
+\end{itemize}
+
 \end{document}
