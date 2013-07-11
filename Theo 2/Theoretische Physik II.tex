@@ -2597,4 +2597,112 @@ Vorlesung 22 - 09.07.2013
     \end{align}
 \end{itemize}
 
+
+
+\begin{flushright}
+Vorlesung 23 - 11.07.2013
+\end{flushright}
+
+\section{Störungstheorie}
+\subsection{Zeitunabhängige Störungstheorie}
+\begin{itemize}
+	\item In praktisch allen "`interessanten"' Anwendungsfällen ist eine geschlossene Lösung der stationären Schrödingergleichung nicht mehr möglich.\\
+    $\hookrightarrow$ Näherungsmethode
+  \item Ausgangspunkt: Hamiltonian $\hat{H}$, der in zwei Beiträge partitioniert wird.
+    \begin{align}
+    &\hat{H}=\hat{H}_0+\hat{H}_1\\
+    &\hat{H}_0:\quad\text{ungestörter Hamiltonian}\\
+    &\hat{H}_1:\quad\text{Störung}
+    \end{align}
+  \item EW-Problem für $\hat{H}_0$ sei geschlossen lösbar
+    \begin{align}
+    \hat{H}_0|\phi_n\rangle=\epsilon_n|\phi_n\rangle
+    \end{align}
+    (ohne Entartung)
+  \item Formaler Kontrollparameter $\lambda$
+    \begin{align}
+    &\hat{H}(\lambda)=\hat{H}_0+\lambda\hat{H}_1\\
+    &\lambda=0:\quad\text{ungestörtes Problem}\\
+    &\lambda=1:\quad\text{volles Problem}
+    \end{align}
+  \item Volles Problem
+    \begin{align}
+    \hat{H}(\lambda=1)|\psi_n\rangle=E_n|\psi_n\rangle
+    \end{align}
+  \item Potenzreihenansatz für $|\psi_n(\lambda)\rangle$ und $E_n(\lambda)$
+    \begin{align}
+    E_n(\lambda)&=E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+...\\
+    |\psi_n(\lambda)\rangle&=|\psi_n^{(0)}\rangle+\lambda|\psi_n^{(1)}\rangle+\lambda^2|\psi_n^{(2)}\rangle+...
+    \end{align}
+  \item Für $\lambda=0$ ergibt sich 
+    \begin{align}
+    E_n^{(0)}&=\epsilon_n\\
+    |\psi_n^{(0)}\rangle&=|\phi_n\rangle
+    \end{align}
+    wenn keine Entartung im ungestörtern Spektrum vorliegt.
+  \item Um die unbekannten "`Entwicklungskoeff."' $E_n^{(i)},\ |\psi_n^{(i)}\rangle$ zu bestimmen, setze Potenzreihe in SGL für $\hat{H}(\lambda)$ ein. 
+    \begin{align}
+    (\hat{H}_0+\lambda\hat{H}_1)(|\psi_n^{(0)}\rangle+\lambda|\psi_n^{(1)}\rangle+...)=(E_n^{(0)}+\lambda E_n^{(1)}+...)(|\psi_n^{(0)}\rangle+\lambda|\psi_n^{(1)}\rangle+...)
+    \end{align}
+  \item Un diese Gleichung für beliebige $\lambda$ zu erfüllen, müssen die Beiträge der linken und rechten Seite in jeder Ordnung von $\lambda$ gleich sein.
+    \begin{align}
+    \lambda^0:\quad \hat{H}_0|\psi_n^{(0)}\rangle=E_n^{(0)}|\psi_n^{(0)},\quad
+    \hat{H}_0|\phi_n\rangle=\epsilon_n|\phi_n\rangle\\
+    \lambda^1:\quad \hat{H}_0|\psi_n^{(0)}\rangle+\hat{H}_1|\phi_n\rangle=\epsilon_n|\phi_n^{(1)}\rangle+E_n^{(1)}|\phi_n\rangle
+    \end{align}
+  \item Orthonormierung der ungestörten Zustände
+    \begin{align}
+    \langle\phi_n|\phi_{n'}\rangle=\delta_{nn'}
+    \end{align}
+  \item volle Eigenzustände $|\psi_n(\lambda)\rangle$ sind ebenfalls orthogonal
+    \begin{align}
+    \langle \psi_n(\lambda)|\psi_{n'}(\lambda)\rangle=0\quad\text{für}\quad n\neq n'
+    \end{align}
+    Aber "`Zwischennormierung"'
+    \begin{align}
+    \langle \phi_n|\psi_n(\lambda)\rangle\stackrel{!}{=}1
+    \end{align}
+    Mit Reihenentwicklung für $|\psi_n(\lambda)\rangle$
+    \begin{align}
+    1&=\langle \phi_n|\psi_n(\lambda)\rangle\\
+    &=\underbrace{\langle\phi_n|\phi_n\rangle}_{=1}+\lambda\langle\phi_n|\psi_n^{(1)}\rangle+\lambda^2\langle\phi_n|\psi_n^{(2)}\rangle+...
+    \end{align}
+    Muss für beliebige $\lambda$ gelten
+    \begin{align}
+    \Rightarrow\quad \langle\phi_n|\psi_n^{(k)}\rangle=0\quad\text{für}\quad k>0
+    \end{align}
+\end{itemize}
+
+
+\noindent\textbf{Störungstheorie erster Ordnung}
+\begin{itemize}
+	\item Multipliziere $\lambda^1$-Gleichung für $E_n|\psi_n\rangle$ mit $\langle\phi_n|$
+    \begin{align}
+    &\underbrace{\langle\phi_n|\hat{H}_0\psi_n^{(1)}\rangle}_{=\epsilon_n\langle\phi_n|\psi_n^{(1)}\rangle=0}+\langle\phi_n|\hat{H}_1|\phi_n\rangle=\epsilon_n\underbrace{\langle\phi_n|\psi_n^{(1)}\rangle}_{=0}+E_n^{(1)}\underbrace{\langle\phi_n|\phi_n\rangle}_{=1}\\
+    &\Rightarrow E_n^{(1)}=\langle\phi_n|\hat{H}_1|\phi_n\rangle
+    \end{align}
+  \item Multipliziere $\lambda^1$-Gleichung für $E_n|\psi_n\rangle$ mit $\langle\phi_m|$ wobei $m\neq n$.
+    \begin{align}
+    &\underbrace{\langle\phi_m|\hat{H}_0|\psi_n^{(1)}\rangle}_{=\epsilon_m\langle\phi_m|\psi_n^{(1)}\rangle}+\langle\phi_m|\hat{H}_1|\phi_n\rangle=\epsilon_n\langle\phi_m|\psi_n^{(1)}\rangle+E_n^{(1)}\underbrace{\langle\phi_m|\phi_n\rangle}_{=0}\\
+    &\Rightarrow \langle\phi_m|\psi_n^{(1)}\rangle=\frac{\langle\phi_m|\hat{H}_1|\phi_n\rangle}{\epsilon_n-\epsilon_m}
+    \end{align}
+    $\hookrightarrow$ Entwicklungskoeffizient der Zustandskorr. $|\psi_n^{(1)}\rangle$ in ungestörter Basis
+    \begin{align}
+    |\psi_n^{(1)}\rangle&=\sum_m|\phi_m\rangle\langle\phi_m|\psi_n^{(1)}\rangle\\
+    &=\sum_m|\phi_m\rangle\frac{\langle\phi_m|\hat{H}_1|\phi_n\rangle}{\epsilon_n-\epsilon_m}
+    \end{align}
+\end{itemize}
+
+\noindent\textbf{Zweite Ordnung}
+\begin{itemize}
+	\item Multipliziere $\lambda^2$-Gleichung mit $\langle\phi_n|$ 
+    \begin{align}
+    &\underbrace{\langle\phi_n|\hat{H}_0|\psi_n^{(2)}\rangle}_{=0}+\langle\phi_n|\hat{H}_1|\psi_n^{(1)}\rangle=\epsilon_n\underbrace{\langle\phi_n|\psi_n^{(2)}\rangle}_{=0}+E_n^{(1)}\underbrace{\langle\phi_n|\psi_n^{(1)}\rangle}_{=0}+E_n^{(2)}\underbrace{\langle\phi_n|\phi_n\rangle}_{=1}
+    \end{align}
+    \begin{align}
+    \Rightarrow E_n^{(2)}&=\langle\phi_n|\hat{H}_1|\psi_n^{(1)}\rangle\\
+    &=\sum_{m\neq n}\frac{\langle\phi_n|\hat{H}_1|\phi_m\rangle\langle\phi_m|\hat{H}_1|\phi_n\rangle}{\epsilon_n-\epsilon_m}\\
+    &=\sum_{m\neq n}\frac{|\langle\phi_n|\hat{H}_1|\phi_m\rangle|^2}{\epsilon_n-\epsilon_m}
+    \end{align}
+\end{itemize}
 \end{document}
