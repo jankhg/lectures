@@ -93,8 +93,8 @@ C \left|0\rangle \right. = \left|0\rangle \right.
 \item Inverses Element bezüglich Addition:
 \begin{equation}
 \begin{aligned}
-\left|\alpha\rangle \right. + \left|{\alpha}_{inv}\rangle \right. = \left|0\rangle \right.\\
-\left|{\alpha}_{inv}\rangle \right. = -\left|\alpha\rangle \right.
+\left|\alpha\rangle \right. + \left|{\alpha}_\text{inv}\rangle \right. = \left|0\rangle \right.\\
+\left|{\alpha}_\text{inv}\rangle \right. = -\left|\alpha\rangle \right.
 \end{aligned}
 \end{equation}
 \end{itemize}
@@ -2479,6 +2479,125 @@ Vorlesung 20 - 27.06.2013
 Vorlesung 21 - 04.07.2013
 \end{flushright}
 
+\section{Dreidimensionale Probleme}
+\subsection{Zentralkraftprobleme}
+\begin{itemize}
+  \item Definition: Potential hängt nur vom Abstand $r=|\vec{x}|$ ab. $V(\vec{x})=V(r)$.\\
+    Hamiltion-Operator mit Zentralpotential
+    \begin{align}
+    \hat{H}=\frac{1}{2m}\hat{\vec{p}}^2+V(\hat{r})
+    \end{align}
+    $\hookrightarrow$ Hamiltionoperator invariant unter räumlichen Drehungen.
+  \item Drehungen in Quantenmechanik durch unitären Operator 
+    \begin{align}
+    \hat{U}=\exp\left(-\frac{i}{\hbar}\vec{\eta}\cdot\hat{\vec{L}}\right)
+    \end{align}
+    Parametervektor $\vec{\eta}$ definiert die Drehachse und den Winkel um die Achse. Der Bahndrehimpulsoperator $\hat{\vec{L}}$ ist der Generator.\\
+    Mit Spin: Gesamtdrehimpulsoperator $\hat{\vec{J}}$ statt $\hat{\vec{L}}$.\\
+    $\hat{H}$ invariant unter Drehungen:
+    \begin{align}
+    \hat{H}=\hat{U}^\dagger\hat{H}\hat{U}&\Leftrightarrow \hat{U}\hat{H}=\hat{U}\hat{U}^\dagger\hat{H}\hat{U}\\
+    &\Leftrightarrow\hat{U}\hat{H}=\hat{H}\hat{U}\\
+    &\Leftrightarrow 0=\hat{H}\hat{U}-\hat{U}\hat{H}\\
+    &\Leftrightarrow0=[\hat{H},\hat{U}]
+    \end{align}
+    Mit Reihendarstellung beziehungsweise infinitesimale Form folgt: $[\hat{H},\hat{\vec{L}}]=0$, das heißt $[\hat{H},\hat{L}_i]=0\quad \forall\ i$\\
+    $\hookrightarrow$ simultane Eigenbasis der Operatoren $\{\hat{H},\hat{\vec{L}}^2,\hat{L}_3\}$ mit:
+    \begin{align}
+    &[\hat{H},\hat{\vec{L}}^2]=0\\
+    &[\hat{H},\hat{L}_3]=0,\\
+    &[\hat{\vec{L}}^2,\hat{L}_3]=0
+    \end{align}
+    Simultane Eigenwertrelation
+    \begin{align}
+    &\hat{H}|nlm\rangle=E_n|nlm\rangle\\
+    &\hat{\vec{L}}^2|nlm\rangle=\hbar^2l(l+1)|nlm\rangle\\
+    &\hat{L}_3|nlm\rangle=\hbar m|nlm\rangle
+    \end{align}
+      \item Stationäre Schrödingergleichung in Ortsdarstellung\\
+    Eigenwert-Gleichung für $\hat{H}$ des Zentralkraftproblems
+    \begin{align}
+    \hat{H}|nlm\rangle=E_n|nlm\rangle\quad\text{für}\quad\hat{H}=\frac{1}{2m}\hat{\vec{p}}^2+V(\hat{r})
+    \end{align}
+    $\hookrightarrow$ Aufgrund der Symmetrie wähle Kugelkoordinaten $(r,\vartheta,\varphi)$\\
+  \item Ortsdarstellung von $\hat{\vec{p}}$ in Kugelkoordinaten
+    \begin{align}
+    \langle r\vartheta\varphi|\hat{\vec{p}}^2|\alpha\rangle&=-\hbar^2\Delta_{r\vartheta\varphi}\langle r\vartheta\varphi|\alpha\rangle\\
+    &=-\hbar^2\bigg(\frac{1}{r}\frac{\partial^2}{\partial r^2}r+\frac{1}{r^2}\underbrace{\left\{\frac{1}{\sin\vartheta}\frac{\partial}{\partial\vartheta}\sin\vartheta\frac{\partial}{\partial\vartheta}+\frac{1}{\sin^2\vartheta}\frac{\partial^2}{\partial\varphi^2}\right\}}_\text{Ortsdarstellung von $\hat{\vec{L}}^2$}\bigg)\langle r\vartheta\varphi|\alpha\rangle\\
+    &=-\hbar^2\frac{1}{r}\frac{\partial^2}{\partial r^2}r\langle r\vartheta\varphi|\alpha\rangle\frac{-\hbar^2}{r^2}\langle r\vartheta\varphi|\hat{\vec{L}}^2|\alpha\rangle
+    \end{align}
+  \item Zusammenhang von $\hat{\vec{p}}^2$ und $\hat{\vec{L}}^2$ auf Operatorebene
+    \begin{align}
+    \hat{\vec{L}}^2=\hat{\vec{x}}^2\hat{\vec{p}}^2-(\hat{\vec{x}}\hat{\vec{p}})^2+i\hbar\hat{\vec{x}}\hat{\vec{p}}
+    \end{align}
+  \item Schrödingergleichung in Ortsdarstellung
+    \begin{align}
+    -\frac{\hbar^2}{2m}\frac{1}{r}\frac{\partial^2}{\partial r^2}r\langle r\vartheta\varphi|nlm\rangle+\frac{-\hbar^2}{2m}\frac{1}{r^2}\langle r\vartheta\varphi|\hat{\vec{L}}^2|nlm\rangle+V(\hat{r})\langle r\vartheta\varphi|nlm\rangle=E_n\langle r\vartheta\varphi|nlm\rangle
+    \end{align}
+    Mit Eigenwertrelation von $\hat{\vec{L}}^2$:
+    \begin{align}
+    \left\{\frac{-\hbar^2}{2m}\frac{1}{r}\frac{\partial^2}{\partial r^2}+\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}+V(r)\right\}\langle r\vartheta\varphi|nlm\rangle=E_n\langle r\vartheta\varphi|nlm\rangle
+    \end{align}
+  \item Wellenfunktionen sind Produkt aus Winkelteil 
+    \begin{align}
+    Y_{lm}(\vartheta,\varphi)=\langle\vartheta\varphi|lm\rangle
+    \end{align}
+    und Radialteil $R_{nl}(r)$
+    \begin{align}
+   \langle r\vartheta\varphi|nlm\rangle=R_{nl}(r)\cdot Y_{lm}(\vartheta,\varphi)
+    \end{align}
+  \item Eindimensionale Radialgleichung $R_{nl}(r)$
+    \begin{align}
+    \left\{-\frac{\hbar^2}{2m}\frac{1}{r}\frac{\partial^2}{\partial r^2}+\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}+V(r)\right\}R_{nl}(r)=E_nR_{nl}(r)
+    \end{align}
+    Mit v-Wellenfunktion
+    \begin{align}
+    V_{nl}(r)=rR_{nl}(r)
+    \end{align}
+    gilt für Radialgleichung
+    \begin{align}
+    \left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial r^2}+\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}+V(r)\right\}V_{nl}(r)=E_nV_{nl}(r)
+    \end{align}
+    Ähnlich der 1-dimensionalen Schrödingergleichung mit zusätzlichem "`Zentrifugalpotential"'
+    \begin{align}
+    V_\text{zent}(r)=\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}
+    \end{align}
+    Achtung: v-Wellenfunktion muss für $r=0$ verschwinden
+    \begin{align}
+    v(r=0)\stackrel{!}{=}0
+    \end{align}
+    da sonst $R_{nl}(r)$ am Ursprung divergiert.
+\end{itemize}
+
+\subsection{Wasserstoffproblem}
+\begin{itemize}
+  \item Schwerpunktseparation: Zweiteilchenproblem für Proton $(m_p,\vec{x}_p)$ und Elektron $(m_e,\hat{x}_e)$, die über die Coulombkraft wechselwirken. Kompletter Hamiltonian:
+  \begin{align}
+  &\hat{H}=\frac{1}{2m_p}\hat{\vec{p}}_p^2+\hat{1}{2m_e}\hat{\vec{pe}}_e^2+V(|\vec{x}_e-\vec{x}_p|)\\
+  &\text{mit}\quad V(r)=-\frac{e_m^2}{4\pi\epsilon_0}\frac{1}{r}=\frac{-e^2}{r}
+  \end{align}
+  \item Übergang in Relativ- und Schwerpunktkoordinaten
+    \begin{align}
+    \vec{r}&=\vec{x}_e-\vec{x}_p\quad\text{Relativkoordinaten}\\
+    \vec{x}&=\frac{1}{M}(m_e\vec{x}_e+m_p\vec{x}_p)\quad\text{Schwerpunktkoordinaten}\\
+    \vec{q}&=\frac{1}{M}(m_p\vec{p}_p-m_e\vec{p}_e)\quad\text{Relativkoordinaten}\\
+    \vec{p}&=\vec{p}_e+\vec{p}_p\quad\text{Schwerpunktkoordinaten}
+    \end{align}
+  \item Für den Hamiltionian in Schwerpunkt / Relativkoordinaten gilt:
+    \begin{align}
+    \hat{H}=\frac{1}{2M}\hat{\vec{p}}^2+\frac{1}{2\mu}\hat{\vec{q}}^2+V(|\vec{r}|)\\
+    M=m_p+m_e\\
+    \mu=\frac{m_pm_e}{m_p+m_e}
+    \end{align}
+  \item Zerfall in Schwerpunkts- und Relativteil
+    \begin{align}
+    \hat{H}_\text{cm}&=\frac{1}{2M}\hat{\vec{p}}^2\\
+    \hat{H}_\text{rel}&=\frac{1}{2\mu}\hat{\vec{q}}^2+V(|\vec{r}|)
+    \end{align}
+    $\hookrightarrow$ $\hat{H}_\text{cm}$-Eigenwertproblem entspricht dem des freien Teilchens
+\end{itemize}
+
+
 \begin{flushright}
 Vorlesung 22 - 09.07.2013
 \end{flushright}
@@ -2704,5 +2823,6 @@ Vorlesung 23 - 11.07.2013
     &=\sum_{m\neq n}\frac{\langle\phi_n|\hat{H}_1|\phi_m\rangle\langle\phi_m|\hat{H}_1|\phi_n\rangle}{\epsilon_n-\epsilon_m}\\
     &=\sum_{m\neq n}\frac{|\langle\phi_n|\hat{H}_1|\phi_m\rangle|^2}{\epsilon_n-\epsilon_m}
     \end{align}
+
 \end{itemize}
 \end{document}
