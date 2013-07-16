@@ -428,13 +428,13 @@ Besondere Eigenschaften für EW-Problem hermitescher Operatoren
       \begin{equation}
       a=\frac{\langle a|\hat{A}|a\rangle }{\langle a|a\rangle }
       \end{equation}
-    \item Eigenvektoren zu verschiedenen EW sind orthogonal\\ \\
+    \item Eigenvektoren zu verschiedenen EW sind orthogonal\\ 
       a) Ohne Entartung:
          \begin{equation}
         \label{eq:ortho}
           \langle a|a'\rangle  = 0 \quad \text{wenn} \quad a \neq a'
           \end{equation}
-          $\hookrightarrow$ Beweis über $(a-a') \ \langle a|a'\rangle  = 0$\\ \\
+          $\hookrightarrow$ Beweis über $(a-a') \ \langle a|a'\rangle  = 0$\\ 
       b) Mit Entartung:\\
          - Wie (a) für EV aus verschiedenen ent. Unterräumen\\
          - Innerhalb des ent. Unterraums muss explizit orthogonalisiert werden.
@@ -720,8 +720,8 @@ Vorlesung 6 - 02.05.13
     \item Unschärfe oder Varianz des EW von A mit $|\gamma\rangle$
       \begin{equation}
       \begin{aligned}
-        \Delta A_\gamma&=\sqrt{\langle\gamma|\left(\hat{A}-\langle\gamma\left|\hat{A}\right|\gamma\rangle\right)^2|\gamma\rangle}\\
-        &=\sqrt{\langle\gamma\left|\hat{A}^2\right|\gamma\rangle-\langle\left|\hat{A}\right|\gamma\rangle^2}\\
+        \Delta A_\gamma&=\sqrt{\langle\gamma|\left(\hat{A}-\langle\gamma|\hat{A}|\gamma\rangle\right)^2|\gamma\rangle}\\
+        &=\sqrt{\langle\gamma|\hat{A}^2|\gamma\rangle-\langle|\hat{A}|\gamma\rangle^2}\\
         &=\sqrt{\langle\hat{A}^2\rangle_\gamma-\langle\hat{A}\rangle_\gamma^2}
       \end{aligned}        
       \end{equation}
@@ -732,13 +732,13 @@ Vorlesung 6 - 02.05.13
       \end{equation}
     \item Beweis der Schwarzschen Ungleichung
       \begin{equation}
-      \langle\alpha|\alpha\rangle\langle\beta|\beta\rangle \geq \left|\langle\alpha\left|\right.\beta\rangle\right|^2
+      \langle\alpha|\alpha\rangle\langle\beta|\beta\rangle \geq \left|\langle\alpha|\beta\rangle\right|^2
       \end{equation}
       Definition von 
       \begin{equation}
       \begin{aligned}
-        |\alpha\rangle=&\left(\hat{A}-\langle\hat{A}_\gamma\right)|\gamma\rangle\\
-        |\beta\rangle=&\left(\hat{B}-\langle\hat{B}_\gamma\right)|\gamma\rangle
+        |\alpha\rangle=&\left(\hat{A}-\langle\hat{A}\rangle_\gamma\right)|\gamma\rangle\\
+        |\beta\rangle=&\left(\hat{B}-\langle\hat{B}\rangle_\gamma\right)|\gamma\rangle
       \end{aligned}
       \end{equation}
       Damit 
@@ -812,7 +812,7 @@ Vorlesung 6 - 02.05.13
         \begin{equation}
         \begin{aligned}
           \text{klassisch: Hamiltonfunktion} \quad H(\vec{x},\vec{p})&=\frac{\vec{p}}{2m} + V(\vec{x})\\
-          \text{QM: Hamiltonoperator} \quad \hat{H}(\hat{\vec{x}},\hat{\vec{o}})&=\frac{\hat{\vec{p}}^2}{2m}+V(\hat{\vec{x}})
+          \text{QM: Hamiltonoperator} \quad \hat{H}(\hat{\vec{x}},\hat{\vec{p}})&=\frac{\hat{\vec{p}}^2}{2m}+V(\hat{\vec{x}})
         \end{aligned}
         \end{equation}
       \item Analogie des fundamentalen Kommutators mit Poisson-Klammern der klassischen Mechanik
@@ -870,10 +870,10 @@ $$
 \end{equation}
 Zerlegung des Eins-Operators
 $$
-\hat{1}=\int\ dx \left|\vec{x}\rangle\langle\vec{x}\right|
+\hat{1}=\int \text{d}x \left|\vec{x}\rangle\langle\vec{x}\right|
 $$
 \begin{equation}
-|\psi,t\rangle=\int\ dx\left|\vec{x}\rangle\langle\vec{x}\right|\psi,t\rangle
+|\psi,t\rangle=\int \text{d}x\left|\vec{x}\rangle\langle\vec{x}\right|\psi,t\rangle
 \label{eq:WellenfunktionOrtsdarstellung}
 \end{equation}
 Annahme: Teilchen mit Masse m in klassischem Potential $V(\vec{x})$
@@ -883,7 +883,7 @@ Annahme: Teilchen mit Masse m in klassischem Potential $V(\vec{x})$
 \end{equation}
 OD eines allg. Operators\footnote{Wichtiger Unterschied zwischen Operator im Hilbertraum und im 3D-Raum (Ortsdarstellung)} $\hat{A}$
 $$
-\langle\vec{x}\left|\right.\hat{A}|\alpha\rangle \quad \quad |\alpha\rangle \quad \text{beliebig}
+\langle\vec{x}|\hat{A}|\alpha\rangle \quad \quad |\alpha\rangle \quad \text{beliebig}
 $$
 OD des Ortsoperators $\hat{\vec{x}}$
 $$
@@ -896,12 +896,12 @@ $$
 OD Impulsoperator\\
 keine einfache EW Relation, aber wir wissen
 \begin{align}
-[\hat{x}_i,\hat{p}_j]&=i\hbar\delta_{ij} \nonumber\\ \nonumber
-\langle\vec{x}|\hat{\vec{p}}|\alpha\rangle&=-i\hbar\vec{\nabla}\langle\vec{x}|\alpha\rangle\\ \nonumber
-\langle\vec{x}|\hat{p}_i|\alpha\rangle&=i\hbar\frac{\partial}{\partial_i}\langle\vec{x}|\alpha\rangle\\ \nonumber
-\langle\vec{x}|[\hat{x}_i,\hat{p}_j]|\alpha\rangle&=\langle\vec{x}|\hat{x}_i,\hat{p}_j|\alpha\rangle-\langle\vec{x}|\hat{x}_j,\hat{p}_i|\alpha\rangle\\ 
-&=x_i\langle\vec{x}_i,\hat{p}_j|\alpha\rangle+i\hbar\frac{\partial}{\partial x_i}x_i\langle\hat{x}|\alpha\rangle\nonumber\\
-&=i\hbar\delta_{ij}\langle\vec{x}|\alpha\rangle
+  [\hat{x}_i,\hat{p}_j]&=i\hbar\delta_{ij} \\ 
+  \langle\vec{x}|\hat{\vec{p}}|\alpha\rangle&=-i\hbar\vec{\nabla}\langle\vec{x}|\alpha\rangle\\ 
+  \langle\vec{x}|\hat{p}_i|\alpha\rangle&=i\hbar\frac{\partial}{\partial x_i}\langle\vec{x}|\alpha\rangle\\
+  \langle\vec{x}|[\hat{x}_i,\hat{p}_j]|\alpha\rangle&=\langle\vec{x}|\hat{x}_i\hat{p}_j|\alpha\rangle-\underbrace{\langle\vec{x}|\hat{p}_j\hat{x}_i|\alpha\rangle}_{=0}\\ 
+  &=x_i\langle\vec{x}|\underbrace{\hat{p}_j|\alpha\rangle}_{=0}+i\hbar\frac{\partial}{\partial x_i}x_i\langle\hat{x}|\alpha\rangle\\
+  &=i\hbar\delta_{ij}\langle\vec{x}|\alpha\rangle
 \end{align}
 OD des $\hat{H}$-Operators 
 \begin{equation}
@@ -2120,7 +2120,7 @@ Vorlesung 18 - 20.06.2013
     \end{align}
   \item nützliche Anwendung: Wirkung von $\hat{J}_1$ oder $\hat{J}_2$ auf $|jm\rangle$
     \begin{align}
-    \hat{J}_1|jm\rangle&=\frac{1}{2}(\hat{J}_+n\hat{J}_-|jm\rangle\\
+    \hat{J}_1|jm\rangle&=\frac{1}{2}(\hat{J}_++\hat{J}_-)|jm\rangle\\
     &=\frac{\hbar}{2}\sqrt{j(j+1)-m(m+1)}|j,m+1\rangle+\frac{\hbar}{2}\sqrt{j(j+1)-m(m+1)}|j,m-1\rangle
     \end{align}
 \end{itemize}
@@ -2552,11 +2552,11 @@ Vorlesung 21 - 04.07.2013
     \end{align}
     Mit v-Wellenfunktion
     \begin{align}
-    V_{nl}(r)=rR_{nl}(r)
+    v_{nl}(r)=rR_{nl}(r)
     \end{align}
     gilt für Radialgleichung
     \begin{align}
-    \left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial r^2}+\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}+V(r)\right\}V_{nl}(r)=E_nV_{nl}(r)
+    \left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial r^2}+\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}+V(r)\right\}v_{nl}(r)=E_nv_{nl}(r)
     \end{align}
     Ähnlich der 1-dimensionalen Schrödingergleichung mit zusätzlichem "`Zentrifugalpotential"'
     \begin{align}
@@ -2823,6 +2823,143 @@ Vorlesung 23 - 11.07.2013
     &=\sum_{m\neq n}\frac{\langle\phi_n|\hat{H}_1|\phi_m\rangle\langle\phi_m|\hat{H}_1|\phi_n\rangle}{\epsilon_n-\epsilon_m}\\
     &=\sum_{m\neq n}\frac{|\langle\phi_n|\hat{H}_1|\phi_m\rangle|^2}{\epsilon_n-\epsilon_m}
     \end{align}
-
 \end{itemize}
+
+\begin{flushright}
+Vorlesung 24 - 16.07.2013
+\end{flushright}
+
+\noindent\textbf{Entartung}
+
+
+\begin{itemize}
+	\item Entartung im ungestörten Spektrum erzeugt Probleme bei der Zuordnung $|\psi_n(\lambda)\rangle$ im Limes $\lambda\rightarrow0$ mit ungestörten Zuständen $|\phi_{n,i}\rangle$
+  \item Betrachte entarteten Unterraum zum EW $\epsilon_n$ mit 
+    \begin{align}
+    \hat{H}_0|\phi_{n,i}\rangle=\epsilon_n|\phi_{n,i}\rangle\quad\forall\ i=1,2,...
+    \end{align}
+  \item Im Prinzip ist Wahl der EZ bzw. Basis im entarteten Unterraum beliebig.
+    $\hookrightarrow$ Zusätzliche Bedingung um Basis so zu wählen, dass sie "`Information"' von der Störung enthält.
+  \item $\hookrightarrow$ Garantiere, dass Grenzübergang $\lambda\rightarrow0$ für $|\psi_n(\lambda)\rangle$ auf ein spezielles $|\phi_{n,i}\rangle$ hinführt.
+  \item Trick: Wähle $|\phi_{n,i}\rangle$ so, dass sie im entarteten Unterraum $\hat{H}_1$ diagonalisiert.
+    \begin{align}
+    \hat{H}_1|\phi_{n,i}\rangle=\eta_i|\phi_{n,i}\rangle
+    \end{align}
+    im $\epsilon_n$-Unterraum
+  \item Die EW $\eta_i$ bilden automatisch die 1. Ordnung Energiekorrektur $E_{n,i}^{(1)}$
+\end{itemize}
+
+\subsection{Anwendung: Feinstruktur}
+
+\begin{itemize}
+	\item Viele Anwendungen von Störungstheorie (niedriger Ordnung) in Atomphysik. 
+  \item 1. Anwendungsfeld: Atome in (schwachen) externen Feldern:\\
+    -\textbf{Stark-Effekt}: Ein-Elektron-Atom in homogenes $\vec{E}$-Feld
+      \begin{align}
+      \hat{H}=\hat{H}_0+eE_0\hat{x}_3,\quad \vec{E}=E_0\vec{e}_3
+      \end{align}
+    -\textbf{Zeeman-Effekt}: Ein-Elektron-Atom in einem externen $\hat{B}$-Feld
+      \begin{align}
+      \hat{H}=\hat{H}_0+\frac{e}{2mc}B_0\hat{J}_3,\quad \hat{B}=B_0\vec{e}_3
+      \end{align}
+  \item 2. Anwendungsfeld: Feinstruktur des Wasserstoff-Spektrums
+  \item Drei zusätzliche "`Wechselwirkungen"', die sich aus einer voll rel. Behandlung im Rahmen der Dirac-Gleichung ergeben.\\
+    $\hookrightarrow$ Störungstheorie auf das nicht-rel. H-Problem aufsetzen.
+\end{itemize}
+
+
+\noindent\textbf{\textcircled{1} Relativistische Korrektur zur kin. Energie}
+\begin{align}
+\hat{H}_1=-\frac{1}{8m^3c^2}\hat{\vec{p}}^4
+\end{align}
+\begin{itemize}
+	\item Aus Taylorentwicklung der rel. Energie-Impuls-Relation
+    \begin{align}
+    E=\sqrt{p^2c^2+m^2c^4}=mc^2+\frac{1}{2m}\vec{p}^2-\frac{1}{8m^3c^2}\vec{p}^4+\mathcal{O}(\vec{p}^6)
+    \end{align}
+\end{itemize}
+\noindent\textbf{\textcircled{2} Spin-Bahn-Wechselwirkung}
+\begin{align}
+\hat{H}_2&=\frac{1}{2m^2c^2}\frac{1}{\hat{r}}\frac{\text{d}V(\hat{r})}{\text{d}\hat{r}}\hat{\vec{L}}\cdot\hat{\vec{S}}\\
+&=\frac{e^2}{2m^2c^2}\frac{1}{\hat{r}^3}\hat{\vec{L}}\cdot\hat{\vec{S}}
+\end{align}
+\begin{itemize}
+	\item Wechselwirkung zwischen Elektron, magn. Moment und dem $\vec{B}$-Feld das von Kernladung im Ruhesystem des Elektrons erzeugt wird.
+\end{itemize}
+\noindent\textbf{\textcircled{3} Darwin-Term}
+\begin{align}
+\hat{H}_3=\frac{\pi\hbar^2e^2}{2m^2c^2}\delta^{(3)}(\hat{\vec{x}})
+\end{align}
+\begin{itemize}
+	\item rel. Korrektur zum Potential
+  \item ungestörtes Problem mit Spinfreiheitsgrad
+    \begin{align}
+    \hat{H}_0\underbrace{|nlm_l\frac{1}{2}m_s\rangle}_{|nlm_l\rangle\otimes|\frac{1}{2}m_s\rangle}=\epsilon_n|nlm_l\frac{1}{2}m_s\rangle
+    \end{align}
+  \item alternativ: gekoppelte Basis
+    \begin{align}
+    \hat{H}_0|n\left(l\frac{1}{2}\right)jm\rangle=\epsilon_n|n\left(l\frac{1}{2}\right)jm\rangle
+    \end{align}
+\end{itemize}
+\noindent\textbf{\textcircled{1} Relativistische Korrektur zur kin. Energie}
+\begin{itemize}
+	\item Störop.:
+    \begin{align}
+    \hat{H}_1=-\frac{1}{8m^3c^2}\hat{\vec{p}}^4
+    \end{align}
+  \item Entartung: $\hat{H}_1$ ist bereits diagonal im entarteten $\epsilon_n$-Unterraum, weil $\hat{\vec{p}}^2$ mit $\hat{\vec{L}}^2,\hat{L}_3,\hat{\vec{S}}^2,\hat{S}_3$ kommutiert.
+  \item Energiekorrektur 1. Ordnung
+    \begin{align}
+    \Delta E_1&=E^{(1)}_{nl}=\langle nlm_lm_s|\hat{H}_1|nlm_lm_s\rangle\\
+    &=-\frac{1}{8m^3c^2}\langle nlm_lm_s|\hat{\vec{p}}^4|nlm_lm_s\rangle\\
+    &=-\frac{1}{8m^3c^2}\langle nlm_lm_s|\hat{T}^2|nlm_lm_s\rangle
+    \end{align}
+  \item Zusammenhang mit $\hat{H}_0$
+    \begin{align}
+    \hat{T}=\hat{H}_0-\frac{e^2}{\hat{r}}
+    \end{align}
+  \item Einsetzen + Ausmultiplizieren
+    \begin{align}
+    \Delta E_1&=-\frac{1}{2mc^2}\langle nlm_lm_s|\left(\hat{H}_0^2+\hat{H}_0\frac{e^2}{\hat{r}}+\frac{e^2}{\hat{r}}\hat{H}_0+\frac{e^4}{\hat{r}^2}\right)|nlm_lm_s\rangle\\
+    &=-\frac{1}{2mc^2}\left(\epsilon_n^2+2\epsilon_n\langle nlm_lm_s|\frac{e^4}{\hat{r}^2}|nlm_lm_s\rangle\right)
+    \end{align}
+    mit
+    \begin{align}
+    &\langle...|\frac{1}{\hat{r}}|...\rangle=\frac{1}{n^2a_0}\\
+    &\langle...|\frac{1}{\hat{r}^2}|...\rangle=\frac{2}{n^3(2l+1)a_0}
+    \end{align}
+    \begin{align}
+    \Rightarrow \Delta E_1&=-\epsilon_n\frac{e^4}{\hbar^2c^2}\frac{1}{n^2}\left(\frac{3}{4}-\frac{n}{l+1/2}\right)\\
+    &=\epsilon_n\alpha^2\frac{1}{n^2}\left(\frac{3}{4}-\frac{n}{l+1/2}\right)
+    \end{align}
+    Feinstrukturkonstante 
+    $$
+    \alpha=\frac{e^2}{\hbar c}\approx \frac{1}{137}
+    $$
+\end{itemize}
+\noindent\textbf{\textcircled{1} Spin-Bahn-Wechselwirkung}
+\begin{itemize}
+	\item Störop.:
+    \begin{align}
+    \hat{H}_2=\frac{e^2}{2m^2c^2}\frac{1}{\hat{r}^3}\hat{\vec{L}}\cdot\hat{\vec{S}}
+    \end{align}
+  \item Entartung: gekoppelte Basis
+  \item Energiekorrektur 
+    \begin{align}
+    \Delta E_2=\langle n(l\frac{1}{2})jm|\hat{H}_2|n(l\frac{1}{2})jm\rangle
+    \end{align}
+    mit Operatorid.
+    \begin{align}
+    \hat{\vec{L}}\cdot\hat{\vec{S}}=\frac{1}{2}\left(\hat{\vec{J}}^2-\hat{\vec{L}}^2-\hat{\vec{S}}^2\right)
+    \end{align}
+    Damit
+    \begin{align}
+    \Delta E_2=\frac{\hbar^2e^2}{4m^2c^2}\left[j(j+1)-l(l+1)-\frac{s}{4}\right]\langle n(l\frac{1}{2})jm|\frac{1}{\hat{r}^3}|n(l\frac{1}{2})jm\rangle
+    \end{align}
+  \item Mit Erwartungwert von $\frac{1}{\hat{r}^3}$ folgt
+    \begin{align}
+    \Delta E_2=-\epsilon_n\frac{\alpha^2}{2nl(l+1/2)(l+1)}
+    \end{align}
+\end{itemize}
+
 \end{document}
