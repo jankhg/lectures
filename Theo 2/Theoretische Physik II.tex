@@ -1875,13 +1875,13 @@ Vorlesung 16 - 13.06.2013
   \item Berechne $c_n,c_{n+1}$:
     \begin{align}
     \hat{a}|\epsilon_n\rangle=c_n|\epsilon_{n-1}\rangle\quad \Rightarrow \quad \langle\epsilon_n|\hat{a}^\dagger=\langle\epsilon_{n-1}|c_n^*\\
-    \Rightarrow \langle \epsilon_n | \underbrace{\hat{a}^\dagger\hat{a}}_{=\hat{h}}=\underbrace{\langle\epsilon_{n-1}|\epsilon_{n-1}\rangle}_{=1}|c_1|^2\\
+    \Rightarrow \langle \epsilon_n | \underbrace{\hat{a}^\dagger\hat{a}}_{=\hat{h}}=\underbrace{\langle\epsilon_{n-1}|\epsilon_{n-1}\rangle}_{=1}|c_n|^2\\
     \langle\epsilon_n|\hat{n}|\epsilon_n\rangle=n\underbrace{\langle\epsilon_n|\epsilon_n\rangle}{=1}\\
     \Rightarrow c_n=\sqrt{n}
     \end{align}
     analog:
     \begin{align}
-    \hat{a}^\dagger|c_n\rangle&=\sqrt{n+1}|\epsilon_{n+1}\rangle\\
+    \hat{a}^\dagger|\epsilon_n\rangle&=\sqrt{n+1}|\epsilon_{n+1}\rangle\\
     \Rightarrow c_{n+1}&=\sqrt{n-1}
     \end{align}
   \item Eigenzustände in Ortsdarstellung:
@@ -1955,7 +1955,7 @@ Vorlesung 17 - 18.06.2013
     [\hat{L}_1,\hat{L}_2]&=i\hbar\hat{L}_3\\
     [\hat{L}_2,\hat{L}_3]&=i\hbar\hat{L}_1\\
     [\hat{L}_3,\hat{L}_1]&=i\hbar\hat{L}_2\\
-    [\hat{L}_i,\hat{L}_j]&=\sum_k\epsilon_{ijk}\hat{L}_k
+    [\hat{L}_i,\hat{L}_j]&= i\hbar\sum_k\epsilon_{ijk}\hat{L}_k
     \end{align}
     $\hookrightarrow$ Kommutatorrelationen sind definierende Eigenschaft jedes Drehimpulses
   \item Unterscheide:\\
@@ -2030,7 +2030,7 @@ Vorlesung 18 - 20.06.2013
     &=(\hat{J}_+\hbar b+\hbar\hat{J}_+)|ab\rangle\\
     &=\hbar(b+1)\hat{J}_+|ab\rangle
     \end{align}
-    $\Rightarrow$ Zustand $\hat{J}_+|ab\rangle$ ist EZ zu $\hat{J}_3$ mit EV $\hbar(b+1)$.
+    $\Rightarrow$ Zustand $\hat{J}_+|ab\rangle$ ist EZ zu $\hat{J}_3$ mit EW $\hbar(b+1)$.
     \begin{align}
     \hat{J}_+|ab\rangle=C_{ab}^{(+)}|a(b+1)\rangle
     \end{align}
